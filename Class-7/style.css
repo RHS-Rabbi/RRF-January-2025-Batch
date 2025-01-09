@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Plus Jakarta Sans", serif;
+    font-weight: 700;
+}
+body{
+    font-family: "Inter", serif;
+    font-weight: 400;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-icon {
+    width: 80px;
+    height: 80px;
+    background: #F4F9FC;
+    padding: 20px;
+    border-radius: 50%;
+    color: #5d74f2;
+}
+
+.feature {
+    display: flex;
+}
+
+.feature-content {
+    width: 40%;
+    margin-right: 50px;
+}
+
+.feature-intro {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: relative;
+    z-index: 1;
+}
+
+.single-feature-list {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+.single-feature-item {
+    padding: 32px 35px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 10px #00000012;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.single-feature-item h6 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    color: #313435;
+}
+
+p, li {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.feature-section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+.feature-section::after {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 50%;
+    height: 55%;
+    background: #F4F4F9;
+    content: "";
+}
+
+
+.feature-content h4 {
+    letter-spacing: 1.25px;
+    margin-bottom: 32px;
+    font-size: .85rem;
+    text-transform: uppercase;
+    color: #8b8d90;
+}
+
+.feature-content h2 {
+    margin-bottom: 25px;
+    font-size: 2.875rem;
+}
+
+.feature-content p {
+    font-size: 18px;
+}
+
+.feature-content ul {
+    padding-left: 18px;
+    padding-top: 20px;
+}
+
+.feature-content ul li {
+    font-size: 18px;
+    margin-bottom: 26px;
+}

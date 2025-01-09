@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body{
+    font-family: "Titillium Web", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.pipline {
+    display: flex;
+}
+.left-bg img {
+    max-width: 500px;
+    margin-right: 50px;
+    border-radius: 0 100px 0 0;
+}
+
+.right-content h2 {
+    font-size: 30px;
+    color: #263534;
+    margin-bottom: 40px;
+    padding-top: 15px;
+}
+.right-content p {
+    max-width: 80%;
+    color: #666666;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+.right-content p {
+    max-width: 80%;
+    color: #666666;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.right-content .btn {
+    background: #15c0e8;
+    padding: 12px 30px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+.pipline-area {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.contact {
+    display: flex;
+}
+.right-content {
+    width: 100%;
+}
+input[type="text"],input[type="email"],textarea {
+    border-radius: 0;
+    width: 100%;
+    border: 1px solid #E8E8E8;
+    padding: 14px 10px;
+    color: #919191;
+    font-size: 15px;
+    margin-bottom: 28px;
+    outline: none;
+}
+textarea{
+    resize: none;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+
+.contact-section {
+    margin-bottom: 30px;
+}
+input[type="submit"] {
+    background: #15c0e8;
+    border: none;
+    color: #fff;
+    padding: 14px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #15c0e8; 
+}
