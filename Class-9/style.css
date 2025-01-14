@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+ /* Basic Css */
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 15px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    font-family: "IBM Plex Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ------Header Section------ */
+.header-section {
+    padding: 20px 0;
+    background: #fff;
+}
+
+.site-logo a svg {
+    max-height: 28px;
+    fill: #091df6;}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    width: 13%;
+}
+
+.mainmenu {
+    width: 67%;
+}
+
+.header-btns {
+    width: 20%;
+    text-align: end;
+}
+.mainmenu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.mainmenu li a {
+    display: block;
+    padding: .75rem;
+    font-size: .9375rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #161D25;
+}
+
+
+.header-btns a {
+    display: inline-flex;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #161D25;
+    padding: .75rem 0;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.header-btns .bordered-btn {
+    border: 1px solid #091df6;
+    color: #091df6;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
