@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-13</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h1>JavaScript Data Types & <br> JavaScript Variable Declaration Methods</h1>
+                <button  id="my-btn">See More</button>
+                <button style="display: none;" id="hide-btn">Hide content</button>
+            </div>
+            <div class="section-content">
+                <div id="my-text" style="display: none;">
+                    <div class="section-table">
+                        <h2 style="text-align: center;">JavaScript Data Types</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data Type</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>String</td>
+                                    <td>Represents textual data enclosed in quotes.</td>
+                                    <td>"Hello" or 'World'</td>
+                                </tr>
+                                <tr>
+                                    <td>Number</td>
+                                    <td>Represents numeric values (both integers and floating-point).</td>
+                                    <td>42, 3.14, -5</td>
+                                </tr>
+                                <tr>
+                                    <td>Boolean</td>
+                                    <td>Represents logical values, either true or false.</td>
+                                    <td>true, false</td>
+                                </tr>
+                                <tr>
+                                    <td>Undefined</td>
+                                    <td>A variable that has been declared but not assigned a value.</td>
+                                    <td>let x; (x is undefined)</td>
+                                </tr>
+                                <tr>
+                                    <td>Null</td>
+                                    <td>Represents an explicitly empty or non-existent value.</td>
+                                    <td>let x = null;</td>
+                                </tr>
+                                <tr>
+                                    <td>Object</td>
+                                    <td>A complex data structure used to store collections of data.</td>
+                                    <td>{name: "John", age: 30}</td>
+                                </tr>
+                                <tr>
+                                    <td>Array</td>
+                                    <td>A special type of object for ordered collections.</td>
+                                    <td>[1, 2, 3] or ["a", "b", "c"]</td>
+                                </tr>
+                                <tr>
+                                    <td>Function</td>
+                                    <td>Represents executable code.</td>
+                                    <td>function() { return 5; }</td>
+                                </tr>
+                                <tr>
+                                    <td>Symbol</td>
+                                    <td>Represents a unique and immutable identifier.</td>
+                                    <td>Symbol("id")</td>
+                                </tr>
+                                <tr>
+                                    <td>BigInt</td>
+                                    <td>Represents integers beyond the safe limit for Number.</td>
+                                    <td>BigInt(9007199254740991n)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 style="text-align: center;">JavaScript Variable Declaration Methods</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Declaration Method</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>var</code></td>
+                                    <td>
+                                        Used to declare variables. The scope is function-level or global. It is hoisted but not block-scoped.
+                                    </td>
+                                    <td>
+                                        <code>var x = 10;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>let</code></td>
+                                    <td>
+                                        Used to declare variables. The scope is block-level, and it cannot be redeclared within the same scope.
+                                    </td>
+                                    <td>
+                                        <code>let y = 20;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>const</code></td>
+                                    <td>
+                                        Used to declare constants. The value cannot be reassigned, and the scope is block-level.
+                                    </td>
+                                    <td>
+                                        <code>const z = 30;</code>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: "Roboto", serif;
+                max-width: 1200px;
+                background-color: rgb(142, 145, 162);
+            }
+            .conatiner{
+                margin: 0 auto;
+            }
+            h2{
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 80px;
+                color: brown;
+                text-transform: uppercase;
+            }
+            h1{
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 80px;
+                color: brown;
+                text-transform: uppercase;
+            }
+            button{
+                background-color: #ffffff;
+                border: 1px solid;
+                padding: 5px 10px;
+                border-radius: 5px;
+                margin-left: 45%;
+                margin-right: 45%;
+            }
+            .hide{
+                margin-left: 47%;
+                margin-right: 47%;
+            }
+            button:hover{
+                background-color: aqua;
+                color: #ffffff;
+            }
+
+            table {
+                font-family: "Roboto", serif;
+                border-collapse: collapse;
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+            
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr{
+                background-color: rgb(185, 90, 167);
+            }
+            
+            tr:nth-child(even) {
+                background-color: #7e60ce;
+            }
+
+            .solid{
+                width: 110px;
+            }
+            .space{
+                margin-bottom: 100px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Js Data Type And Variable</h1>
+        <button id="btn">See More</button>
+        <button class="hide" style="display: none;" id="hidebtn">Hide</button>
+        <div id="hide" style="display: none;">
+        <h2>Data Types</h2>
+        <table>
+            <tr>
+                <th>Data Type</th>
+                <th>Category</th>
+                <th>Desctiption</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td>Primitive</td>
+                <td>Represents both integer and floating-point numbers</td>
+                <td>42, 3.14</td>
+            </tr>
+            <tr>
+                <td>BigInt</td>
+                <td>Primitive</td>
+                <td>Represents integers larger than the Number type can safely store.</td>
+                <td>123n</td>
+            </tr>
+            <tr>
+                <td>String</td>
+                <td>Primitive</td>
+                <td>Represents textual data. Strings are immutable.</td>
+                <td>"Hello"</td>
+            </tr>
+            <tr>
+                <td>Boolean</td>
+                <td>Primitive</td>
+                <td>Represents true or false.</td>
+                <td>true, false</td>
+            </tr>
+            <tr>
+                <td>Undefined</td>
+                <td>Primitive</td>
+                <td>A variable that has been declared but not assigned a value.</td>
+                <td>undefined</td>
+            </tr>
+            <tr>
+                <td>Null</td>
+                <td>Primitive</td>
+                <td>Represents an intentional absence of any value.</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <td>Symbol</td>
+                <td>Primitive</td>
+                <td>Introduced in ES6, Symbol represents a unique and immutable value.</td>
+                <td>Symbol("id")</td>
+            </tr>
+            <tr>
+                <td>Object</td>
+                <td>Non-Primitive</td>
+                <td>Represents a collection of key-value pairs.</td>
+                <td>{name: "John"}</td>
+            </tr>
+            <tr>
+                <td>Array</td>
+                <td>Non-Primitive</td>
+                <td>A special type of object used for storing ordered collections of data.</td>
+                <td>[1, 2, 3]</td>
+            </tr>
+            <tr>
+                <td>Function</td>
+                <td>Non-Primitive</td>
+                <td>Functions are objects and can be treated as values.</td>
+                <td>function() {}</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Non-Primitive</td>
+                <td>Represents dates and times.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>Non-Primitive</td>
+                <td>Represents dates and times.</td>
+                <td>new Date()</td>
+            </tr>
+            <tr>
+                <td>Regular Expressions</td>
+                <td>Non-Primitive</td>
+                <td>Represents patterns for text matching.</td>
+                <td>/abc/</td>
+            </tr>
+            <tr>
+                <td>Map</td>
+                <td>Non-Primitive</td>
+                <td>A collection of key-value pairs where keys can be of any type.</td>
+                <td>new Map()</td>
+            </tr>
+            <tr>
+                <td>Set</td>
+                <td>Non-Primitive</td>
+                <td>A collection of unique values.</td>
+                <td>new Set()</td>
+            </tr>
+            <tr>
+                <td>typeof</td>
+                <td>Special Data Types</td>
+                <td>typeof null; // "object" (this is a historical bug) <br>
+                        typeof NaN;  // "number" (Not a Number is still a Number type)</td>
+                <td>new Set()</td>
+            </tr>
+        </table>
+        <h2>variable</h2>
+        <table>
+            <tr>
+                <th>Variable</th>
+                <th>Desctiption</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>var</td>
+                <td>This is the oldest way to declare variables. It has function scope, which means it is only visible within the function it is declared in.</td>
+                <td>var x = 10;</td>
+            </tr>
+            <tr>
+                <td>let</td>
+                <td>Introduced in ES6 (ES2015), let allows you to declare variables with block scope, meaning the variable is only visible within the block it is declared in.</td>
+                <td>let y = 20;</td>
+            </tr>
+            <tr>
+                <td>const</td>
+                <td>Also introduced in ES6, const is used to declare variables that cannot be reassigned after their initial assignment. It also has block scope.</td>
+                <td class="solid">const z = 30;</td>
+            </tr>
+        </table>
+        </div>
+        <div class="space">
+    
+        </div>
+     </div>
+
+
+
+   <script>
+        const showBtn =document.getElementById('btn')
+        const hideBtn =document.getElementById('hidebtn')
+        const allContent =document.getElementById('hide')
+
+        showBtn.addEventListener('click', function() {
+            allContent.style.display = 'block'
+            showBtn.style.display = 'none'
+            hideBtn.style.display = 'block'
+        });
+
+        hideBtn.addEventListener('click', function() {
+            hideBtn.style.display = 'none'
+            allContent.style.display = 'none'
+            showBtn.style.display = 'block'
+            
+        })
+   </script>
+</body>
+</html>
