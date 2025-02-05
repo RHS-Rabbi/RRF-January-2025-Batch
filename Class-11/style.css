@@ -1,0 +1,555 @@
+/*----------------Basic Css---------------------  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 15px;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: Roboto, sans-serif;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    font-size: 16px;
+
+}
+a{
+    text-decoration: none;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    color: #0F172A;
+}
+svg{
+    width: 24px;
+    height: 24px;
+    /* color: #FFFFFF; */
+}
+h6{
+    font-weight: 700;
+    font-size: 20px;
+}
+h5{
+    font-family: "Roboto", Sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #0F172A;
+}
+h3{
+    font-family: "Roboto", Sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #0F172A;
+}
+
+/*-------------- Section Header Area--------------- */
+.header-area {
+    background: #881337;
+    /* padding: 30px; */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 30px 0;
+}
+
+.single-header {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50%;
+}
+
+.mainmenu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: end;
+    align-items: center;
+}
+
+.mainmenu ul li a {
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    line-height: 42px;
+    letter-spacing: 0.5px;
+}
+.header-border-btn {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #61CE7000;
+    margin-left: 20px;
+}
+.btn{
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    line-height: 42px;
+    letter-spacing: 0.5px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #61CE7000;
+}
+
+.section-padding{
+    padding: 60px 0;
+}
+
+/* -----------------Hero -------------------*/
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    margin-left: -15px;
+    margin-right: -15px;
+    align-items: center;
+}
+
+.single-hero-list {
+    width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.single-hero-left h1 {
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 79.2px;
+}
+.input-search{
+    position: relative;
+}
+.input-search input[type="search"] {
+    width: 451px;
+    height: 48px;
+    text-transform: capitalize;
+    padding: 12px 16px 12px 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-search svg {
+    position: absolute;
+    left: 8.5px;
+    top: 14.5px;
+    color: #94A3B8;
+    width: 18.21px;
+    height: 18.21px;
+}
+
+.input-search input[type="submit"] {
+    width: 109px;
+    height: 48px;
+    border-radius: 5px;
+    padding: 14px;
+    border: 2px solid #BE123C;
+    margin-left: 16px;
+    background: #BE123C;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.hero-btn ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-btn li a {
+    padding: 4px 4px 4px 4px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-right: 6px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.hero-btn {
+    margin-top: 10px;
+}
+
+.single-hero-right img {
+    float: right;
+}
+
+
+/*------------------ Smart Section------------------- */
+.smart {
+    display: flex;
+    justify-content: space-around;
+}
+
+.smart-section {
+    padding: 60px 0;
+    background-color: #F1F5F9;
+}
+
+/* --------------Featured Section--------------- */
+.featured-section {
+    padding: 60px 0;
+}
+.featured {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.featured-title-btn a {
+    display: flex;
+    align-items: center;
+}
+
+a.boderless-btn , .btn-brdr{
+    color: #2563EB;
+    font-weight: 500;
+}
+
+a.boderless-btn svg , .btn-brdr svg {
+    margin-left: 10px;
+}
+
+/* ----------Featured-two ------------*/
+.featured-two {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 20px;
+}
+
+.single-featured-list {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 236.8px;
+    height: 354px;
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+.single-featured-list:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0F172A80 100%, #0F172A00 100%);
+    z-index:-1;
+    content:"";
+    opacity: .5;
+    
+}
+
+.featured-bg1{
+    background-image: url(https://dev-xinder-rrf-january-2025.pantheonsite.io/wp-content/uploads/2025/01/featured-1.jpg);
+}
+.featured-bg2{
+    background-image: url(https://dev-xinder-rrf-january-2025.pantheonsite.io/wp-content/uploads/2025/01/featured-2.png);
+}
+.featured-bg3{
+    background-image: url(https://dev-xinder-rrf-january-2025.pantheonsite.io/wp-content/uploads/2025/01/featured-3.jpg);
+}
+.featured-bg4{
+    background-image: url(https://dev-xinder-rrf-january-2025.pantheonsite.io/wp-content/uploads/2025/01/featured-4.jpg);
+}
+.featured-bg5{
+    background-image: url(https://dev-xinder-rrf-january-2025.pantheonsite.io/wp-content/uploads/2025/01/featured-5.jpg);
+}
+.single-featured-item {
+    padding: 15px;
+    color: #fff;
+}
+
+
+
+/* ----------------Latest Section --------------*/
+.latest {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.single-latest-list {
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    width: 300px;
+    height: 300px;
+}
+
+.single-latest-item {
+    background: #ffff;
+    border-radius: 10px;
+}
+.latest-section {
+    background: #F1F5F9;
+}
+
+.latest {
+    padding-top: 30px;
+}
+.sub-details {
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    box-shadow: 0 0 10px #0000000f;
+}
+.sub-details .sub-bg {
+    margin-right: 15px;
+    margin-left: 10px;
+}
+.sub-details .sub-bg {
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.sub-info span {
+    color: #0F172A;
+    font-weight: 500;
+}
+
+.sub-info p {
+    font-size: 14px;
+    color: #475569;
+    margin-top: 3px;
+}
+
+.latest-bg {
+    position: relative;
+}
+
+.latest-bg p {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    padding: 4px 8px 4px 8px;
+    font-size: 14px;
+    background: #F1F5F9;
+    color: #292524;
+    font-weight: 400;
+    border-radius: 4px;
+}
+.bg-style-p p {
+    background: #F3E8FF;
+    color: #6B21A8;
+}
+.latest-bg img {
+    border-radius: 10px 10px 0 0;
+}
+
+/* ----------------Expanding section----------- */
+
+.expanding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.single-expanding-list {
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.expanding-title {
+    text-align: center;
+}
+
+.expandig-btn {
+    text-align: center;
+}
+
+
+.expandig-btn .expanding-btn {
+    padding: 10px 30px;
+    background: #BE123C;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.single-expanding-item h5 {
+    margin-top: 20px;
+}
+
+
+/* -----------------Best Section ------------------- */
+.best {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.single-best-list {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50%;
+}
+.best-section {
+    background: #475569;
+}
+
+.single-best-left h2 {
+    color: #fff;
+    line-height: 60px;
+}
+
+.single-best-left p {
+    font-weight: 500;
+    color: #fff;
+}
+
+.best-left-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+.best-left-list ul li {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.best-left-list ul li svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    stroke-width:4px;
+}
+
+.best-left-list {
+    margin-top: 30px;
+}
+
+/* ---------------Marie Section----------------- */
+.marie-section{
+    background: #F1F5F9;
+}
+.marie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.single-marie-list {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50%;
+}
+.single-marie-right span {
+    color: #2563EB;
+}
+
+.single-marie-right p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* ---------------Incredible-Section ---------------*/
+.incredible-section{
+    background: #475569;
+}
+.incredible {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-between;
+}
+
+.single-incredible-list {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 60%;
+}
+
+.single-incredible {
+    width: 40%;
+}
+.single-incredible-left h2 {
+    color: #fff;
+}
+
+.single-incredible-left p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+/* ---------------Art Section ----------------*/
+.single-art-list {
+    width: 33.3333333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.art {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.featured-title {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.art-bg {
+    position: relative;
+}
+
+.art-bg span {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    padding: 4px 8px;
+    background: #F3E8FF;
+    color: #6B21A8;
+    border-radius: 4px;
+}

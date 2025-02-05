@@ -1,0 +1,22 @@
+@media only screen and (max-width: 574px) {
+    .info{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 575px) and (max-width:767px) {
+    .info{
+        flex-wrap: wrap;
+    }
+    .single-info-list{
+        width: 50%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width:999px) {
+    .info{
+        flex-wrap: wrap;
+    }
+    .single-info-list{
+        width: 50%;
+    }
+}
