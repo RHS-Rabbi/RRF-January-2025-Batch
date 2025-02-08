@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background: #ddd;
+}
+
+
+
+/* -----Hero Section------- */
+
+.hero-data {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.hero-section {
+    padding: 40px 0;
+}
+.single-hero {
+    width: 250px;
+    height: 250px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.hero-clip-circle h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+
+.hero-1 {
+    clip-path: circle();
+    background: #2D336B;
+}
+.hero-2 {
+    clip-path: circle(50% at 0% 50%);
+    background: #5C7285;
+}
+
+.hero-3 {
+    clip-path: circle(100% at 100% 0%);
+    background: #1D1616;
+}
+.hero-4 {
+    clip-path: circle(100% at 50% -25%);
+    background: #66785F;
+
+}
+.hero-5 {
+    background: black;
+    clip-path: ellipse(23% 50%);
+}
+.hero-6 {
+    background: #81BFDA;
+    clip-path: ellipse(80% 50% at 0% 50%);
+}
+
+.hero-7 {
+    clip-path: ellipse(50% 50% at 50% 0%);
+    background: #355F2E;
+}
+
+.hero-8 {
+    clip-path: ellipse(50% 100% at 50% 0%);
+    background: #525B44;
+}
+
+.hero-9 {
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    background: #0A3981;
+}
+
+.hero-10 {
+    clip-path: polygon(0% 100%, 25% 0%, 75% 0%, 50% 100%);
+    background: #80C4E9;
+}
+
+.hero-11 {
+    clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
+    background: #131010;
+}
+
+.hero-12 {
+    background: #BCCCDC;
+    clip-path: polygon(50% 0, 50% 0%, 100% 50%, 50% 100%);
+}
+
+
+
+/* For Mobile size responsive */
+@media screen and (max-width: 767px) {
+
+
+}

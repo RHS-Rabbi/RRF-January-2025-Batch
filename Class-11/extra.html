@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="input.css" />
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <section id="hero-section">
+    <div id="background-img" style="background-image: url(https://i.ibb.co.com/H3K5w4T/1.jpg)" class="bg-cover bg-center w-screen h-screen relative z-[1] after:absolute after:content-[''] after:z-[-1] after:opacity-50 after:bg-black after:top-0 after:left-0 after:w-full after:h-full">
+      <div class="max-w-[1200px] mx-auto">
+        <!-- Header -->
+        <header class="flex justify-between items-center py-8">
+          <div>
+            <img class="w-[130px]" src="https://i.ibb.co.com/SwmHjNVm/logo-light.png" alt="Rentax Logo" />
+          </div>
+
+          <nav class="flex items-center gap-[35px] ml-6">
+            <ul class="flex gap-[20px] text-white text-[14px]">
+              <li class="group relative">
+                <a href="#" class="flex items-center gap-1 text-[rgb(245,183,84)]">
+                  Home <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul id="dropdown-menu" class="absolute w-[150px] bg-[#222222] p-5 rounded-2xl opacity-0 translate-y-2 invisible transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible pointer-events-auto group">
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out pb-2.5">
+                    <a href="#">Slider 01</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out pb-2.5">
+                    <a href="#">Slider 02</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out pb-2.5">
+                    <a href="#">Image 01</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Image 02 <i class="fa-solid fa-caret-down"></i></a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">About</a></li>
+              <li class="group relative">
+                <a href="#" class="flex items-center gap-1">
+                  Service <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul id="dropdown-menu" class="absolute top-full left-0 w-[150px] bg-[#222222] p-5 rounded-2xl opacity-0 translate-y-2 invisible transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible pointer-events-auto group">
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Service 01</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Service 02</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Service Details</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="group relative">
+                <a href="#" class="flex items-center gap-1">
+                  Cars <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul id="dropdown-menu" class="absolute top-full left-0 w-[150px] bg-[#222222] p-5 rounded-2xl opacity-0 translate-y-2 invisible transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible pointer-events-auto group">
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Car Grid</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Car Listing</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Car Types</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Car Details</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="group relative">
+                <a href="#" class="flex items-center gap-1">
+                  Pages <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul id="dropdown-menu" class="absolute top-full left-0 w-[150px] bg-[#222222] p-5 rounded-2xl opacity-0 translate-y-2 invisible transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible pointer-events-auto group">
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Team</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Image Gallery</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Video Gallery</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Pricing</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">FAQ</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="group relative">
+                <a href="#" class="flex items-center gap-1">
+                  Blog <i class="fa-solid fa-caret-down"></i>
+                </a>
+                <ul id="dropdown-menu" class="absolute top-full left-0 w-[150px] bg-[#222222] p-5 rounded-2xl opacity-0 translate-y-2 invisible transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible pointer-events-auto group">
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Blog Grid 01</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Blog Grid 02</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Blog List</a>
+                  </li>
+                  <li class="hover:text-[rgb(245,183,84)] hover:translate-x-2 transition duration-300 ease-in-out">
+                    <a href="#">Past Single</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="flex items-center gap-3">
+              <div id="contact-icon" class="bg-transparent border border-[rgb(245,183,84)] hover:bg-[rgb(245,183,84)] transition duration-300 ease-in-out p-2.5 rounded-[50px] group">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 stroke-[1.5] text-white transition duration-300 ease-in-out group-hover:text-black">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0 6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z" />
+                </svg>
+              </div>
+
+              <div class="text-white">
+                <p class="text-[12px]">Need help?</p>
+                <a class="text-[17px]" href="tel:8551004444">855 100 4444</a>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <!-- Hero Content -->
+        <div class="w-[80%] absolute top-[30%] text-start">
+          <div>
+            <h6 class="uppercase text-[14px] text-[rgb(245,183,84)] tracking-[6px]">
+              * Premium
+            </h6>
+            <h1 class="text-[90px] text-white font-extrabold leading-[1]">
+              Rental Car
+            </h1>
+            <div class="flex items-center gap-3">
+              <h5 class="text-[17px] text-white">Audi RS7 Sportback</h5>
+              <span class="text-[rgb(245,183,84)] text-[21px] font-bold">
+                $450 <span class="text-[12px] text-white">/ day</span>
+              </span>
+            </div>
+            <div class="flex items-center gap-3 pt-5">
+              <a id="btn-primary" href="#" class="bg-[rgb(245,183,84)] hover:bg-white hover:text-black transition duration-300 hover:transform hover:translate-y-[-5px] ease-in-out px-12 py-4 rounded-[40px] flex items-center">
+                View Details
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 pl-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+              </a>
+              <a id="btn-secondary" href="#" class="bg-transparent border border-white text-white hover:bg-[rgb(245,183,84)] hover:text-black hover:border-[rgb(245,183,84)] px-12 py-4 rounded-[40px] transition-all duration-300 hover:transform hover:translate-y-[-5px] ease-in-out flex items-center">
+                Rent Now
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 pl-2 hover:text-black">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

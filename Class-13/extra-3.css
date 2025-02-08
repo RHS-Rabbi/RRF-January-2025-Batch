@@ -8,10 +8,14 @@
     max-width: 100%;
     margin: 0 auto;
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 body {
     font-family: "Rubik", sans-serif;
-    color: #fff;
+    /* color: #fff; */
 }
 
 a {
@@ -57,6 +61,7 @@ a {
     position: absolute;
     top: 15px;
     right: 20px;
+    color: #fff;
     z-index: 1000;
 }
 
@@ -78,6 +83,61 @@ a {
 .hero-btn a:nth-child(2):hover {
     border-color: #2973B2;
 }
+
+
+
+/* -----Hero Section------- */
+
+.hero-data {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.hero-section {
+    padding: 40px 0;
+}
+.single-hero {
+    width: 250px;
+    height: 250px;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.hero-1 {
+    clip-path: circle();
+    background: #2D336B;
+}
+.hero-2 {
+    clip-path: circle(50% at 0% 50%);
+    background: #5C7285;
+}
+.hero-2 h4 {
+    transform: rotate(-90deg);
+    display: block;
+    margin-left: -150px;
+}
+.hero-3 {
+    clip-path: circle(100% at 100% 0%);
+    background: #1D1616;
+}
+.hero-4 {
+    clip-path: circle(100% at 50% -25%);
+    background: #66785F;
+
+}
+
+
+
+
+
+
+
+
 
 
 /* For Mobile size responsive */
