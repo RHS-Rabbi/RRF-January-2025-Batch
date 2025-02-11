@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 15px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    font-family: "Titillium Web", serif;
+}
+
+.slick-section {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    padding: 0 60px;
+    background: url(https://wallpapers.com/images/hd/orange-autumn-tree-full-desktop-screen-hd-ywshhmhy6samvo87.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.slick-section:after {
+    content:'';
+    position: absolute;
+    /* z-index: 2; */
+    z-index: -99;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+}
+
+.slick-carousel {
+    position: relative;
+    z-index: 200;
+    padding: 0 0px;
+    margin: 5rem auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -25px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-family: monospace;
+    font-size: 5rem;
+    z-index: 300;
+    outline: none;
+}
+  
+  .slick-prev {
+    left: -50px;
+    text-align: left;
+}
+  
+  .slick-next {
+    right: -50px;
+    text-align: right;
+}
+
+  .item.slick-slide {
+    width: 400px;
+    height: 400px !important;
+    transition: transform .4s;
+    position: relative; 
+}
+
+.slick-slide:after {
+    content:'';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    transition: transform .4s;
+}
+
+.item.slick-slide {
+    transform: scale(0.7)  translate(640px);
+}
+  
+.item.slick-slide.slick-center + .slick-slide {
+    transform: scale(0.8) translate(-250px);
+    z-index: 10;
+}
+  
+  .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
+    transform: scale(0.7)  translate(-640px);
+    z-index: 5;
+}
+  
+  .item.slick-slide.slick-active {
+    transform: scale(0.8) translate(250px);
+}
+  
+  .item.slick-slide.slick-center {
+    transform: scale(1);
+    z-index: 30;
+}
+  
+  .slick-center:after {
+    opacity: 0;
+}
+
+
+.slick-title h1 {
+    color: #FBFBFB;
+    text-align: center;
+    font-size: 50px;
+}
+
+.slick-title h1 span {
+    color: #2973B2;
+    font-size: 40px;
+}
+
+.slick-title {
+    padding: 30px 0;
+}
+
+

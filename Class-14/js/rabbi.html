@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", serif;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  background-color: beige;
+}
+ul li{
+padding: 10px;
+}
+
+.tab-content-wrapper .tab-content{
+display: none;
+
+}
+.tab-content-wrapper .tab-content:first-child{
+  display: block;
+}
+
+ul li.active{
+background-color:  gold;
+
+}
+    </style>
+</head>
+<body>
+
+
+<script>
+jQuery(document).ready(function() {
+
+    $("ul li").click(function() {
+        $("ul li").removeClass("active");
+        $(this).addClass("active");
+
+        $(".tab-content").hide();
+
+        let tab = $(this).data("tab");
+
+        $(`#${tab}`).show();
+    });
+});
+  </script>
+
+
+
+    <ul>
+        <li class="active" data-tab="tab-1" class="active">tab 1</li>
+        <li data-tab="tab-2" >tab 2</li>
+        <li data-tab="tab-3" >tab 3</li>
+    </ul>
+
+<div class="tab-content-wrapper">
+    <div id="tab-1" class="tab-content">
+        <h2>Tab 1 Content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nulla ad consectetur iusto, laudantium quia ullam architecto saepe obcaecati odit!
+        </p>
+    </div>
+    
+    <div id="tab-2" class="tab-content">
+        <h2>Tab 2 Content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nulla ad consectetur iusto, laudantium quia ullam architecto saepe obcaecati odit!
+        </p>
+    </div>
+    
+    <div id="tab-3" class="tab-content">
+        <h2>Tab 3 Content</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nulla ad consectetur iusto, laudantium quia ullam architecto saepe obcaecati odit!
+        </p>
+    </div>
+    
+    
+</div>
+</body>
+</html>
