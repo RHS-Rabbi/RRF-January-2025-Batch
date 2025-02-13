@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 15px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    font-family: "Titillium Web", serif;
+}
+
+/* ------Product Section ---------*/
+.product-section {
+    padding: 80px 0;
+}
+
+.product-title {
+    text-align: center;
+}
+
+.product-title h2 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+}
+
+.product-title h2 span {
+    color: #33d286;
+}
+
+.product-divider {
+    text-align: center;
+    position: relative;
+    background: #33d286;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.product-divider:after , .product-divider:before {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    background: #33d286;
+    width: 30px;
+    height: 1px;
+    content: "";
+}
+
+.product-divider:before{
+    left: 20px;
+}
+
+.filter-button {
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-flex;
+    cursor: pointer;
+    padding: 12px 22px;
+    font-size: 13px;
+    border: 1px solid transparent;
+    transition: .5s;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    margin: 0;
+    line-height: 1;
+    color: #777;
+    background: #fff;
+}
+
+.filter-button.active {
+    color: #33d286;
+    border-color: #33d286;
+    background: #fff;
+}
+
+.product {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-wrap: wrap;
+    padding: 50px 0 ;
+}
+
+.single-product-list {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 25%;
+}
+
+.single-product {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.02);
+    background: #fff;
+    margin-bottom: 20px;
+    transition: .5s;
+}
+.single-product:hover {
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.03);
+}
+
+.new-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 3px 12px;
+    background: #33d286;
+    color: #fff;
+    display: inline-block;
+}
+
+.border-bottom-text h4, .border-bottom-text h4 a {
+    color: #333;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-top: 17px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+
+.p-rating {
+    color: #fec42d;
+    cursor: pointer;
+}
+
+.single-product span.price {
+    color: #33d286;
+    font-size: 16px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.border-bottom-text {
+    margin-bottom: 10px;
+}
+
+
+/* --------Slider Section --------------*/
+.slider-area {
+    padding: 50px 0;
+} 
+
+.slider-item{
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-item:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    content: "";
+    z-index: -1;
+    opacity: 0.65;
+}
+
+
+.slider-bg1 {
+    background-image: url(https://www.getmasum.com/html-preview/fancyshop/img/slider/1.jpg);
+}
+.slider-bg2 {
+    background-image: url(https://www.getmasum.com/html-preview/fancyshop/img/slider/2.jpg);
+}
+.slider-bg3 {
+    background-image: url(https://www.getmasum.com/html-preview/fancyshop/img/slider/3.jpg);
+}
+
+.single-slider-item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* height: 100vh; */
+    height: 490px;
+}
+
+.slider-carousel{
+    position: relative;
+    z-index: 1;
+}
+
+
+.slick-arrow {
+    width: 50px;
+    height: 50px;
+    color: #33d286;
+    font-size: 20px;
+    line-height: 50px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(221, 221, 221, 0.6);
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    opacity: 1;
+    z-index: 1;
+    transition: .4s;
+}
+.slick-arrow:hover{
+    background-color: #33d286;
+    color: #fff;
+    border-color: #33d286;
+}
+
+.slick-next {
+    right: 28px;
+}
+.slick-prev {
+    left:28px;
+}
+
+.single-slider-details p {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.single-slider-details h1 {
+    color: #33d286;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.single-slider-details h4 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+.btn {
+    background: #fff;
+    border-color: #fff;
+    padding: 12px 30px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.06);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .5s;
+    font-weight: 500;
+    border-radius: 30px;
+    color: #33d286;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #33d286;
+    color: #fff;
+}
+
+ul.slick-dots button {
+    display: none;
+}
+
+ul.slick-dots button {
+    display: none;
+}
+
+ul.slick-dots li {
+    height: 10px;
+    width: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    margin: 5px 7px;
+    box-shadow: 0 0 6px rgba(221, 221, 221, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+ul.slick-dots .slick-active {
+    background: #33d286;
+    border: 1px solid #33d286;
+}
+ul.slick-dots {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    bottom:20px;
+    left: 50%;
+}
+
+.intro h3 {
+    font-size: 24px;
+    color: #33d286;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+/* ------Accordion Section -------------*/
+.accordian-section {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#accordion h3 {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#accordion .ui-accordion-header-active {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b) !important;
+}
+
+#accordion .ui-accordion-content {
+    background: white;
+    padding: 30px;
+    border-left: 3px solid #007bff;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* --------Counter Area ---------*/
+.counter-area{
+    background-image: url(https://longwoodgardens.org/sites/default/files/styles/social_share_cropped/public/2024-11/Dining%20Room%20Table%20w%20Fountains%20-%20Credit%20Evan%20Sung%20%281%29.jpg?h=0f078b92&itok=_8y2_IXZ);
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+    margin-bottom: 60px;
+    background-attachment:scroll;
+}
+
+.counter-area:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    content: "";
+    opacity: .7;
+    z-index: -1;
+}
+
+.counters {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+}
+
+.counter-section {
+    background: #3674B5;
+    padding: 25px 85px;
+    border-radius: 5px;
+}
+
+.counter-section .fa-solid {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile Size */
+@media (max-width: 768px) {
+
+    .single-product-list{
+        width: 100%;
+    }
+    
+}
+  

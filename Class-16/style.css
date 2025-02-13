@@ -69,12 +69,12 @@ body{
     outline: none;
 }
   
-  .slick-prev {
+.slick-prev {
     left: -50px;
     text-align: left;
 }
   
-  .slick-next {
+.slick-next {
     right: -50px;
     text-align: right;
 }
