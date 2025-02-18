@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+body{
+    background-color: #ddd;
+}
+
+.header {
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    background-image: url(https://activecollab.com/upload/blog/551/cover.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    position: relative;
+    z-index: 1;
+}
+.header:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: #000;
+    left: 0;
+    top: 0;
+    opacity: .5;
+}
+.main-content {
+    padding: 40px 0;
+    text-align: center;
+}
+.main-content p {
+    width: 50%;
+    margin: 0 auto;
+}
+.mainmenu {
+    background-color: #000;
+}
+.mainmenu ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+.mainmenu ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-right: 1px solid #555;
+    color: #fff;
+    transition: .3s;
+}
+
+
+.mainmenu ul li a:hover, .mainmenu ul li a.active {
+    background: #3674B5;
+    color:#fff;
+    border-right-color: #3674B5;
+}
+
+.main-content h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+a.btn {
+    padding: 10px 20px;
+    display: inline-block;
+    background: #3674B5;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.single-gallery {
+    width: 33%;
+    margin-bottom: 33px;
+}
+
+
+
+
+.footer {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
