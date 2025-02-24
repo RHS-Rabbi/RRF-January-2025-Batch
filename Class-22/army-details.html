@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Army Location & Contact</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <style>
+        .map { height: 1000px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Bangladesh Army Location & Contact</h2>
+    <div class="map"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var map = L.map(document.querySelector(".map")).setView([23.8103, 90.4125], 6);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var locations = [
+                { 
+                lat: 23.73513009791208,
+                lng: 90.4261012282724, 
+                name: "কমলাপুর রেলওয়ে, ওয়ারি, শাহজাহানপুর",
+                contact: "01769-092464"
+            },
+
+            { 
+                lat: 23.733166365732707, 
+                lng: 90.40647294024235, 
+                name: "রমনা, সেগুনবাগিচা, সুপ্রিমকোর্ট",
+                contact: "01769-095419"
+            },
+            
+            { 
+                lat: 23.730454444167442,
+                lng: 90.41012533126498, 
+                name: "পল্টন, গুলিস্থান, মতিঝিল",
+                contact: "01763-939857"
+            },
+
+            { 
+                lat: 23.71826041216662,
+                lng: 90.40045299048809, 
+                name: "বংশাল, কোতোয়ালী, সূত্রাপুর, গেন্ডারিয়া",
+                contact: "01769-095204"
+            },
+
+            { 
+                lat: 23.692223873716006,
+                lng: 90.43297816586347, 
+                name: "ডেমরা, যাত্রাবাড়ী, কদমতলী, শ্যামপুর, জুরাইন, পোস্তগোলা",
+                contact: "01763-939857"
+            },
+
+            { 
+                lat: 23.737297883968445,
+                lng: 90.396171448901, 
+                name: "শাহবাগথানা",
+                contact: "01769-091225"
+            },
+
+            { 
+                lat: 23.737297883968445,
+                lng: 90.396171448901, 
+                name: "শাহবাগথানা",
+                contact: "01769-091225"
+            },
+
+            { 
+                lat: 23.7450, 
+                lng: 90.3760, 
+                name: "ধানমন্ডি, কলাবাগান, নিউমার্কেট, হাজারীবাগ",
+                contact: "01769-022141"
+            },
+
+            { 
+                lat: 23.7199, 
+                lng: 90.3854, 
+                name: "লালবাগ, কামরাঙ্গীরচর",
+                contact: "01769-013439"
+            },
+
+            { 
+                lat: 23.7806, 
+                lng: 90.3990, 
+                name: "তেজগাঁও, গুলশান, মহাখালী, বিজয়সরনী, মাটিকাটা, কচুখেত, মিরপুর, ভাসানটেক, বসুন্ধরাসিটি, ফার্মগেট",
+                contact: "01769-019409"
+            },
+
+            { 
+                lat: 23.7775, 
+                lng: 90.3547, 
+                name: "আগারগাঁও, শ্যামলী, আদাবর",
+                contact: "01815-794993"
+            },
+
+            { 
+                lat: 23.7104, 
+                lng: 90.5636, 
+                name: "সিদ্ধিরগঞ্জ, নারায়ণগঞ্জ",
+                contact: "01732-051858"
+            },
+
+            { 
+                lat: 23.9999, 
+                lng: 90.4203, 
+                name: "গাজীপুর, জয়দেবপুর",
+                contact: "01769-099041"
+            },
+
+            { 
+                lat: 23.9999, 
+                lng: 90.4203, 
+                name: "গাজীপুর, জয়দেবপুর",
+                contact: "01732-051858"
+            },
+
+            { 
+                lat: 23.7936, 
+                lng: 90.6400, 
+                name: "সোনারগাঁও, আরাইহাজার",
+                contact: "01769-090551"
+            },
+
+            { 
+                lat: 24.0910, 
+                lng: 90.4950, 
+                name: "পূবাইল, কালিগঞ্জ, শ্রীপুর, গাছা",
+                contact: "01769-095102"
+            },
+
+            { 
+                lat: 23.6982, 
+                lng: 90.3273, 
+                name: "কেরানীগঞ্জ",
+                contact: "01769-095214"
+            },
+
+            { 
+                lat: 23.7986, 
+                lng: 90.4221, 
+                name: "গুলশান, বাড্ডা, বনানী, বাড়িধারা, দ্রুতাবাস এলাকা, তেজগাঁও শিল্প এলাকা",
+                contact: "01769-050283"
+            },
+
+            { 
+                lat: 23.9123, 
+                lng: 90.2827, 
+                name: "আশুলিয়া, চন্দ্রা, হেমায়েতপুর",
+                contact: "01769-095202"
+            },
+            
+            { 
+                lat: 23.8615, 
+                lng: 90.0000, 
+                name: "মানিকগঞ্জ জেলা",
+                contact: "01769-092542"
+            },
+
+            { 
+                lat: 23.8750, 
+                lng: 90.2733, 
+                name: "জিরাবো, ইপিজেড, বাইপাইল",
+                contact: "01769-097737"
+            },
+
+            { 
+                lat: 23.7500, 
+                lng: 90.4181, 
+                name: "মুগদা, সবুজবাগ, খিলগাঁও হাতিরঝিল",
+                contact: "01769-053154"
+            },
+
+            { 
+                lat: 23.8305, 
+                lng: 90.5270, 
+                name: "রুপগন্জ",
+                contact: "01769-053154"
+            },
+
+
+            
+
+        ];
+
+
+        locations.forEach(function(location) {
+            L.marker([location.lat, location.lng]) 
+                .addTo(map)
+                .bindPopup(
+                    "<b>Location:</b> " + location.name + "<br>" +
+                    "<b>Contact:</b> <a href='tel:" + location.contact + "' style='color: blue; text-decoration: underline;'>" + location.contact + "</a>"
+                );
+        });
+
+
+    });
+    </script>
+</body>
+</html>
