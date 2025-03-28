@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+.container{
+    @apply mx-auto px-4 max-w-[1280px];
+}
+.flex{
+    @apply -mx-4;
+}
+
+.btn{
+    @apply px-6 py-3 font-bold  transition duration-300 border-[1px] border-black;
+}
+.btn:hover, .hero-btn:hover {
+    @apply bg-black text-white;
+}
+.menu-link{
+    @apply p-4 font-bold text-lg;
+}
+
+.hero-btn{
+    @apply px-[56px] py-3 font-bold  transition duration-300 border-[1px] border-black;
+}
+
+.about-section{
+    @apply bg-[#1F1F1F] text-white;
+}
+.portfolio-btn{
+    @apply w-[37.67px] h-[37.67px] bg-[#FC3314] rounded-full flex justify-center items-center ;
+}
+
+.blog-btn{
+    @apply inline-flex items-center gap-4 font-bold text-xs;
+}
+
+.contact-social{
+    @apply mt-[150px]
+}
+

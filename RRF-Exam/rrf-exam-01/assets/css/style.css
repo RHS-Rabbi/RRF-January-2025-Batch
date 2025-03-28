@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Bold.woff2') format('woff2'),
+        url('../font/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.woff2') format('woff2'),
+        url('../font/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------Basic CSS ------*/
+
+body {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-style: normal;
+    /* line-height: 150%; */
+    color: #1F1F1F;
+    background-color:#F7F7F7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root{
+    --primary-color: #FFFFFF;
+    --secondary-color: #F7F7F7;
+    --text-color: #1F1F1F;
+    --primary-bg-color: #FFD4D0;
+    --secondary-bg-color: #F7F7F7;
+}
+
+h1{
+    font-size: 64px;
+}
+
+h2{
+    font-size: 48px;
+}
+
+h3{
+    font-size: 36px;
+}
+
+
+/*------- Header Area----------- */
+header{
+    background-color: var(--primary-bg-color);
+}
+
+
+
+
+/* -------------About Section------ */
+
+.plus-sign::after {
+    content: '+';
+}
+
+/* -------------Service Section------ */
+.service-section{
+    background-color: var(--primary-color);
+}
+
+/* -------------Portfolio Section------ */
+.portfolio-section{
+    background-color: var(--primary-bg-color);
+}
+
+/* -------------Testimonial Section------ */
+.testimonial-section{
+    background-color: var(--primary-bg-color);
+}
+.slick-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.slick-prev {
+    left: 0;
+    z-index: 1;
+    width: 20px;
+}
+
+
+/* -------------Contact Section------ */
+.contact-section{
+    background-color: var(--primary-bg-color);
+}
+
+/* -------------footer Section------ */
+footer{
+    background-color: var(--text-color);
+}
