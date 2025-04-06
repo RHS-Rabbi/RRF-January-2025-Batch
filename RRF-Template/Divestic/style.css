@@ -70,6 +70,16 @@ p{
 .slick-track{
     margin-left: 140px !important;
 }
+.menu ul li{
+    margin-bottom: 10px;
+}
+.menu ul li a{
+    color: #737373;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
 
 .menu ul li a{
     display: block;
