@@ -1,0 +1,82 @@
+/* ---Basic Css ----*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.2px;
+    color: #737373;
+}
+h1{
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 80px;
+    color: #252B42;
+    
+}
+h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    color: #252B42;
+
+}
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #252B42;
+    letter-spacing: 0.1px;
+
+}
+h5{
+    font-weight: 700;
+    color: #252B42;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+}
+h6{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
+p{
+    color: #737373;
+    font-weight: 500;
+}
+
+/* -- Header Section --- */
+
+.header-section {
+    background: url(assets/Image/background.png) center / cover no-repeat;
+    height: 690px;
+}
+
+
+.mainmenu li a {
+    display: block;
+    padding: 10px 10px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+.testimonial-title h2, .testimonial-title p , .contact-title h2, .contact-title p {
+    color: #fff;
+}
+
+.slick-list{
+    overflow: visible !important;
+}
+.slick-track{
+    margin-left: 140px !important;
+}
+
+.menu ul li a{
+    display: block;
+    padding: 10px 10px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+
