@@ -79,6 +79,7 @@ input::placeholder {
 /*--- Hero Area---- */
 .hero-bg-1{
     background-image: url(./assets/Image/hero-bg/hero-1.png);
+    top: -20%;
 }
 .hero-bg-2{
     background-image: url(./assets/Image/hero-bg/hero-2.png);
@@ -86,6 +87,11 @@ input::placeholder {
 .hero-bg-3{
     background-image: url(./assets/Image/hero-bg/hero-3.png);
 }
+
+
+
+
+
 .hero-area{
     background-color: #1889C2;
     position: relative;
@@ -262,9 +268,9 @@ input::placeholder {
     line-height: 23px;
 }
 
-.project-right-content{
+/* .project-right-content{
     padding: 59px 0px 64px 35px;
-}
+} */
 
 .project-slider{
     box-shadow: 1px 5px 50px 0px rgba(84, 99, 122, 0.10);
@@ -272,8 +278,8 @@ input::placeholder {
 
 .project-slider .slick-arrow {
     position: absolute;
-    left: -85%;
-    top: 60%;
+    left: -75%;
+    top: 75%;
     background: #fff;
     width: 72px;
     height: 72px;
@@ -293,7 +299,7 @@ input::placeholder {
     box-shadow: 0px 0px 16px 4px rgba(126, 126, 126, 0.10);
 }
 .project-slider .slick-next.slick-arrow {
-    left: -500px;
+    left: -450px;
 }
 
 .single-project{
