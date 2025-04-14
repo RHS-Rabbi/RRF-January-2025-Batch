@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+h1,h2,h3, h5{
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+body{
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #45426E;
+}
+
+
+/* Header Area */
+.mainmenu ul li a {
+    font-size: 16px;
+    line-height: 1;
+    color: #17134a;
+    font-weight: 500;
+    margin-right: 20px;
+}
+.hero-btns {
+    text-align: center;
+    background: center / contain no-repeat url('https://cdn.dorik.com/5e373b6c43a72a001f56dbf6/61a1f4035bfd7b0011fb92f9/images/button-bg_wqfy1ggx.svg');
+}
+
+.hero-btns a svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Video Area */
+.video-area {
+    background: url(./assets/Image/video-bg/vi-bg-1.svg) top no-repeat;
+    background-size: contain;
+}
+  
+  .video-bg {
+    background: url(./assets/Image/video-bg/vi-bg-2.webp) center/cover no-repeat;
+    border-radius: 20px;
+    height: 475px;
+}
+
+/* Footer Area */
+.footer-bg{
+    background-image: url(./assets/Image/footer-bg.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+a.footer-ones button {
+    padding: 0.5rem 0.75rem;
+    display: inline;
+    background: #2b2b2b;
+    width: 250px;
+    border-radius: 0.5rem;
+    border: 1px solid #000000;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    padding-left: 35px;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+a.footer-ones button:before {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: #33b17e;
+    border-radius: 50%;
+}
+.footer-ones button:hover{
+    background-color: #424242;
+}
+.footer-two  li a {
+    line-height: 26px;
+    color: #A2A1B7;
+}
+.footer-two  li a:hover{
+    color: white;
+}
+  
