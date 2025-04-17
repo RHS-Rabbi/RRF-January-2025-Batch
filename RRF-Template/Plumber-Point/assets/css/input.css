@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+    --font-bg: "Bricolage Grotesque", "sans-serif";
+    --font-robo: "Roboto", "sans-serif";
+    --font-mukta: "Mukta", "sans-serif";
+}
+
+
+.container{
+    @apply max-w-[1170px] mx-auto px-4;
+}
+.row{
+    @apply flex flex-wrap -mx-4;
+}
+.pd{
+    @apply px-4;
+}
+.heading-1{
+    @apply text-[44px] font-extrabold leading-normal uppercase font-bg text-[#000000];
+}
+.heading-6{
+    @apply text-white text-sm font-medium leading-normal;
+}
+
+
+/* Header Area */
+.nav-link{
+    @apply text-[#222222] font-medium leading-normal text-sm;
+}
+.header-btn{
+    @apply  text-white text-[12px] font-bold uppercase bg-[#DD3142] rounded-[5px] w-[146px] h-[36px] leading-9 inline-block text-center;
+}
+
+
+.hero-bg {
+    background-color: lightgray;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-bg1 {
+    background-image: url(../image/hero-bg-1.png);
+    height: 432px;
+    width: 302px;
+}
+
+.hero-bg2 {
+    background-image: url(../image/hero-bg-2.png);
+    height: 341px;
+    width: 390px;
+}
+
+/* Info Area */
+.single-descri{
+    @apply w-[237px] h-[53px] text-white text-xs leading-[133.5%] font-normal mx-auto;
+}
+.info-btn{
+    @apply px-[17px] py-[7px] rounded-[5px] bg-[#F6FAFB] inline-block underline text-base;
+}
+
+/* Welcome section */
+.welcome-bg{
+    height: 405px;
+    width: 100%;
+    background:  url(../image/wel-bg.png) lightgray 50% / cover no-repeat;
+}
+.welcome-btn{
+    @apply w-[136px] h-[43px] bg-[#DD3142] inline-flex justify-center items-center rounded-[45px] text-base text-white font-normal underline;
+}
+
+
+/* Our Company Area */
+.company-bg{
+    width: 600px;
+    height: 314px;
+    background: url(../image/our-bg.png) lightgray 50% / cover no-repeat;
+}
+
+/* Hero BG 3 */
+.hero-bg-3{
+    background: url(../image/hero-bg-3.png) lightgray 50% / cover no-repeat;
+    height: 255px;
+
+}
+
+/* Testimonial Area */
+.testimonial-bg{
+    background: url(../image/testi-bg.png) lightgray 50% / cover no-repeat;
+    height: 316px;
+    @apply relative before:content-[''] before:absolute before:inset-0 before:bg-black before:opacity-70;
+}
+
+ul.slick-dots button {
+    display: none;
+}
+
+.testimoniaal-slider .slick-dots li {
+    width: 10px;
+    height: 10px;
+    background: #E2E2E2;
+    border-radius: 50%;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.testimoniaal-slider .slick-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.testimoniaal-slider .slick-dots .slick-active {
+    background: #DD3142;
+}
+.testimoniaal-slider .draggable {
+    margin-bottom: 15px;
+}
