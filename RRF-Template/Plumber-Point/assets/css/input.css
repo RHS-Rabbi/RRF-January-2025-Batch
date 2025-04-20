@@ -56,7 +56,7 @@
 
 /* Info Area */
 .single-descri{
-    @apply w-[237px] h-[53px] text-white text-xs leading-[133.5%] font-normal mx-auto;
+    @apply w-[237px] h-[53px] text-white text-xs leading-[133.5%] font-normal mx-auto break-words overflow-hidden text-ellipsis;
 }
 .info-btn{
     @apply px-[17px] py-[7px] rounded-[5px] bg-[#F6FAFB] inline-block underline text-base;
@@ -99,17 +99,18 @@ ul.slick-dots button {
 }
 
 .testimoniaal-slider .slick-dots li {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #E2E2E2;
     border-radius: 50%;
-    margin: 6px;
+    margin: 4px;
     cursor: pointer;
 }
 
 .testimoniaal-slider .slick-dots {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .testimoniaal-slider .slick-dots .slick-active {
@@ -117,4 +118,17 @@ ul.slick-dots button {
 }
 .testimoniaal-slider .draggable {
     margin-bottom: 15px;
+}
+
+/* About Area */
+.about-area{
+    background: linear-gradient(90deg, #DD3142 0.03%, rgba(196, 196, 196, 0.00) 141.61%), url(../image/about-bg.png) lightgray 50% / cover no-repeat;
+    height: 304px;
+
+}
+
+/* Project Area */
+.project-area{
+    background: url(../image/project-bg.png) lightgray 50% / cover no-repeat;
+    height: 255px;
 }
