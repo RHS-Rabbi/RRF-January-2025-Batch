@@ -86,7 +86,7 @@
                 </div>
             </div>
        </section>
-<?php include_once('content/blog.php')?>
+<?php include_once('content/blogs.php')?>
 
 
 

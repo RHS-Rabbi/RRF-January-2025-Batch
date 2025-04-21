@@ -13,7 +13,7 @@
 
     <?php
         function is_active($check){
-            $requested_uri = $_SERVER['REQUEST_URI']
+            $requested_uri = $_SERVER['REQUEST_URI'];
 
             $search = strpos($requested_uri, $check);
 
@@ -24,13 +24,13 @@
         }
 
         $menus =[
-            'index' => 'Home',
-            'about' => 'About us',
-            'services' => 'Services',
-            'project' => 'Project',
-            'blog' => 'Blogs',
-            'contact' => 'Contact'
-        ]
+            'index.php' => 'Home',
+            'about.php' => 'About us',
+            'services.php' => 'Services',
+            'project.php' => 'Project',
+            'blog.php' => 'Blogs',
+            'contact.php' => 'Contact'
+        ];
     
     ?>
 
@@ -40,7 +40,7 @@
             <div class="row items-center">
                 <div class="w-3/12 pd">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img class="w-[158px] h-[38px] object-cover" src="./assets/image/logo.png" alt="logo image">
                         </a>
                     </div>
@@ -49,7 +49,7 @@
                     <nav class="mainmenu">
                         <ul class="flex justify-end items-center gap-[30px]">
                             <?php foreach($menus as $key => $value): ?>
-                                <li><a class="<?php echo is_active($key);?>" href="<?php echo $key; ?>.html"><?php echo $value; ?></a></li>
+                                <li><a class="<?php echo is_active($key);?>" href="<?php echo $key; ?>"><?php echo $value; ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </nav>

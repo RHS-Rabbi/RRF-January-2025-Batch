@@ -165,7 +165,7 @@
 <?php include_once('content/commercial.php')?>
 <?php include_once('content/teams.php')?>
 <?php include_once('content/testimonials.php')?>
-<?php include_once('content/blog.php')?>
+<?php include_once('content/blogs.php')?>
 
 
 <?php include_once('footer.php')?>

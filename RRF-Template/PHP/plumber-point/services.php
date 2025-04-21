@@ -271,8 +271,9 @@
      </section>
 
 
+<?php include_once('content/teams.php')?>
 <?php include_once('content/testimonials.php')?>
-<?php include_once('content/blog.php')?>
+<?php include_once('content/blogs.php')?>
 
 
 
