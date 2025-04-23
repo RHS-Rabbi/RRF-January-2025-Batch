@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    --font-inter: "Inter", 'sans-serif';
+    --neutral-silver: #F5F7FA;
+    --neutral-white: #fff;
+    --neutral-black: #263238;
+    --text-primary :#18191F;
+    --text-brand-primary: #4CAF4F;
+    --text-secondary: #4D4D4D;
+    --text-gray-p: #717171;
+    --text-gray-900: #18191F;
+    --text-neutral-l-grey: #89939E;
+    --bg-tint: #E8F5E9;
+    --bg-gray-bold:#D9DBE1;
+    
+}
+
+.heading-1{
+    @apply text-[64px] font-semibold leading-[76px] text-[var(--text-secondary)];
+    word-spacing: 2px
+}
+
+/* @layer{
+    .container{
+        @apply mx-auto px-4 max-w-[1152px]
+    }
+} */
+
+/* Header Area */
+.mainmenu li a{
+    @apply text-base leading-6 font-normal text-[var(--text-primary)] block;
+    letter-spacing: .2px
+}
+
+.mainmenu li .active{
+    @apply text-base leading-6 font-medium text-[var(--text-primary)];
+}
+
+.headar-btns a{
+    @apply text-sm leading-5 font-medium;
+    padding: 11px 20px;
+}
+
+.hero-btn a{
+    padding: 14px 32px;
+    border-radius: 4px;
+    background:  #4CAF4F;
+}
+
+.btn{
+    @apply bg-[var(--primary)] text-white  rounded-md  font-medium leading-6;
+    padding: 14px 32px;
+    border-radius: 4px;
+    background:  #4CAF4F;
+}
+
+.single-community{
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.20);
+}
+
+/* Hero four */
+.hero-bg-4{
+    border-radius: 8px;
+    background: url(../hero-4.png) lightgray 50% / cover no-repeat;
+    box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
+}
+ /* Caring area */
+ .caring-bg{
+    border-radius: 8px;
+    background: url(../caring-bg/c-1.png) lightgray 50% / cover no-repeat;
+    height: 286px;
+ }
+ .caring-bg-2{
+    border-radius: 8px;
+    background: url(../caring-bg/c-2.png) lightgray 50% / cover no-repeat;
+    height: 286px;
+ }
+ .caring-bg-3{
+    border-radius: 8px;
+    background: url(../caring-bg/c-3.png) lightgray 50% / cover no-repeat;
+    height: 286px;
+ }
+
+ /* Footer Area */
+ .single-footer h4{
+    @apply text-[20px] text-[var(--neutral-white)] font-semibold;
+}
+
+.single-footer li a{
+    @apply text-sm font-normal leading-5 text-[var(--neutral-silver)];
+}
+
+.footer-form input[type="email"]::placeholder {
+    color: #D9DBE1;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+}
