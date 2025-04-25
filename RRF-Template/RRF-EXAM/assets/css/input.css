@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    --font-monts:"Montserrat", "sans-serif";
+    --red:#FC3314;
+    --pink:#FFD4D0;
+    --dark:#1F1F1F;
+    --dark-grey:#8D8D8D;
+    --medium-grey:#E1E1E1;
+    --grey:#F7F7F7;
+    --white:#FFFFFF;
+    --deep-graphite:#343A32;
+
+}
+@layer{
+    .container_lg{
+        @apply max-w-[1192px] mx-auto;
+    }
+    .container{
+        @apply max-w-[1064px]  mx-auto;
+    }
+    .container_sm{
+        @apply max-w-[840px] mx-auto;
+    }
+}
+
+/* Header Area */
+.mainmenu li a{
+    @apply text-[var(--dark)] not-italic text-lg leading-[130%] font-bold;
+}
+.header-btn a{
+    @apply bg-[var(--dark)] py-3.5 px-6 text-[var(--white)] text-base not-italic font-bold leading-6;
+}
+
+.hero-left h1{
+    @apply text-5xl font-bold text-[var(--dark)] not-italic leading-[150%] ;
+}
+.hero-left p{
+    @apply text-base not-italic text-[var(--dark)] leading-[150%] font-normal;
+}
+.hero-btn{
+    @apply flex gap-[21px]
+}
+
+.hero-btn .hero-btn-borderles{
+    @apply  text-[var(--white)] text-base not-italic font-bold leading-[150%] bg-[var(--dark)];
+    padding: 12px 56px;
+
+}
+.hero-btn .hero-btn-border{
+    @apply text-[var(--dark)] text-base not-italic font-bold leading-[150%] border-1 border-[var(--dark)]  ;
+    padding: 11px 51px;
+}
+
+
+/* Portfolio Section */
+.portpoflio-btn{
+    @apply size-[37px] rounded-full flex justify-center items-center p-[7.53px] bg-[var(--red)];
+}
+
+
+/* Testimonial  */
+.testimonial-carousel .slick-arrow {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+.testimonial-carousel .slick-prev {
+    left: 12px;
+    z-index: 1;
+    width: 20px;
+    top: 20px;
+}
+
+/* Footer Menu */
+.footer-menu li a{
+    @apply text-[var(--white)] font-bold text-xl leading-[150%];
+}
