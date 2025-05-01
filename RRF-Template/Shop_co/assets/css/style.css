@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../font/Satoshi-Bold.woff2') format('woff2'),
+        url('../font/Satoshi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../font/Satoshi-Regular.woff2') format('woff2'),
+        url('../font/Satoshi-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url('../font/IntegralCF-Bold.woff2') format('woff2'),
+        url('../font/IntegralCF-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: 'Satoshi', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 700;
+}
+
+/* Hero-area */
+.hero-1{
+    background-image: url(../img/h1.png);
+    width: 420px;
+    height: 625.112px;
+    flex-shrink: 0;
+    aspect-ratio: 420.00/629.11;
+    margin-left: 6px;
+    background-repeat: no-repeat;
+}
+.hero-2{
+    background-image: url(../img/h2.png);
+    width: 509px;
+    height: 624.947px;
+    flex-shrink: 0;
+    aspect-ratio: 509.00/628.95;
+    background-repeat: no-repeat;
+}
+
+.hero-intro:after {
+    position: absolute;
+    left: 173px;
+    top: 24px;
+    width: 1px;
+    height: 74px;
+    content: "";
+    background: #0000001A;
+}
+.hero-intro:before {
+    position: absolute;
+    right: 226px;
+    top: 26px;
+    width: 1px;
+    height: 74px;
+    background: #0000001A;
+    content: "";
+}
+.customer-slider .slick-list {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.customer-wrapper {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.customer-slider .slick-arrow {
+    position: absolute;
+    right: 40px;
+    top: -65px;
+    cursor: pointer;
+}
+
+.customer-slider .slick-next {
+    position: absolute;
+    right: 0px;
+}
+.customer-slider .slick-list {
+   overflow: visible;
+}
+
+.customer-slider .slick-slide {
+    filter: blur(2px);
+}
+
+.customer-slider .slick-slide.slick-active {
+    filter: blur(0px);
+}
+.bread-crumb ul li a {color: #00000099;font-size: 16px;font-weight: 400;}
+
+.bread-crumb ul li .active {
+    color: #000000;
+}
+

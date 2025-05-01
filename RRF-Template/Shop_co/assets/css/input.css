@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+
+@theme{
+    --black: #000000;
+    --grey-p:#00000099;
+    --grey-2:#F0F0F0;
+    --grey-p-2:#00000066;
+    --pink:#FFEBEB;
+    --red:#FF3333;
+}
+
+.heading-h2{
+    @apply text-[var(--black)] text-[48px] not-italic leading-normal font-bold;
+}
+
+
+.container{
+    @apply max-w-[1240px] mx-auto;
+}
+
+
+/* Header Area */
+.mainmenu li a{
+
+    @apply text-base leading-normal text-[var(--black)] font-normal not-italic;
+    word-spacing: .3px;
+}
+
+
+/* Foooter */
+.single-footer ul li {
+    @apply mb-3.5;
+}
+.single-footer ul li a {
+    @apply text-[var(--grey-p)]  leading-[19px] text-base font-normal not-italic;
+}
+
+
+/* Product-Details */
+.bread-crumb ul li a{
+    @apply flex gap-1 items-center text-[var(--grey-p)] text-base leading-normal not-italic font-normal;
+}
+
+/* Pagination */
+.pagination-number ul li a{
+    @apply p-3  text-[#00000080] w-10 inline-flex rounded-[8px] justify-center text-sm size-10;
+}
+
+.pagination-number ul li .active{
+    @apply py-3 px-3 bg-[#0000000F] text-[var(--black)]
+}
+
+
