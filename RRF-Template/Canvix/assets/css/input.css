@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+@import "tailwindcss";
+
+/* Basic Css */
+@theme{
+    /* --container_lg: 1470px; */
+    --container_lg: 91.875rem;
+    --container: 87.5rem;
+    /* --container: 1400px; */
+    --light-green:#64CCC5;
+    --black:#0C0C0C;
+    --light-black:#0C0C0CE5;
+    --white:#fff;
+    --light-grey:#F4F4F4;
+    --dark-grey:#DFDFDF;
+    --font-roboto: "Roboto Serif", "serif";
+    --font-dm-sans: "DM Sans", "sans-serif";
+
+    /* Custom Pixel(px) */
+    --gap-30x: 1.875rem;
+    --px-15x:0.9375rem;
+    --23x:1.4375rem;
+    --63x:3.9375rem;
+    --64x:4rem;
+    --0.54x:0.03375rem;
+    --29x:1.8125rem;
+    --30x:1.875rem;
+    --20x:1.25rem;
+    --25x:1.5625rem;
+    --45x:2.8125rem;
+    --15x:0.9375rem;
+
+    /* Custom width */
+    --w-1:9.6875rem;
+    --w-8_37:52.3125rem;
+    --w-5_57x:34.8125rem;
+    --w-6_09:38.0625rem;
+    --422_48x:26.405rem;
+}
+
+@layer{
+.container_lg{
+    max-width: var(--container_lg);
+    @apply mx-auto;
+}
+.container{
+    max-width: var(--container);
+    @apply mx-auto md:px-0 px-4;
+}
+
+/* Custom width */
+.w-1{
+    @apply min-w-[var(--w-1)];
+}
+.w-8_37{
+    @apply min-w-[var(--w-8_37)];
+}
+.w-5_57x{
+    @apply max-w-[var(--w-5_57x)];
+}
+.w-6_09{
+    @apply min-w-[var(--w-6_09)];
+}
+
+}
+
+/* Heading CSS */
+.heading-1{
+    @apply font-semibold not-italic  leading-[75.5px] md:[font-size:var(--64x)] text-4xl md:text-left text-center;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    @apply font-roboto;
+}
+
+/* Header Area */
+.header-area{
+    @apply bg-black text-white py-[0.4375rem] bg-[url('../img/header-bg.png')] bg-no-repeat bg-cover;
+}
+
+.mainmenu ul li a{
+    @apply text-xl not-italic font-normal leading-normal text-[var(--white)];
+}
+
+.header-btn a{
+    @apply inline-block py-2 px-[var(--px-15x)] text-lg font-normal tracking-[0.03375rem] text-[var(--light-black)] bg-[var(--white)] rounded-[var(--23x)];
+}
+
+/* Hero Area */
+.hero-left{
+    @apply md:py-[147px] flex flex-col gap-6;
+}
+.hero-right{
+    @apply md:flex md:justify-end md:items-center md:h-215.5 mx-auto ;
+}
+
+.hero-1{
+    /* @apply md:size-187.5 md:mt-1 -mr-16 bg-[url('../img/rabbi.png')] bg-cover bg-center bg-no-repeat size-80; */
+    @apply md:size-187.5 mt-[4px] md:mr-[-47px] bg-[url('../img/rabbi.png')] bg-cover bg-center bg-no-repeat size-80;
+}
+
+/* Service Area */
+.single-service{
+    @apply p-[var(--45x)]  flex flex-col gap-15.5 rounded-[var(--20x)] h-full;
+}
+.service-svg{
+    @apply size-20  flex justify-center items-center rounded-full;
+}
+.single-service h5{
+    @apply [font-size:var(--25x)] font-medium leading-normal ;
+}
+.single-service p{
+    @apply text-lg font-normal tracking-[0.54px] leading-5.5 mb-auto;
+}
+
+/* About Section */
+.right-about h4{
+    @apply [font-size:var(--30x)] font-semibold leading-[30px] text-[var(--light-green)];
+}
+.right-about h2{
+    @apply [font-size:var(--64x)] font-semibold leading-[76px] text-[var(--white)];
+}
+
+/* Footer Area */
+.single-footer{
+    @apply flex flex-col  text-[var(--white)];
+}
+
+.single-footer h5{
+    @apply text-xl font-semibold leading-6.25;  
+}
+
+.single-footer li a{
+    @apply text-base font-normal tracking-[0.030625rem] leading-[20px];
+
+}
+.single-footer li {
+    @apply  leading-5.25;
+
+}
+
+.footer-social a{
+    @apply size-12.5 bg-[var(--white)] flex justify-center items-center rounded-full;
+}
