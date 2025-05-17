@@ -9,35 +9,66 @@
 </head>
 <body class="font-dm-sans overflow-x-hidden">
     <header class="header-area w-full">
-        <div class="container_lg">
-            <div class="flex flex-col md:flex-row md:gap-99 items-center py-5 ">
-                <div class="w-1">
+        <div class="container_lg lg:px-5 2xl:px-0">
+            <div class="hidden flex-col 2xl:flex-row 2xl:gap-99 items-center py-5 lg:gap-50 lg:justify-between xl:gap-5 xl:flex">
+                <div class="2xl:w-38.75 lg:w-3/12">
                     <a class="site-logo" href="#">
-                        <img src="./assets/img/logo-white.png" alt="logo-white">
+                        <img class="w-[155px]" src="./assets/img/logo-white.png" alt="logo-white">
                     </a>
                 </div>
-                <div class="w-76.5">
+                <div class="2xl:w-76.5 lg:w-6/12">
                     <nav class="mainmenu">
-                        <ul class="flex gap-30x justify-around">
+                        <ul class="flex gap-[30px] justify-around">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="w-1">
-                    <div class="header-btn">
+                <div class="2xl:w-38.75 lg:w-3/12">
+                    <div class="header-btn lg:text-end 2xl:text-left xl:text-left">
                         <a href="#">Get in touch</a>
                     </div>
                 </div>
             </div>
+            <!-- Mobile Navbar -->
+            <div class="flex flex-col items-center py-5 px-4 bg-[var(--black)] text-white xl:hidden w-full fixed top-0 z-1">
+                <div class="w-full flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="#" class="site-logo">
+                        <img class="w-[130px]" src="./assets/img/logo-white.png" alt="logo-white">
+                    </a>
+
+                    <!-- Hamburger Icon -->
+                    <div id="hamburger" class="flex flex-col justify-center gap-1 cursor-pointer">
+                        <span class="w-6 h-0.5 bg-white block"></span>
+                        <span class="w-6 h-0.5 bg-white block"></span>
+                        <span class="w-6 h-0.5 bg-white block"></span>
+                    </div>
+                </div>
+                <div id="mobile-menu" class="w-full mt-4 hidden">
+                    <nav class="mainmenu">
+                        <ul class="flex flex-col gap-4 text-center">
+                            <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">About</a></li>
+                            <li><a href="#" class="hover:text-yellow-400">Contact Us</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Button -->
+                    <div class="header-btn text-center mt-4">
+                        <a href="#" class="inline-block bg-white text-black px-4 py-2 rounded">Get in touch</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- Hero Area -->
         <div class="hero-area relative">
-            <div class="rabbi absolute top-24.5 left-0 hidden md:block"><img src="./assets/img/hero-3.png" alt="hero-3"></div>
+            <div class="rabbi absolute top-24.5 left-0 hidden md:block lg:hidden 2xl:block"><img src="./assets/img/hero-3.png" alt="hero-3"></div>
             <div class="container">
-                <div class="flex flex-col md:flex-row gap-5 pb-19.5">
-                    <div class="md:w-167 px-4 md:px-0">
+                <div class="flex flex-col xl:flex-row gap-5 pb-19.5">
+                    <div class="2xl:w-167 px-5 2xl:px-0 lg:w-6/12">
                         <div class="hero-left">
                             <div class="flex flex-col gap-8">
                                 <div class="flex flex-col gap-6">
@@ -80,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="md:w-212.5 px-4 md:px-0">
+                    <div class="2xl:w-212.5 px-4 2xl:px-0 lg:w-6/12">
                         <div class="hero-right md:pt-0 pt-10">
                             <div class="hero-1 md:mx-0 mx-auto"></div>
                         </div>
@@ -437,7 +468,7 @@
                                 </div>
                                 <div class="flex flex-col gap-4 relative">
                                     <img class="object-cover" src="./assets/img/process-bg/p-2.png" alt="Process Bg Two">
-                                    <a href="#" class="absolute size-12.5 bg-[var(--black)] justify-center items-center flex rounded-full top-50 left-77.5">
+                                    <a href="#" class="hidden 2xl:flex absolute size-12.5 bg-[var(--black)] justify-center items-center rounded-full top-50 left-77.5">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                             <path d="M1 21L11 11L21 1M21 1H13.5M21 1V8.5" stroke="#FBFBFB" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -535,9 +566,9 @@
                     <div class="md:w-108.25">
                         <div class="single-footer gap-4.75">
                             <h5>Subscribe</h5>
-                            <form  class="flex rounded-full p-2.5 bg-[var(--white)] gap-[94px]" action="#">
+                            <form  class="flex rounded-full p-2.5 bg-[var(--white)] gap-20 relative text-[var(--light-black)]" action="#">
                                 <input class="w-full focus:outline-none pl-5.75 py-2.5 placeholder:text-[var(--light-black)] text-lg tracking-[0.03375rem]" type="email" placeholder="Enter your email here">
-                                <button class="px-3.75 py-2 bg-[var(--light-black)] tracking-[0.03375rem] text-lg rounded-[var(--20x)] cursor-pointer" type="submit">Subscribe</button>
+                                <button class="px-3.75 py-2 bg-[var(--light-black)] tracking-[0.03375rem] text-lg rounded-[var(--20x)] cursor-pointer  text-[var(--white)]" type="submit">Subscribe</button>
                             </form>
                         </div>
                     </div>
@@ -593,6 +624,14 @@
 
 
 
+      <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+      </script>
 
 </body>
 </html>

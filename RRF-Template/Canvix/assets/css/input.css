@@ -30,6 +30,7 @@
     --25x:1.5625rem;
     --45x:2.8125rem;
     --15x:0.9375rem;
+    --56x:3.5rem;
 
     /* Custom width */
     --w-1:9.6875rem;
@@ -42,11 +43,11 @@
 @layer{
 .container_lg{
     max-width: var(--container_lg);
-    @apply mx-auto;
+    @apply mx-auto lg:max-w-280 2xl:max-w-367.5;
 }
 .container{
     max-width: var(--container);
-    @apply mx-auto md:px-0 px-4;
+    @apply mx-auto md:px-0 px-4 lg:max-w-280  2xl:max-w-350;
 }
 
 /* Custom width */
@@ -67,7 +68,7 @@
 
 /* Heading CSS */
 .heading-1{
-    @apply font-semibold not-italic  leading-[75.5px] md:[font-size:var(--64x)] text-4xl md:text-left text-center;
+    @apply font-semibold not-italic  leading-[75.5px] 2xl:[font-size:var(--64x)] text-4xl md:text-left text-center lg:[font-size:var(--56x)];
 }
 
 
@@ -90,15 +91,16 @@ h1,h2,h3,h4,h5,h6{
 
 /* Hero Area */
 .hero-left{
-    @apply md:py-[147px] flex flex-col gap-6;
+    @apply 2xl:py-36.75 flex flex-col gap-6 lg:py-15;
 }
 .hero-right{
-    @apply md:flex md:justify-end md:items-center md:h-215.5 mx-auto ;
+    /* @apply md:flex md:justify-end md:items-center md:h-215.5 mx-auto ; */
+    @apply flex 2xl:justify-end 2xl:items-center 2xl:h-215.5 2xl:mx-auto lg:justify-center lg:items-center ;
 }
 
 .hero-1{
     /* @apply md:size-187.5 md:mt-1 -mr-16 bg-[url('../img/rabbi.png')] bg-cover bg-center bg-no-repeat size-80; */
-    @apply md:size-187.5 mt-[4px] md:mr-[-47px] bg-[url('../img/rabbi.png')] bg-cover bg-center bg-no-repeat size-80;
+    @apply 2xl:size-187.5 mt-[4px] lg:mr-[-47px] bg-[url('../img/rabbi.png')] bg-cover bg-center bg-no-repeat size-80 lg:size-125 lg:mt-17.5;
 }
 
 /* Service Area */
