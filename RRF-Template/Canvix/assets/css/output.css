@@ -9,8 +9,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-yellow-400: oklch(85.2% 0.199 91.936);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-900: oklch(21% 0.034 264.665);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -22,6 +20,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -210,9 +210,6 @@
   .relative {
     position: relative;
   }
-  .sticky {
-    position: sticky;
-  }
   .-top-9 {
     top: calc(var(--spacing) * -9);
   }
@@ -275,9 +272,6 @@
   }
   .z-1 {
     z-index: 1;
-  }
-  .z-50 {
-    z-index: 50;
   }
   .container {
     width: 100%;
@@ -587,12 +581,6 @@
   .bg-\[var\(--white\)\] {
     background-color: var(--white);
   }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
-  }
-  .bg-gray-900 {
-    background-color: var(--color-gray-900);
-  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -713,6 +701,10 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -1085,11 +1077,6 @@
       gap: calc(var(--spacing) * 45.25);
     }
   }
-  .md\:gap-99 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 99);
-    }
-  }
   .md\:px-0 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 0);
@@ -1146,11 +1133,6 @@
       gap: calc(var(--spacing) * 50);
     }
   }
-  .lg\:gap-\[200px\] {
-    @media (width >= 64rem) {
-      gap: 200px;
-    }
-  }
   .lg\:px-5 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 5);
@@ -1179,16 +1161,6 @@
   .xl\:gap-5 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 5);
-    }
-  }
-  .xl\:gap-\[20px\] {
-    @media (width >= 80rem) {
-      gap: 20px;
-    }
-  }
-  .xl\:gap-\[100px\] {
-    @media (width >= 80rem) {
-      gap: 100px;
     }
   }
   .xl\:text-left {
@@ -1437,12 +1409,24 @@ h1,h2,h3,h4,h5,h6 {
   color: var(--light-green);
 }
 .right-about h2 {
-  font-size: var(--64x);
-  --tw-leading: 76px;
-  line-height: 76px;
+  text-align: center;
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
+  --tw-leading: calc(var(--spacing) * 12.5);
+  line-height: calc(var(--spacing) * 12.5);
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
   color: var(--white);
+  @media (width >= 48rem) {
+    text-align: left;
+  }
+  @media (width >= 48rem) {
+    font-size: var(--64x);
+  }
+  @media (width >= 48rem) {
+    --tw-leading: 76px;
+    line-height: 76px;
+  }
 }
 .single-footer {
   display: flex;

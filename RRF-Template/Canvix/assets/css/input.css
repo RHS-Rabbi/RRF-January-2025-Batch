@@ -122,7 +122,7 @@ h1,h2,h3,h4,h5,h6{
     @apply [font-size:var(--30x)] font-semibold leading-[30px] text-[var(--light-green)];
 }
 .right-about h2{
-    @apply [font-size:var(--64x)] font-semibold leading-[76px] text-[var(--white)];
+    @apply md:[font-size:var(--64x)] font-semibold md:leading-[76px] text-[var(--white)] text-4xl md:text-left text-center leading-12.5;
 }
 
 /* Footer Area */
