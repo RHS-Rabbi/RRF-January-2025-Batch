@@ -106,7 +106,7 @@ h1,h2,h3,h4,h5,h6{
 
 /*------------- About Section ----------------*/
 .about-area{
-    @apply pt-30 md:pb-103.5 pb-30 border-b-1 border-[var(--neutral-dark-gray)];
+    @apply pt-30 2xl:pb-103.5 lg:pb-30 pb-30 border-b-1 border-[var(--neutral-dark-gray)];
 }
 
 /* About Left */
