@@ -698,6 +698,11 @@
       display: none;
     }
   }
+  .\32 xl\:mt-0 {
+    @media (width >= 96rem) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
   .\32 xl\:flex {
     @media (width >= 96rem) {
       display: flex;
