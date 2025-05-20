@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-</title>
+    <link rel="stylesheet" href="./assets/css/output.css">
+</head>
+<body class="font-manrope text-[var(--neutral-off-white)] bg-[var(--neutral-black)]">
+    <header class="header-area py-6">
+        <div class="container_lg">
+            <div class="2xl:flex hidden flex-col md:flex-row justify-between h-12 items-center">
+                <a href="#" class="site-logo font-bn text-[2rem]">
+                   <img class="" src="./assets/img/logo.png" alt="Site logo">
+                </a>
+                <nav class="mainmenu">
+                    <ul class="flex gap-8">
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Mobile Navbar -->
+            <div class="flex flex-col left-0 items-center py-5 px-4 bg-[var(--black-3)] text-white 2xl:hidden w-full fixed top-0 z-1">
+                <div class="w-full flex justify-between items-center">
+                    <!-- Logo -->
+                    <a href="#" class="site-logo">
+                        <img class="w-[130px]" src="./assets/img/logo.png" alt="logo-png">
+                    </a>
+
+                    <!-- Hamburger Icon -->
+                    <div id="hamburger" class="flex flex-col justify-center gap-1 cursor-pointer">
+                        <!-- <span class="w-6 h-0.5 bg-white block"></span>
+                        <span class="w-6 h-0.5 bg-white block"></span>
+                        <span class="w-6 h-0.5 bg-white block"></span> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
+                            <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
+                            <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div id="mobile-menu" class="w-full mt-4 hidden">
+                    <nav class="mainmenu">
+                        <ul class="flex flex-col gap-4 text-center">
+                            <li><a href="#">Work</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Area -->
+     <section class="hero-area">
+        <div class="container">
+            <div class="flex flex-col md:flex-row 2xl:justify-between gap-15 lg:gap-15 lg:items-center 2xl:items-start">
+                <div class="2xl:max-w-136 lg:w-6/12">
+                    <div class="hero-left">
+                        <div class="flex flex-col gap-2">
+                            <h1>hi, i am <br> robert garcia.</h1>
+                            <p>A Sydney based front-end developer passionate about building accessible and user friendly websites.</p>
+                        </div>
+                        <div class="hero-btns flex gap-4 pb-5.5">
+                            <a class="hero-btn-1 " href="#">
+                                Contact Me
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                    <circle cx="5" cy="5" r="5" fill="#0A0A0A"/>
+                                </svg>
+                            </a>
+                            <a class="hero-btn-2" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                    <path d="M5.39825 7.79682C6.70735 7.79682 7.76858 6.73558 7.76858 5.42649C7.76858 4.11739 6.70735 3.05615 5.39825 3.05615C4.08915 3.05615 3.02792 4.11739 3.02792 5.42649C3.02792 6.73558 4.08915 7.79682 5.39825 7.79682Z" fill="#D3E97A"/>
+                                    <path d="M10.0068 9.59282V22.7434H14.0898V16.2402C14.0898 14.5242 14.4127 12.8623 16.5403 12.8623C18.6388 12.8623 18.6648 14.8242 18.6648 16.3485V22.7445H22.75V15.5327C22.75 11.9902 21.9873 9.26782 17.8468 9.26782C15.8589 9.26782 14.5264 10.3587 13.9815 11.3912H13.9263V9.59282H10.0068ZM3.35292 9.59282H7.4425V22.7434H3.35292V9.59282Z" fill="#D3E97A"/>
+                                </svg>
+                            </a>
+                            <a class="hero-btn-2" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0282 2.16675C7.06008 2.16675 2.223 7.00383 2.223 12.9719C2.223 17.7451 5.31808 21.7957 9.61242 23.2257C10.153 23.3232 10.348 22.9906 10.348 22.7046C10.348 22.4478 10.3393 21.7675 10.3361 20.8673C7.32983 21.5194 6.695 19.4178 6.695 19.4178C6.20533 18.1698 5.49575 17.8372 5.49575 17.8372C4.51533 17.1666 5.5705 17.1818 5.5705 17.1818C6.656 17.2576 7.22475 18.2954 7.22475 18.2954C8.18892 19.9464 9.75542 19.4698 10.3686 19.1935C10.4672 18.4948 10.7488 18.0181 11.0565 17.7483C8.658 17.4764 6.136 16.5491 6.136 12.4075C6.136 11.2299 6.55742 10.2636 7.24533 9.50958C7.13592 9.2355 6.76217 8.13592 7.35258 6.64958C7.35258 6.64958 8.25933 6.35817 10.3231 7.75567C11.2045 7.51589 12.1137 7.3935 13.0271 7.39167C13.9405 7.39315 14.8498 7.51554 15.7311 7.75567C17.7959 6.35708 18.7016 6.64958 18.7016 6.64958C19.292 8.13592 18.9215 9.2355 18.8088 9.50958C19.5022 10.2636 19.9182 11.2288 19.9182 12.4075C19.9182 16.5599 17.394 17.4721 14.9868 17.7397C15.3714 18.0733 15.7181 18.732 15.7181 19.7395C15.7181 21.1847 15.7051 22.3503 15.7051 22.7046C15.7051 22.9938 15.8979 23.3297 16.4493 23.2235C20.7415 21.7913 23.8333 17.744 23.8333 12.9719C23.8333 7.00383 18.9963 2.16675 13.0282 2.16675Z" fill="#D3E97A"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="2xl:md:max-w-150 lg:w-6/12">
+                    <div class="hero-right">
+                        <img class="w-full object-cover" src="./assets/img/hero.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Featured Area -->
+     <section class="featured-area">
+        <div class="container">
+            <div class="flex flex-col gap-20">
+                <div class="md:max-w-150">
+                    <div class="featured-title">
+                       <div class="flex flex-col gap-2">
+                            <h2>Featured Projects</h2>
+                            <p>Here are some of the selected projects that showcase my passion for front-end development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:gap-30 gap-15 ">
+                    <!-- Featured one -->
+                    <div class="flex flex-col md:flex-row gap-12">
+                        <div class="2xl:max-w-150 lg:w-6/12">
+                            <div class="featured-left">
+                                <a class="featured-btn" href="#">Conceptual Work</a>
+                               <div class="md:w-121.5 md:h-86.75">
+                                    <img class="2xl:w-full object-cover w-72.5 lg:w-90 lg:mt-15 lg:mx-auto" src="./assets/img/f-1.png" alt="Featured Image One">
+                               </div>
+                            </div>
+                        </div>
+                        <div class="2xl:max-w-144 lg:w-6/12">
+                            <div class="featured-right 2xl:py-15 lg:py-0 py-8">
+                                <div class="flex flex-col gap-4">
+                                    <h3>Promotional landing page for our favorite show</h3>
+                                    <div class="flex flex-col gap-8">
+                                        <p class="text-lg font-normal leading-6.75">Teamed up with a designer to breathe life into a promotional webpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.</p>
+                                        <div class="flex flex-col gap-4">
+                                            <div class="flex flex-col gap-4">
+                                                <h6 class="leading-6 text-base uppercase text-[var(--neutral-white)] font-manrope! font-semibold">Project Info</h6>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                            <div class="flex flex-col gap-4">
+                                                <div class="flex justify-between">
+                                                    <span class="leading-[160%] font-medium text-base text-[var(--neutral-white)]">Year</span>
+                                                    <span class="leading-[160%] font-medium text-base">2023</span>
+                                                </div>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                            <div class="flex flex-col gap-3.75">
+                                                <div class="flex justify-between">
+                                                    <span class="leading-[160%] font-medium text-base text-[var(--neutral-white)]">Role</span>
+                                                    <span class="leading-[160%] font-medium text-base">Front-end Developer</span>
+                                                </div>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="featured-btns">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="#">
+                                            Live Demo
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_7_108)">
+                                                    <path d="M5.9897 19.2176L16.3036 8.90369V16.3891L18.3033 16.3891L18.3033 5.48978L7.40391 5.48978L7.40391 7.48948L14.8893 7.48948L4.57549 17.8033L5.9897 19.2176Z" fill="#D3E97A"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_7_108"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                                            </svg>
+                                        </a>
+                                        <div class="h-0.5 bg-[var(--primary)]"></div>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <a href="#">
+                                            See on Github
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0282 2.16675C7.06011 2.16675 2.22302 7.00383 2.22302 12.9719C2.22302 17.7451 5.31811 21.7957 9.61244 23.2257C10.153 23.3232 10.348 22.9906 10.348 22.7046C10.348 22.4478 10.3394 21.7675 10.3361 20.8673C7.32986 21.5194 6.69502 19.4178 6.69502 19.4178C6.20536 18.1698 5.49577 17.8372 5.49577 17.8372C4.51536 17.1666 5.57052 17.1818 5.57052 17.1818C6.65602 17.2576 7.22477 18.2954 7.22477 18.2954C8.18894 19.9464 9.75544 19.4698 10.3686 19.1935C10.4672 18.4948 10.7489 18.0181 11.0565 17.7483C8.65802 17.4764 6.13602 16.5491 6.13602 12.4075C6.13602 11.2299 6.55744 10.2636 7.24536 9.50958C7.13594 9.2355 6.76219 8.13592 7.35261 6.64958C7.35261 6.64958 8.25936 6.35817 10.3231 7.75567C11.2045 7.51589 12.1137 7.3935 13.0271 7.39167C13.9406 7.39315 14.8498 7.51554 15.7311 7.75567C17.7959 6.35708 18.7016 6.64958 18.7016 6.64958C19.292 8.13592 18.9215 9.2355 18.8089 9.50958C19.5022 10.2636 19.9182 11.2288 19.9182 12.4075C19.9182 16.5599 17.394 17.4721 14.9869 17.7397C15.3714 18.0733 15.7181 18.732 15.7181 19.7395C15.7181 21.1847 15.7051 22.3503 15.7051 22.7046C15.7051 22.9938 15.8979 23.3297 16.4494 23.2235C20.7415 21.7913 23.8334 17.744 23.8334 12.9719C23.8334 7.00383 18.9963 2.16675 13.0282 2.16675Z" fill="#D3E97A"/>
+                                            </svg>
+                                        </a>
+                                        <div class="h-0.5 bg-[var(--primary)]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Featured Two -->
+                    <div class="flex flex-col md:flex-row gap-12">
+                        <div class="2xl:max-w-150 lg:w-6/12">
+                            <div class="featured-left">
+                               <div class="md:w-121.5 md:h-86.75">
+                                    <img class="2xl:w-full object-cover w-72.5 lg:w-90 lg:mt-15 lg:mx-auto" src="./assets/img/f-2.png" alt="Featured Image two">
+                               </div>
+                            </div>
+                        </div>
+                        <div class="2xl:max-w-144 lg:w-6/12">
+                            <div class="featured-right py-13.5">
+                                <div class="flex flex-col gap-4">
+                                    <h3>Blog site for World News</h3>
+                                    <div class="flex flex-col gap-8">
+                                        <p class="text-lg font-normal leading-6.75">Mastered CSS Grid complexities in building an innovative news homepage, navigating intricate design decisions for a seamless user experience. Leveraged the challenge to enhance skills in  front-end development.</p>
+                                        <div class="flex flex-col gap-4">
+                                            <div class="flex flex-col gap-4">
+                                                <h6 class="leading-6 text-base uppercase text-[var(--neutral-white)] font-manrope! font-semibold">Project Info</h6>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                            <div class="flex flex-col gap-4">
+                                                <div class="flex justify-between">
+                                                    <span class="leading-[160%] font-medium text-base text-[var(--neutral-white)]">Client</span>
+                                                    <span class="leading-[160%] font-medium text-base">World News</span>
+                                                </div>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                            <div class="flex flex-col gap-4">
+                                                <div class="flex justify-between">
+                                                    <span class="leading-[160%] font-medium text-base text-[var(--neutral-white)]">Year</span>
+                                                    <span class="leading-[160%] font-medium text-base">2022</span>
+                                                </div>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                            <div class="flex flex-col gap-3.75">
+                                                <div class="flex justify-between">
+                                                    <span class="leading-[160%] font-medium text-base text-[var(--neutral-white)]">Role</span>
+                                                    <span class="leading-[160%] font-medium text-base">Front-end Developer</span>
+                                                </div>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="featured-btns">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="#">
+                                            View project
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_7_108)">
+                                                    <path d="M5.9897 19.2176L16.3036 8.90369V16.3891L18.3033 16.3891L18.3033 5.48978L7.40391 5.48978L7.40391 7.48948L14.8893 7.48948L4.57549 17.8033L5.9897 19.2176Z" fill="#D3E97A"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_7_108"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                                            </svg>
+                                        </a>
+                                        <div class="h-0.5 bg-[var(--primary)]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- featured Three -->
+                     <div class="flex flex-col md:flex-row gap-12">
+                        <div class="md:max-w-150">
+                            <div class="featured-left">
+                                <a class="featured-btn" href="#">Challenge</a>
+                               <div class="md:w-121.5 md:h-76.5">
+                                    <img class="2xl:w-full object-cover w-72.5 lg:w-90 lg:mt-15 lg:mx-auto" src="./assets/img/f-3.png" alt="Featured Image Three">
+                               </div>
+                            </div>
+                        </div>
+                        <div class="2xl:max-w-144 lg:w-6/12">
+                            <div class="featured-right 2xl:py-23.75 py-23.75 lg:py-12">
+                                <div class="flex flex-col gap-4">
+                                    <h3>E-commerce product page</h3>
+                                    <div class="flex flex-col gap-8">
+                                        <p class="text-lg font-normal leading-6.75">Successfully crafted an engaging product page featuring a dynamic lightbox gallery and seamless cart functionality, showcasing proficiency in JavaScript development.</p>
+                                        <div class="flex flex-col gap-4">
+                                            <div class="flex flex-col gap-4">
+                                                <h6 class="leading-6 text-base uppercase text-[var(--neutral-white)] font-manrope! font-semibold">Project Info</h6>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                            <div class="flex flex-col gap-4">
+                                                <div class="flex justify-between">
+                                                    <span class="leading-[160%] font-medium text-base text-[var(--neutral-white)]">Year</span>
+                                                    <span class="leading-[160%] font-medium text-base">2023</span>
+                                                </div>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                            <div class="flex flex-col gap-3.75">
+                                                <div class="flex justify-between">
+                                                    <span class="leading-[160%] font-medium text-base text-[var(--neutral-white)]">Role</span>
+                                                    <span class="leading-[160%] font-medium text-base">Front-end Developer</span>
+                                                </div>
+                                                <div class="border-b-1 border-[var(--neutral-dark-gray)]"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="featured-btns">
+                                    <div class="flex flex-col gap-1">
+                                        <a href="#">
+                                            Live Demo
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <g clip-path="url(#clip0_7_108)">
+                                                    <path d="M5.9897 19.2176L16.3036 8.90369V16.3891L18.3033 16.3891L18.3033 5.48978L7.40391 5.48978L7.40391 7.48948L14.8893 7.48948L4.57549 17.8033L5.9897 19.2176Z" fill="#D3E97A"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_7_108"><rect width="24" height="24" fill="white"/></clipPath></defs>
+                                            </svg>
+                                        </a>
+                                        <div class="h-0.5 bg-[var(--primary)]"></div>
+                                    </div>
+                                    <div class="flex flex-col gap-1">
+                                        <a href="#">
+                                            See on Github
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0282 2.16675C7.06011 2.16675 2.22302 7.00383 2.22302 12.9719C2.22302 17.7451 5.31811 21.7957 9.61244 23.2257C10.153 23.3232 10.348 22.9906 10.348 22.7046C10.348 22.4478 10.3394 21.7675 10.3361 20.8673C7.32986 21.5194 6.69502 19.4178 6.69502 19.4178C6.20536 18.1698 5.49577 17.8372 5.49577 17.8372C4.51536 17.1666 5.57052 17.1818 5.57052 17.1818C6.65602 17.2576 7.22477 18.2954 7.22477 18.2954C8.18894 19.9464 9.75544 19.4698 10.3686 19.1935C10.4672 18.4948 10.7489 18.0181 11.0565 17.7483C8.65802 17.4764 6.13602 16.5491 6.13602 12.4075C6.13602 11.2299 6.55744 10.2636 7.24536 9.50958C7.13594 9.2355 6.76219 8.13592 7.35261 6.64958C7.35261 6.64958 8.25936 6.35817 10.3231 7.75567C11.2045 7.51589 12.1137 7.3935 13.0271 7.39167C13.9406 7.39315 14.8498 7.51554 15.7311 7.75567C17.7959 6.35708 18.7016 6.64958 18.7016 6.64958C19.292 8.13592 18.9215 9.2355 18.8089 9.50958C19.5022 10.2636 19.9182 11.2288 19.9182 12.4075C19.9182 16.5599 17.394 17.4721 14.9869 17.7397C15.3714 18.0733 15.7181 18.732 15.7181 19.7395C15.7181 21.1847 15.7051 22.3503 15.7051 22.7046C15.7051 22.9938 15.8979 23.3297 16.4494 23.2235C20.7415 21.7913 23.8334 17.744 23.8334 12.9719C23.8334 7.00383 18.9963 2.16675 13.0282 2.16675Z" fill="#D3E97A"/>
+                                            </svg>
+                                        </a>
+                                        <div class="h-0.5 bg-[var(--primary)]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+    <!-- About Section -->
+     <section class="about-area pt-30 md:pb-103.5 pb-30 border-b-1 border-[var(--neutral-dark-gray)]">
+        <div class="container">
+            <div class="flex flex-col md:flex-row 2xl:gap-52.5 gap-20 lg:gap-25">
+                <div class="2xl:min-w-77.5 lg:w-5/12">
+                    <div class="about-left">
+                        <h3>About me</h3>
+                    </div>
+                </div>
+                <div class="2xl:min-w-176 lg:w-7/12">
+                    <div class="about-right">
+                        <div class="flex flex-col gap-4">
+                            <h3>I am a front-end developer based in Sydney. Has Mechanical Engineering background. </h3>
+                            <p class="text-lg font-normal leading-6.75">I am a front-end developer based in Sydney looking for exciting opportunities. Has Mechanical Engineering background. Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently, I’m exploring Reactjs, Webflow and a bit of Designing. While I am not programming, I enjoy playing football, photography and playing Valorant. Learning more to improve skill.</p>
+                        </div>
+                        <div class="flex">
+                            <div class="flex flex-col gap-1">
+                                <a class="about-btn" href="#">More about me</a>
+                                <div class="h-0.5 bg-[var(--primary)]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Deatils Area -->
+     <section class="details-area py-14">
+        <div class="container">
+            <div class="flex flex-col md:flex-row 2xl:gap-6 lg:gap-16 gap-6">
+                <div class="2xl:min-w-150 lg:6/12">
+                    <div class="details-left flex flex-col justify-between h-full">
+                        <div class="flex flex-col gap-10">
+                            <div class="flex flex-col gap-4">
+                                <h3 class="2xl:[font-size:var(--76x)] lg:text-6xl text-5xl font-normal leading-[100%] text-[var(--neutral-white)]">Let’s connect</h3>
+                                <div class="flex flex-col gap-2">
+                                    <span class="text-lg leading-6.75 ">Say hello at <a class="relative  text-[var(--neutral-white)] before:content-[''] before:absolute before:left-0 before:top-6 before:w-full before:h-0.5 before:bg-[var(--primary)]"href="mailto:robertgarcia@gmail.com">robertgarcia@gmail.com</a></span>
+                                    <span class="text-lg leading-6.75 ">For more info, here’s my <a class="relative  text-[var(--neutral-white)] before:content-[''] before:absolute before:left-0 before:top-6 before:w-full before:h-0.5 before:bg-[var(--primary)]"href="mailto:robertgarcia@gmail.com">resume</a></span>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 mb-5">
+                                <a class="size-8" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M6.644 9.59602C8.2552 9.59602 9.56134 8.28988 9.56134 6.67869C9.56134 5.06749 8.2552 3.76135 6.644 3.76135C5.0328 3.76135 3.72667 5.06749 3.72667 6.67869C3.72667 8.28988 5.0328 9.59602 6.644 9.59602Z" fill="#D3E97A"/>
+                                        <path d="M12.316 11.8067V27.992H17.3413V19.988C17.3413 17.876 17.7387 15.8307 20.3573 15.8307C22.94 15.8307 22.972 18.2453 22.972 20.1213V27.9933H28V19.1173C28 14.7573 27.0613 11.4067 21.9653 11.4067C19.5187 11.4067 17.8787 12.7493 17.208 14.02H17.14V11.8067H12.316ZM4.12666 11.8067H9.16V27.992H4.12666V11.8067Z" fill="#D3E97A"/>
+                                    </svg>
+                                </a>
+                                <a class="size-8" href="#">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0347 2.66669C8.68933 2.66669 2.73599 8.62002 2.73599 15.9654C2.73599 21.84 6.54533 26.8254 11.8307 28.5854C12.496 28.7054 12.736 28.296 12.736 27.944C12.736 27.628 12.7253 26.7907 12.7213 25.6827C9.02133 26.4854 8.23999 23.8987 8.23999 23.8987C7.63733 22.3627 6.76399 21.9534 6.76399 21.9534C5.55733 21.128 6.85599 21.1467 6.85599 21.1467C8.19199 21.24 8.89199 22.5174 8.89199 22.5174C10.0787 24.5494 12.0067 23.9627 12.7613 23.6227C12.8827 22.7627 13.2293 22.176 13.608 21.844C10.656 21.5094 7.55199 20.368 7.55199 15.2707C7.55199 13.8214 8.07066 12.632 8.91733 11.704C8.78266 11.3667 8.32266 10.0134 9.04933 8.18402C9.04933 8.18402 10.1653 7.82535 12.7053 9.54535C13.7901 9.25025 14.9091 9.09961 16.0333 9.09735C17.1576 9.09918 18.2766 9.24982 19.3613 9.54535C21.9027 7.82402 23.0173 8.18402 23.0173 8.18402C23.744 10.0134 23.288 11.3667 23.1493 11.704C24.0027 12.632 24.5147 13.82 24.5147 15.2707C24.5147 20.3814 21.408 21.504 18.4453 21.8334C18.9187 22.244 19.3453 23.0547 19.3453 24.2947C19.3453 26.0734 19.3293 27.508 19.3293 27.944C19.3293 28.3 19.5667 28.7134 20.2453 28.5827C25.528 26.82 29.3333 21.8387 29.3333 15.9654C29.3333 8.62002 23.38 2.66669 16.0347 2.66669Z" fill="#D3E97A"/>
+                                    </svg>
+                                </a>
+                                <a class="size-8" href="#">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M24.0402 4.66669H28.3133L18.9799 14.2874L30 27.3334H21.3414L14.5944 19.4252L6.83534 27.3334H2.56225L12.5703 17.0578L2 4.66669H10.8835L17.012 11.92L24.0402 4.66669ZM22.5221 25.0163H24.8835L9.59036 6.83261H7.00402L22.5221 25.0163Z" fill="#D3E97A"/>
+                                   </svg>
+                                </a>
+                                <a class="size-8" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                        <path d="M15.9987 9.836C14.3635 9.836 12.7953 10.4856 11.6391 11.6418C10.4829 12.798 9.83333 14.3662 9.83333 16.0013C9.83333 17.6365 10.4829 19.2047 11.6391 20.3609C12.7953 21.5171 14.3635 22.1667 15.9987 22.1667C17.6338 22.1667 19.202 21.5171 20.3582 20.3609C21.5144 19.2047 22.164 17.6365 22.164 16.0013C22.164 14.3662 21.5144 12.798 20.3582 11.6418C19.202 10.4856 17.6338 9.836 15.9987 9.836ZM15.9987 20.0053C14.9364 20.0053 13.9176 19.5833 13.1665 18.8322C12.4153 18.0811 11.9933 17.0623 11.9933 16C11.9933 14.9377 12.4153 13.9189 13.1665 13.1678C13.9176 12.4167 14.9364 11.9947 15.9987 11.9947C17.0609 11.9947 18.0797 12.4167 18.8309 13.1678C19.582 13.9189 20.004 14.9377 20.004 16C20.004 17.0623 19.582 18.0811 18.8309 18.8322C18.0797 19.5833 17.0609 20.0053 15.9987 20.0053Z" fill="#D3E97A"/>
+                                        <path d="M22.408 11.0467C23.2018 11.0467 23.8453 10.4031 23.8453 9.60933C23.8453 8.81551 23.2018 8.172 22.408 8.172C21.6142 8.172 20.9707 8.81551 20.9707 9.60933C20.9707 10.4031 21.6142 11.0467 22.408 11.0467Z" fill="#D3E97A"/>
+                                        <path d="M27.3773 8.14799C27.0687 7.35089 26.597 6.62703 25.9924 6.02273C25.3879 5.41843 24.6639 4.94701 23.8667 4.63865C22.9338 4.28846 21.9482 4.09911 20.952 4.07865C19.668 4.02265 19.2613 4.00665 16.0053 4.00665C12.7493 4.00665 12.332 4.00665 11.0587 4.07865C10.0632 4.09806 9.07834 4.28745 8.14667 4.63865C7.34925 4.94665 6.62502 5.41795 6.02045 6.02229C5.41587 6.62663 4.9443 7.35068 4.636 8.14799C4.28574 9.0808 4.09682 10.0664 4.07733 11.0627C4.02 12.3453 4.00267 12.752 4.00267 16.0093C4.00267 19.2653 4.00267 19.68 4.07733 20.956C4.09733 21.9533 4.28533 22.9373 4.636 23.872C4.94517 24.669 5.41719 25.3928 6.02191 25.997C6.62663 26.6013 7.35075 27.0728 8.148 27.3813C9.07791 27.7456 10.0632 27.9485 11.0613 27.9813C12.3453 28.0373 12.752 28.0547 16.008 28.0547C19.264 28.0547 19.6813 28.0547 20.9547 27.9813C21.9508 27.9611 22.9363 27.7722 23.8693 27.4227C24.6663 27.1136 25.3902 26.6417 25.9946 26.0373C26.5991 25.4328 27.0709 24.709 27.38 23.912C27.7307 22.9787 27.9187 21.9947 27.9387 20.9973C27.996 19.7147 28.0133 19.308 28.0133 16.0507C28.0133 12.7933 28.0133 12.38 27.9387 11.104C27.9231 10.0937 27.7332 9.09365 27.3773 8.14799ZM25.7533 20.8573C25.7447 21.6257 25.6045 22.387 25.3387 23.108C25.1384 23.6265 24.8319 24.0973 24.4388 24.4902C24.0456 24.8831 23.5746 25.1894 23.056 25.3893C22.343 25.6539 21.5898 25.7942 20.8293 25.804C19.5627 25.8627 19.2053 25.8773 15.9573 25.8773C12.7067 25.8773 12.3747 25.8773 11.084 25.804C10.3239 25.7947 9.5711 25.6544 8.85867 25.3893C8.33825 25.1906 7.86534 24.8849 7.47052 24.4919C7.0757 24.099 6.76778 23.6275 6.56667 23.108C6.30459 22.3947 6.16442 21.6424 6.152 20.8827C6.09467 19.616 6.08133 19.2587 6.08133 16.0107C6.08133 12.7613 6.08133 12.4293 6.152 11.1373C6.16062 10.3693 6.30087 9.60855 6.56667 8.88799C6.97333 7.83599 7.80667 7.00799 8.85867 6.60532C9.57145 6.34151 10.324 6.20127 11.084 6.19065C12.352 6.13332 12.708 6.11732 15.9573 6.11732C19.2067 6.11732 19.54 6.11732 20.8293 6.19065C21.5899 6.1998 22.3431 6.34008 23.056 6.60532C23.5746 6.80568 24.0455 7.11226 24.4386 7.50536C24.8317 7.89846 25.1383 8.36941 25.3387 8.88799C25.6007 9.60125 25.7409 10.3535 25.7533 11.1133C25.8107 12.3813 25.8253 12.7373 25.8253 15.9867C25.8253 19.2347 25.8253 19.584 25.768 20.8587H25.7533V20.8573Z" fill="#D3E97A"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-base leading-[160%] font-medium ">© 2023 Robert Garcia</p>
+                    </div>
+                </div>
+                <div class="2xl:min-w-150 lg:w-6/12">
+                    <div class="details-right flex flex-col gap-9.75">
+                        <form action="#" class="flex flex-col gap-[24px]">
+                            <div class="flex flex-col gap-2">
+                                <label class="text-base font-medium  leading-[160%]" for="name">Name</label>
+                                <input class="w-full bg-[var(--black)]  px-4 py-3 text-lg font-normal leading-6.75 text-[var(--neutral-white)] focus:outline-none" type="text" id="name" placeholder="Your name" value="John Doe" required>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-base font-medium  leading-[160%]" for="email">Email</label>
+                                <input class="w-full bg-[var(--black)]  px-4 py-3 text-lg font-normal leading-6.75 text-[var(--neutral-white)] focus:outline-none" type="email" id="email" required>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-base font-medium  leading-[160%]" for="subject">Subject</label>
+                                <input class="w-full bg-[var(--black)]  px-4 py-3 text-lg font-normal leading-6.75 text-[var(--neutral-white)] focus:outline-none" type="subject" id="subject" required>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <label class="text-base font-medium  leading-[160%]" for="subject">Message</label>
+                                <textarea class="w-full bg-[var(--black)]  px-4 py-3 text-lg font-normal leading-6.75 text-[var(--neutral-white)] focus:outline-none resize-none" id="message" rows="5" required></textarea>
+                            </div>
+                        </form>
+                        <div class="flex">
+                            <button type="submit" class=" bg-[var(--primary)] cursor-pointer font-bold uppercase text-[var(--neutral-black)] rounded-full w-35 h-13.5">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <script>
+            let hamburger = document.getElementById('hamburger');
+            let mobileMenu = document.getElementById('mobile-menu');
+
+            hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+     </script>
+</body>
+</html>

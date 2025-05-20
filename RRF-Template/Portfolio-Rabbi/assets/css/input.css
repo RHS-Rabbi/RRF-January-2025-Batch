@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+    --font-bn: 'Bebas Neue', sans-serif;
+    --font-manrope: 'Manrope', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --neutral-black:#0A0A0A;
+    --neutral-dark-gray:#484848;
+    --neutral-off-white:#C7C7C7;
+    --neutral-white:#FFFFFF;
+    --primary:#D3E97A;
+    --black:#1A1A1A;
+    --black-dark:#0A0A0A;
+    --black-3:#222222;
+    --black-4:#000000;
+     /* Custom  */
+    --101x:6.3125rem;
+    --76x:4.75rem;
+    --32x:2rem;
+    --64x:4rem;
+
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font-bn);
+}
+
+@layer{
+    .container_lg{
+        @apply 2xl:max-w-330 mx-auto md:px-0 px-4 lg:max-w-217.5 xl:max-w-[1070px];
+    }
+    .container{
+         @apply 2xl:max-w-306 mx-auto md:px-0 px-4 lg:max-w-206 xl:max-w-[1024px];
+    }
+
+}
+
+/* ------------------Header Area --------------------*/
+.mainmenu ul li a{
+    @apply text-base font-medium leading-6 font-inter
+}
+.hero-btns .hero-btn-1{
+    /* @apply flex gap-7 py-5 pl-6 pr-1.5 bg-[var(--primary)] rounded-[100px] items-center w-[188px] h-[54px] text-[var(--neutral-black)] text-base font-bold leading-4 uppercase; */
+    @apply flex gap-7 py-5 pl-6 pr-1.5 bg-[var(--primary)] rounded-[100px] items-center w-[188px] h-[54px] text-[var(--neutral-black)] text-base font-bold leading-4 uppercase;
+
+}
+
+.hero-btns .hero-btn-2{
+    @apply size-13.5 bg-[var(--black-3)] rounded-full flex justify-center items-center;  
+}
+
+/* ------------------Hero Area --------------------*/
+.hero-area{
+    @apply pt-7.5 pb-20 border-b-1 border-[var(--neutral-dark-gray)];
+}
+.hero-left{
+    @apply flex flex-col gap-10 2xl:pt-40 ;
+}
+.hero-left h1{
+    @apply 2xl:[font-size:var(--101x)] lg:[font-size:var(--64x)] text-[var(--neutral-white)] text-5xl font-normal not-italic leading-[90%];
+}
+.hero-left p{
+    @apply text-lg font-normal leading-6.75;
+}
+
+
+/* ------------------Featured Area ----------------*/
+.featured-area{
+    @apply py-20 border-b-1 border-[var(--neutral-dark-gray)];
+}
+
+.featured-title h2{
+    @apply 2xl:[font-size:var(--76x)] lg:[font-size:var(--64x)] text-[var(--neutral-white)] text-5xl font-normal not-italic leading-[100%];
+}
+.featured-title p{
+    @apply text-lg font-normal leading-6.75;
+}
+
+.featured-left{
+    @apply bg-[var(--black)] 2xl:size-150 lg:h-[584px] h-85.75 rounded-xl flex justify-center items-center relative;
+}
+
+.featured-left .featured-btn{
+    @apply absolute text-[var(--neutral-white)] text-sm font-medium leading-5.25 bg-[var(--black-dark)] py-2 px-4 top-4 left-4 rounded-full;
+}
+
+
+/* Featured Right */
+.featured-right{
+    @apply flex flex-col 2xl:gap-11.5 gap-11.5 lg:gap-6;
+}
+
+.featured-right h3{
+    @apply font-manrope! text-[var(--neutral-white)] leading-[140%] font-medium [font-size:var(--32x)];
+}
+
+.featured-btns{
+    @apply flex gap-6;
+}
+.featured-btns a{
+    @apply flex items-center text-base leading-[24px] uppercase font-bold text-[var(--primary)] gap-1 relative ;
+}
+
+/*------------- About Section ----------------*/
+.about-area{
+    @apply pt-30 md:pb-103.5 pb-30 border-b-1 border-[var(--neutral-dark-gray)];
+}
+
+/* About Left */
+.about-left h3{
+    @apply 2xl:[font-size:var(--101x)] lg:[font-size:var(--64x)] text-5xl text-[var(--neutral-white)] leading-[90%] font-normal;
+}
+
+/* About Right */
+.about-right{
+    @apply flex flex-col gap-13;
+}
+.about-right h3{
+    @apply [font-size:var(--32x)] text-[var(--neutral-white)] leading-[140%] font-medium not-italic font-manrope!;
+}
+
+.about-right .about-btn{
+    @apply flex items-center text-base leading-[24px] uppercase font-bold text-[var(--primary)] gap-1 relative;
+}
+
