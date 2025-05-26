@@ -1,0 +1,34 @@
+.mainmenu ul li a::after {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #72b626;
+    content: "";
+    transition: width 0.3s ease;
+    bottom: -5px;
+}
+
+.mainmenu ul li a:hover::after {
+    width: 100%;
+}
+
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #000; /* Change if your header has a different background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header_main {
+  transition: all 0.3s ease;
+}
+
+
+
+
+
