@@ -31,6 +31,9 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+a{
+  @apply cursor-pointer
+}
 
 
 /* -----------------Header Area ---------------*/
@@ -39,7 +42,7 @@ h1,h2,h3,h4,h5,h6{
 } 
 
 .mainmenu ul li a{
-    @apply text-lg  text-white font-medium uppercase relative block after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-[var(--green-1)] after:transition-all after:duration-300 hover:after:w-full;
+    @apply text-lg  text-white font-medium uppercase relative  after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-[var(--green-1)] after:transition-all after:duration-300 hover:after:w-full;
 }
 
 /* -----------------Hero Area --------------*/
@@ -57,9 +60,16 @@ h1,h2,h3,h4,h5,h6{
   @apply lg:text-[41px] xl:[font-size:var(--51x)] text-3xl font-bold uppercase leading-12.75 relative before:absolute before:xl:w-10 before:h-1 before:bg-[var(--green-1)] before:left-0 before:top-6 before:rounded-[10px]
 }
 
-.hero-btn a{
+/* .hero-btn a{
   @apply inline-block uppercase pr-17.5 pl-8.75 py-4  border-1 border-[var(--green-1)] text-base relative rounded-full font-semibold overflow-hidden after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[var(--green-1)] after:rounded-full after:transition-transform after:duration-300 after:ease-out after:translate-x-full hover:after:translate-x-0 after:z-[-1] hover:text-white;
+} */
+
+.hero-btn a {
+  @apply inline-block uppercase pr-17.5 pl-8.75 py-4 border-1 border-[var(--green-1)] text-base relative rounded-full font-semibold overflow-hidden after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[var(--green-1)] after:rounded-full after:transition-transform after:duration-300 after:ease-out after:translate-x-full  hover:after:translate-x-0 focus:after:translate-x-0 active:after:translate-x-0  hover:text-white focus:text-white active:text-white after:z-[-1];
 }
+
+
+
 .hero-icon{
   @apply absolute right-0 size-13.75 top-0 bg-[var(--green-1)] flex justify-center items-center rounded-full; 
 }
@@ -67,7 +77,7 @@ h1,h2,h3,h4,h5,h6{
 
 /* ---------------About Area ---------------*/
 .about-area{
-  @apply relative z-1 after:absolute after:-right-26.25 after:top-0 after:lg:w-[20%] after:h-full after:bg-[var(--yellow)] lg:after:content-[''] after:z-[-1] after:skew-x-10 overflow-x-hidden;
+  @apply relative  after:absolute after:-right-26.25 after:top-0 after:lg:w-[20%] after:h-full after:bg-[var(--yellow)] lg:after:content-[''] after:z-[-1] after:skew-x-10 overflow-x-hidden;
 }
 
 .about-title{
@@ -85,11 +95,8 @@ h1,h2,h3,h4,h5,h6{
   @apply relative;
 }
 .about-left .about-bg img{
-  @apply lg:hidden size-[230px] mx-auto ;
-    border: 4px solid #252525;
-    border-radius: 50%;
-    padding: 0px;
-    background: #040404;
+  @apply lg:hidden size-[230px] mx-auto  border-4 rounded-full;
+    animation: pulse-border 2s infinite ease-in-out;
 }
 
 .about-left .about-bg h3{
@@ -100,11 +107,33 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .about-left .about-info li{
-  @apply text-[#CFCFCF] capitalize list-none text-base ;
+  @apply text-[#CFCFCF] capitalize list-none text-[0.9375rem] ;
 }
 .about-left .about-info li span{
   @apply text-white font-semibold;
 }
+
+.about-btn a{
+  @apply inline-block uppercase pr-17.5 pl-8.75 py-4 border-1 border-[var(--yellow)] text-base relative rounded-full font-semibold overflow-hidden after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[var(--yellow)] after:rounded-full after:transition-transform after:duration-300 after:ease-out after:translate-x-full  hover:after:translate-x-0 focus:after:translate-x-0 active:after:translate-x-0  hover:text-white focus:text-white active:text-white after:z-[-1];
+}
+
+.about-icon{
+  @apply absolute right-0 size-13.75 top-0 bg-[var(--yellow)] flex justify-center items-center rounded-full; 
+}
+
+.single-right-about{
+  @apply bg-[var(--black)] border-1 border-[#252525] pt-5 pr-7.5 pb-6.25 pl-10 text-center md:text-left cursor-pointer flex flex-col h-full lg:gap-0 gap-2;
+
+}
+.single-right-about h6{
+  @apply text-[2.5rem] lg:text-[3.125rem] font-bold text-[var(--yellow)] relative after:absolute  after:text-[2.0625rem] after:font-medium after:top-0.5 after:content-['+'] cursor-pointer;
+}
+
+.single-right-about p{
+  @apply mb-auto lg:pl-11.25 uppercase xl:w-52.5  relative cursor-pointer after:absolute after:bg-[#777] after:left-0 after:lg:w-7.5 after:h-0.25 after:content-[''] after:top-3.25;
+}
+
+
 
 
 
@@ -153,6 +182,7 @@ h1,h2,h3,h4,h5,h6{
   top: 0;
   transform: translate(calc(-50% + 15px), -50%);
   z-index: 9999;
+  @apply xl:hidden
 }
 
 .cursor {
@@ -166,12 +196,14 @@ h1,h2,h3,h4,h5,h6{
   pointer-events: none;
   transition: width .3s, height .3s, opacity .3s;
   z-index: 9999;
+   @apply xl:hidden
 }
 
 .hover {
   background-color: transparent;
   opacity: 0.5;
   z-index: 9999;
+   @apply xl:hidden
 }
 
 
@@ -198,3 +230,18 @@ h1,h2,h3,h4,h5,h6{
 .hero-bounce {
   animation: HeroBounce 3s infinite;
 }
+
+
+ /* About Image */
+@keyframes pulse-border {
+  0% {
+    border-color: #252525;
+  }
+  50% {
+    border-color: #ffb400;
+  }
+  100% {
+    border-color: #252525;
+  }
+}
+
