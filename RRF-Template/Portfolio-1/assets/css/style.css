@@ -1,4 +1,4 @@
-.mainmenu ul li a::after {
+/* .mainmenu ul li a::after {
     position: absolute;
     left: 0;
     width: 0;
@@ -11,22 +11,43 @@
 
 .mainmenu ul li a:hover::after {
     width: 100%;
-}
+} */
 
 
-.sticky-header {
+/* .sticky-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
-  background-color: #000; /* Change if your header has a different background */
+  background-color: #000; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header_main {
   transition: all 0.3s ease;
+} */
+
+/* .hero-right h1 {
+    position: relative;
 }
+
+.hero-right h1::before {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: #72b626;
+    content: "";
+    left: 0;
+    top: 24px;
+    border-radius: 10px;
+} */
+
+
+
+
+
+
 
 
 

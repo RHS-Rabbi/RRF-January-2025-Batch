@@ -55,10 +55,18 @@
   });
   
 
-  $(window).on('scroll', function () {
-    if ($(this).scrollTop() > 100) {
-      $('.header_main').addClass('sticky-header');
-    } else {
-      $('.header_main').removeClass('sticky-header');
-    }
-  });
+//   $(window).on('scroll', function () {
+//     if ($(this).scrollTop() > 100) {
+//       $('.header_main').addClass('sticky-header');
+//     } else {
+//       $('.header_main').removeClass('sticky-header');
+//     }
+//   });
+
+
+// AoS
+
+ AOS.init({
+    duration: 2000,
+ }
+ );
