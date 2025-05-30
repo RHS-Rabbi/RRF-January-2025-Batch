@@ -137,7 +137,7 @@ a{
 
 }
 .single-right-about h6{
-  @apply text-[2.5rem] lg:text-[3.125rem] font-bold text-[var(--yellow)] relative after:absolute  after:text-[2.0625rem] after:font-medium after:top-0.5 after:content-['+'] cursor-pointer;
+  @apply text-[2.5rem] lg:text-[3.125rem] font-bold text-[var(--green-1)] relative after:absolute  after:text-[2.0625rem] after:font-medium after:top-0.5 after:content-['+'] cursor-pointer;
 }
 
 .single-right-about p{

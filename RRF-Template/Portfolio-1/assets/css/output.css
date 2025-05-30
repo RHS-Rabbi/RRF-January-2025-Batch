@@ -998,7 +998,7 @@ a {
   font-size: 2.5rem;
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
-  color: var(--yellow);
+  color: var(--green-1);
   &::after {
     content: var(--tw-content);
     position: absolute;
