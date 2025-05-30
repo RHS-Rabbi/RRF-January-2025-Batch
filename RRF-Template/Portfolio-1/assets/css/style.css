@@ -28,22 +28,17 @@
   transition: all 0.3s ease;
 } */
 
-/* .hero-right h1 {
-    position: relative;
+
+
+html {
+  scroll-behavior: smooth;
 }
 
-.hero-right h1::before {
-    position: absolute;
-    width: 40px;
-    height: 4px;
-    background: #72b626;
-    content: "";
-    left: 0;
-    top: 24px;
-    border-radius: 10px;
-} */
 
-
+.single-about-info .about-circle canvas {
+    width: 120px;
+    height: 120px;
+}
 
 
 

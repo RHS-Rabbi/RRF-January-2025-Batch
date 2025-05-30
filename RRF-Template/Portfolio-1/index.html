@@ -22,7 +22,7 @@
             <div class="particle"></div>
             <div class="particle"></div>
             <div class="particle"></div>
-            <div class="header_main lg:py-8 sticky-header">
+            <div id="home" class="header_main lg:py-8 sticky-header">
                 <div class="container">
                     <div class="justify-between items-center lg:flex hidden">
                         <div class="site-logo">
@@ -30,7 +30,7 @@
                         </div>
                         <nav class="mainmenu hidden lg:block">
                             <ul class="flex gap-10">
-                                <li><a class="nav-link" href="#">Home</a></li>
+                                <li><a class="nav-link" href="#home">Home</a></li>
                                 <li><a class="nav-link" href="#about">About</a></li>
                                 <li><a class="nav-link" href="#">Service</a></li>
                                 <li><a class="nav-link" href="#">Portfolio</a></li>
@@ -65,8 +65,8 @@
                             </div>
                             <nav class="mainmenu">
                                 <ul class="flex flex-col gap-6 text-white text-xl text-center mt-10 px-4">
-                                    <li><a class="nav-link" href="#">Home</a></li>
-                                    <li><a class="nav-link" href="#">About</a></li>
+                                    <li><a class="nav-link" href="#home">Home</a></li>
+                                    <li><a class="nav-link" href="#about">About</a></li>
                                     <li><a class="nav-link" href="#">Service</a></li>
                                     <li><a class="nav-link" href="#">Portfolio</a></li>
                                     <li><a class="nav-link" href="#">Contact</a></li>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-area xl:py-25 lg:py-10">
+            <div class="hero-area xl:py-25 lg:py-10 py-10">
                <div class="container">
                      <div class="flex flex-col lg:flex-row justify-between items-center h-full  gap-10">
                         <div class="md:w-6/12">
@@ -89,9 +89,9 @@
                         <div class="md:w-6/12">
                             <div data-aos="zoom-out" class="hero-right">
                                 <h1><span class="text-[var(--green-1)]">I'm Mohammad Rabbi Hossain.</span> <br><span class="text-4xl" id="typed"></span></h1>
-                                <p class="text-base text-white leading-normal">I'm a Bangladeshi-based web designer and front‑end developer focused on crafting clean and user‑friendly experiences. I'm passionate about building excellent websites that improve the lives of people around me.</p>
+                                <p class="md:text-base text-sm text-white leading-normal">I'm a Bangladeshi-based web designer and front‑end developer focused on crafting clean and user‑friendly experiences. I'm passionate about building excellent websites that improve the lives of people around me.</p>
                                 <div class="hero-btn">
-                                    <a >
+                                    <a class="btn" href="#">
                                         more about me
                                         <span class="hero-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -107,7 +107,7 @@
             </div>
         </header>
         <!-- About Section -->
-        <section id="about" class="about-area py-25">
+        <section id="about" class="about-area lg:py-25 py-10">
             <div class="container">
                 <div class="md:w-6/12 mx-auto">
                     <div data-aos="fade-right" class="about-title">
@@ -115,7 +115,7 @@
                         <span class="title-bg">Resume</span>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row lg:py-20 py-15 gap-7.5 xl:gap-35">
+                <div class="flex flex-col lg:flex-row lg:py-20 py-15 gap-7.5 xl:gap-35 justify-between">
                    <div class="md:max-w-6/12">
                         <div data-aos="fade-up" class="about-left flex flex-col lg:gap-5 gap-12.5">
                             <div class="flex flex-col lg:gap-7.5 gap-12.5">
@@ -123,7 +123,7 @@
                                     <h3>personal infos</h3>
                                     <img src="./assets/img/about-bg.png" alt="About image">
                                 </div>
-                                <div class="flex  gap-7.5 md:flex-row rabbi">
+                                <div class="flex  gap-7.5 md:flex-row">
                                     <div class="md:w-1/2">
                                         <div class="about-info">
                                             <li>first name : <span>Mohammad Rabbi</span></li>
@@ -139,13 +139,13 @@
                                             <li>phone : <span><a href="tel:+8801610278594">+8801610278594</a></span></li>
                                             <li>Email : <span class="lowercase!"><a href="mailto:you@mail.com">rabbihossain187@gmail.com</a></span></li>
                                             <li>Linkedin : <span class="lowercase!"><a href="https://www.linkedin.com/in/mohammad-rabbi-hossain-72177b365/" target="_blank">mohammad-rabbi-hossain-72177b365</a></span></li>
-                                            <li>langages : <span>English, Bangla, Spanish</span></li>
+                                            <li>language : <span>English, Bangla, Spanish</span></li>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="about-btn flex lg:justify-start justify-center mb-5">
-                                <a href="#">
+                                <a class="btn" href="#">
                                     Download CV
                                     <span class="about-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -159,28 +159,28 @@
                    <div class="md:max-w-6/12">
                         <div data-aos="fade-down" class="flex flex-col gap-7.5 lg:mt-0">
                             <div class="flex flex-col md:flex-row gap-10">
-                                <div class="xl:max-w-[265px] lg:max-w-[215px]">
+                                <div class="xl:max-w-66.25 lg:max-w-53.75">
                                     <div class="single-right-about">
                                         <h6>20</h6>
                                         <p>completed projects</p>
                                     </div>
                                 </div>
-                                <div class="xl:max-w-[265px] lg:max-w-[215px]">
+                                <div class="xl:max-w-66.25 lg:max-w-53.75">
                                     <div class="single-right-about">
-                                       <h6>30</h6>
-                                       <p>coding challenges solved</p>
+                                       <h6>10</h6>
+                                       <p>technologies learned</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row gap-10">
-                                <div class="xl:max-w-[265px] lg:max-w-[215px]">
+                                <div class="xl:max-w-66.25 lg:max-w-53.75">
                                     <div class="single-right-about">
                                         <h6>3</h6>
                                         <p>year of learning experience</p>
 
                                     </div>
                                 </div>
-                                <div class="xl:max-w-[265px] lg:max-w-[215px]">
+                                <div class="xl:max-w-66.25 lg:max-w-53.75">
                                     <div class="single-right-about">
                                         <h6>22</h6>
                                         <p>educational videos created</p>
@@ -190,11 +190,107 @@
                         </div>
                    </div>
                 </div>
+                <div class="separator"></div>
+                <!-- Skill Area -->
+                <div data-aos="fade-down" class="skill-area">
+                    <div class="text-center mb-10">
+                        <h3 class="text-[26px] uppercase font-semibold">My Skills</h3>
+                    </div>
+                    <div class="flex flex-row flex-wrap ">
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-html"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-sm">Html</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-css"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">Css</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-javascript"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">javascript</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-jquery"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">jquery</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-php"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">php</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-wordpress"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">wordpress</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-bootstrap"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">bootstrap</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-tailwind-css"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">tailwind css</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-git-gitHub"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">Git & GitHub</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-responsive-design"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">Responsive Design</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-elementor"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">Elementor</h3>
+                            </div>
+                        </div>
+                        <div class="md:max-w-3/12 w-6/12 px-4">
+                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                                <div class="about-circle" id="about-figma"></div>
+                                    <span class="progressbar-parcentage"></span>
+                                <h3 class="uppercase md:text-base text-center text-sm">Figma to Code (Pixel Perfect)</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator"></div>
             </div>
         </section>
+        
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/jquery-circular-progress-bar.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

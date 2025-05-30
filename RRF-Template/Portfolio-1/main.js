@@ -67,6 +67,134 @@
 // AoS
 
  AOS.init({
-    duration: 3000,
+   duration: 800,       
+   easing: 'linear', 
  }
  );
+
+
+// jQuery(document).ready(function(){
+//     $('#about-html').circleProgress({
+//         value: 0.90,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(90 * progress) + '%');
+//     });
+//     $('#about-css').circleProgress({
+//         value: 0.85,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(85 * progress) + '%');
+//     });
+//     $('#about-javascript').circleProgress({
+//         value: 0.40,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(40 * progress) + '%');
+//     });
+//     $('#about-jquery').circleProgress({
+//         value: 0.70,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(70 * progress) + '%');
+//     });
+//     $('#about-php').circleProgress({
+//         value: 0.60,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(60 * progress) + '%');
+//     });
+//     $('#about-wordpress').circleProgress({
+//         value: 0.65,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(65 * progress) + '%');
+//     });
+//     $('#about-bootstrap').circleProgress({
+//         value: 0.92,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(92 * progress) + '%');
+//     });
+//     $('#about-tailwind-css').circleProgress({
+//         value: 0.90,
+//         size: 160,
+//         fill: '#FFB400', 
+//         thickness: 10,
+//         emptyFill: '#252525',
+//     }).on('circle-animation-progress', function(event, progress) {
+//         $(this).siblings('.progressbar-parcentage').text(Math.round(90 * progress) + '%');
+//     });
+// });
+
+
+jQuery(document).ready(function () {
+    let animated = false;
+
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+    }
+
+    function animateSkills() {
+        if (animated) return;
+
+        if (isInViewport(document.querySelector('.single-about-info'))) {
+            animated = true;
+
+            const skills = {
+                '#about-html': 90,
+                '#about-css': 85,
+                '#about-javascript': 40,
+                '#about-jquery': 70,
+                '#about-php': 60,
+                '#about-wordpress': 65,
+                '#about-bootstrap': 92,
+                '#about-tailwind-css': 90,
+                '#about-git-gitHub': 70,
+                '#about-responsive-design': 99,
+                '#about-elementor': 35,
+                '#about-figma': 99,
+            };
+
+            $.each(skills, function (id, percent) {
+                $(id).circleProgress({
+                    value: percent / 100,
+                    size: 160,
+                    fill: '#FFB400',
+                    thickness: 10,
+                    emptyFill: '#252525',
+                }).on('circle-animation-progress', function (e, progress) {
+                    $(this).siblings('.progressbar-parcentage').text(Math.round(percent * progress) + '%');
+                });
+            });
+        }
+    }
+
+    $(window).on('scroll', animateSkills);
+    animateSkills();
+});
+
+
+
