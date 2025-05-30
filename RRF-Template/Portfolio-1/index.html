@@ -17,288 +17,304 @@
 <body class="font-open-sens bg-[var(--black)] text-white">
     <div class="outline"></div>
     <div class="cursor"></div>
-    <header class="header-area">
+    <header id="home" class="header_main py-8  sticky-header">
+        <div class="container">
+            <div class="justify-between items-center lg:flex hidden">
+                <div class="site-logo">
+                    <a href="#"><img src="./assets/img/logo-white.png" alt="logo-png" class="h-8"></a>
+                </div>
+                <nav class="mainmenu hidden lg:block">
+                    <ul class="flex gap-10">
+                        <li><a class="nav-link" href="#home">Home</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="nav-link" href="#">Service</a></li>
+                        <li><a class="nav-link" href="#">Portfolio</a></li>
+                        <li><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex flex-col lg:hidden relative">
+                <div class="w-full flex justify-between items-center">
+                    <a href="#" class="site-logo">
+                        <img src="./assets/img/logo-white.png" alt="logo-png" class="h-8">
+                    </a>
+                    <div id="hamburger" class="flex flex-col justify-center gap-1 cursor-pointer z-50">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
+                            <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
+                            <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
+                            <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[var(--black)] transform -translate-x-full transition-transform duration-300 ease-in-out z-40">
+                    <div class="flex justify-end p-4">
+                        <button id="close-menu" class="text-white text-3xl font-bold cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="mainmenu">
+                        <ul class="flex flex-col gap-6 text-white text-xl text-center mt-10 px-4">
+                            <li><a class="nav-link" href="#home">Home</a></li>
+                            <li><a class="nav-link" href="#about">About</a></li>
+                            <li><a class="nav-link" href="#">Service</a></li>
+                            <li><a class="nav-link" href="#">Portfolio</a></li>
+                            <li><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Area -->
+    <section class="hero-area xl:py-31.25 lg:py-10 py-10 relative">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
         <div class="header-1"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div id="home" class="header_main lg:py-8 sticky-header">
-                <div class="container">
-                    <div class="justify-between items-center lg:flex hidden">
-                        <div class="site-logo">
-                            <a href="#"><img src="./assets/img/logo-white.png" alt="logo-png" class="h-8"></a>
+        <div class="container">
+                <div class="flex flex-col md:flex-row justify-between items-center h-full  gap-10">
+                <div class="lg:w-6/12">
+                    <div class="hero-left hidden lg:block">
+                        <div data-aos="zoom-in" class="hero-bg">
+                            <img  class="w-full object-cover h-full hero-bounce" src="./assets/img/hero.png" alt="Hero Image">
                         </div>
-                        <nav class="mainmenu hidden lg:block">
-                            <ul class="flex gap-10">
-                                <li><a class="nav-link" href="#home">Home</a></li>
-                                <li><a class="nav-link" href="#about">About</a></li>
-                                <li><a class="nav-link" href="#">Service</a></li>
-                                <li><a class="nav-link" href="#">Portfolio</a></li>
-                                <li><a class="nav-link" href="#">Contact</a></li>
-                            </ul>
-                        </nav>
                     </div>
-                    <div class="flex flex-col lg:hidden relative py-4">
-                        <div class="w-full flex justify-between items-center p-4">
-                            <a href="#" class="site-logo">
-                                <img src="./assets/img/logo-white.png" alt="logo-png" class="h-8">
-                            </a>
-                            <div id="hamburger" class="flex flex-col justify-center gap-1 cursor-pointer z-50">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
-                                    <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
-                                    <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="2" viewBox="0 0 32 2" fill="none">
-                                    <path d="M0 1H32" stroke="#C7C7C7" stroke-width="2"/>
-                                </svg>
-                            </div>
-                        </div>
-                    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[var(--black)] transform -translate-x-full transition-transform duration-300 ease-in-out z-40">
-                            <div class="flex justify-end p-4">
-                                <button id="close-menu" class="text-white text-3xl font-bold cursor-pointer">
+                </div>
+                <div class="lg:w-6/12 md:w-full">
+                    <div data-aos="zoom-out" class="hero-right">
+                        <h1><span class="text-[var(--green-1)]">I'm Mohammad Rabbi Hossain.</span> <br><span class="text-4xl capitalize" id="typed"></span></h1>
+                        <p class="lg:text-base text-sm text-white leading-normal">I'm a Bangladeshi-based web designer and front‑end developer focused on crafting clean and user‑friendly experiences. I'm passionate about building excellent websites that improve the lives of people around me.</p>
+                        <div class="hero-btn">
+                            <a class="btn" href="#about">
+                                more about me
+                                <span class="hero-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
                                     </svg>
-                                </button>
-                            </div>
-                            <nav class="mainmenu">
-                                <ul class="flex flex-col gap-6 text-white text-xl text-center mt-10 px-4">
-                                    <li><a class="nav-link" href="#home">Home</a></li>
-                                    <li><a class="nav-link" href="#about">About</a></li>
-                                    <li><a class="nav-link" href="#">Service</a></li>
-                                    <li><a class="nav-link" href="#">Portfolio</a></li>
-                                    <li><a class="nav-link" href="#">Contact</a></li>
-                                </ul>
-                            </nav>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-area xl:py-31.25 lg:py-10 py-10">
-               <div class="container">
-                     <div class="flex flex-col lg:flex-row justify-between items-center h-full  gap-10">
-                        <div class="md:w-6/12">
-                            <div class="hero-left">
-                                <div data-aos="zoom-in" class="hero-bg">
-                                    <img  class="w-full object-cover h-full hero-bounce" src="./assets/img/hero.png" alt="Hero Image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="md:w-6/12">
-                            <div data-aos="zoom-out" class="hero-right">
-                                <h1><span class="text-[var(--green-1)]">I'm Mohammad Rabbi Hossain.</span> <br><span class="text-4xl" id="typed"></span></h1>
-                                <p class="md:text-base text-sm text-white leading-normal">I'm a Bangladeshi-based web designer and front‑end developer focused on crafting clean and user‑friendly experiences. I'm passionate about building excellent websites that improve the lives of people around me.</p>
-                                <div class="hero-btn">
-                                    <a class="btn" href="#">
-                                        more about me
-                                        <span class="hero-icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about-area lg:py-25 py-10">
+        <div class="container">
+            <div class="md:w-6/12 mx-auto">
+                <div data-aos="fade-right" class="about-title">
+                    <h2 class="[font-size:var(--56x)] font-bold uppercase">ABOUT <span class="text-[var(--green-1)]">Me</span></h2>
+                    <span class="title-bg">Resume</span>
+                </div>
             </div>
-        </header>
-        <!-- About Section -->
-        <section id="about" class="about-area lg:py-25 py-10">
-            <div class="container">
-                <div class="md:w-6/12 mx-auto">
-                    <div data-aos="fade-right" class="about-title">
-                        <h2 class="[font-size:var(--56x)] font-bold uppercase">ABOUT <span class="text-[var(--green-1)]">Me</span></h2>
-                        <span class="title-bg">Resume</span>
+            <div class="flex flex-col lg:flex-row lg:py-20 py-15 gap-7.5 xl:gap-35 justify-center">
+                <div class="lg:max-w-6/12">
+                    <div data-aos="fade-up" class="about-left flex flex-col lg:gap-5 gap-12.5">
+                        <div class="flex flex-col lg:gap-7.5 gap-12.5">
+                            <div class="about-bg">
+                                <h3>personal infos</h3>
+                                <img src="./assets/img/about-bg.png" alt="About image">
+                            </div>
+                            <div class="flex  gap-7.5 md:flex-row">
+                                <div class="md:w-1/2">
+                                    <div class="about-info">
+                                        <li>first name : <span>Mohammad Rabbi</span></li>
+                                        <li>last name : <span>Hossain</span></li>
+                                        <li>Age : <span>24 Years</span></li>
+                                        <li>Nationality : <span>Bangladeshi</span></li>
+                                        <li>Freelance :  <span>Available</span></li>
+                                        <li>Education :  <span>B.Com (Honours) in Accounting Tongi Govt. College, Under National University (19–20)</span></li>
+                                    </div>
+                                </div>
+                                <div class="md:w-1/2">
+                                    <div class="about-info">
+                                        <li>Address : <span>Gazipur, Dhaka, Bangladesh</span></li>
+                                        <li>phone : <span><a href="tel:+8801610278594">+8801610278594</a></span></li>
+                                        <li>Email : <span class="lowercase!"><a href="mailto:you@mail.com">rabbihossain187@gmail.com</a></span></li>
+                                        <li>Linkedin : <span class="lowercase!"><a href="https://www.linkedin.com/in/mohammad-rabbi-hossain-72177b365/" target="_blank">mohammad-rabbi-hossain-72177b365</a></span></li>
+                                        <li>language : <span>English, Bangla, Spanish</span></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-btn flex lg:justify-start justify-center mb-5">
+                            <a class="btn" href="#">
+                                Download CV
+                                <span class="about-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row lg:py-20 py-15 gap-7.5 xl:gap-35 justify-center">
-                   <div class="lg:max-w-6/12">
-                        <div data-aos="fade-up" class="about-left flex flex-col lg:gap-5 gap-12.5">
-                            <div class="flex flex-col lg:gap-7.5 gap-12.5">
-                                <div class="about-bg">
-                                    <h3>personal infos</h3>
-                                    <img src="./assets/img/about-bg.png" alt="About image">
-                                </div>
-                                <div class="flex  gap-7.5 md:flex-row">
-                                    <div class="md:w-1/2">
-                                        <div class="about-info">
-                                            <li>first name : <span>Mohammad Rabbi</span></li>
-                                            <li>last name : <span>Hossain</span></li>
-                                            <li>Age : <span>24 Years</span></li>
-                                            <li>Nationality : <span>Bangladeshi</span></li>
-                                            <li>Freelance :  <span>Available</span></li>
-                                            <li>Education :  <span>B.Com (Honours) in Accounting Tongi Govt. College, Under National University (19–20)</span></li>
-                                        </div>
-                                    </div>
-                                    <div class="md:w-1/2">
-                                        <div class="about-info">
-                                            <li>Address : <span>Gazipur, Dhaka, Bangladesh</span></li>
-                                            <li>phone : <span><a href="tel:+8801610278594">+8801610278594</a></span></li>
-                                            <li>Email : <span class="lowercase!"><a href="mailto:you@mail.com">rabbihossain187@gmail.com</a></span></li>
-                                            <li>Linkedin : <span class="lowercase!"><a href="https://www.linkedin.com/in/mohammad-rabbi-hossain-72177b365/" target="_blank">mohammad-rabbi-hossain-72177b365</a></span></li>
-                                            <li>language : <span>English, Bangla, Spanish</span></li>
-                                        </div>
-                                    </div>
+                <div class="lg:max-w-6/12">
+                    <div data-aos="fade-down" class="flex flex-col gap-7.5 lg:mt-0">
+                        <div class="flex flex-col md:flex-row gap-10">
+                            <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
+                                <div class="single-right-about">
+                                    <h6>20</h6>
+                                    <p>completed projects</p>
                                 </div>
                             </div>
-                            <div class="about-btn flex lg:justify-start justify-center mb-5">
-                                <a class="btn" href="#">
-                                    Download CV
-                                    <span class="about-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                                        </svg>
-                                    </span>
-                                </a>
+                            <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
+                                <div class="single-right-about">
+                                    <h6>10</h6>
+                                    <p>technologies learned</p>
+                                </div>
                             </div>
                         </div>
-                   </div>
-                   <div class="lg:max-w-6/12">
-                        <div data-aos="fade-down" class="flex flex-col gap-7.5 lg:mt-0">
-                            <div class="flex flex-col md:flex-row gap-10">
-                                <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
-                                    <div class="single-right-about">
-                                        <h6>20</h6>
-                                        <p>completed projects</p>
-                                    </div>
-                                </div>
-                                <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
-                                    <div class="single-right-about">
-                                       <h6>10</h6>
-                                       <p>technologies learned</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col md:flex-row gap-10">
-                                <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
-                                    <div class="single-right-about">
-                                        <h6>3</h6>
-                                        <p>year of learning experience</p>
+                        <div class="flex flex-col md:flex-row gap-10">
+                            <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
+                                <div class="single-right-about">
+                                    <h6>3</h6>
+                                    <p>year of learning experience</p>
 
-                                    </div>
-                                </div>
-                                <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
-                                    <div class="single-right-about">
-                                        <h6>22</h6>
-                                        <p>educational videos created</p>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
-                   </div>
-                </div>
-                <div class="separator"></div>
-                <!-- Skill Area -->
-                <div data-aos="fade-down" class="skill-area">
-                    <div class="text-center mb-10">
-                        <h3 class="text-[26px] uppercase font-semibold">My Skills</h3>
-                    </div>
-                    <div class="flex flex-row flex-wrap ">
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-html"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-sm">Html</h3>
+                            <div class="xl:max-w-66.25 lg:max-w-53.75 md:w-6/12">
+                                <div class="single-right-about">
+                                    <h6>22</h6>
+                                    <p>educational videos created</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-css"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">Css</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-javascript"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">javascript</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-jquery"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">jquery</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-php"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">php</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-wordpress"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">wordpress</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-bootstrap"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">bootstrap</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-tailwind-css"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">tailwind css</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-git-gitHub"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">Git & GitHub</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-responsive-design"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">Responsive Design</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-elementor"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">Elementor</h3>
-                            </div>
-                        </div>
-                        <div class="md:max-w-3/12 w-6/12 px-4">
-                            <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
-                                <div class="about-circle" id="about-figma"></div>
-                                    <span class="progressbar-parcentage"></span>
-                                <h3 class="uppercase md:text-base text-center text-sm">Figma to Code (Pixel Perfect)</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="separator"></div> -->
-            </div>
-        </section>
-        <!-- Portfolio Section -->
-        <section class="portfolio-area lg:py-25 py-10">
-            <div class="container">
-                <div class="md:w-6/12 mx-auto">
-                    <div  class="about-title">
-                        <h2 class="[font-size:var(--56x)] font-bold uppercase">My <span class="text-[var(--green-1)]">portfolio</span></h2>
-                        <span class="title-bg">works</span>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="separator"></div>
+            <!-- Skill Area -->
+            <div data-aos="fade-down" class="skill-area">
+                <div class="text-center mb-10">
+                    <h3 class="text-[26px] uppercase font-semibold">My Skills</h3>
+                </div>
+                <div class="flex flex-row flex-wrap ">
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-html"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-sm">Html</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-css"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">Css</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-javascript"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">javascript</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-jquery"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">jquery</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-php"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">php</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-wordpress"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">wordpress</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-bootstrap"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">bootstrap</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-tailwind-css"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">tailwind css</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-git-gitHub"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">Git & GitHub</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-responsive-design"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">Responsive Design</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-elementor"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">Elementor</h3>
+                        </div>
+                    </div>
+                    <div class="md:max-w-3/12 w-6/12 px-4">
+                        <div class="single-about-info flex flex-col gap-5 relative items-center mb-4 md:mb-12">
+                            <div class="about-circle" id="about-figma"></div>
+                                <span class="progressbar-parcentage"></span>
+                            <h3 class="uppercase md:text-base text-center text-sm">Figma to Code (Pixel Perfect)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="separator"></div> -->
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="portfolio-area lg:py-25 py-10">
+        <div class="container">
+            <div class="md:w-6/12 mx-auto">
+                <div  class="about-title">
+                    <h2 class="[font-size:var(--56x)] font-bold uppercase">My <span class="text-[var(--green-1)]">portfolio</span></h2>
+                    <span class="title-bg">works</span>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row flex-wrap">
+                <div class="w-4/12 px-4">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, tempora. Expedita sint eius nisi nobis quidem sapiente ut harum sunt, natus debitis? Natus repudiandae quibusdam repellat ipsa nostrum ducimus numquam.
+                </div>
+                <div class="w-4/12 px-4">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, tempora. Expedita sint eius nisi nobis quidem sapiente ut harum sunt, natus debitis? Natus repudiandae quibusdam repellat ipsa nostrum ducimus numquam.
+                </div>
+                <div class="w-4/12 px-4">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, tempora. Expedita sint eius nisi nobis quidem sapiente ut harum sunt, natus debitis? Natus repudiandae quibusdam repellat ipsa nostrum ducimus numquam.
+                </div>
+                <div class="w-4/12 px-4">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, tempora. Expedita sint eius nisi nobis quidem sapiente ut harum sunt, natus debitis? Natus repudiandae quibusdam repellat ipsa nostrum ducimus numquam.
+                </div>
+                <div class="w-4/12 px-4">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, tempora. Expedita sint eius nisi nobis quidem sapiente ut harum sunt, natus debitis? Natus repudiandae quibusdam repellat ipsa nostrum ducimus numquam.
+                </div>
+            </div>
+        </div>
+    </section>
 
         
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

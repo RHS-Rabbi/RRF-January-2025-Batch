@@ -55,15 +55,6 @@
   });
   
 
-//   $(window).on('scroll', function () {
-//     if ($(this).scrollTop() > 100) {
-//       $('.header_main').addClass('sticky-header');
-//     } else {
-//       $('.header_main').removeClass('sticky-header');
-//     }
-//   });
-
-
 // AoS
 
  AOS.init({
@@ -182,7 +173,7 @@ jQuery(document).ready(function () {
             $.each(skills, function (id, percent) {
                 $(id).circleProgress({
                     value: percent / 100,
-                    size: 160,
+                    size: 150,
                     fill: '#72b626',
                     thickness: 10,
                     emptyFill: '#252525',
@@ -195,6 +186,19 @@ jQuery(document).ready(function () {
 
     $(window).on('scroll', animateSkills);
     animateSkills();
+});
+
+
+
+const sticky_header = document.querySelector('.sticky-header');
+
+// Close mobile menu when a nav link is clicked
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        sticky_header.classList.add('scrolled');
+    } else {
+        sticky_header.classList.remove('scrolled');
+    }
 });
 
 
