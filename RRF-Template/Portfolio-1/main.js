@@ -69,6 +69,7 @@
  AOS.init({
    duration: 800,       
    easing: 'linear', 
+   once: true,
  }
  );
 
@@ -169,20 +170,20 @@ jQuery(document).ready(function () {
                 '#about-javascript': 40,
                 '#about-jquery': 70,
                 '#about-php': 60,
-                '#about-wordpress': 65,
-                '#about-bootstrap': 92,
-                '#about-tailwind-css': 90,
+                '#about-wordpress': 75,
+                '#about-bootstrap': 90,
+                '#about-tailwind-css': 80,
                 '#about-git-gitHub': 70,
                 '#about-responsive-design': 99,
-                '#about-elementor': 35,
-                '#about-figma': 99,
+                '#about-elementor': 50,
+                '#about-figma': 98,
             };
 
             $.each(skills, function (id, percent) {
                 $(id).circleProgress({
                     value: percent / 100,
                     size: 160,
-                    fill: '#FFB400',
+                    fill: '#72b626',
                     thickness: 10,
                     emptyFill: '#252525',
                 }).on('circle-animation-progress', function (e, progress) {
