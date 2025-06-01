@@ -203,3 +203,57 @@ window.addEventListener('scroll', () => {
 
 
 
+// Portfolio Popup
+// $("#single-portfolio").click(function() {
+//   $(".single-portfolio-popup").fadeIn(500);
+// });
+// $(".portfolio-close").click(function() {
+//   $(".single-portfolio-popup").fadeOut(500);
+// });
+
+//   $(document).ready(function () {
+//     // Open modal with data
+//     $('.single-portfolio-list').on('click', function () {
+//       const title = $(this).data('title');
+//       const desc = $(this).data('description');
+
+//       $('#popupTitle').text(title);
+//       $('#popupDesc').text(desc);
+//       $('.single-portfolio-popup').removeClass('hidden');
+//     });
+
+//     // Close modal
+//     $('.portfolio-close').on('click', function () {
+//       $('.single-portfolio-popup').addClass('hidden');
+//     });
+
+//     // Optional: Click outside to close
+//     $('.single-portfolio-popup').on('click', function (e) {
+//       if (e.target === this) {
+//         $(this).addClass('hidden');
+//       }
+//     });
+//   });
+
+
+ // Initialize Micromodal
+// $(document).ready(function () {
+//     $('.portfolio-popup').magnificPopup({
+//         type: 'inline',
+//         midClick: true
+//     });
+// });
+
+$(document).ready(function () {
+    $('.portfolio-popup').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        mainClass: 'mfp-fade',     // 👈 Add this line
+        removalDelay: 300          // 👈 Add this line too
+    });
+});
+
+
+
+
+
