@@ -15,34 +15,94 @@
         hamburger.classList.remove('hidden');
     });
 
+
+    // Service Mobile size active
+    $(document).ready(function () {
+        $('.single-service-list').on('click', function (e) {
+            e.stopPropagation();
+            $('.single-service-list').removeClass('is-active'); 
+            $(this).addClass('is-active'); 
+        });
+        $(document).on('click', function () {
+            $('.single-service-list').removeClass('is-active');
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //Cursor
-    let outline = document.querySelector('.outline');
-    let cursor = document.querySelector('.cursor');
-    let a = document.querySelectorAll('a');
+    const $cursor = $('.cursor');
+    const $outline = $('.outline');
+    const $interactiveElements = $('a, button');
 
-    document.addEventListener('mousemove', function(e){
-    let x = e.clientX;
-    let y = e.clientY;
-    outline.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%) )`
+    let mouseX = 0, mouseY = 0;
+    let outlineX = 0, outlineY = 0;
+    let isHoveringInteractive = false;
+
+    $(document).on('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    $cursor.css({ left: mouseX, top: mouseY });
+
+    if (!isHoveringInteractive) {
+        $cursor.css('opacity', 0.5);
+        $outline.css('opacity', 0.9);
+    }
     });
 
-    document.addEventListener('mousemove', function(e){
-    let x = e.clientX;
-    let y = e.clientY;
-    cursor.style.left = x + 'px';
-    cursor.style.top = y + 'px';
+    function animate() {
+    outlineX += (mouseX - outlineX) * 0.15;
+    outlineY += (mouseY - outlineY) * 0.15;
+
+    $outline.css({ left: outlineX, top: outlineY });
+
+    requestAnimationFrame(animate);
+    }
+    animate();
+
+    $interactiveElements.on('mouseenter', function() {
+    isHoveringInteractive = true;
+    $cursor.css('opacity', 0);
+    $outline.css('opacity', 0);
+    $(this).css('cursor', 'pointer');
+    });
+
+    $interactiveElements.on('mouseleave', function() {
+    isHoveringInteractive = false;
+    $cursor.css('opacity', 0.5);
+    $outline.css('opacity', 0.9);
+    $(this).css('cursor', 'auto');
+    });
+
+    $(document).on('mouseleave', function() {
+    $cursor.css('opacity', 0);
+    $outline.css('opacity', 0);
+    });
+
+    $(document).on('mouseenter', function() {
+    if (!isHoveringInteractive) {
+        $cursor.css('opacity', 0.5);
+        $outline.css('opacity', 0.9);
+    }
     });
 
 
 
-    a.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        outline.classList.add('hover');
-    });
-    item.addEventListener('mouseleave', () => {
-        outline.classList.remove('hover');
-    });
-    })
+
 
 
     // for typed Js
@@ -60,85 +120,10 @@
  AOS.init({
    duration: 800,       
    easing: 'linear', 
-   once: true,
+//    once: true,
  }
  );
 
-
-// jQuery(document).ready(function(){
-//     $('#about-html').circleProgress({
-//         value: 0.90,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(90 * progress) + '%');
-//     });
-//     $('#about-css').circleProgress({
-//         value: 0.85,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(85 * progress) + '%');
-//     });
-//     $('#about-javascript').circleProgress({
-//         value: 0.40,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(40 * progress) + '%');
-//     });
-//     $('#about-jquery').circleProgress({
-//         value: 0.70,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(70 * progress) + '%');
-//     });
-//     $('#about-php').circleProgress({
-//         value: 0.60,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(60 * progress) + '%');
-//     });
-//     $('#about-wordpress').circleProgress({
-//         value: 0.65,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(65 * progress) + '%');
-//     });
-//     $('#about-bootstrap').circleProgress({
-//         value: 0.92,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(92 * progress) + '%');
-//     });
-//     $('#about-tailwind-css').circleProgress({
-//         value: 0.90,
-//         size: 160,
-//         fill: '#FFB400', 
-//         thickness: 10,
-//         emptyFill: '#252525',
-//     }).on('circle-animation-progress', function(event, progress) {
-//         $(this).siblings('.progressbar-parcentage').text(Math.round(90 * progress) + '%');
-//     });
-// });
 
 
 jQuery(document).ready(function () {
@@ -203,53 +188,13 @@ window.addEventListener('scroll', () => {
 
 
 
-// Portfolio Popup
-// $("#single-portfolio").click(function() {
-//   $(".single-portfolio-popup").fadeIn(500);
-// });
-// $(".portfolio-close").click(function() {
-//   $(".single-portfolio-popup").fadeOut(500);
-// });
-
-//   $(document).ready(function () {
-//     // Open modal with data
-//     $('.single-portfolio-list').on('click', function () {
-//       const title = $(this).data('title');
-//       const desc = $(this).data('description');
-
-//       $('#popupTitle').text(title);
-//       $('#popupDesc').text(desc);
-//       $('.single-portfolio-popup').removeClass('hidden');
-//     });
-
-//     // Close modal
-//     $('.portfolio-close').on('click', function () {
-//       $('.single-portfolio-popup').addClass('hidden');
-//     });
-
-//     // Optional: Click outside to close
-//     $('.single-portfolio-popup').on('click', function (e) {
-//       if (e.target === this) {
-//         $(this).addClass('hidden');
-//       }
-//     });
-//   });
-
-
- // Initialize Micromodal
-// $(document).ready(function () {
-//     $('.portfolio-popup').magnificPopup({
-//         type: 'inline',
-//         midClick: true
-//     });
-// });
 
 $(document).ready(function () {
     $('.portfolio-popup').magnificPopup({
         type: 'inline',
         midClick: true,
-        mainClass: 'mfp-fade',     // 👈 Add this line
-        removalDelay: 300          // 👈 Add this line too
+        mainClass: 'mfp-fade',     
+        removalDelay: 300  
     });
 });
 

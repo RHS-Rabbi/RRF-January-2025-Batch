@@ -63,8 +63,11 @@ a{
 }
 
 .mainmenu ul li a{
-    @apply text-lg  text-white font-medium uppercase relative  after:absolute after:left-0 after:-bottom-1.25 after:w-0 after:h-0.5 after:bg-[var(--green-1)] after:transition-all after:duration-300 hover:after:w-full;
+    @apply text-lg  text-white font-medium uppercase relative  after:absolute after:left-0 after:-bottom-1.25 after:w-0 after:h-0.5 after:bg-[var(--green-1)] after:transition-all after:duration-300 hover:after:w-full hover:text-[var(--green-1)] transition duration-200 ease-in-out;
 }
+
+
+
 
 
 
@@ -161,9 +164,6 @@ a{
   @apply text-white font-semibold md:text-[0.9375rem] text-sm;
 }
 
-/* .about-btn a.btn{
-  @apply border-[var(--yellow)] after:bg-[var(--yellow)] ;
-} */
 
 .about-icon{
   @apply absolute right-0 size-13.75 top-0 bg-[var(--green-1)] flex justify-center items-center rounded-full; 
@@ -191,12 +191,11 @@ a{
 
 
 .progressbar-parcentage{
-  /* @apply text-2xl font-semibold size-30 flex justify-center items-center absolute top-0 left-0; */
   @apply text-2xl font-semibold absolute top-11.25;
 }
 
 
-/* Portfolio Section */
+/* ----------------Portfolio Section --------------*/
 .single-portfolio-list {
   @apply relative overflow-hidden block;
 }
@@ -204,13 +203,71 @@ a{
   @apply text-white!
 }
 .portfolio-details {
-  @apply  absolute top-0 left-0  w-0 h-full flex justify-center items-center bg-[#72b626] transition-all duration-300 ease-in-out invisible opacity-0;
+  @apply  absolute top-0 left-0  w-0 h-full flex justify-center items-center bg-[#72b626] transition-all duration-300 ease-in-out invisible opacity-0 rounded-[0.3125rem];
 }
 
 .single-portfolio-list.group:hover .portfolio-details {
   @apply w-full visible opacity-100;
 }
 
+
+/* --------------Service Area---------- */
+.service-area{
+  @apply lg:py-25 py-10;
+}
+
+
+.single-service-list {
+  @apply border border-[var(--black-2)] p-8 rounded-lg flex flex-col h-full gap-10 bg-transparent duration-300 ease-in-out cursor-pointer shadow-[0_0_10px_rgba(0,0,0,0.05)]
+         hover:bg-[var(--black-2)] hover:transform hover:translate-y-[-0.3125rem] hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)] focus:bg-[var(--black-2)] focus:translate-y-[-0.3125rem] focus:shadow-[0_10px_20px_rgba(0,0,0,0.1)] active:bg-[var(--black-2)] active:translate-y-[-0.3125rem] active:shadow-[0_10px_20px_rgba(0,0,0,0.1)];
+}
+
+.single-service-list.is-active {
+  @apply bg-[var(--black-2)] translate-y-[-0.3125rem] shadow-[0_10px_20px_rgba(0,0,0,0.1)];
+}
+
+.single-service-icon svg{
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+
+
+.single-service-list:hover .single-service-icon svg,
+.single-service-list:focus .single-service-icon svg,
+.single-service-list:active .single-service-icon svg,
+.single-service-list.is-active .single-service-icon svg {
+  @apply transform scale-[1.2];
+}
+
+
+.single-service-list .service-list{
+  @apply  text-sm text-white flex flex-col gap-1;
+}
+
+.single-service-list .service-list li{
+ @apply flex gap-4 items-center py-1 transition-colors duration-300 ease-in-out  hover:text-[var(--green-1)]  focus:text-[var(--green-1)]  active:text-[var(--green-1)];
+}
+
+
+/* Contact Section */
+.single-form .form-control{
+@apply bg-[var(--black-2)] border border-transparent focus:border-[var(--green-1)] outline-none text-white py-2.5 px-6 uppercase transition-all duration-300 ease-in-out lg:[font-size:var(--15x)] text-sm rounded-[0.3125rem];
+}
+
+.contact-content{
+  @apply flex flex-col gap-5.25;
+}
+.contact-content h5{
+  @apply lg:[font-size:var(1.625rem)] text-xl text-[white] uppercase font-bold;
+}
+
+.contact-content i.fa-solid{
+  @apply text-[var(--green-1)] lg:[font-size:2.0625rem] text-2xl;
+}
+
+ul.contact-social li a{
+  @apply size-10 inline-flex justify-center items-center bg-[var(--black-2)] transition duration-300 hover:bg-[var(--green-1)] ease-in-out rounded-full;
+}
 
 
 
@@ -247,61 +304,47 @@ a{
 .outline {
   width: 50px;
   height: 50px;
-  border-radius: 100%;
-  transition: all 200ms ease-out;
+  border-radius: 50%;
   position: fixed;
   pointer-events: none;
   left: 0;
   top: 0;
-  /* transform: translate(calc(-50% + 15px), -50%); */
   z-index: 9999;
-  background: #593C0C;
-  opacity: .8;
+  background: rgba(255, 160, 1, 0.3);
+  /* opacity: 0; */
+  transition: background-color 0.2s ease, opacity 0.3s ease;
   outline: none;
-  @apply xl:hidden;
+  transform: translate(-50%, -50%);
 }
 
 .cursor {
-  width: 5px;
-  height: 5px;
-  border-radius: 100%;
-  background-color: #FFA201;
-  opacity: .5;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(255, 160, 1);
+  /* opacity: 0.5; */
   position: fixed;
-  transform: translate(-50%, -50%);
   pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
   z-index: 9999;
-   @apply xl:hidden
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
 
-.hover {
-  background-color: transparent;
-  opacity: 0.5;
-  z-index: 9999;
-  @apply xl:hidden
+.hide-cursor {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.default-cursor {
+  cursor: default !important;
+}
+
+.no-cursor {
+  cursor: none !important;
 }
 
 
-/* Hero Area */
- /* .particle {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
-} */
 
-/* .particle:nth-child(1) { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
-.particle:nth-child(2) { width: 60px; height: 60px; top: 70%; left: 85%; animation-delay: 2s; }
-.particle:nth-child(3) { width: 100px; height: 100px; top: 20%; left: 47%; animation-delay: 4s; } */
-
-/* .particle:nth-child(4) {
-    width: 200px;
-    height: 200px;
-    top: 70%;
-    left: 45%;
-    animation-delay: 4s;
-} */
 
 .hero-bounce {
   animation: HeroBounce 3s infinite;
