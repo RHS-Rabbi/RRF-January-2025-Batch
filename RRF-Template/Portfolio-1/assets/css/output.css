@@ -1063,10 +1063,28 @@ a {
       }
     }
   }
+  &:focus {
+    color: var(--green-1);
+  }
+  &:focus {
+    &::after {
+      content: var(--tw-content);
+      width: 100%;
+    }
+  }
+  &:active {
+    color: var(--green-1);
+  }
+  &:active {
+    &::after {
+      content: var(--tw-content);
+      width: 100%;
+    }
+  }
 }
 .hero-area {
   position: relative;
-  padding-block: calc(var(--spacing) * 31.25);
+  padding-block: calc(var(--spacing) * 37.5);
   @media (width >= 64rem) {
     max-height: 100dvh;
   }
@@ -1805,6 +1823,18 @@ ul.contact-social li a {
     @media (hover: hover) {
       color: var(--color-black);
     }
+  }
+  &:focus {
+    background-color: var(--color-white);
+  }
+  &:focus {
+    color: var(--color-black);
+  }
+  &:active {
+    background-color: var(--color-white);
+  }
+  &:active {
+    color: var(--color-black);
   }
 }
 .cta-info {
