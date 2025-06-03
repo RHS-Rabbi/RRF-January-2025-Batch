@@ -72,11 +72,16 @@ a{
 
 
 
+
+
 /* -----------------Hero Area --------------*/
 .hero-area{
-  @apply lg:max-h-dvh;
+  /* @apply lg:max-h-dvh  xl:py-31.25 lg:py-10 py-10 relative; */
+  @apply lg:max-h-dvh   xl:py-31.25 lg:py-10  h-dvh  relative;
 }
-
+.hero-mobile{
+  @apply h-dvh lg:h-auto  justify-center lg:justify-between;
+}
 .header-1{
   @apply w-full h-[200%] -rotate-15 absolute bg-[var(--green-1)] -left-[83%] -top-[50%] -z-1 lg:block hidden;
 }
@@ -251,7 +256,11 @@ a{
 
 /* Contact Section */
 .single-form .form-control{
-@apply bg-[var(--black-2)] border border-transparent focus:border-[var(--green-1)] outline-none text-white py-2.5 px-6 uppercase transition-all duration-300 ease-in-out lg:[font-size:var(--15x)] text-sm rounded-[0.3125rem];
+@apply bg-[var(--black-2)] border border-transparent focus:border-[var(--green-1)] outline-none text-white py-2.5 px-6  transition-all duration-300 ease-in-out lg:[font-size:var(--15x)] text-sm rounded-[0.3125rem];
+}
+
+.single-form .form-control::placeholder{
+  @apply uppercase;
 }
 
 .contact-content{
@@ -266,8 +275,50 @@ a{
 }
 
 ul.contact-social li a{
-  @apply size-10 inline-flex justify-center items-center bg-[var(--black-2)] transition duration-300 hover:bg-[var(--green-1)] ease-in-out rounded-full;
+  @apply size-10 inline-flex justify-center items-center bg-[var(--black-2)] transition duration-300 hover:bg-[var(--green-1)] ease-in-out rounded-full active:bg-[var(--green-1)] focus:bg-[var(--green-1)];
 }
+
+
+/* Cta Area */
+.cta-area{
+  @apply bg-[var(--black-2)] py-6 font-poppins! lg:[font-size:var(--15x)] text-sm;
+}
+.cta-right span{
+  @apply  hover:opacity-[0.8] transition duration-300 ease-in-out hover:text-[var(--green-1)] active:text-[var(--green-1)] focus:text-[var(--green-1)];
+}
+.cta-info p{
+  @apply lg:[font-size:var(--15x)] text-sm text-white;
+}
+
+.cta-info h4{
+  @apply text-lg lg:text-2xl font-bold ;
+}
+
+.cta-data h5{
+  @apply lg:text-base text-sm font-semibold
+}
+
+.terms-contents,.dis-contents{
+  @apply hidden fixed top-0 left-0 z-9999 bg-[var(rgba(0,0,0,0.7))] shadow-[0_10px_25px_rgba(0,0,0,0.3)] w-full h-full;
+
+}
+.temrs-details{
+  @apply relative w-full h-full flex justify-center items-center;
+}
+.cta-close-btn{
+  /* @apply absolute top-[8px] right-[8px] bg-transparent border-none cursor-pointer size-7.5 border-1 border-white rounded-full flex justify-center items-center; */
+  @apply absolute top-5 right-5 cursor-pointer border border-white bg-transparent w-[35px] h-[35px] rounded-full font-bold flex justify-center items-center transition duration-200 ease-in-out hover:bg-white hover:text-black;
+}
+.cta-info{
+  @apply bg-[var(--black-2)] p-7.5 relative lg:w-6/12 rounded-xl;
+}
+
+hr.cta-br{
+  @apply text-white mx-auto;
+}
+
+
+
 
 
 
@@ -388,5 +439,56 @@ ul.contact-social li a{
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
+
+
+
+/* For Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 600ms ease; 
+}
+
+.loader {
+  display: flex;
+  gap: 10px;
+}
+
+.loader span {
+  width: 15px;
+  height: 15px;
+  background-color: #72b626;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+}
+
 
 

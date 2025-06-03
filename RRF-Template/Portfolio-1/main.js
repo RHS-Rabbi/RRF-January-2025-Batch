@@ -17,22 +17,38 @@
 
 
     // Service Mobile size active
-    $(document).ready(function () {
-        $('.single-service-list').on('click', function (e) {
-            e.stopPropagation();
-            $('.single-service-list').removeClass('is-active'); 
-            $(this).addClass('is-active'); 
-        });
-        $(document).on('click', function () {
+$(document).ready(function () {
+    $('.single-service-list').on('click', function (e) {
+        e.stopPropagation();
+        
+        if ($(this).hasClass('is-active')) {
+            $(this).removeClass('is-active');
+        } else {
             $('.single-service-list').removeClass('is-active');
-        });
+            $(this).addClass('is-active');
+        }
     });
+    $(document).on('click', function () {
+        $('.single-service-list').removeClass('is-active');
+    });
+});
 
 
 
+    // preloader
+    window.addEventListener('load', function () {
+        const preloader = document.getElementById('preloader');
 
-
-
+        // Wait a bit before starting fade out
+        setTimeout(() => {
+        preloader.style.opacity = '0';
+        
+        // Wait for fade transition (600ms), then remove
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 600);
+        }, 500); // Initial delay before fade (for better UX)
+    });
 
 
 
@@ -188,7 +204,7 @@ window.addEventListener('scroll', () => {
 
 
 
-
+// Portfolio
 $(document).ready(function () {
     $('.portfolio-popup').magnificPopup({
         type: 'inline',
@@ -197,6 +213,44 @@ $(document).ready(function () {
         removalDelay: 300  
     });
 });
+
+
+$(document).ready(function () {
+    // Show Terms popup
+    $('#cta-terms').on('click', function () {
+        $('.terms-contents').fadeIn();
+        $('.dis-contents').fadeOut(); // Hide the other one
+    });
+
+    // Show Disclaimer popup
+    $('#cta-dis').on('click', function () {
+        $('.dis-contents').fadeIn();
+        $('.terms-contents').fadeOut(); // Hide the other one
+    });
+
+    // Close buttons
+    $('#cta-close-terms').on('click', function () {
+        $('.terms-contents').fadeOut();
+    });
+
+    $('#cta-close-dis').on('click', function () {
+        $('.dis-contents').fadeOut();
+    });
+
+    // Close when clicking outside
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.temrs-details, #cta-terms, #cta-dis').length) {
+            $('.terms-contents').fadeOut();
+            $('.dis-contents').fadeOut();
+        }
+    });
+});
+
+
+
+
+
+
 
 
 

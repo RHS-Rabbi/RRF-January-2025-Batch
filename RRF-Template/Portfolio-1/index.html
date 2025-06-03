@@ -23,6 +23,13 @@
 <body class="font-open-sens bg-[var(--black)] text-white">
     <div class="outline"></div>
     <div class="cursor"></div>
+    <div id="preloader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
     <header id="home" class="header_main lg:py-8 py-5  sticky-header">
         <div class="container">
             <div class="justify-between items-center lg:flex hidden">
@@ -78,14 +85,14 @@
         </div>
     </header>
     <!-- Hero Area -->
-    <section class="hero-area xl:py-31.25 lg:py-10 py-10 relative">
+    <section class="hero-area">
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="header-1"></div>
         <div class="container">
-                <div class="flex flex-col md:flex-row justify-between items-center h-full  lg:gap-10">
+                <div class="flex flex-col md:flex-row justify-between items-center h-full  lg:gap-10 hero-mobile">
                 <div class="lg:w-6/12">
                     <div class="hero-left hidden lg:block">
                         <div data-aos="zoom-in" class="hero-bg">
@@ -306,13 +313,13 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-15">
                 <!-- project-1 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-1.jpg" alt="Project 1" class="object-cover rounded-[0.3125rem]">
+                    <img src="./assets/img/project-bg/fancy-1.jpg" alt="Project 1" class="object-cover rounded-[0.3125rem] lg:h-70.75">
                     <div class="portfolio-details">
-                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-1">Image Project</a>
+                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-1">Website Test</a>
                     </div>
                     <div id="project-1" class="mfp-hide mx-auto lg:w-5/12 bg-[var(--black-2)] relative p-7.5 rounded-[0.625rem]">
                         <div class="flex flex-col gap-5">
-                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Project one</h2>
+                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">FancyShop</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
@@ -327,10 +334,12 @@
                                 </div>
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                        </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!">Test</span></p>
+                                        <div class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                            </svg>
+                                        </div>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!"> this template was used for practice only; I do not claim ownership.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -339,7 +348,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
 
-                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, Javascript</span></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, jquery,Bootstrap.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -347,26 +356,26 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a href="#" class="font-semibold!">View Live Project</a></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a target="_blank" href="https://rhs-rabbi.github.io/RRF-January-2025-Batch/Boostrap/Fancyshop/" class="font-semibold! transition duration-300 hover:opacity-[.8] active:opacity-[.8] focus:opacity-[.8]">View Live Project</a></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-1.jpg" alt="">
+                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-bg/fancy-1.jpg" alt="project-1">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-2 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-1.jpg" alt="Project 1" class="object-cover rounded-[0.3125rem]">
+                    <img src="./assets/img/project-bg/project-2.jpg" alt="Project 2" class="object-cover rounded-[0.3125rem] w-full lg:h-70.75">
                     <div class="portfolio-details">
-                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-2">Image Project</a>
+                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-2">Website test</a>
                     </div>
                     <div id="project-2" class="mfp-hide mx-auto lg:w-5/12 bg-[var(--black-2)] relative p-7.5 rounded-[0.625rem]">
                         <div class="flex flex-col gap-5">
-                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Project Two</h2>
+                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Clumb</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
@@ -381,10 +390,12 @@
                                 </div>
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                        </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!">Test</span></p>
+                                        <div class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                            </svg>
+                                        </div>
+                                       <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!"> this template was used for practice only; I do not claim ownership.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -393,7 +404,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
 
-                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, Javascript</span></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, jquery,Bootstrap.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -401,26 +412,26 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a href="#" class="font-semibold!">View Live Project</a></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a target="_blank" href="https://rhs-rabbi.github.io/RRF-January-2025-Batch/Boostrap/Clumb/" class="font-semibold! transition duration-300 hover:opacity-[.8] active:opacity-[.8] focus:opacity-[.8]">View Live Project</a></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-1.jpg" alt="">
+                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-bg/project-2.jpg" alt="project-2">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-3 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-1.jpg" alt="Project 1" class="object-cover rounded-[0.3125rem]">
+                    <img src="./assets/img/project-bg/project-3.png" alt="Project 1" class="object-cover rounded-[0.3125rem] lg:h-70.75">
                     <div class="portfolio-details">
-                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-3">Image Project</a>
+                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-3">WebSite test</a>
                     </div>
                     <div id="project-3" class="mfp-hide mx-auto lg:w-5/12 bg-[var(--black-2)] relative p-7.5 rounded-[0.625rem]">
                         <div class="flex flex-col gap-5">
-                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Project Three</h2>
+                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">bustle</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
@@ -435,10 +446,12 @@
                                 </div>
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                        </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!">Test</span></p>
+                                        <div class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                            </svg>
+                                        </div>
+                                       <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!"> this template was used for practice only; I do not claim ownership.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -447,7 +460,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
 
-                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, Javascript</span></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, jquery,Bootstrap.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -455,26 +468,26 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a href="#" class="font-semibold!">View Live Project</a></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a target="_blank" href="https://rhs-rabbi.github.io/RRF-January-2025-Batch/Boostrap/Bustle/" class="font-semibold! transition duration-300 hover:opacity-[.8] active:opacity-[.8] focus:opacity-[.8]">View Live Project</a></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-1.jpg" alt="">
+                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-bg/project-3.png" alt="project-3">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-4 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-1.jpg" alt="Project 1" class="object-cover rounded-[0.3125rem]">
+                    <img src="./assets/img/project-bg/project-4.png" alt="Project 4" class="object-cover rounded-[0.3125rem] lg:h-70.75">
                     <div class="portfolio-details">
-                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-4">Image Project</a>
+                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-4">Website test</a>
                     </div>
                     <div id="project-4" class="mfp-hide mx-auto lg:w-5/12 bg-[var(--black-2)] relative p-7.5 rounded-[0.625rem]">
                         <div class="flex flex-col gap-5">
-                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Project Four</h2>
+                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Site -Cardiology</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
@@ -489,10 +502,12 @@
                                 </div>
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                        </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!">Test</span></p>
+                                        <div class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                            </svg>
+                                        </div>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!"> this template was used for practice only; I do not claim ownership.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -500,8 +515,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
-
-                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, Javascript</span></p>
+                                       <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, jquery,Bootstrap.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -509,26 +523,26 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a href="#" class="font-semibold!">View Live Project</a></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a target="_blank" href="https://rhs-rabbi.github.io/RRF-January-2025-Batch/Boostrap/Site%20-Cardiology/" class="font-semibold! transition duration-300 hover:opacity-[.8] active:opacity-[.8] focus:opacity-[.8]">View Live Project</a></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-1.jpg" alt="">
+                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-bg/project-4.png" alt="project-4">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-5 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-1.jpg" alt="Project 1" class="object-cover rounded-[0.3125rem]">
+                    <img src="./assets/img/project-bg/project-5.jpg" alt="Project 5" class="object-cover rounded-[0.3125rem] lg:h-70.75">
                     <div class="portfolio-details">
-                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-5">Image Project</a>
+                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-5">Website Test</a>
                     </div>
                     <div id="project-5" class="mfp-hide mx-auto lg:w-5/12 bg-[var(--black-2)] relative p-7.5 rounded-[0.625rem]">
                         <div class="flex flex-col gap-5">
-                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Project Five</h2>
+                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Thalia</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
@@ -543,10 +557,12 @@
                                 </div>
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                        </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!">Test</span></p>
+                                        <div class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                            </svg>
+                                        </div>
+                                       <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!"> this template was used for practice only; I do not claim ownership.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -555,7 +571,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
 
-                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, Javascript</span></p>
+                                       <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, jquery,Bootstrap.</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -563,26 +579,26 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a href="#" class="font-semibold!">View Live Project</a></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a target="_blank" href="https://rhs-rabbi.github.io/RRF-January-2025-Batch/Boostrap/Thalia/" class="font-semibold! transition duration-300 hover:opacity-[.8] active:opacity-[.8] focus:opacity-[.8]">View Live Project</a></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-1.jpg" alt="">
+                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-bg/project-5.jpg" alt="project-5">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-6 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-1.jpg" alt="Project 1" class="object-cover rounded-[0.3125rem]">
+                    <img src="./assets/img/project-bg/project-6png.png" alt="Project 6" class="object-cover rounded-[0.3125rem] lg:h-70.75">
                     <div class="portfolio-details">
-                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-6">Image Project</a>
+                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-6">Wordpress test</a>
                     </div>
                     <div id="project-6" class="mfp-hide mx-auto lg:w-5/12 bg-[var(--black-2)] relative p-7.5 rounded-[0.625rem]">
                         <div class="flex flex-col gap-5">
-                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Project Six</h2>
+                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Lopard Wordpress Theme</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
@@ -597,10 +613,12 @@
                                 </div>
                                 <div class="lg:w-6/12">
                                     <div class="flex gap-2 lg:mb-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                                        </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!">Test</span></p>
+                                        <div class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                            </svg>
+                                        </div>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Client: <span class="font-semibold!">Own</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -609,7 +627,7 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
 
-                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">HTML, CSS, Javascript</span></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">language: <span class="font-semibold!">WordPress Theme Devolopment</span></p>
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
@@ -617,13 +635,13 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
-                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a href="#" class="font-semibold!">View Live Project</a></p>
+                                        <p class="[font-size:var(--15x)] text-white capitalize">Preview : <a target="_blank" href="https://dev-lopard-rabbi.pantheonsite.io/" class="font-semibold! transition duration-300 hover:opacity-[.8] active:opacity-[.8] focus:opacity-[.8]">View Live Project</a></p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-1.jpg" alt="">
+                                <img class="object-cover rounded-[0.3125rem] lg:h-138" src="./assets/img/project-bg/project-6png.png" alt="project-6">
                             </div>
                         </div>
                     </div>
@@ -764,7 +782,7 @@
     </section>
 
     <!-- Contact Section -->
-     <section id="contact" class="contact-area lg:py-25 py-10">
+     <section data-aos="fade-up"  id="contact" class="contact-area lg:py-25 py-10">
         <div class="container">
             <div class="md:w-6/12 mx-auto">
                 <div  class="about-title">
@@ -775,7 +793,7 @@
             <div class="flex flex-col lg:flex-row-reverse mt-20 gap-20">
                 <div class="lg:w-4/12">
                     <div class="contact-content">
-                        <div class="flex flex-col gap-2">
+                        <div class="flex flex-col gap-5">
                             <h5>Don't be shy !</h5>
                             <p class="[font-size:var(--15x)] lg:w-100">Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
                         </div>
@@ -797,7 +815,7 @@
                                 <a class="text-white font-semibold  lg:[font-size:var(--15x)] text-sm" href="tel:+8801610278594">+8801610278594</a>
                             </div>
                         </div>
-                        <ul class="contact-social flex flex-col gap-4">
+                        <ul class="contact-social flex flex-col gap-5">
                             <h5>Follow Me</h5>
                             <div class="flex gap-2.5">
                                 <li><a href="https://www.facebook.com/rabbihossain.0" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -810,16 +828,16 @@
                     </div>
                 </div>
                 <div class="lg:w-8/12">
-                    <form action="#" class="flex flex-col gap-5">
+                    <form  action="https://formspree.io/f/mqabkjrw" method="POST" class="flex flex-col gap-5">
                         <div class="single-form flex lg:flex-row flex-col lg:gap-10 gap-5">
-                            <input class="w-full form-control" type="text" placeholder="Name">
-                            <input class="w-full form-control" type="email" placeholder="Email">
+                            <input class="w-full form-control" type="text" placeholder="Name" required>
+                            <input class="w-full form-control" type="email" placeholder="Email" required>
                         </div>
                         <div class="single-form">
                             <input class="w-full form-control" type="text" name="SUBJECT" placeholder="SUBJECT" required>
                         </div>
                         <div class="single-form">
-                            <textarea class="form-control w-full resize-none" rows="5" name="Massage" placeholder="Massage" id="massage" resize-none></textarea>
+                            <textarea class="form-control w-full resize-none" rows="10" name="Massage" placeholder="Massage" id="massage" resize-none></textarea>
                         </div>
                         <div class="about-btn flex justify-start">
                             <button type="submit" class="btn" href="#">
@@ -838,21 +856,104 @@
      </section>
 
     <!-- Cta Area -->
-    <section class="cta-area bg-[#252525] py-6">
+    <section class="cta-area">
         <div class="container">
-            <!-- <div class="flex flex-col lg:flex-row">
-                <div class="lg:w-6/12">
-                    <div class="cta-left">
-                        <p class="text-base font-poppins!">Copyright © 2025 <a class="uppercase text-[var(--green-1)] font-semibold hover:opacity-[0.8] transition duration-300 ease-in-out" href="index.html">mrh</a>. All Rights Reserved.</p>
+            <div class="flex flex-col lg:flex-row gap-5 justify-between">
+                <div class="cta-left lg:text-left text-center">
+                    <p>Copyright © 2025 <a class="uppercase text-[var(--green-1)] font-semibold hover:opacity-[0.8] transition duration-300 ease-in-out" href="index.html">mrh</a>. All Rights Reserved.</p>
+                </div>
+                <div class="cta-right">
+                    <div class="flex gap-2.5 lg:justify-start justify-center">
+                        <span id="cta-terms" class="cursor-pointer">Terms & Conditions</span>
+                        |
+                        <span id="cta-dis" class="cursor-pointer">Disclaimer</span>
                     </div>
-                </div>
-                <div class="lg:w-6/12">
-
-                </div>
-            </div> -->
-            <div class="w-full">
-                <div class="cta-left text-center">
-                    <p class="text-base font-poppins!">Copyright © 2025 <a class="uppercase text-[var(--green-1)] font-semibold hover:opacity-[0.8] transition duration-300 ease-in-out" href="index.html">mrh</a>. All Rights Reserved.</p>
+                    <div class="terms-contents">
+                        <div class="temrs-details">
+                            <div class="cta-info">
+                                <button class="cta-close-btn" id="cta-close-terms">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                                <div class="flex flex-col gap-7.5">
+                                    <h4>Terms & Conditions</h4>
+                                    <div class="cta-divider">
+                                        <hr class="cta-br">
+                                    </div>
+                                    <p>Welcome to my portfolio website. By accessing or using this website, you agree to the following terms:</p>
+                                    <ul class="cta-data flex flex-col gap-4">
+                                        <div class="flex flex-col">
+                                            <li class="flex items-center gap-2.5">1.
+                                                <h5>Use of Content</h5>
+                                            </li>
+                                            <p class="pl-4.5">All content, including images, text, projects, and code, is the intellectual property of the owner of this website. You may not copy, reproduce, or redistribute any part without prior permission.</p>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <li class="flex items-center gap-2.5">2.
+                                                <h5>Accuracy</h5>
+                                            </li>
+                                            <p class="pl-4.5">I make every effort to keep the information on this website accurate and up to date. However, I make no guarantees regarding the completeness, accuracy, or reliability of any information presented.</p>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <li class="flex items-center gap-2.5">3.
+                                                <h5>External Links</h5>
+                                            </li>
+                                            <p class="pl-4.5">This website may contain links to third-party websites for your convenience. I do not endorse or take responsibility for the content, privacy practices, or policies of these external sites.</p>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <li class="flex items-center gap-2.5">4.
+                                                <h5>Changes to Terms</h5>
+                                            </li>
+                                            <p class="pl-4.5">I reserve the right to update or modify these Terms & Conditions at any time without prior notice. Continued use of the website constitutes your acceptance of any changes.</p>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dis-contents">
+                        <div class="temrs-details">
+                            <div class="cta-info">
+                                <button class="cta-close-btn" id="cta-close-dis">
+                                    ✕
+                                </button>
+                                <div class="flex flex-col gap-7.5">
+                                    <h4>Disclaimer</h4>
+                                    <div class="cta-divider">
+                                        <hr class="cta-br">
+                                    </div>
+                                    <p>This portfolio website is intended solely for the purpose of showcasing my personal, academic, and professional work.</p>
+                                    <ul class="cta-data flex flex-col gap-4">
+                                        <div class="single-cta-list">
+                                            <li class="flex gap-2.5">
+                                                <div class="leading-6"><i class="fa-solid fa-circle-dot"></i></div>
+                                                <p>The projects and content displayed are for demonstration purposes only.</p>
+                                            </li>
+                                        </div>
+                                        <div class="single-cta-list">
+                                            <li class="flex gap-2.5">
+                                                <div class="leading-6"><i class="fa-solid fa-circle-dot"></i></div>
+                                                <p class="">All content, including images, text, projects, and code, is the intellectual property of the owner of this website. You may not copy, reproduce, or redistribute any part without prior permission.</p>
+                                            </li>
+                                        </div>
+                                        <div class="single-cta-list">
+                                            <li class="flex gap-2.5">
+                                                <div class="leading-6"><i class="fa-solid fa-circle-dot"></i></div>
+                                                <p class="">This site does not collect any personal data unless you voluntarily provide it (e.g., through a contact form).</p>
+                                            </li>
+                                        </div>
+                                        <div class="single-cta-list">
+                                            <li class="flex gap-2.5">
+                                                <div class="leading-6"><i class="fa-solid fa-circle-dot"></i></div>
+                                                <p class="">No guarantees are made regarding the outcomes or results from using any information or tools found on this site.</p>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
