@@ -76,12 +76,12 @@ a{
 
 /* -----------------Hero Area --------------*/
 .hero-area{
-  /* @apply lg:max-h-dvh  xl:py-31.25 lg:py-10 py-10 relative; */
-  @apply lg:max-h-dvh   xl:py-31.25 lg:py-10  h-dvh  relative;
+  @apply lg:max-h-dvh  xl:py-31.25 lg:py-10 py-31.25 relative;
+  /* @apply lg:max-h-dvh   xl:py-31.25 lg:py-10  h-dvh  relative; */
 }
-.hero-mobile{
+/* .hero-mobile{
   @apply h-dvh lg:h-auto  justify-center lg:justify-between;
-}
+} */
 .header-1{
   @apply w-full h-[200%] -rotate-15 absolute bg-[var(--green-1)] -left-[83%] -top-[50%] -z-1 lg:block hidden;
 }
@@ -443,7 +443,7 @@ hr.cta-br{
 
 
 /* For Preloader */
-#preloader {
+/* #preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -488,7 +488,7 @@ hr.cta-br{
     transform: translateY(-15px);
     opacity: 1;
   }
-}
+} */
 
 
 

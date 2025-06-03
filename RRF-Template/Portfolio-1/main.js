@@ -36,19 +36,19 @@ $(document).ready(function () {
 
 
     // preloader
-    window.addEventListener('load', function () {
-        const preloader = document.getElementById('preloader');
+    // window.addEventListener('load', function () {
+    //     const preloader = document.getElementById('preloader');
 
-        // Wait a bit before starting fade out
-        setTimeout(() => {
-        preloader.style.opacity = '0';
+    //     // Wait a bit before starting fade out
+    //     setTimeout(() => {
+    //     preloader.style.opacity = '0';
         
-        // Wait for fade transition (600ms), then remove
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 600);
-        }, 500); // Initial delay before fade (for better UX)
-    });
+    //     // Wait for fade transition (600ms), then remove
+    //     setTimeout(() => {
+    //         preloader.style.display = 'none';
+    //     }, 600);
+    //     }, 500); // Initial delay before fade (for better UX)
+    // });
 
 
 
