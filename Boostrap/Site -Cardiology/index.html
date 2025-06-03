@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site | Cardiology Responsive Website Template</title>
+
+    <!-- Bootstrap 5.3.x -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Owl Carousel Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header class="header" style="position: sticky; top: 0; z-index: 999; width: 100%;">
+        <div class="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Menu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <!-- About Us Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                    <li><a class="dropdown-item" href="about-us.html">About Clinic</a></li>
+                                    <li><a class="dropdown-item" href="doctor-listing.html">Doctor Listing</a></li>
+                                    <li><a class="dropdown-item" href="doctor-profile.html">Doctor Profile</a></li>
+                                </ul>
+                            </li>
+                            <!-- Treatment Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="treatmentDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Treatment
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="treatmentDropdown">
+                                    <li><a class="dropdown-item" href="treatment-list.html">Treatment List</a></li>
+                                    <li><a class="dropdown-item" href="treatment-sidebar.html">Treatment Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <!-- Blog Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Blog
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                                    <li><a class="dropdown-item" href="blog-listing.html">Blog Listing</a></li>
+                                    <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
+                                </ul>
+                            </li>
+                            <!-- Features Dropdown with Nested Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Features
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="featuresDropdown">
+                                    <li><a class="dropdown-item" href="testimonial.html">Testimonials</a></li>
+                                    <li><a class="dropdown-item" href="appointment-form.html">Appointment Form</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">Faq</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Gallery</a>
+                                        <!-- <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="gallery-filter-3.html">Filterable Gallery 3 column</a></li>
+                                            <li><a class="dropdown-item" href="gallery-masonry.html">Masonry Gallery</a></li>
+                                            <li><a class="dropdown-item" href="gallery-zoom.html">Zoom Gallery</a></li>
+                                        </ul> -->
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Shortcodes</a>
+                                        <!-- <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="shortcodes-accordion.html">Accordions</a></li>
+                                            <li><a class="dropdown-item" href="shortcodes-tabs.html">Tabs</a></li>
+                                            <li><a class="dropdown-item" href="shortcodes-alerts.html">Alerts</a></li>
+                                            <li><a class="dropdown-item" href="shortcodes-cta.html">Call to Actions</a></li>
+                                            <li><a class="dropdown-item" href="shortcodes-columns.html">Columns</a></li>
+                                        </ul> -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- Contact Us Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Contact Us
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                                    <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                                    <li><a class="dropdown-item" href="location-listing.html">Location Listing</a></li>
+                                    <li><a class="dropdown-item" href="location-single.html">Location Single</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="site">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" class="site-logo" src="assets/img/logo.png" alt="">
+                    </div>
+                    <div class="col-md-7 offset-md-1">
+                        <div class="site-info">
+                            <p><i class="fa-solid fa-location-dot"></i><a href="#"> View Locations</a></p>
+                            <p><i class="fa-solid fa-phone"></i> +(800) 123-4567</p>
+                            <a class="btn btn-default site-btn" href="#">Make An Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Slider Section Start -->
+     <div class="slider-section">
+        <div id="owl-1" class="owl-carousel slider-carousel owl-theme">
+            <div class="slider-item">
+                <div class="slider-bg slider-bg1">
+                    <div class="col-md-8 offset-md-2 text-center">
+                        <div class="slider-title">
+                            <h2><strong>A Request</strong>
+                                <br>
+                                to Make An Appointment
+                            </h2>
+                            <a href="#" class="btn btn-default slider-btn">Make an apointment</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            <div class="slider-item">
+                <div class="slider-bg slider-bg2">
+                    <div class="col-md-8 offset-md-2 text-center">
+                        <div class="slider-title">
+                            <h2><strong>Specialties</strong>
+                                <br>
+                                We’re experts in Cardiology
+                            </h2>
+                            <a href="#" class="btn btn-default slider-btn">View Treatments</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            <div class="slider-item">
+               <div class="slider-bg slider-bg3">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="slider-title">
+                        <h2><strong>Highly Experienced</strong>
+                            <br>
+                            & Recognised Cardiologists
+                        </h2>
+                        <a href="#" class="btn btn-default slider-btn">Make an apointment</a>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-8 offset-md-2 text-center">
+            <p class="lead">Heart Care is the past, present, and future of cardiology in India. Founded almost 5 years ago, Heart Care is the oldest and largest cardiovascular group in India. From its small beginning in ahmedabad, Heart Care has grown to over 50 physicians throughout.</p>
+            <a href="#" class="btn-link">Know More aBOUT uS</a>
+        </div>
+     </div>
+    <!-- Slider Section End  -->
+     
+    <!-- Space-Mall Section Start -->
+     <div class="space-mall-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="space-mall-title">
+                        <h2>Welcome Patient to our clinic</h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-space-mall-list">
+                            <div class="feature-list">
+                                <div class="space-mall-icon">
+                                <i class="bi bi-card-checklist"></i>
+                            </div>
+                            <div class="space-mall-content">
+                                <h3>New Patient Forms</h3>
+                                <p>For your convenience, we have placed patient form below, in the form of PDF files, that you may download at your respite..</p>
+                                <a href="#" class="btn btn-default">Download Form</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-space-mall-list">
+                            <div class="feature-list">
+                                <div class="space-mall-icon">
+                                    <i class="bi bi-card-list"></i>
+                            </div>
+                            <div class="space-mall-content">
+                                <h3>Book Your Appt. Online</h3>
+                                <p>Your time is valuable and we make every effort to run on time. so book your appointment online, its fast n quickble to response.</p>
+                                <a href="#" class="btn btn-default">Make Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-space-mall-list">
+                            <div class="feature-list">
+                                <div class="space-mall-icon">
+                                <i class="bi bi-play-circle"></i>
+                            </div>
+                            <div class="space-mall-content">
+                                <h3>Watch Patient Education</h3>
+                                <p>For your convenience, we have placed patient form below, in the form of PDF files, that you may download at your respite..</p>
+                                <a href="#" class="btn btn-default">Watch Video</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- Space-Mall Section End -->
+
+    <!-- Service Section Start -->
+    <div class="service-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="service-title mb-4">
+                        <h2>Services We Provide</h2>
+                        <p>Our cardiologists offer a comprehensive and progressive cardiac care service.</p>
+                    </div>
+                </div>
+                <div class="service-tab">
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="electrophysiology-tab" data-toggle="tab" href="#electrophysiology" role="tab" aria-controls="electrophysiology" aria-selected="true">Electrophysiology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="cardiac-surgery-tab" data-toggle="tab" href="#cardiac-surgery" role="tab" aria-controls="cardiac-surgery" aria-selected="false">Cardiac & Thoracic Surgery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="heart-failure-tab" data-toggle="tab" href="#heart-failure" role="tab" aria-controls="heart-failure" aria-selected="false">Congestive Heart Failure</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="cardiology-tab" data-toggle="tab" href="#cardiology" role="tab" aria-controls="cardiology" aria-selected="false">Interventional Cardiology</a>
+                        </li>
+                    </ul>
+    
+                    <!-- Tab Content -->
+                    <div class="tab-content service-bg" id="myTabContent">
+                        <div class="tab-pane fade show active" id="electrophysiology" role="tabpanel" aria-labelledby="electrophysiology-tab">
+                            <div class="service-block">
+                                <div class="row py-2">
+                                    <div class="col-md-4">
+                                        <div class="treatment-img">
+                                            <a href="#">
+                                                <img src="assets/img/service bg/treatment-img-1.jpg" alt="">
+                                                <i class="fa-regular fa-eye-slash"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <h2><a href="#">Electrophysiology Services</a></h2>
+                                            <p>Sesto nisigravida vitae facilisis on infaus quis eliorbi sitamet in portain quis libero hasellus lorem pretiumis elitorbi.</p>
+                                            <a href="#" class="btn-link">View More Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <ul>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ablation Therapy for Atrial Fibrillation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Biventricular Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Standard Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Tilt Table Procedures</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Implantable Cardioverter Defibrillator</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ventricular Tachycardia and Cryotherapy</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cardiac-surgery" role="tabpanel" aria-labelledby="cardiac-surgery-tab">
+                            <div class="service-block">
+                                <div class="row py-2">
+                                    <div class="col-md-4">
+                                        <div class="treatment-img">
+                                            <a href="#">
+                                                <img src="assets/img/service bg/treatment-img-2.jpg" alt="">
+                                                <i class="fa-regular fa-eye-slash"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <h2><a href="#">Cardiac & Thoracic Surgery</a></h2>
+                                            <p>Sesto nisigravida vitae facilisis on infaus quis eliorbi sitamet in portain quis libero hasellus lorem pretiumis elitorbi.</p>
+                                            <a href="#" class="btn-link">View More Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <ul>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ablation Therapy for Atrial Fibrillation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Biventricular Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Standard Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Tilt Table Procedures</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Implantable Cardioverter Defibrillator</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ventricular Tachycardia and Cryotherapy</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="heart-failure" role="tabpanel" aria-labelledby="heart-failure-tab">
+                            <div class="service-block">
+                                <div class="row py-2">
+                                    <div class="col-md-4">
+                                        <div class="treatment-img">
+                                            <a href="#">
+                                                <img src="assets/img/service bg/treatment-img-3.jpg" alt="">
+                                                <i class="fa-regular fa-eye-slash"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <h2><a href="#">Congestive Heart Failure</a></h2>
+                                            <p>Sesto nisigravida vitae facilisis on infaus quis eliorbi sitamet in portain quis libero hasellus lorem pretiumis elitorbi.</p>
+                                            <a href="#" class="btn-link">View More Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <ul>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ablation Therapy for Atrial Fibrillation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Biventricular Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Standard Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Tilt Table Procedures</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Implantable Cardioverter Defibrillator</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ventricular Tachycardia and Cryotherapy</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cardiology" role="tabpanel" aria-labelledby="cardiology-tab">
+                            <div class="service-block">
+                                <div class="row py-2">
+                                    <div class="col-md-4">
+                                        <div class="treatment-img">
+                                            <a href="#">
+                                                <img src="assets/img/service bg/treatment-img-4.jpg" alt="">
+                                                <i class="fa-regular fa-eye-slash"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <h2><a href="#">Interventional Cardiology</a></h2>
+                                            <p>Sesto nisigravida vitae facilisis on infaus quis eliorbi sitamet in portain quis libero hasellus lorem pretiumis elitorbi.</p>
+                                            <a href="#" class="btn-link">View More Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="treatment-list">
+                                            <ul>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ablation Therapy for Atrial Fibrillation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Biventricular Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Standard Pacemaker Implantation</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Tilt Table Procedures</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Implantable Cardioverter Defibrillator</a></li>
+                                            <li><a href="#"><i class="fa-regular fa-heart"></i> Ventricular Tachycardia and Cryotherapy</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service Section End -->
+
+    <!-- Space Medium Section Start -->
+     <div class="space-medium">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="space-medium-title">
+                        <h2>Need Any Help?</h2>
+                        <p>If you have any questions before your appointment call us on
+                            <br><strong>+(800) 123-4567.</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-space-medium-list spacemedium-bg1">
+                        <div class="space-medium-content">
+                            <i class="fa-solid fa-route"></i>
+                            <h3>Find Location + Direction</h3>
+                            <p>In all locations order to provide patients with convenient care.</p>
+                            <a href="#" class="btn btn-default">View Location</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-space-medium-list spacemedium-bg2">
+                        <div class="space-medium-content">
+                            <i class="fa-solid fa-heart"></i>
+                            <h3>Heart Healthy Tips</h3>
+                            <p>Your heart works hard for you nonstop for your whole life.</p>
+                            <a href="#" class="btn btn-primary">Make Appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="single-space-medium-list spacemedium-bg3">
+                        <div class="space-medium-content">
+                            <i class="fa-solid fa-question"></i>
+                            <h3>Have A Question? Ask Us</h3>
+                            <p>If you have questions in regards to any, please feel free to ask us.</p>
+                            <a href="#" class="btn btn-default">Watch Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- Space Medium Section End -->
+
+    <!-- Info  Section Start  -->
+     <div class="info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                   <div class="info-bg">
+                        <img src="assets/img/dr-profile.jpg" alt="">
+                   </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-content">
+                        <h1>Meet Our
+                            <br>
+                            <strong>Dr. Thomas Davis </strong>
+                        </h1>
+                        <div class="team-meta">
+                            <span>(Cardiovascular Disease)</span>
+                        </div>
+                        <p class="lead">“Dr. Thomas davis was born and raised in India.he is a proud first generation Indian. He was awarded the Young Investigators award”</p>
+                        <a href="#" class="btn btn-default">meet our Cardiologist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- Info  Section End  -->
+
+    <!-- Slider Section Two Start -->
+     <div class="slider-section-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div id="owl-2" class="testimonial owl-carousel owl-theme">
+                        <div class="testimonial-item">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <h3>Great doctor! Great staff! Completely satisfied!!</h3>
+                            <p class="testimonal-content">
+                                “Everybody in the office was very helpful. The doctor was nice and took his time to listen and explain my condition”
+                            </p>
+                            <div class="testimonial-meta">
+                                - Helga Evans
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <h3>Great doctor! Great staff! Completely satisfied!!</h3>
+                            <p class="testimonal-content">
+                                “Service has always been excellent and very professional from Dr. and the office staff and assistants. I have always got the very strong feeling that Dr. is a most caring person and have given his name and praise to several of my friends.”
+                            </p>
+                            <div class="testimonial-meta">
+                                - Kelsie Messing
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <h3>Great doctor! Great staff! Completely satisfied!!</h3>
+                            <p class="testimonal-content">
+                                “Excellent support. Knowledgeable and caring towards patients. I am very satisfied with my physician, Very happy with my doctor”
+                            </p>
+                            <div class="testimonial-meta">
+                                - Charles Gilleland
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <!-- Slider Carousel Section Two End -->
+
+    <!-- Comment Section Start -->
+    <div class="comment-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="comment-title">
+                        <h2>Cardiology Latest Blog</h2>
+                        <p>Our blogs with reliable, up to date information from patients and physicians about Cardiology.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-comment-list">
+                        <div class="post-header">
+                            <h2><a href="#">Lower Your Calcium Heart Score</a></h2>
+                            <p class="meta">
+                                <span class="meta-date">31 Dec, 2020</span>
+                                <span class="meta-comment"><a href="#" class="meta-link">(05) COmments</a></span>
+                            </p>
+                        </div>
+                        <p>Spendisse suscipit, ante sed varius convallis magna diam suscipit, ante sed varius convallisaliquam.</p>
+                        <a href="#" class="btn-link">READ More</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-comment-list">
+                        <div class="post-header">
+                            <h2><a href="#">It is Heart Month What Can You Do?</a></h2>
+                            <p class="meta">
+                                <span class="meta-date">31 Dec, 2020</span>
+                                <span class="meta-comment"><a href="#" class="meta-link">(05) COmments</a></span>
+                            </p>
+                        </div>
+                        <p>Spendisse suscipit, ante sed varius convallis magna diam suscipit, ante sed varius convallisaliquam.</p>
+                        <a href="#" class="btn-link">READ More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comment Section End -->
+
+    <!-- Footer Section Start  -->
+     <div class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-logo">
+                        <a href="#">
+                            <img src="assets/img/footer-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>                   
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget-footer">
+                        <h3 class="widget-title">About Us</h3>
+                        <p>Heart Care is the past, present, & future of cardio in India. Founded almost five years ago, Heart Care is the oldest and largest cardiovascular in India. </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget-footer">
+                        <h3 class="widget-title">Services</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Electrophysiology</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Cardiac & Thoracic Surgery</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Congestive Heart Failure</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Interventional Cardiology</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget-footer">
+                        <h3 class="widget-title">Quick Links</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">About Us</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Services</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Blog</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget-footer">
+                        <h3 class="widget-title">Subscribe Newsletter</h3>
+                        <div class="form-group">
+                            <input id="newsletteremail" for="newsletteremail" name="newsletteremail" type="email" class="form-control" placeholder="Write E-Mail Address" required="">
+                            <button class="btn btn-default" type="button">Subscriber</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="tiny-footer">
+        <div class="container">
+             <div class="row">
+                 <div class="col-md-6">
+                     <p>Copyright 2017 - Cardiology Heart care clinic. All rights reserved.</p>
+                 </div>
+                 <div class="col-md-6 text-end">
+                     <p class="tiny-footer-link">
+                         <a href="#">Privacy Policy</a>
+                         <a href="#">Terms and Conditions</a>
+                     </p>
+                 </div>
+             </div>
+        </div>
+     </div>
+    <!-- Footer Section  End  -->
+
+
+
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
