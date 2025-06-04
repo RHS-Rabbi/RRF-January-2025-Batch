@@ -87,7 +87,7 @@ a{
 
 /* -----------------Hero Area --------------*/
 .hero-area{
-  @apply lg:max-h-dvh  xl:py-31.25 lg:py-10 py-37.5 relative;
+  @apply lg:max-h-dvh  xl:py-31.25 lg:py-10 py-40 relative;
   /* @apply lg:max-h-dvh   xl:py-31.25 lg:py-10  h-dvh  relative; */
 }
 /* .hero-mobile{

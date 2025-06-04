@@ -1067,7 +1067,7 @@ a {
 }
 .hero-area {
   position: relative;
-  padding-block: calc(var(--spacing) * 37.5);
+  padding-block: calc(var(--spacing) * 40);
   @media (width >= 64rem) {
     max-height: 100dvh;
   }
