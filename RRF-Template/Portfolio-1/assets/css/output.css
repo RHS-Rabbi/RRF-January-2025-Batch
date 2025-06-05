@@ -11,6 +11,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -321,14 +323,23 @@
   .h-screen {
     height: 100vh;
   }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
   .w-4\/12 {
     width: calc(4/12 * 100%);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
   }
   .w-6\/12 {
     width: calc(6/12 * 100%);
   }
   .w-full {
     width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .-translate-x-full {
     --tw-translate-x: -100%;
@@ -398,6 +409,9 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
+  .gap-7 {
+    gap: calc(var(--spacing) * 7);
+  }
   .gap-7\.5 {
     gap: calc(var(--spacing) * 7.5);
   }
@@ -406,6 +420,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
   }
   .gap-12\.5 {
     gap: calc(var(--spacing) * 12.5);
@@ -435,6 +452,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
+  }
   .p-7\.5 {
     padding: calc(var(--spacing) * 7.5);
   }
@@ -455,6 +475,9 @@
   }
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
+  }
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
   }
   .pl-4\.5 {
     padding-left: calc(var(--spacing) * 4.5);
@@ -484,6 +507,10 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .\[font-size\:var\(--15x\)\] {
     font-size: var(--15x);
@@ -527,11 +554,17 @@
   .capitalize {
     text-transform: capitalize;
   }
+  .lowercase {
+    text-transform: lowercase;
+  }
   .lowercase\! {
     text-transform: lowercase !important;
   }
   .uppercase {
     text-transform: uppercase;
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .opacity-\[0\.8\] {
     opacity: 0.8;
@@ -637,6 +670,11 @@
     @media (width >= 48rem) {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .md\:\[font-size\:var\(--15x\)\] {
+    @media (width >= 48rem) {
+      font-size: var(--15x);
     }
   }
   .lg\:mt-0 {
@@ -1067,7 +1105,7 @@ a {
 }
 .hero-area {
   position: relative;
-  padding-block: calc(var(--spacing) * 60);
+  padding-block: calc(var(--spacing) * 40);
   @media (width >= 64rem) {
     max-height: 100dvh;
   }
