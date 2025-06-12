@@ -1786,7 +1786,7 @@ ul.contact-social li a {
   display: none;
   height: 100%;
   width: 100%;
-  background-color: var(rgba(0,0,0,0.7));
+  background-color: rgba(0,0,0,0.7);
   --tw-shadow: 0 10px 25px var(--tw-shadow-color, rgba(0,0,0,0.3));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }

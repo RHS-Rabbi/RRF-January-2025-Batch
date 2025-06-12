@@ -310,11 +310,11 @@ ul.contact-social li a{
 }
 
 .terms-contents,.dis-contents{
-  @apply hidden fixed top-0 left-0 z-9999 bg-[var(rgba(0,0,0,0.7))] shadow-[0_10px_25px_rgba(0,0,0,0.3)] w-full h-full;
+  @apply hidden fixed top-0 left-0 z-9999 bg-[rgba(0,0,0,0.7)] shadow-[0_10px_25px_rgba(0,0,0,0.3)] w-full h-full;
 
 }
 .temrs-details{
-  @apply relative w-full h-full flex justify-center items-center;
+  @apply relative w-full h-full flex justify-center items-center ;
 }
 .cta-close-btn{
   @apply absolute top-5 right-5 cursor-pointer border border-white bg-transparent w-[35px] h-[35px] rounded-full font-bold flex justify-center items-center transition duration-200 ease-in-out hover:bg-white hover:text-black 
