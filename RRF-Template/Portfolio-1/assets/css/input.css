@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6{
 @layer{
     .container{
         /* @apply mx-auto px-4 md:px-0 xl:px-10 lg:px-10 2xl:px-0; */
-        @apply mx-auto px-5 md:px-0 1xl:max-w-292.5 xl:max-w-292.5 lg:max-w-242.5 2xl:max-w-360;
+        @apply mx-auto px-5  1xl:max-w-292.5 1xl:px-0 xl:px-0 lg:px-0 xl:max-w-292.5 lg:max-w-242.5 2xl:max-w-360;
     }
 
 }
