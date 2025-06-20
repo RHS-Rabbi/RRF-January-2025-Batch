@@ -1521,6 +1521,16 @@ p.copy-right-text {
     
 
 }
+@media (max-width: 480px) {
+  .header-info ul {
+        justify-content: center;
+        margin-bottom: 10px;
+        
+    }
+    .header-top-social .hdr-tp {
+        justify-content: center;
+    }
+}
 
 
 /* =================================== Responsive End =================================== */
