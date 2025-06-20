@@ -86,10 +86,17 @@ $(document).ready(function () {
     });
 
     // Remove focus from buttons after click to prevent mobile green outline
+    // document.querySelectorAll('.btn').forEach(btn => {
+    //     btn.addEventListener('click', () => {
+    //     btn.blur();
+    //     });
+    // });
     document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+    btn.addEventListener('click', () => {
+        setTimeout(() => {
         btn.blur();
-        });
+        }, 200); // 200 milliseconds delay, চাইলে বাড়াতে পারেন
+    });
     });
 
 
