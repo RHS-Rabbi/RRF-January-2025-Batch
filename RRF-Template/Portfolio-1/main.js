@@ -52,6 +52,48 @@ $(document).ready(function () {
 
 
 
+    // const scrollBtn = document.getElementById("scrollTopBtn");
+
+    // window.addEventListener("scroll", () => {
+    //     if (window.scrollY > 300) {
+    //     scrollBtn.classList.remove("opacity-0", "pointer-events-none");
+    //     scrollBtn.classList.add("opacity-100");
+    //     } else {
+    //     scrollBtn.classList.add("opacity-0", "pointer-events-none");
+    //     scrollBtn.classList.remove("opacity-100");
+    //     }
+    // });
+
+    // scrollBtn.addEventListener("click", () => {
+    //     window.scrollTo({ top: 0, behavior: "smooth" });
+    // });
+
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+        scrollBtn.classList.remove("opacity-0", "pointer-events-none");
+        scrollBtn.classList.add("opacity-100");
+        } else {
+        scrollBtn.classList.add("opacity-0", "pointer-events-none");
+        scrollBtn.classList.remove("opacity-100");
+        }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        scrollBtn.blur();
+    });
+
+    // Remove focus from buttons after click to prevent mobile green outline
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+        btn.blur();
+        });
+    });
+
+
+
 
 
 

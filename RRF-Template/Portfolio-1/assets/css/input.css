@@ -21,6 +21,8 @@ h1,h2,h3,h4,h5,h6{
     --green-1:#72b626;
     /* --blue:#4169E1; */
     /* --yellow:#ffb400; */
+    --grey:#59554B;
+    --white-2:#eee;
 
     --51x:3.1875rem;
     --56x:3.5rem;
@@ -48,6 +50,22 @@ a{
 .btn{
    @apply inline-block uppercase pr-17.5 pl-8.75 py-4 border-1  md:text-base text-sm relative rounded-full font-semibold overflow-hidden after:absolute after:top-0 after:left-0 after:w-full after:h-full  after:rounded-full after:transition-transform after:duration-300 after:ease-out after:translate-x-full  hover:after:translate-x-0 focus:after:translate-x-0 active:after:translate-x-0  hover:text-white focus:text-white active:text-white after:z-[-1]
    border-[var(--green-1)] after:bg-[var(--green-1)];
+}
+
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #72b626;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
 }
 
 
@@ -85,7 +103,7 @@ a{
 
 
 
-/* -----------------Hero Area --------------*/
+/* ---------------------------------Hero Area ----------------------------*/
 .hero-area{
   @apply lg:max-h-dvh  xl:py-31.25 lg:py-10 py-40 relative;
   /* @apply lg:max-h-dvh   xl:py-31.25 lg:py-10  h-dvh  relative; */
@@ -141,7 +159,7 @@ a{
 }
 
 
-/* ---------------About Area ---------------*/
+/* ---------------------------------About Area ---------------------------------*/
 .about-area{
   /* @apply relative  after:absolute after:-right-[250px] after:top-0 after:lg:w-[20%] after:h-full after:bg-[var(--yellow)] lg:after:content-[''] after:z-[-1] after:skew-x-9 overflow-x-hidden; */
   @apply relative  lg:z-1 lg:bg-[var(--black)];
@@ -210,10 +228,35 @@ a{
   @apply text-2xl font-semibold absolute top-11.25;
 }
 
+/* -------Education area---------- */
+.single-education{
+  @apply flex flex-col relative before:absolute before:top-0 before:left-5 before:bottom-0 content-[''] before:border-l-1 before:border-[#333] before:z-[-1];
+}
+.edu-icon-info{
+  @apply flex items-start gap-5;
+}
+.edu-icon-info .edu-icon{
+  @apply size-10 bg-[var(--green-1)] rounded-full flex items-center justify-center;
+}
+.edu-icon-info .edu-year{
+  @apply text-xs py-0.25 px-2.5 bg-[var(--black-2)] opacity-80 rounded-[1.25rem] uppercase;
+}
+.single-education .edu-details h4{
+  @apply md:text-lg text-base uppercase font-semibold;
+}
+.single-education .edu-details .edu-sub{
+  @apply pl-6.5 relative opacity-80 text-[0.9375rem] before:absolute before:left-1.75 before:top-2.25 before:w-2.5 before:h-0.5 before:bg-white before:content-[''] before:opacity-80;
+}
+.single-education .edu-details{
+  @apply flex flex-col gap-2.5;
+}
+.single-education .edu-details p{
+  @apply md:text-[0.9375rem] text-[var(--white-2)] font-normal text-sm;
+}
 
-/* ----------------Portfolio Section --------------*/
+/* ------------------------------------Portfolio Section ------------------------------*/
 .single-portfolio-list {
-  @apply relative overflow-hidden block;
+  @apply relative overflow-hidden block ;
 }
 .mfp-close-btn-in .mfp-close{
   @apply text-white!
@@ -227,7 +270,7 @@ a{
 }
 
 
-/* --------------Service Area---------- */
+/* ---------------------------------Service Area--------------------------- */
 .service-area{
   @apply lg:py-25 py-10;
 }
@@ -292,7 +335,7 @@ ul.contact-social li a{
 
 /* Cta Area */
 .cta-area{
-  @apply bg-[var(--black)] border-t-1 border-gray-50 py-6 font-poppins! lg:[font-size:var(--15x)] text-sm;
+  @apply bg-[var(--black)] border-t-1 border-[var(--grey)] py-6 font-poppins! lg:[font-size:var(--15x)] text-sm;
 }
 .cta-right span{
   @apply  hover:opacity-[0.8] transition duration-300 ease-in-out hover:text-[var(--green-1)] active:text-[var(--green-1)] focus:text-[var(--green-1)] md:[font-size:var(--15x)] text-xs;
