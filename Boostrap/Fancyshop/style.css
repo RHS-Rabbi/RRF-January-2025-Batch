@@ -1443,6 +1443,12 @@ p.copy-right-text {
 .payment-mthd-icon.text-right {
     text-align: right;
 }
+
+.copy-right-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 /*=============================  Footer Area End =================================*/
 
 
@@ -1487,7 +1493,7 @@ p.copy-right-text {
 }
 
 /* Mobile (up to 767px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     /* .header-info {
         text-align: center;
     }
@@ -1513,6 +1519,22 @@ p.copy-right-text {
         margin-top: 0;
     }
 
+    .row.fancy {
+        flex-direction: column;
+    }
+
+    .row.fancy .col-md-3 {
+        width: 100%;
+    }
+
+    .row.fancy .col-md-9 {
+        width: 100%;
+    }
+
+    .special-bg img {
+        width: 283px;
+    }
+
 
 }
 
@@ -1529,6 +1551,13 @@ p.copy-right-text {
     }
     .header-top-social .hdr-tp {
         justify-content: center;
+    }
+    .footer-social, .payment-mthd-icon {
+        margin: 0 auto;
+        width: fit-content;
+    }
+    .slider-area .owl-nav i.fa{
+        display: none;
     }
 }
 
