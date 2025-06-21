@@ -870,7 +870,7 @@ p.copy-text i.fa {
         text-align: center;
     }
     .testimonial-bg img {
-        width: 100%;
+        max-width: 100%;
         margin-bottom: 30px;
     }
 }
@@ -907,6 +907,28 @@ p.copy-text i.fa {
     }
     .cta-icon {
         float: right;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-title h2,  h2  {
+        font-size: 2rem;
+    }
+    .single-testimonial-item p{
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+    .single-testimonial-item h4{
+        font-size: 1rem;
+    }
+    .single-testimonial-item{
+        margin-bottom: 0;
+    }
+    .single-testimonial-item span{
+        margin-bottom: 7px;
+    }
+    p{
+        font-size: 0.75rem;
     }
 }
 
