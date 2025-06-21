@@ -830,10 +830,29 @@ p.tiny-footer-link :hover {
     .navigation .navbar-nav .nav-link.active, .navigation .navbar-nav .nav-link.show{
         color: #fff !important;
     }
-    
-    
-    
-    
 
+}
+
+/* Mobile Size */
+@media (max-width: 480px) {
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-social ul {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    p.tiny-footer-link {
+        margin: 0 auto;
+        width: fit-content;
+    }
+    button.owl-prev .fa-solid, button.owl-next .fa-solid{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 /* ===================================Responsive end =================================== */
