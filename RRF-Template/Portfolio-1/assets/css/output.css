@@ -1248,7 +1248,6 @@ a {
   width: calc(var(--spacing) * 70);
   height: calc(var(--spacing) * 70);
   border-radius: calc(infinity * 1px);
-  background-color: var(--color-white);
   @media (width >= 48rem) {
     margin-inline: auto;
   }

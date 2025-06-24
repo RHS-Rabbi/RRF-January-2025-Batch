@@ -134,7 +134,8 @@ a{
 
 /* Hero Left */
 .hero-bg{
-    @apply 2xl:size-150 rounded-full bg-white size-70 lg:size-112.5 md:mx-auto xl:size-125 xl:mx-0;
+    /* @apply 2xl:size-150 rounded-full bg-white size-70 lg:size-112.5 md:mx-auto xl:size-125 xl:mx-0; */
+    @apply 2xl:size-150 rounded-full size-70 lg:size-112.5 md:mx-auto xl:size-125 xl:mx-0;
 }
 
 /* Hero Right */
