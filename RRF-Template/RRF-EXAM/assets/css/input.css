@@ -16,66 +16,315 @@
 }
 @layer{
     .container_lg{
-        @apply max-w-[1192px] mx-auto;
+        @apply  lg:max-w-242.5 xl:max-w-298 mx-auto px-5 lg:px-0;
     }
     .container{
-        @apply max-w-[1064px]  mx-auto;
+        @apply xl:max-w-266  mx-auto px-5 lg:px-0;
     }
     .container_sm{
-        @apply max-w-[840px] mx-auto;
+        @apply xl:max-w-210 mx-auto px-5 lg:px-0;
     }
 }
+.title-header{
+    @apply text-[var(--white)] leading-[150%] lg:text-4xl text-3xl font-bold;
+}
 
-/* Header Area */
+
+/*---------------------- Header Area------------------ */
 .mainmenu li a{
     @apply text-[var(--dark)] not-italic text-lg leading-[130%] font-bold;
 }
 .header-btn a{
-    @apply bg-[var(--dark)] py-3.5 px-6 text-[var(--white)] text-base not-italic font-bold leading-6;
+    @apply border-1 border-[var(--dark)] bg-transparent py-3.5 px-6 text-[var(--dark)] text-base not-italic font-bold leading-6 transition-all duration-300 ease-in-out hover:bg-[var(--dark)] hover:text-[var(--white)] focus:bg-[var(--dark)] focus:text-[var(--white)];
+}
+
+.header-circle{
+    @apply lg:size-36.5 size-25 bg-[var(--red)] rounded-full absolute inset-0 mx-auto lg:ml-78.5 ml-37.5 md:mx-auto -mt-24.5;
+}
+
+
+/*------------- Hero Section-------------------- */
+.header-intro{
+    @apply flex flex-col gap-8 lg:gap-8 bg-[var(--pink)] lg:max-h-159.5;
 }
 
 .hero-left h1{
-    @apply text-5xl font-bold text-[var(--dark)] not-italic leading-[150%] ;
+    @apply text-3xl lg:text-5xl font-bold text-[var(--dark)] not-italic leading-[150%] ;
 }
+
+.hero-right{
+    @apply flex justify-end flex-col items-end lg:h-129.5 md:h-[277px] relative;
+}
+.hero-bg{
+    @apply absolute  lg:left-[17%] lg:top-7.5 lg:w-[28.588rem] lg:h-[30.6465rem] md:h-auto md:w-55 md:left-12.5 flex-shrink-0 bg-no-repeat -ml-0.5 w-fit h-full bottom-0 left-15;
+}
+
+.hero-bg-2{
+    @apply object-cover lg:w-full
+}
+.hero-left{
+    @apply flex flex-col;
+}
+
 .hero-left p{
-    @apply text-base not-italic text-[var(--dark)] leading-[150%] font-normal;
+    @apply text-sm lg:text-base not-italic text-[var(--dark)] leading-[150%] font-normal;
 }
 .hero-btn{
-    @apply flex gap-[21px]
+    @apply flex gap-5.25 ;
 }
 
 .hero-btn .hero-btn-borderles{
-    @apply  text-[var(--white)] text-base not-italic font-bold leading-[150%] bg-[var(--dark)];
-    padding: 12px 56px;
+    @apply  text-[var(--dark)] border-1 border-[var(--dark)]  not-italic font-bold leading-[150%] bg-transparent py-3 lg:px-14 px-12.25 transition-all duration-300 ease-in-out hover:bg-[var(--dark)] hover:text-[var(--white)] focus:bg-[var(--dark)] focus:text-[var(--white)] text-xs lg:text-base;
 
 }
 .hero-btn .hero-btn-border{
-    @apply text-[var(--dark)] text-base not-italic font-bold leading-[150%] border-1 border-[var(--dark)]  ;
-    padding: 11px 51px;
+    @apply text-[var(--dark)]  text-xs lg:text-base not-italic font-bold leading-[150%] border-1 border-[var(--dark)] py-2.75 px-12.75 transition-all duration-300 ease-in-out hover:bg-[var(--dark)] hover:text-[var(--white)] focus:bg-[var(--dark)] focus:text-[var(--white)];
 }
 
 
-/* Portfolio Section */
+
+/* -----------------About Section--------------- */
+.about-area{
+    @apply pt-16 pb-20 relative bg-[var(--dark)];
+}
+
+.about-circle{
+    @apply lg:size-58.5  size-29.25 rounded-full inset-0  absolute mx-auto lg:mt-83.25 mt-137.5 md:mt-72.5;
+}
+
+.about-title{
+    @apply text-center flex flex-col gap-6 mx-auto;
+}
+
+.about-title h2{
+    @apply text-[var(--white)] leading-[150%] lg:text-4xl text-3xl font-bold;
+}
+.about-title p{
+    @apply lg:text-base md:text-sm text-xs text-[var(--white)] font-normal;
+}
+.single-about-list{
+    @apply flex flex-col justify-center items-center;
+}
+
+.single-about-list h3{
+    @apply text-[var(--pink)] lg:text-[4rem] text-[2rem]  leading-[150%] not-italic font-bold; 
+}
+.single-about-list p{
+    @apply lg:text-lg text-base text-[var(--white)] leading-[130%] font-bold text-center;
+}
+
+/* ---------------Service Section--------------------- */
+.service-area{
+    @apply py-16 relative bg-[var(--white)];
+}
+.service-title{
+    @apply flex flex-col lg:w-202.5 mx-auto text-center gap-6 w-full;
+}
+.service-title h2{
+    @apply text-[var(--dark)]  leading-[150%] lg:text-4xl text-3xl font-bold; 
+}
+.service-title p{
+    @apply lg:text-base md:text-sm text-xs text-[var(--dark)] font-normal; 
+}
+.single-service{
+    @apply p-4 flex flex-col gap-6 h-full;
+}
+.single-service-content{
+    @apply  flex flex-col gap-6 h-full;
+}
+.single-service-content h4{
+    @apply lg:text-lg text-sm font-bold leading-[130%] text-[var(--dark)];
+}
+.single-service-content p{
+    @apply text-xs lg:text-sm font-normal leading-[150%] text-[var(--dark)] mb-auto;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------ Portfolio Section--------------------- */
+.portfolio-area{
+    @apply pt-[50px] h-79.25 bg-[var(--pink)];
+}
+
+.portfolio-title{
+    @apply flex flex-col lg:w-202.5 mx-auto text-center gap-6 w-full;
+}
+.portfolio-title h2{
+    @apply text-[var(--dark)] leading-[150%] lg:text-[35px] text-3xl font-bold;
+}
+
+.portfolio-title p{
+    @apply lg:text-base md:text-sm text-xs text-[var(--dark)] font-normal;
+}
+
+.single-portfolio{
+    @apply flex flex-col gap-8 transition duration-300 ease-in-out hover:scale-[1.05] active:scale-[1.05] focus:scale-[1.05];
+}
+
+.single-portfolio-content{
+    @apply flex flex-col gap-4;
+}
+.single-portfolio-content a h4 {
+    @apply text-[var(--dark)] lg:text-xl leading-[150%] font-bold md:text-sm text-lg; 
+}
+.single-portfolio-content p{
+    @apply lg:text-sm text-[var(--dark)] not-italic font-normal mt-[1px] md:text-xs text-sm;
+}
+
 .portpoflio-btn{
-    @apply size-[37px] rounded-full flex justify-center items-center p-[7.53px] bg-[var(--red)];
+    @apply lg:size-9.25 size-9.25 md:size-7.5 rounded-full flex justify-center items-center p-[7.53px] bg-[var(--red)] transition-all duration-300 ease-in-out hover:bg-[var(--dark)] focus:bg-[var(--dark)];
 }
 
 
-/* Testimonial  */
+/* ----------------Skills Area-------------------- */
+.skills-area{
+    @apply py-22.5 relative z-1 bg-[var(--grey)];
+}
+
+.skills-title {
+    @apply flex flex-col lg:w-202.5 mx-auto text-center gap-6 w-full;
+}
+.skills-title h2 {
+    @apply text-[var(--dark)] leading-[150%] lg:text-[2.1875rem] text-3xl font-bold;
+}
+.skills-title p {
+    @apply lg:text-base md:text-sm text-xs text-[var(--dark)] font-normal;
+}
+.single-progress-bar{
+    @apply flex flex-col gap-2 w-full;
+}
+.progress-bar-title{
+    @apply font-bold text-[var(--dark)] dark:text-white lg:text-base text-sm;
+}
+
+
+
+
+
+/* ---------------------------Testimonial--------------*/
+.testimonial-area{
+    @apply pt-22.5 pb-16 bg-[var(--pink)];
+}
+
+.testimonial-title{
+    @apply w-full text-center;
+}
+
+.testimonial-title h2{
+    @apply text-[var(--dark)] leading-[150%] lg:text-[35px] text-3xl font-bold; 
+}
+
+.testimonial-carousel .slick-dots {
+    @apply hidden invisible opacity-0;
+
+}
+
 .testimonial-carousel .slick-arrow {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    cursor: pointer;
+    @apply absolute top-5 right-2.5 cursor-pointer  lg:block! hidden!;
 }
 .testimonial-carousel .slick-prev {
-    left: 12px;
-    z-index: 1;
-    width: 20px;
-    top: 20px;
+    @apply left-3 z-1 w-5 top-5;
 }
 
-/* Footer Menu */
+
+/* --------------------Blog Area----------------------------- */
+.blog-area{
+    @apply py-22.5 relative z-1 bg-[var(--grey)];
+}
+.blog-title{
+    @apply flex flex-col lg:w-199.75 mx-auto text-center gap-4 w-full;
+}
+
+.blog-title h2{
+    @apply text-[var(--dark)]  leading-[150%] lg:text-4xl text-3xl font-bold; 
+}
+.blog-title p{
+    @apply lg:text-base md:text-sm text-xs text-[var(--dark)] font-normal; 
+}
+.single-blog{
+    @apply flex flex-col gap-[15px] bg-[var(--white)] h-full transition duration-300 ease-in-out hover:scale-[1.05] cursor-pointer active:scale-[1.05] focus:scale-[1.05];
+}
+.single-blog img{
+    @apply cursor-pointer w-full object-cover;
+}
+.single-blog-content{
+    @apply flex flex-col gap-2 h-full;
+}
+.single-blog-content span{
+    @apply text-xs text-[var(--dark)] font-normal;
+}
+
+.single-blog-content a h5{
+    @apply font-bold  text-sm lg:text-base leading-[150%] text-[var(--dark)];
+}
+
+.single-blog-content p{
+    @apply lg:text-sm text-xs leading-[150%] text-[var(--dark)] font-normal mb-auto;
+}
+.single-blog .blog-btn{
+    @apply flex gap-2 text-xs font-bold leading-[150%];
+}
+
+
+/* ---------------Contact Area-------------------- */
+.contact-area{
+    @apply py-31 bg-[var(--pink)] relative;
+}
+.contact-circle{
+    @apply xl:size-55.25 size-27.5 absolute bg-[var(--red)] rounded-full lg:-left-33.75 top-[-53px] md:left-[40%] left-[37%] lg:top-[226.846px];
+}
+.contact-title{
+    @apply flex flex-col gap-4;
+}
+
+.contact-title h3{
+    @apply text-[var(--dark)]  leading-[150%] lg:text-4xl text-3xl font-bold;
+}
+
+.contact-title p{
+    @apply lg:text-base md:text-sm text-xs text-[var(--dark)] font-normal
+}
+.single-contact {
+    @apply flex gap-4 font-normal leading-[150%] lg:text-base text-[var(--dark)] md:items-center lg:items-start text-sm;
+}
+.contact-social{
+    @apply lg:mt-28.75 md:mt-23.75 mt-10;
+}
+
+.contact-social ul li a{
+    @apply block size-7.5 transition duration-300 ease-in-out hover:scale-[1.05] active:scale-[1.05] focus:scale-[1.05];
+}
+.contact-btn{
+    @apply border-1 border-[var(--dark)] lg:text-base text-sm text-[var(--dark)] font-bold leading-[150%] cursor-pointer py-3.25 lg:px-13.25 px-7.5 transition duration-300 ease-in-out hover:text-white hover:bg-[var(--dark)] active:bg-[var(--dark)] focus:bg-[var(--dark)] active:text-white focus:text-white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------Footer Menu ------------------------*/
+.footer-area{
+    @apply bg-[var(--dark)] py-20;
+}
+
 .footer-menu li a{
-    @apply text-[var(--white)] font-bold text-xl leading-[150%];
+    @apply text-[var(--white)] font-bold lg:text-xl text-lg leading-[150%];
+}
+
+.footer-icons a{
+    @apply block size-7.5 transition duration-300 ease-in-out hover:scale-[1.05] active:scale-[1.05] focus:scale-[1.05];
 }
