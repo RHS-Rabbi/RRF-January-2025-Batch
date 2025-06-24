@@ -17,21 +17,21 @@
 
 
     // Service Mobile size active
-$(document).ready(function () {
-    $('.single-service-list').on('click', function (e) {
-        e.stopPropagation();
-        
-        if ($(this).hasClass('is-active')) {
-            $(this).removeClass('is-active');
-        } else {
+    $(document).ready(function () {
+        $('.single-service-list').on('click', function (e) {
+            e.stopPropagation();
+            
+            if ($(this).hasClass('is-active')) {
+                $(this).removeClass('is-active');
+            } else {
+                $('.single-service-list').removeClass('is-active');
+                $(this).addClass('is-active');
+            }
+        });
+        $(document).on('click', function () {
             $('.single-service-list').removeClass('is-active');
-            $(this).addClass('is-active');
-        }
+        });
     });
-    $(document).on('click', function () {
-        $('.single-service-list').removeClass('is-active');
-    });
-});
 
 
 
