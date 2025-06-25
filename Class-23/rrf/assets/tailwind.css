@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.container{
+    @apply mx-auto max-w-[1050px] px-4;
+}
+
+
+/* Hero Area */
+.hero-btn{
+    @apply py-[10px] px-9 bg-[#FFA62B] text-white font-bold text-sm rounded-[37px];
+}
+
+.hero-boderless-btn{
+    @apply py-[10px] px-9 border-[1px] border-[#00A0C1] font-bold text-sm rounded-[37px] text-[#00A0C1];
+}

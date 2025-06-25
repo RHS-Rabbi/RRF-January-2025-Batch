@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap');
+
+
+@import "tailwindcss";
+
+@theme{
+    --font-Poppins:"Poppins", "sans-serif";
+    --font-sen:"Sen", "sans-serif";
+     --primary-color:#FFFCF4;
+    --secondary-color:#FFB900;
+    --white-color:#FFFFFF;
+    --dark-color:#171100;
+    --dark-color-2:#2E2100;
+    --dark-light-color:#5F5B53;
+    --third-color:#634700;
+    --4th-color:#BFBCB2;
+    --5th-color:#807D74;
+    --6th-color:#696262;
+
+    --44x:2.75rem;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    @apply font-sen text-[var(--dark-color)];
+}
+
+
+@layer{
+    .container{
+       @apply xl:max-w-292.5 lg:max-w-235 mx-auto md:px-0 px-5;
+
+    }
+}
+
+
+/* -----------Header Area --------------*/
+.header-area{
+    @apply py-9.5 bg-[var(--primary-color)];
+}
+/* .mainmenu ul li a{
+    @apply text-base font-normal leading-7 text-[var(--dark-light-color)];
+}
+.mainmenu ul li .active{
+    @apply  relative text-[var(--dark-color)] font-semibold after:content-[''] after:absolute after:left-0 after:w-3 after:h-0.5 after:bg-[#000] after:bottom-0;
+}
+.header-btn a{
+    @apply inline-block w-36 h-12.5 bg-[var(--dark-color)] text-[var(--white-color)] rounded-[1.53125rem] py-2.75 px-10.25 font-semibold;
+} */
+
+.rrf-menu > div > ul{
+    @apply flex  items-center text-base font-normal leading-7;
+
+}
+.rrf-menu > div > ul li a{
+    @apply block px-4 py-2;
+    
+}
+.rrf-menu > div > ul li {
+    @apply relative;
+}
+.rrf-menu > div > ul li ul {
+    @apply absolute flex-col bg-[var(--dark-color)] w-64 opacity-0 invisible transition duration-300 ease-in-out z-1;
+}
+
+.rrf-menu > div > ul li ul ul{
+    @apply left-full top-0;
+}
+
+.rrf-menu > div > ul li:hover ul ul{
+    @apply opacity-0 invisible;
+}
+
+
+.rrf-menu > div > ul li:hover ul, .rrf-menu > div > ul li:hover ul li:hover ul{
+    @apply opacity-100 visible;
+}
+
+
+.rrf-menu > div > ul li ul a {
+    @apply text-white ;
+}
+.rrf-menu > div > ul li ul a:hover {
+    @apply bg-[var(--secondary-color)] text-white;
+}
+
+.rrf-menu .btn{
+    @apply  bg-[var(--dark-color)] text-[var(--white-color)] rounded-full px-6 py-2 font-semibold;
+}
