@@ -35,6 +35,38 @@
 
 
 
+
+    // portfolio Isotop
+    
+    $(document).ready(function () {
+        $('.project-list').isotope({
+            itemSelector: '.item-1',
+            layoutMode: 'fitRows'
+        });
+
+        $('.portfolio-filter ul li').click(function () {
+            //ACTIVE CLASS
+            $('.portfolio-filter ul li').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $('.project-lists').isotope({
+                filter: selector
+            });
+            return false;
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
     // preloader
     // window.addEventListener('load', function () {
     //     const preloader = document.getElementById('preloader');

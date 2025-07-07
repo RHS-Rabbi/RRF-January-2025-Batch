@@ -366,10 +366,23 @@
                     <span class="title-bg">works</span>
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-15">
+
+            <div class="py-16 hidden">
+                <div class="portfolio-filter">
+                    <ul class="portfolio-list">
+                        <li class="active" data-filter="*">All</li>
+                        <li data-filter=".booststrap">Boostsrap</li>
+                        <li data-filter=".tailwindcss">Tailwindcss</li>
+                        <li data-filter=".elementor">Elementor</li>
+                        <li data-filter=".wp-Devolopment">Wp-Devolopment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-15 projects-lists">
                 <!-- project-1 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-1.png" alt="Project 1" class="object-cover rounded-[0.3125rem] lg:h-70.75 w-full">
+                    <img src="./assets/img/project-bg/project-1.png" alt="Project 1" class="object-fill rounded-[0.3125rem] lg:h-70.75 w-full md:h-32.5">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-1">Website Test</a>
                     </div>
@@ -378,7 +391,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">FancyShop</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -389,7 +402,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -399,7 +412,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -408,7 +421,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -418,14 +431,14 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-1.png" alt="project-1">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-1.png" alt="project-1">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-2 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-2.png" alt="Project 2" class="object-cover rounded-[0.3125rem] w-full lg:h-70.75">
+                    <img src="./assets/img/project-bg/project-2.png" alt="Project 2" class="object-cover rounded-[0.3125rem] w-full lg:h-70.75 md:h-32.5">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-2">Website test</a>
                     </div>
@@ -434,7 +447,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Clumb</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -445,7 +458,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -455,7 +468,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -464,7 +477,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -474,14 +487,14 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-2.png" alt="project-2">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-2.png" alt="project-2">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-3 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-3.png" alt="Project 1" class="object-cover rounded-[0.3125rem] lg:h-70.75 w-full">
+                    <img src="./assets/img/project-bg/project-3.png" alt="Project 1" class="object-fill rounded-[0.3125rem] lg:h-70.75 md:h-32.5 w-full">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-3">WebSite test</a>
                     </div>
@@ -490,7 +503,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">bustle</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -501,7 +514,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -511,7 +524,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -520,7 +533,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -530,14 +543,14 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-3.png" alt="project-3">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-3.png" alt="project-3">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-4 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-4.png" alt="Project 4" class="object-cover rounded-[0.3125rem] lg:h-70.75 w-full">
+                    <img src="./assets/img/project-bg/project-4.png" alt="Project 4" class="object-fill rounded-[0.3125rem] lg:h-70.75 md:h-32.5 w-full">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-4">Website test</a>
                     </div>
@@ -546,7 +559,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Site -Cardiology</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -557,7 +570,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -567,7 +580,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -575,7 +588,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -585,14 +598,14 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-4.png" alt="project-4">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-4.png" alt="project-4">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-5 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-5.jpg" alt="Project 5" class="object-cover rounded-[0.3125rem] lg:h-70.75 w-full">
+                    <img src="./assets/img/project-bg/project-5.jpg" alt="Project 5" class="object-fill rounded-[0.3125rem] lg:h-70.75 md:h-32.5 w-full">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-5">Website Test</a>
                     </div>
@@ -601,7 +614,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Thalia</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -612,7 +625,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -622,7 +635,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -631,7 +644,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -641,14 +654,14 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-5.jpg" alt="project-5">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-5.jpg" alt="project-5">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-6 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-6png.png" alt="Project 6" class="object-cover rounded-[0.3125rem] lg:h-70.75 w-full">
+                    <img src="./assets/img/project-bg/project-6png.png" alt="Project 6" class="object-fill rounded-[0.3125rem] lg:h-70.75 md:h-32.5 w-full">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-6">Wordpress test</a>
                     </div>
@@ -657,7 +670,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Lopard Wordpress Theme</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -668,7 +681,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -678,7 +691,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -687,7 +700,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -697,14 +710,14 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-6png.png" alt="project-6">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-6png.png" alt="project-6">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-7 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-7.png" alt="Project 7" class="object-cover rounded-[0.3125rem] lg:h-70.75 w-full">
+                    <img src="./assets/img/project-bg/project-7.png" alt="Project 7" class="object-fill rounded-[0.3125rem] lg:h-70.75 md:h-32.5 w-full">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-7">Website Test</a>
                     </div>
@@ -713,7 +726,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Lesson Template</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -724,7 +737,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -734,7 +747,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -743,7 +756,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -753,14 +766,14 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-7.png" alt="project-7">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-7.png" alt="project-7">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project-8 -->
                 <div class="single-portfolio-list cursor-pointer group">
-                    <img src="./assets/img/project-bg/project-8.png" alt="Project 8" class="object-cover rounded-[0.3125rem] lg:h-70.75 w-full">
+                    <img src="./assets/img/project-bg/project-8.png" alt="Project 8" class="object-fill rounded-[0.3125rem] lg:h-70.75 md:h-32.5 w-full">
                     <div class="portfolio-details">
                         <a class="portfolio-popup uppercase text-lg font-medium" href="#project-8">Website Test</a>
                     </div>
@@ -769,7 +782,7 @@
                             <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">RRF Template</h2>
                             <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
                                             <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
@@ -780,7 +793,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <div class="size-5">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -790,7 +803,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
@@ -799,7 +812,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:w-6/12">
-                                    <div class="flex gap-2 lg:mb-3">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -809,7 +822,63 @@
                             </div>
                             <!-- Site Image -->
                             <div class="block">
-                                <img class="object-cover rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-8.png" alt="project-8">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-8.png" alt="project-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project-9 -->
+                <div class="single-portfolio-list cursor-pointer group">
+                    <img src="./assets/img/project-bg/project-9.png" alt="Project 9" class="object-fill rounded-[0.3125rem] lg:h-70.75 md:h-32.5 w-full">
+                    <div class="portfolio-details">
+                        <a class="portfolio-popup uppercase text-lg font-medium" href="#project-9">Website Test</a>
+                    </div>
+                    <div id="project-9" class="mfp-hide mx-auto md:w-6/12 xl:w-5/12 bg-[var(--black-2)] relative p-7.5 rounded-[0.625rem]">
+                        <div class="flex flex-col gap-5">
+                            <h2 class="font-bold mb-2 text-center lg:text-4xl text-xl text-[var(--green-1)] uppercase">Logoipsum</h2>
+                            <div class="flex flex-col lg:flex-row lg:gap-0 gap-3 flex-wrap justify-between">
+                                <div class="lg:w-6/12">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
+                                        <svg width="20px" height="20px" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="#fff"/>
+                                            <path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="#fff"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1854 0.5H4.5C3.39543 0.5 2.5 1.39543 2.5 2.5V17.5C2.5 18.6046 3.39543 19.5 4.5 19.5H15.5C16.6046 19.5 17.5 18.6046 17.5 17.5V7.20179C17.5 6.70104 17.3122 6.21851 16.9736 5.84956L12.659 1.14777C12.2802 0.734983 11.7457 0.5 11.1854 0.5ZM4.5 17.5V2.5H11.1854L15.5 7.20179V17.5H4.5Z" fill="#fff"/>
+                                            <path d="M11.5 6.5H16.5C17.0523 6.5 17.5 6.94772 17.5 7.5C17.5 8.05228 17.0523 8.5 16.5 8.5H10.5C9.94772 8.5 9.5 8.05228 9.5 7.5V1.5C9.5 0.947715 9.94772 0.5 10.5 0.5C11.0523 0.5 11.5 0.947715 11.5 1.5V6.5Z" fill="#fff"/>
+                                        </svg>
+                                        <p class="md:[font-size:var(--15x)] text-white capitalize text-xs">Project: <span class="font-semibold!">Website</span></p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-6/12">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
+                                        <div class="size-5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"    class="size-5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                            </svg>
+                                        </div>
+                                        <p class="md:[font-size:var(--15x)] text-white capitalize text-xs">Client: <span class="font-semibold!">Test</span></p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-6/12">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                                        </svg>
+
+                                        <p class="md:[font-size:var(--15x)] text-white capitalize text-xs">language: <span class="font-semibold!">Elementor-(Pro)</span></p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-6/12">
+                                    <div class="flex gap-2 lg:mb-3 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                                        </svg>
+                                        <p class="md:[font-size:var(--15x)] text-white capitalize text-xs">Preview : <a target="_blank" href="https://dev-rabbi-hossain.pantheonsite.io/it-company-website/" class="font-semibold! transition duration-300 hover:opacity-[.8] active:opacity-[.8] focus:opacity-[.8]">View Live Project</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Site Image -->
+                            <div class="block">
+                                <img class="object-contain rounded-[0.3125rem] lg:h-138 w-full" src="./assets/img/project-bg/project-9.png" alt="project-9">
                             </div>
                         </div>
                     </div>
@@ -878,7 +947,7 @@
                         </svg>
                     </div>
                     <div class="flex flex-col gap-2 h-full">
-                        <h4 class="text-lg lg:text-2xl font-bold uppercase">WordPress & CMS Solutions</h4>
+                        <h4 class="text-lg lg:text-2xl font-bold capitalize">WordPress & CMS Solutions</h4>
                         <p class="mb-auto lg:[font-size:var(--15x)] text-xs">I build powerful and dynamic websites using WordPress. Whether it's theme customization, Elementor design, or WooCommerce integration, I ensure your site is scalable, secure, and easy to manage.</p>
                         <ul class="service-list">
                             <li>
@@ -1154,6 +1223,8 @@
     <script src="./assets/js/aos.js"></script>
     <!-- jquery-circular-progress-bar.js -->
     <script src="./assets/js/jquery-circular-progress-bar.js"></script>
+    <!-- isotope.pkgd.min.js -->
+    <script src="./assets/js/isotope.pkgd.min.js"></script>
     <!-- main.js -->
     <script src="./main.js"></script>
 </body>
