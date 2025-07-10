@@ -48,7 +48,6 @@
     --black: #111111;
     --black-2: #252525;
     --green-1: #72b626;
-    --grey: #59554B;
     --white-2: #eee;
     --51x: 3.1875rem;
     --56x: 3.5rem;
@@ -2011,7 +2010,7 @@ ul.contact-social li a {
 .cta-area {
   border-top-style: var(--tw-border-style);
   border-top-width: 1px;
-  border-color: var(--grey);
+  border-color: #252525;
   background-color: var(--black);
   padding-block: calc(var(--spacing) * 6);
   font-family: var(--font-poppins) !important;
