@@ -37,23 +37,19 @@
 
 
     // portfolio Isotop
-    
     $(document).ready(function () {
-        $('.project-list').isotope({
-            itemSelector: '.item-1',
-            layoutMode: 'fitRows'
-        });
+        $('.filter-btn').on('click', function () {
+            var filter = $(this).attr('data-filter');
 
-        $('.portfolio-filter ul li').click(function () {
-            //ACTIVE CLASS
-            $('.portfolio-filter ul li').removeClass('active');
-            $(this).addClass('active');
+            $('.filter-btn').removeClass('active bg-gray-800 text-white').addClass('bg-gray-200 text-gray-800');
+            $(this).addClass('active bg-gray-800 text-white').removeClass('bg-gray-200 text-gray-800');
 
-            var selector = $(this).attr('data-filter');
-            $('.project-lists').isotope({
-                filter: selector
-            });
-            return false;
+            if (filter === 'all') {
+            $('.item-box').show();
+            } else {
+                $('.item-box').hide();
+                $('.' + filter).show();
+            }
         });
     });
 

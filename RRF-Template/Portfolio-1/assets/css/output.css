@@ -8,6 +8,8 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -445,6 +447,12 @@
   .bg-\[var\(--black-2\)\] {
     background-color: var(--black-2);
   }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
+  }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
+  }
   .object-contain {
     object-fit: contain;
   }
@@ -481,8 +489,11 @@
   .py-15 {
     padding-block: calc(var(--spacing) * 15);
   }
-  .py-16 {
-    padding-block: calc(var(--spacing) * 16);
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
   }
   .pl-4\.5 {
     padding-left: calc(var(--spacing) * 4.5);
@@ -558,6 +569,9 @@
   }
   .text-\[var\(--green-1\)\]\! {
     color: var(--green-1) !important;
+  }
+  .text-gray-800 {
+    color: var(--color-gray-800);
   }
   .text-white {
     color: var(--color-white);
@@ -692,6 +706,11 @@
   .md\:mb-12 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
     }
   }
   .md\:h-32\.5 {
@@ -1769,7 +1788,8 @@ h2 {
 }
 .portfolio-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: calc(var(--spacing) * 2.5);
   @media (width >= 48rem) {
     flex-direction: row;
@@ -1780,10 +1800,15 @@ h2 {
 }
 .portfolio-list li {
   cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: var(--color-gray-200);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
   font-size: var(--text-sm);
   line-height: var(--tw-leading, var(--text-sm--line-height));
   --tw-font-weight: var(--font-weight-bold);
   font-weight: var(--font-weight-bold);
+  color: var(--color-gray-800);
   text-transform: uppercase;
   @media (width >= 48rem) {
     font-size: var(--text-base);
@@ -1795,9 +1820,14 @@ h2 {
   }
 }
 .portfolio-list li.active {
-  border-bottom-style: var(--tw-border-style);
-  border-bottom-width: 2px;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border-style: var(--tw-border-style);
+  border-width: 2px;
   border-color: var(--green-1);
+  background-color: var(--color-gray-800);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
   color: var(--green-1);
 }
 .service-area {
