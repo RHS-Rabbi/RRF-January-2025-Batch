@@ -22,6 +22,11 @@
 
         // array_diff($a, $b) ----> $a থেকে $b-তে না থাকা মানগুলো বের করে
 
+        $listA = ['Pen', 'Pencil'];
+        $listB = ['Pencil', 'Eraser'];
+        $diff = array_diff($listA, $listB);
+        print_r($diff);
+
     ?>
 
 
