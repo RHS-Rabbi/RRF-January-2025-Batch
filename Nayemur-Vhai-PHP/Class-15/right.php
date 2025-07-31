@@ -1,9 +1,20 @@
+<?php
+
+    if(isset($_GET['accept_cookie'])){
+        setcookie('cookie_accepted', 'yes', time() + (86400 * 30), "/"); // 30 days
+        exit;
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class-14</title>
+    <title>Class-15</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -300,6 +311,94 @@
         .form-group { margin-bottom: 15px; }
         .user-bg img { max-width: 100px; max-height: 100px; }
     </style>
+
+    <?php if(!isset($_COOKIE['cookie_accepted'])) : ?>
+
+        <!-- Cookie Area -->
+        <div class="cookie-area" id="cookieBox">
+            <div class="cookie">
+                <div id="cookie-closebtn" class="cookie-close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M13.1999 2.7998L2.7998 13.1999M2.7998 2.7998L13.1999 13.1999" stroke="#514F6E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="cookie-info">
+                    <div class="cookie-icon">
+                        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_iii_1779_3649)">
+                        <rect y="0.5" width="40" height="40" rx="9.67" fill="#EDECFF"/>
+                        <g clip-path="url(#clip0_1779_3649)">
+                        <path d="M23.0556 26.6111C23.7788 26.6111 24.3651 26.0248 24.3651 25.3015C24.3651 24.5783 23.7788 23.992 23.0556 23.992C22.3324 23.992 21.7461 24.5783 21.7461 25.3015C21.7461 26.0248 22.3324 26.6111 23.0556 26.6111Z" fill="#897FFF"/>
+                        <path d="M16.0712 25.738C16.7945 25.738 17.3808 25.1517 17.3808 24.4285C17.3808 23.7053 16.7945 23.119 16.0712 23.119C15.348 23.119 14.7617 23.7053 14.7617 24.4285C14.7617 25.1517 15.348 25.738 16.0712 25.738Z" fill="#897FFF"/>
+                        <path d="M15.1982 19.627C15.9214 19.627 16.5077 19.0407 16.5077 18.3175C16.5077 17.5942 15.9214 17.0079 15.1982 17.0079C14.475 17.0079 13.8887 17.5942 13.8887 18.3175C13.8887 19.0407 14.475 19.627 15.1982 19.627Z" fill="#897FFF"/>
+                        <path d="M20.4365 21.373C21.1597 21.373 21.746 20.7867 21.746 20.0634C21.746 19.3402 21.1597 18.7539 20.4365 18.7539C19.7132 18.7539 19.127 19.3402 19.127 20.0634C19.127 20.7867 19.7132 21.373 20.4365 21.373Z" fill="#897FFF"/>
+                        <path d="M30.4763 20.5001C29.0871 20.5001 27.7548 19.9482 26.7724 18.9659C25.7901 17.9835 25.2382 16.6512 25.2382 15.262C23.849 15.262 22.5167 14.7101 21.5343 13.7278C20.552 12.7454 20.0001 11.4131 20.0001 10.0239C17.9281 10.0239 15.9027 10.6383 14.1799 11.7894C12.4571 12.9406 11.1143 14.5767 10.3214 16.491C9.52846 18.4053 9.321 20.5117 9.72523 22.5439C10.1295 24.576 11.1272 26.4427 12.5923 27.9078C14.0575 29.373 15.9241 30.3707 17.9563 30.775C19.9885 31.1792 22.0949 30.9717 24.0092 30.1788C25.9235 29.3859 27.5596 28.0431 28.7108 26.3203C29.8619 24.5975 30.4763 22.5721 30.4763 20.5001Z" stroke="#897FFF" stroke-width="1.57143" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        </g>
+                        <defs>
+                        <filter id="filter0_iii_1779_3649" x="0" y="-3.66667" width="40" height="45.3571" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="-4.16667"/>
+                        <feGaussianBlur stdDeviation="2.38095"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.671684 0 0 0 0 0.712137 0 0 0 0 0.914402 0 0 0 0.3 0"/>
+                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1779_3649"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="1.19048"/>
+                        <feGaussianBlur stdDeviation="0.595238"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0"/>
+                        <feBlend mode="normal" in2="effect1_innerShadow_1779_3649" result="effect2_innerShadow_1779_3649"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="-1"/>
+                        <feGaussianBlur stdDeviation="0.5"/>
+                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0.195669 0 0 0 0 0.195669 0 0 0 0 0.799617 0 0 0 0.13 0"/>
+                        <feBlend mode="normal" in2="effect2_innerShadow_1779_3649" result="effect3_innerShadow_1779_3649"/>
+                        </filter>
+                        <clipPath id="clip0_1779_3649">
+                        <rect width="22.8571" height="22.8571" fill="white" transform="translate(8.57129 9.07141)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                    </div>
+                    <div class="cookie-content">
+                        <h4>We respect your privacy</h4>
+                        <p>Our website use cookies. By continuing, we assume your permission to deploy cookies as detailed in our <a href="#">Privacy Policy.</a></p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="cookie-btns">
+                    <button class="btn-decline">Decline cookies</button>
+                    <button class="btn-accept" onclick="acceptCookie()">Accept cookies</button>
+                </div>
+            </div>
+        </div>
+
+    <?php endif;  ?>
     
+    <script>
+        let cookieCloseBtn = document.getElementById("cookie-closebtn");
+        let cookieArea = document.querySelector(".cookie-area");
+        let btnAccept = document.querySelector(".btn-accept");
+        let btnDecline = document.querySelector(".btn-decline");
+        cookieCloseBtn.addEventListener("click", function() {
+            cookieArea.style.display = "none";
+        });
+
+        btnDecline.addEventListener("click", function() {
+            cookieArea.style.display = "none";
+        });
+
+
+        function acceptCookie() {
+            fetch('?accept_cookie')  // ঠিক করা হয়েছে
+                .then(() => {
+                    document.getElementById('cookieBox').style.display = 'none';
+                });
+        }
+    </script>
 </body>
 </html>
