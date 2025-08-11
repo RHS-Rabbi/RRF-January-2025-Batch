@@ -1,0 +1,14 @@
+/*
+Theme Name: Lesson LMS
+Theme URI: NULL
+Author: Mohammad Rabbi Hossain
+Author URI: NULL
+Description: This is Lesson LMS website. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id animi nesciunt perspiciatis, officia deserunt, necessitatibus molestiae, obcaecati quo porro fuga magni nulla cupiditate illo optio aperiam laborum nam minima tempora.
+Version: 1.0
+Text Domain: lessonlms
+*/
+
+
+/*------------- Calling output CSS--------------------- */
+@import url(assets/css/output.css);
+
