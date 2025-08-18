@@ -1867,7 +1867,11 @@ a.blog-btn {
 }
 .blog-author-bg {
   display: flex;
+  flex-direction: column;
   gap: calc(var(--spacing) * 3);
+  @media (width >= 64rem) {
+    flex-direction: row;
+  }
 }
 .blog-author-bg h5 {
   font-size: var(--text-xl);

@@ -576,7 +576,7 @@ a.blog-btn {
 }
 
 .blog-author-bg{
-    @apply flex gap-3;
+    @apply flex lg:flex-row flex-col gap-3;
 }
 
 .blog-author-bg h5{
