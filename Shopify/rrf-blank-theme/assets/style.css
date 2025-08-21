@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Satoshi';
+    src: url('Satoshi-Bold.woff2') format('woff2'),
+        url('Satoshi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('Satoshi-Regular.woff2') format('woff2'),
+        url('Satoshi-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url('IntegralCF-Bold.woff2') format('woff2'),
+        url('IntegralCF-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body, .single-product-item h3 , .single-browse-item h3 , .cart-title h3{
+    font-family: 'Satoshi', sans-serif;
+}
+/* body{
+    color: #00000099;
+} */
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Integral CF', sans-serif;
+    font-weight: 700;
+}
+.testimonial-carousel .slick-arrow {
+    position: absolute;
+    right: 0;
+    top: -70px;
+    cursor: pointer;
+}
+
+.testimonial-carousel .slick-prev{
+    right: 40px;
+}
+
+.testimonial-carousel .slick-list {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.single-cart-list:last-child .cart-bottom {
+    border-bottom: none;
+}
+.single-cart-list:nth-of-type(2) .card-bottom {
+    margin-top: 5px;
+}
+.single-cart-list:last-child .cart-top {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.single-cart-list:nth-child(2) .cart-top {
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+/* .single-cart-list:nth-child(1) .cart-top {
+    margin-top: 0px;
+    margin-bottom:0px;
+} */
+
+.product-img.active {
+    border: 1px solid #000; /* Change color as needed */
+    
+}
+
+/* ---------Tab Menu----------- */
+.tab-menu ul li {
+    /* width: 414px; */
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+}
+.tab-menu ul li{
+    color: #00000099;
+    cursor: pointer;
+}
+
+.tab-menu ul li.active{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.tab-menu-details .tab-content{
+    display: none;
+}
+.tab-menu-details .tab-content:nth-child(2) {
+    display: block;
+}
+.tab-content h3{
+    font-family: 'Satoshi', sans-serif;
+}
+
+.quantity{
+    width: 40px;
+}
+
+
+.cart-top {
+    border-bottom: 1px solid #E5E7EB;
+}
+.cart-top:last-child {
+    border-bottom: none;
+}
+
+/* .single-product-item .quick-btn {
+    background: #000;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    color: #fff;
+}
+
+.single-product-item:hover .quick-btn {
+    opacity: 1;
+    visibility: visible;
+} */
+
+.show-wishlist-btn svg{
+    min-height: 25px;
+    min-width: 25px;
+    cursor: pointer;
+}
+
+

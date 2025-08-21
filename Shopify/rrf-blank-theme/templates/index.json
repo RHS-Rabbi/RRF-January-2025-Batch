@@ -1,0 +1,27 @@
+{
+    "sections":{
+        // "announcement-bar": {
+        //     "type":"announcement-bar"
+        // },
+        
+        "hero": {
+            "type":"hero"
+        },
+        "logos": {
+            "type":"logos"
+        },
+        "product-grid": {
+            "type":"product-grid"
+        },
+        "category-box": {
+            "type":"category-box"
+        },
+        "testimonials": {
+            "type":"testimonials"
+        },
+    },
+
+    "order" :["hero" , "logos" , "product-grid", "category-box", "testimonials"]
+}
+
+// "announcement-bar",

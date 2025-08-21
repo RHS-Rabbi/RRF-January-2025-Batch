@@ -1,0 +1,40 @@
+<div class="single-product-item mb-15 relative group">
+    <div class="absolute right-3 top-3 hidden group-hover:flex flex-col">
+        {% comment %} <button class="bg-white shadow p-2 mb-2 wishlist-btn" data-product-id="{{ product.id }}"> {% endcomment %}
+            <button class="bg-white shadow p-2 mb-2 wishlist-btn" data-product-handle="{{ product.handle }}">
+           <span class="text">
+                {% render 'heart-icon' %}
+           </span>
+           <span class="wish-listed hidden">
+                {% render 'heart-icon-solid' %}
+           </span>
+        </button>
+
+        <button data-product-handle="{{ product.handle }}" class="quick-view-btn bg-white shadow p-2 mb-2">
+            <span class="text">
+                {% render 'adjustment-icon' %}
+            </span>
+            <div class="loading-icon hidden animate-spin" data-product-handle="{{ product.handle }}">
+                {% render 'cog-icon' %}
+            </div>
+        </button>
+    </div>
+
+
+    <a href="{{ product.url }}" class="bg-gray-100 rounded-lg mb-4 block">
+        <img class="w-full rounded-lg" src="{{ "product-1.png" | asset_url}}" alt="" width="auto" height="auto">
+    </a>
+    {% comment %} <h3 class="text-xl mb-2">T-shirt with Tape Details</h3> {% endcomment %}
+    <h3 class="text-xl mb-2"><a href="{{ product.url }}">{{product.title}}</a></h3>
+    <div class="flex items-center text-gray-500 mb-4">
+        <div class="flex mr-2">
+            {% for i in (1..5) %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
+                    <path d="M9.24494 0.255005L11.8641 5.89491L18.0374 6.6431L13.4829 10.8769L14.679 16.9793L9.24494 13.956L3.8109 16.9793L5.00697 10.8769L0.452479 6.6431L6.62573 5.89491L9.24494 0.255005Z" fill="#FFC633"/>
+                </svg>
+            {% endfor %}
+        </div>
+        3.5/5
+    </div>
+    <div class="font-bold text-2xl">$120</div>
+</div>

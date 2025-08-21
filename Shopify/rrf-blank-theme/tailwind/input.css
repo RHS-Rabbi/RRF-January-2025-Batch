@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.container{
+    @apply mx-auto px-4;
+}
+.rrf-top-bar{
+    @apply bg-black py-2 text-center text-sm;
+}
+.rrf-top-bar a{
+    @apply underline font-bold;
+}
+
+.mainmenu li a{
+    @apply block py-2 px-4;
+}
+
+.mainmenu{
+    @apply flex justify-center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    @apply focus:outline-none;
+}
+
+.rrf-section-title{
+    @apply text-[48px];
+}
+
+#filter-color > div {
+    @apply mr-4 mb-4;
+}
+
+button{
+    @apply cursor-pointer;
+}

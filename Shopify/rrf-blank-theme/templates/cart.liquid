@@ -1,0 +1,130 @@
+<div class="">
+     <!-- Load asstes/cart.js -->
+    <script src="{{ 'cart.js' | asset_url }}" defer></script>
+    <div class="container">
+        <div class="border-t border-gray-200 pt-8 pb-20">
+            <div class="flex items-center">
+                <a href="">Home</a>
+                <svg class="mx-2" width="6.5" height="11.5" viewBox="0 0 6.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.28 0.22L6.28 5.22C6.35 5.29 6.4 5.37 6.44 5.46C6.48 5.55 6.5 5.65 6.5 5.75C6.5 5.85 6.48 5.94 6.44 6.04C6.4 6.13 6.35 6.21 6.28 6.28L1.28 11.28C1.14 11.42 0.95 11.5 0.75 11.5C0.55 11.5 0.36 11.42 0.22 11.28C0.07 11.14 0 10.95 0 10.75C0 10.55 0.07 10.36 0.22 10.22L4.68 5.75L0.21 1.28C0.07 1.14 0 0.95 0 0.75C0 0.55 0.07 0.36 0.21 0.22C0.36 0.07 0.55 0 0.75 0C0.95 0 1.14 0.07 1.28 0.22Z" fill="#000000" fill-opacity="0.6"/>
+                </svg>
+                <span class="text-black">Cart</span>
+            </div>
+
+            <h1 class="rrf-section-title mb-6">Your Cart</h1>
+
+            {% if cart.item_count != 0 %}
+            <div class="py-5">
+                <div class="flex -mx-4">
+                    <div class="w-7/12 px-4">
+                        <form action="{{ routes.cart_url }}" method="post">
+                            <div class="border-1 border-gray-200 p-5 rounded-2xl">
+                                {% comment %} {% for i in (1..3) %} {% endcomment %}
+                                {% for item in cart.items %}
+                                    <div class="single-cart-list">
+                                            <div class="cart-bottom">
+                                                {% comment %} <div class="flex  mb-5 cart-top">
+                                                    {% comment %} <img class="rounded-lg" src="{{ 'cart.jpg' | asset_url }}" alt="" width="auto" height="auto"> {% endcomment %}
+                                                    {% if item.image %}
+                                                        <div class="w-20">
+                                                            <img class="rounded-lg" src="{{ item.image | image_url: width: 300 }}" alt="" width="auto" height="auto">
+                                                        </div>
+                                                    {% endif %}
+                                                    <div class="flex flex-col w-full ml-4 ">
+                                                        <div class="flex  items-center justify-between cart-title">
+                                                            {% comment %} <h3>Gradient Graphic T-shirt</h3> {% endcomment %}
+                                                            <h3>{{item.title}}</h3>
+                                                            <div class="">
+                                                                <a class="" href="{{ item.url_to_remove }}">
+                                                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M17.25 3.5H13.5V2.75C13.5 2.15326 13.2629 1.58097 12.841 1.15901C12.419 0.737053 11.8467 0.5 11.25 0.5H6.75C6.15326 0.5 5.58097 0.737053 5.15901 1.15901C4.73705 1.58097 4.5 2.15326 4.5 2.75V3.5H0.75C0.551088 3.5 0.360322 3.57902 0.21967 3.71967C0.0790178 3.86032 0 4.05109 0 4.25C0 4.44891 0.0790178 4.63968 0.21967 4.78033C0.360322 4.92098 0.551088 5 0.75 5H1.5V18.5C1.5 18.8978 1.65804 19.2794 1.93934 19.5607C2.22064 19.842 2.60218 20 3 20H15C15.3978 20 15.7794 19.842 16.0607 19.5607C16.342 19.2794 16.5 18.8978 16.5 18.5V5H17.25C17.4489 5 17.6397 4.92098 17.7803 4.78033C17.921 4.63968 18 4.44891 18 4.25C18 4.05109 17.921 3.86032 17.7803 3.71967C17.6397 3.57902 17.4489 3.5 17.25 3.5ZM7.5 14.75C7.5 14.9489 7.42098 15.1397 7.28033 15.2803C7.13968 15.421 6.94891 15.5 6.75 15.5C6.55109 15.5 6.36032 15.421 6.21967 15.2803C6.07902 15.1397 6 14.9489 6 14.75V8.75C6 8.55109 6.07902 8.36032 6.21967 8.21967C6.36032 8.07902 6.55109 8 6.75 8C6.94891 8 7.13968 8.07902 7.28033 8.21967C7.42098 8.36032 7.5 8.55109 7.5 8.75V14.75ZM12 14.75C12 14.9489 11.921 15.1397 11.7803 15.2803C11.6397 15.421 11.4489 15.5 11.25 15.5C11.0511 15.5 10.8603 15.421 10.7197 15.2803C10.579 15.1397 10.5 14.9489 10.5 14.75V8.75C10.5 8.55109 10.579 8.36032 10.7197 8.21967C10.8603 8.07902 11.0511 8 11.25 8C11.4489 8 11.6397 8.07902 11.7803 8.21967C11.921 8.36032 12 8.55109 12 8.75V14.75ZM12 3.5H6V2.75C6 2.55109 6.07902 2.36032 6.21967 2.21967C6.36032 2.07902 6.55109 2 6.75 2H11.25C11.4489 2 11.6397 2.07902 11.7803 2.21967C11.921 2.36032 12 2.55109 12 2.75V3.5Z" fill="#FF3333"/>
+                                                                    </svg>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <p class="font-normal">Size:<span class="text-[#00000099]"> Large</span></p>
+                                                        <p class="font-normal">Color:<span class="text-[#00000099]"> White</span></p>
+                                                        
+                                                        <div class="flex  items-center justify-between cart-title">
+                                                            {% comment %} <h3 class="text-2xl">$145</h3> {% endcomment %}
+                                                            <h3 class="text-2xl">{{ item.final_price | money }}</h3>
+                                                            <div class="flex items-center gap-5 bg-[#F0F0F0] py-3 px-5 rounded-full">
+                                                                {% comment %} <a href="">
+                                                                    <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M15.8125 1C15.8125 1.24864 15.7137 1.4871 15.5379 1.66291C15.3621 1.83873 15.1236 1.9375 14.875 1.9375H1.125C0.87636 1.9375 0.637903 1.83873 0.462087 1.66291C0.286272 1.4871 0.1875 1.24864 0.1875 1C0.1875 0.75136 0.286272 0.512903 0.462087 0.337087C0.637903 0.161272 0.87636 0.0625 1.125 0.0625H14.875C15.1236 0.0625 15.3621 0.161272 15.5379 0.337087C15.7137 0.512903 15.8125 0.75136 15.8125 1Z" fill="black"/>
+                                                                    </svg>
+                                                                        
+                                                                </a>
+                                                                <a href="">
+                                                                {{item.quantity}}
+                                                                </a>
+                                                                
+                                                                <a href="">
+                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M15.8125 8C15.8125 8.24864 15.7137 8.4871 15.5379 8.66291C15.3621 8.83873 15.1236 8.9375 14.875 8.9375H8.9375V14.875C8.9375 15.1236 8.83873 15.3621 8.66291 15.5379C8.4871 15.7137 8.24864 15.8125 8 15.8125C7.75136 15.8125 7.5129 15.7137 7.33709 15.5379C7.16127 15.3621 7.0625 15.1236 7.0625 14.875V8.9375H1.125C0.87636 8.9375 0.637903 8.83873 0.462087 8.66291C0.286272 8.4871 0.1875 8.24864 0.1875 8C0.1875 7.75136 0.286272 7.5129 0.462087 7.33709C0.637903 7.16127 0.87636 7.0625 1.125 7.0625H7.0625V1.125C7.0625 0.87636 7.16127 0.637903 7.33709 0.462087C7.5129 0.286272 7.75136 0.1875 8 0.1875C8.24864 0.1875 8.4871 0.286272 8.66291 0.462087C8.83873 0.637903 8.9375 0.87636 8.9375 1.125V7.0625H14.875C15.1236 7.0625 15.3621 7.16127 15.5379 7.33709C15.7137 7.5129 15.8125 7.75136 15.8125 8Z" fill="black"/>
+                                                                    </svg>
+                                                                </a> {% endcomment %}
+                                                                {% render 'quantity', type:"cart", quantity:item.quantity,item_key:item.key %}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> {% endcomment %}
+                                                <div id="cart-items"></div>
+                                            </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </form>    
+                    </div>
+                    <div class="w-5/12 px-4">
+                        <div class="border-1 border-gray-200 p-5 rounded-2xl">
+                            <div class="cart-title leading-10">
+                                <h3 class="text-2xl">Order Summary</h3>
+                                <div class="flex items-center justify-between w-full">
+                                    <p class="text-[#00000099] text-xl">Subtotal</p>
+                                    <p class="font-bold text-black">{{ cart.items_subtotal_price | money }}</p>
+                                </div>
+                                <div class="flex items-center justify-between w-full">
+                                    <p class="text-[#00000099] text-xl">Discount (-20%)</p>
+                                    <p class="text-red-500 font-bold">{{ cart.discount_price | money }}</p>
+                                </div>
+                                <div class="border-b border-gray-200">
+                                    <div class="flex items-center justify-between w-full mb-4">
+                                        <p class="text-[#00000099] text-xl">Delivery Fee</p>
+                                        <p class="text-black font-bold">$15</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full mb-5 mt-5">
+                                    <p class="text-black text-xl">Total</p>
+                                    <p class="text-black font-bold">{{ cart.total_price | money }}</p>
+                                </div>
+                                 <div class="flex items-center justify-between mb-6 ">
+                                    <form class="flex bg-gray-200 rounded-full  items-center px-4 w-[420px]" action="">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M21.0766 10.4857L11.7653 1.17444C11.5917 0.999696 11.3851 0.861152 11.1576 0.766846C10.93 0.672541 10.686 0.62435 10.4397 0.625069H1.75001C1.45164 0.625069 1.16549 0.743595 0.954513 0.954574C0.743534 1.16555 0.625008 1.4517 0.625008 1.75007V10.4398C0.624289 10.6861 0.67248 10.9301 0.766785 11.1576C0.861091 11.3852 0.999635 11.5918 1.17438 11.7654L10.4856 21.0766C10.8372 21.4281 11.3141 21.6256 11.8113 21.6256C12.3084 21.6256 12.7853 21.4281 13.1369 21.0766L21.0766 13.1369C21.4281 12.7853 21.6255 12.3085 21.6255 11.8113C21.6255 11.3141 21.4281 10.8373 21.0766 10.4857ZM11.8113 19.2204L2.87501 10.2813V2.87507H10.2813L19.2175 11.8113L11.8113 19.2204ZM7.37501 5.87507C7.37501 6.17174 7.28703 6.46175 7.12221 6.70842C6.95739 6.9551 6.72312 7.14736 6.44903 7.26089C6.17494 7.37442 5.87334 7.40412 5.58237 7.34625C5.2914 7.28837 5.02413 7.14551 4.81435 6.93573C4.60457 6.72595 4.46171 6.45868 4.40383 6.1677C4.34595 5.87673 4.37566 5.57513 4.48919 5.30104C4.60272 5.02695 4.79498 4.79269 5.04165 4.62786C5.28833 4.46304 5.57834 4.37507 5.87501 4.37507C6.27283 4.37507 6.65436 4.5331 6.93567 4.81441C7.21697 5.09571 7.37501 5.47724 7.37501 5.87507Z" fill="black" fill-opacity="0.4"/>
+                                        </svg>
+                                       <input class="p-2 w-full px-2" type="text" placeholder="Add promo code">
+                                    </form>
+                                    <button class="bg-black py-[8px] px-[45px] text-white rounded-[62px] cursor-pointer" type="submit">Apply</button>
+                                </div> 
+                                <button class="w-full bg-black inline-flex  text-white items-center justify-center p-2 rounded-full" type="submit">Go to Checkout
+                                      <svg class="m-2" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.7959 0.454104L18.5459 7.2041C18.6508 7.30862 18.734 7.43281 18.7908 7.56956C18.8476 7.7063 18.8768 7.85291 18.8768 8.00098C18.8768 8.14904 18.8476 8.29565 18.7908 8.4324C18.734 8.56915 18.6508 8.69334 18.5459 8.79785L11.7959 15.5479C11.5846 15.7592 11.2979 15.8779 10.9991 15.8779C10.7002 15.8779 10.4135 15.7592 10.2022 15.5479C9.99084 15.3365 9.87211 15.0499 9.87211 14.751C9.87211 14.4521 9.99084 14.1654 10.2022 13.9541L15.0313 9.12504L1.25 9.12504C0.951632 9.12504 0.665483 9.00651 0.454505 8.79554C0.243527 8.58456 0.125 8.29841 0.125 8.00004C0.125 7.70167 0.243527 7.41552 0.454505 7.20455C0.665483 6.99357 0.951632 6.87504 1.25 6.87504L15.0313 6.87504L10.2013 2.04598C9.98991 1.83463 9.87117 1.54799 9.87117 1.2491C9.87117 0.950218 9.98991 0.663574 10.2013 0.45223C10.4126 0.240885 10.6992 0.122151 10.9981 0.122151C11.297 0.122151 11.5837 0.240885 11.795 0.45223L11.7959 0.454104Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+                <div class="">
+                    <p class="text-2xl text-black">Your cart is empty.</p>
+                    <a class="" href="">Return To Shop</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+

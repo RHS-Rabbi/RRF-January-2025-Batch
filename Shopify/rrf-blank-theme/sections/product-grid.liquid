@@ -1,0 +1,83 @@
+<div class="py-20">
+    <div class="container">
+        {% comment %} <h2 class="rrf-section-title text-center mb-12 uppercase">NEW ARRIVALS</h2> {% endcomment %}
+        <h2 class="rrf-section-title text-center mb-12 uppercase">{{ section.settings.title }}</h2>
+        <div class="arival-section border-b-1 border-gray-100">
+            <div class="flex -mx-4 flex-wrap">
+                {% comment %} {% for i in (1..4) %}
+                    <div class="w-1/4 px-4">
+                        {% render 'single-product'%}
+                    </div>
+                {% endfor %} {% endcomment %}
+                {% for product in section.settings.collection.products limit: section.settings.product_limit %}
+                    <div class="w-1/4 px-4">
+                        {% render 'single-product', product: product %}
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="w-full mb-10 text-center">
+                {% comment %} <a class="px-18 py-3 border-1 border-gray-100 rounded-[62px] inline-block" href="">View All</a> {% endcomment %}
+                <a class="px-18 py-3 border-1 border-gray-100 rounded-[62px] inline-block" href="">{{section.settings.link_text}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Product Grid",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+      },
+    "settings": [
+        {
+            "id" : "title",
+            "type": "text",
+            "label": "Title",
+            "default": "NEW ARRIVALS",
+        },
+        {
+            "id" : "collection",
+            "type": "collection",
+            "label": "Collection",
+
+        
+        },
+
+        {
+            "id" : "url",
+            "type": "url",
+            "label": "Link",
+
+        
+        },
+
+        {
+            "id" : "link_text",
+            "type": "text",
+            "label": "Link Text",
+            "default": "View All"
+
+        
+        },
+        {
+            "id": "product_limit",
+            "type": "range",
+            "label": "Number of Products Show",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "default": 4
+        }
+        
+        
+    ],
+    "presets": [
+        {
+        
+            "name" : "Product Grid",
+        }
+    ]
+    
+}
+{% endschema %}

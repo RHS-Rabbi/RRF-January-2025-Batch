@@ -1,0 +1,53 @@
+<div class="bg-black py-10">
+    <div class="container">
+        <div class="flex">
+            {% comment %} {% for i in (1..5) %}
+                <div class="flex-1 flex items-center justify-center">
+                    <img  src="{{ 'company-' | append: i | append: '.png' | asset_img_url }}" alt="" width="auto" height="auto">
+                </div>
+            {% endfor %} {% endcomment %}
+            {% for block in section.blocks %}
+                {%- case block.type -%}
+                  {%- when "logos" -%}
+                    <div class="flex w-20 h-20 justify-between">
+                        {{ block.settings.image | image_url: width: 400 | image_tag }}
+                    </div>
+                {% endcase %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Brand Logos",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "blocks": [
+        {
+          "type": "logos",
+          "name": "Logos",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Upload Image",
+            },
+
+            {
+              "type": "url",
+              "id": "url",
+              "label": "URL",
+            }
+          ]
+        }
+      ],
+    "presets": [
+        {
+        
+            "name" : "Brand Logos",
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,48 @@
+<div class="py-10">
+    <div class="container">
+        <div class="bg-gray-100 p-8 rounded-3xl">
+            <h2 class="rrf-section-title text-center mb-12">BROWSE BY dress STYLE</h2>
+            <div class="flex flex-wrap p-10 -mx-4">
+                <a href="" class="w-5/12 px-4 mb-10">
+                    <div class="h-full relative">
+                        <img class="w-full h-full object-cover rounded-lg" src="{{ 'browse-1.jpg' | asset_url }}" alt="" width="auto" height="auto">
+                        <div class="font-bold text-4xl absolute top-8 left-8 ">Casual</div>
+                    </div>
+                </a>
+                <div class="w-7/12 px-4 mb-10">
+                    <a href="" class="h-full relative">
+                        <img class="w-full h-full object-cover rounded-lg" src="{{ 'browse-2.jpg' | asset_url }}" alt="" width="auto" height="auto">
+                        <div class="font-bold text-4xl absolute top-8 left-8">Formal</div>
+                    </a>
+                </div>
+                <a href="" class="w-7/12 px-4 mb-10">
+                    <div class="h-full relative">
+                        <img class="w-full h-full object-cover rounded-lg" src="{{ 'browse-3.jpg' | asset_url }}" alt="" width="auto" height="auto">
+                        <div class="font-bold text-4xl absolute top-8 left-8">Party</div>
+                    </div>
+                </a>
+                <a href="" class="w-5/12 px-4 mb-10">
+                    <div class="h-full relative">
+                        <img class="w-full h-full object-cover rounded-lg" src="{{ 'browse-4.jpg' | asset_url }}" alt="" width="auto" height="auto">
+                        <div class="font-bold text-4xl absolute top-8 left-8">Gym</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Category Boxes",
+    "disabled_on": {
+        "groups": ["header", "footer"]
+    },
+    "presets": [
+        {
+        
+            "name" : "Category Boxes",
+        }
+    ]
+}
+{% endschema %}
