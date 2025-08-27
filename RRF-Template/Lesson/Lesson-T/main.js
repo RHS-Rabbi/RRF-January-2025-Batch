@@ -94,3 +94,25 @@ const toggleBtn = document.getElementById('menu-toggle');
     openIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
   });
+
+
+jQuery(document).ready(function(){
+    $('.service-tab-area li').click(function(){
+        $('.service-tab-area li').removeClass('active');
+        $(this).addClass('active');
+        $(".tab-content").hide();
+
+        let tab = $(this).data("tab");
+
+        $(`#${tab}`).show();
+    })
+});
+
+$(function() {
+  $("#accordion").accordion({
+    heightStyle: "content",
+    collapsible: true,
+    active: false,
+    icons: false
+  });
+});
