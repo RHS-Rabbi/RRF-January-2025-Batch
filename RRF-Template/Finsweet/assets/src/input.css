@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sen:wght@400..800&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-sen: "Sen", sans-serif;
+  --font-inter: "Inter", sans-serif;;
+  --56px: 3.5rem;
+  --36px: 2.25rem;
+  --28px: 1.75rem;
+  --Black:#232536;
+  --Yellow:#FFD050;
+  --Purple:#592EA9;
+  --Dark-Grey:#4C4C4C;
+  --Medium-grey:#6D6E76;
+  --Light-grey:#F4F4F4;
+  --Lavender:#F4F0F8;
+  --Light-yellow:#FBF6EA;
+  --light:#fff;
+  --hero-gradient:radial-gradient(80.99% 71.93% at 74.58% 0%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+}
+
+body{
+    @apply font-normal  lg:text-base  text-sm not-italic;
+}
+
+h1{
+    @apply lg:[font-size:var(--56px)] text-3xl font-bold lg:leading-16 leading-10 font-sen;
+}
+h2{
+    @apply md:[font-size:var(--36px)] text-3xl font-bold md:leading-12 leading-10 font-sen;
+}
+h3{
+    @apply  [font-size:var(--28px)] font-bold leading-9 font-sen;
+}
+h4{
+    @apply text-2xl font-bold leading-8 font-sen;
+}
+h5{
+    @apply text-xl font-bold leading-8 font-sen;
+}
+h6{
+    @apply text-base  font-bold leading-6 font-sen;
+}
+p{
+    @apply text-[var(--Medium-grey)];
+}
+
+.btn{
+    @apply cursor-pointer bg-[var(--Yellow)] lg:px-12 lg:py-4 py-4 px-6  inline-flex items-start lg:text-lg text-sm not-italic leading-6 font-bold transition-normal duration-300 ease-in-out  hover:bg-[#EDC14A] active:bg-[#EDC14A] focus:bg-[#EDC14A] ;
+}
+
+.container{
+    @apply mx-auto 2xl:max-w-320 lg:px-8 px-8 xl:max-w-[1170px] xl:px-0;
+}
+
+
+/* ------------- Header Area --------------------*/
+.header-area{
+    @apply bg-[var(--Black)] py-3;
+}
+.mainmenu{
+    @apply flex gap-8;
+}
+.mainmenu ul{
+    @apply flex items-center gap-6;
+}
+.mainmenu ul li a, .mainmenu-mobile ul li a{
+    @apply text-base not-italic font-normal leading-7 text-white;
+}
+.mainmenu-mobile ul{
+    @apply flex flex-col gap-2;
+}
+.mainmenu-mobile{
+    @apply flex flex-col gap-2 pt-3;
+}
+.header-btn{
+    @apply !bg-white;
+}
+
+/*------------- Hero Area------------------ */
+.hero-area{
+    @apply w-full  lg:pt-32 lg:pb-48 py-12 !bg-scroll !bg-cover !bg-center;
+}
+.hero-title .hero-data{
+    @apply text-[var(--light)] text-base not-italic font-medium leading-5 tracking-[3px] uppercase;
+
+}
+.hero-title h1{
+    @apply text-[var(--light)] tracking-[-3px] py-6;
+}
+.hero-title .hero-author{
+    @apply text-base text-[var(--light)] font-normal capitalize leading-7 pb-4 flex items-center;
+}
+.hero-title .hero-author p, .feature-author p{
+    @apply !text-[var(--Dark-Grey)];
+}
+
+.hero-title .hero-author a{
+    @apply text-[var(--Yellow)];
+}
+.hero-title .hero-description{
+    @apply text-[var(--Light-grey)] text-base font-normal leading-7 md:w-149.75;
+}
+.hero-btn{
+    @apply lg:mt-12 mt-6;
+}
+
+/* -----------------------Featured Area ------------------*/
+.featured-area{
+    @apply py-32 bg-[var(--light)];
+}
+.featured-title{
+    @apply mb-8;
+}
+.featured-title{
+    @apply tracking-[-2px]
+}
+.featured-item{
+    @apply p-8 border-1 border-[#F0F0F1];
+}
+.featured-bg img{
+    @apply object-cover w-167.25 h-88;
+}
+.featured-item-info{
+    @apply flex flex-col gap-4;
+}
+.feature-author{
+    @apply flex text-sm font-medium leading-5;
+}
+.feature-author a{
+    @apply text-[var(--Purple)];
+}
+.featured-item{
+    @apply flex flex-col gap-8;
+}
+.featured--item-title h3{
+    @apply text-[var(--black)] leading-10 tracking-[-1px] !text-[28px];
+
+}
+.featured-description{
+    @apply text-[var(--Medium-grey)] leading-7 !text-[16px];
+}
+
+/* ----Featured Right Title Area----- */
+.featured-right-titles{
+    @apply flex justify-between items-center;
+}
+
+.featured-right-titles h2{
+    @apply tracking-[-2px];
+}
+
+.featured-right-titles a{
+    @apply text-base text-[var(--Purple)] font-normal leading-7;
+}
+.featured-right-area{
+    @apply flex flex-col gap-8;
+}
+
+.single-featured-right-list{
+   @apply md:p-8 lg:pt-8 lg:pl-8 lg:pb-6 lg:pr-28  flex flex-col gap-2 transition-all duration-300 ease-in-out hover:bg-[var(--Light-yellow)] cursor-pointer focus:bg-[var(--Light-yellow)] active:bg-[var(--Light-yellow)];
+
+}
+/* .featured-right-list {
+    
+    @apply lg:block flex flex-col gap-8
+} */
+
+/* --------------About Area ---------------------*/
+.about-area{
+    @apply pb-32 bg-[var(--light)];
+}
+.about-style{
+    @apply bg-[var(--Lavender)] xl:py-25 xl:pl-20 xl:pr-27 p-8;
+}
+.about-left-area,.about-right-area{
+    @apply flex flex-col gap-6 h-full;
+}
+
+.about-left-area span,.about-right-area span{
+    @apply text-[var(--Black)] text-base not-italic font-semibold leading-5 tracking-[3px] uppercase;
+}
+
+.about-title{
+    @apply flex flex-col gap-4 flex-grow;
+}
+
+.about-title p{
+    @apply text-[var(--Medium-grey)] text-base not-italic font-normal leading-7 mb-auto ;
+}
+
+.about-btn{
+    @apply text-[var(--Purple)] text-lg not-italic font-bold leading-8 ;
+}
+
+/* -----------------Catagory Area------------------ */
+.catagory-area{
+    @apply pb-32 bg-[var(--light)];
+}
+.single-catagory-item{
+    @apply cursor-pointer p-8 border-1 border-[#D3D3D6] bg-white flex flex-col h-full gap-4 transition-all duration-300 ease-in-out hover:bg-[var(--Yellow)] hover:border-[var(--Yellow)] active:bg-[var(--Yellow)] focus:bg-[var(--Yellow)] active:border-[var(--Yellow)] focus:border-[var(--Yellow)];
+}
+.catagory-bg img{
+    @apply size-12 bg-[var(--Light-yellow)] rounded-xl ;
+}
+.catagory-info{
+    @apply flex flex-col gap-1 h-full;
+}
+
+.catagory-info h3{
+    @apply lg:text-xl xl:[font-size:var(--28px)] text-[var(--Black)] not-italic font-bold leading-10 tracking-[-1px];
+}
+
+.catagory-info p{
+    @apply text-[var(--Medium-grey)] xl:text-base not-italic font-normal leading-7 mb-auto text-sm ;
+}
+
+
+/* -------------SpecialPost Area----------------- */
+.specialPost-area{
+    @apply bg-[var(--light)] pb-32;
+}
+
+.speacialpost-bg img {
+    @apply w-237.25 h-auto object-cover;
+}
+.speacialpost-content .special-tags{
+    @apply text-[var(--Black)] leading-5 xl:text-base text-sm font-semibold tracking-[3px] uppercase mb-6;
+}
+.specialpost{
+    @apply relative flex flex-col gap-8 ;
+}
+.speacialpost-content{
+    @apply xl:p-20  bg-white;
+}
+.specialpost-title{
+    @apply flex flex-col gap-4;
+}
+.specialpost-title h2{
+    @apply text-3xl xl:text-5xl not-italic font-bold xl:leading-16 leading-10 tracking-[-2px];
+}
+.specialpost-title  p{
+    @apply text-base font-normal leading-7;
+}
+.speacialpost-content .btn{
+    @apply mt-8;
+}
+.speacialpost-content {
+    @apply xl:absolute xl:bottom-0 xl:w-176.5 xl:right-0;
+}
+
+/* -------------Authors Area ------------------ */
+.authors-area {
+    @apply pb-32 bg-[var(--light)];
+}
+.single-authors-item{
+    @apply p-10 bg-[var(--Light-grey)] flex flex-col gap-5 h-full flex-grow transition-all duration-300 ease-in-out cursor-pointer hover:bg-[var(--Light-yellow)] active:bg-[var(--Light-yellow)] focus:bg-[var(--Light-yellow)];
+}
+.authors-bg img{
+    @apply size-32 object-cover mx-auto;
+}
+.authors-info{
+    @apply text-center h-full;
+}
+.authors-info h3{
+    @apply leading-10 font-bold tracking-[-1px] lg:text-xl ;
+}
+.authors-info p{
+    @apply font-normal leading-5 text-sm mb-auto ;
+}
+.authors-social{
+    @apply flex justify-center gap-4;
+}
+
+/* ------------Logo Component Area---------------- */
+.logoComponent-area{
+    @apply pb-32 bg-[var(--light)];
+}
+.single-logoComponent-item span{
+    @apply leading-5 font-normal text-sm text-[var(--Medium-grey)];
+}
+.single-logoComponent-item  h4{
+    @apply leading-8 text-2xl font-bold text-[var(--Medium-grey)];
+}
+.single-logoComponent-item img {
+    @apply max-w-33.5 max-h-8 object-cover; 
+}
+.single-logoComponent-item {
+   @apply md:bg-[var(--Light-grey)] lg:bg-transparent md:py-3 md:px-5 lg:p-0 ;
+}
+
+/* ---------Testimonial Area------------------ */
+.testimonial-area{
+    @apply bg-[var(--Light-yellow)];
+}
+.testimonial-style{
+    @apply xl:pt-20 xl:pb-18.75 xl:px-28 lg:p-10 py-12;
+}
+.single-testimonial-left-item{
+    @apply flex flex-col gap-3 h-full flex-grow;
+}
+.single-testimonial-left-item span{
+    @apply text-base font-semibold leading-5 tracking-[3px] uppercase text-[var(--Black)]; 
+}
+.testimonial-title{
+    @apply flex flex-col gap-4 h-full;
+}
+.testimonial-title h2{
+    @apply font-bold leading-12 tracking-[-2px];
+}
+.testimonial-title p{
+    @apply text-[var(--Black)] text-base font-normal leading-7 mb-auto ;
+}
+.single-testimonial-right-item{
+    @apply flex flex-col xl:gap-30.25 gap-8;
+}
+
+.testimonial-bg img{
+    @apply size-12 object-cover;
+}
+.testimonial-user {
+    @apply flex gap-4;
+}
+
+
+.testimonial-carousel .slick-arrow {
+    @apply size-12 bg-white lg:flex justify-center items-center rounded-full absolute lg:right-0 lg:bottom-0 z-1 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[var(--Black)] hover:text-white hover:size-15.5 hidden;
+}
+.testimonial-carousel {
+    @apply relative;
+}
+
+.testimonial-carousel .slick-prev {
+    @apply lg:right-17.5 hidden lg:flex;
+}
+
+.testimonial-divider {
+    @apply lg:w-0.25 bg-[#6D6E76] opacity-[0.4] lg:h-auto h-0.25 w-full ;
+}
+
+/*--------------- Join Our Area------------------ */
+.join-our-area{
+    @apply bg-[var(--light)] py-32;
+}
+.single-join-area{
+    @apply flex flex-col text-center gap-8;
+}
+.join-now-title{
+    @apply flex flex-col gap-4;
+}
+
+
+/* ---------------Footer Area--------------------- */
+.footer-area{
+    @apply pt-14.75 pb-14 bg-[var(--Black)];
+}
+.footer-mainmenu ul{
+    @apply flex gap-6 flex-col md:flex-row;
+}
+.footer-mainmenu ul li a{
+    @apply text-[var(--light)] text-base not-italic font-normal leading-7;
+}
+.cta-area{
+    @apply xl:py-20 xl:px-16 bg-[#2E3040] mt-13.5 mb-12 p-8 ;
+}
+.cta-title h2 {
+    @apply text-[var(--light)] leading-12 tracking-[-2px]  lg:text-left;
+}
+
+.form-contol input[type="email"] {
+    @apply py-4 pl-6 xl:w-80.75 w-full text-[var(--Medium-grey)] border-1 border-[#4C4C4C] outline-none focus:border-[var(--Yellow)] ;
+}
+
+.cta-form-area{
+    @apply flex flex-col xl:flex-row gap-8 xl:items-center md:justify-center xl:justify-start;
+}
+
+.single-footer-info-social ul{
+    @apply flex gap-6.5;
+}
+.single-footer-info-list p , .single-footer-info-list a{
+    @apply text-[#BDBEC3] text-base font-normal leading-6;
+}
+
+
+
+
+
+
