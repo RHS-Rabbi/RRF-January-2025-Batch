@@ -80,7 +80,7 @@ p{
 
 /*------------- Hero Area------------------ */
 .hero-area{
-    @apply w-full  lg:pt-32 lg:pb-48 py-12 !bg-scroll !bg-cover !bg-center;
+    @apply w-full  lg:pt-32 lg:pb-48 pt-8 pb-12 !bg-scroll !bg-cover !bg-center;
 }
 .hero-title .hero-data{
     @apply text-[var(--light)] text-base not-italic font-medium leading-5 tracking-[3px] uppercase;
@@ -427,7 +427,10 @@ p{
     @apply h-0.25 bg-[var(--Medium-grey)] opacity-[0.32];
 }
 .blog-card-bg{
-    @apply lg:w-122.5;
+    @apply lg:w-122.5 md:w-6/12;
+}
+.blog-content-details{
+    @apply lg:w-156 md:w-6/12;
 }
 .single-blog-info{
     @apply flex flex-col gap-5;
@@ -439,11 +442,11 @@ p{
     @apply flex gap-8 items-center;
 }
 .blog-info-title h2 {
-    @apply w-150.5;
+    @apply lg:w-150.5 text-2xl;
 }
 
 .blog-info-title p {
-    @apply w-156;
+    @apply lg:w-156;
 }
 
 .single-blog-info span{

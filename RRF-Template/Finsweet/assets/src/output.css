@@ -610,7 +610,8 @@ p {
   background-size: cover !important;
   background-attachment: scroll !important;
   background-position: center !important;
-  padding-block: calc(var(--spacing) * 12);
+  padding-top: calc(var(--spacing) * 8);
+  padding-bottom: calc(var(--spacing) * 12);
   @media (width >= 64rem) {
     padding-top: calc(var(--spacing) * 32);
   }
@@ -1502,8 +1503,19 @@ p {
   opacity: 0.32;
 }
 .blog-card-bg {
+  @media (width >= 48rem) {
+    width: calc(6/12 * 100%);
+  }
   @media (width >= 64rem) {
     width: calc(var(--spacing) * 122.5);
+  }
+}
+.blog-content-details {
+  @media (width >= 48rem) {
+    width: calc(6/12 * 100%);
+  }
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 156);
   }
 }
 .single-blog-info {
@@ -1522,10 +1534,16 @@ p {
   gap: calc(var(--spacing) * 8);
 }
 .blog-info-title h2 {
-  width: calc(var(--spacing) * 150.5);
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 150.5);
+  }
 }
 .blog-info-title p {
-  width: calc(var(--spacing) * 156);
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 156);
+  }
 }
 .single-blog-info span {
   font-size: var(--text-base);
