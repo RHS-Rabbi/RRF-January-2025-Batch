@@ -126,7 +126,7 @@ p{
     @apply flex flex-col gap-4;
 }
 .feature-author{
-    @apply flex text-sm font-medium leading-5;
+    @apply flex text-sm font-medium leading-5 items-center;
 }
 .feature-author a{
     @apply text-[var(--Purple)];
@@ -322,7 +322,7 @@ p{
 
 
 .testimonial-carousel .slick-arrow {
-    @apply size-12 bg-white lg:flex justify-center items-center rounded-full absolute lg:right-0 lg:bottom-0 z-1 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[var(--Black)] hover:text-white hover:size-15.5 hidden;
+    @apply size-12 bg-white lg:!flex justify-center items-center rounded-full absolute lg:right-0 lg:bottom-0 z-1 cursor-pointer transition-all duration-300 ease-in-out hover:bg-[var(--Black)] hover:text-white hover:size-15.5 !hidden;
 }
 .testimonial-carousel {
     @apply relative;
@@ -378,6 +378,76 @@ p{
 }
 .single-footer-info-list p , .single-footer-info-list a{
     @apply text-[#BDBEC3] text-base font-normal leading-6;
+}
+
+
+/*-------------- Hero Blog Area------------------ */
+.hero-blog-area{
+    @apply bg-[var(--Lavender)] lg:pt-40 pb-20 pt-25;
+}
+.hero-blog-left-area{
+    @apply flex flex-col xl:gap-8 lg:gap-5.75 gap-8;
+}
+
+.hero-blog-left-area .blog-hero-data {
+    @apply text-[var(--Black)] text-base not-italic font-medium leading-5 tracking-[3px] uppercase;
+}
+.blog-hero-title{
+    @apply flex flex-col gap-4;
+}
+.blog-hero-title p{
+    @apply text-[var(--Medium-grey)] text-base not-italic font-normal leading-7;
+}
+
+.hero-blog-right-area img {
+    @apply md:h-89.75 object-cover;
+}
+
+.blog-hero-title h2 {
+    @apply md:text-2xl md:leading-7.5 lg:[font-size:var(--36px)] lg:leading-12;
+}
+
+
+.header-area {
+  @apply fixed top-0 left-0 w-full z-999;
+  transition: top 0.3s ease-in-out;
+}
+
+
+/*-------------- Blog All Post Area ------------------*/
+.blog-all-post-area{
+    @apply pt-16 py-25;
+}
+
+.blog-all-post-title{
+    @apply flex flex-col gap-8;
+}
+
+.blog-all-post-divider{
+    @apply h-0.25 bg-[var(--Medium-grey)] opacity-[0.32];
+}
+.blog-card-bg{
+    @apply lg:w-122.5;
+}
+.single-blog-info{
+    @apply flex flex-col gap-5;
+}
+.blog-info-title{
+    @apply flex flex-col gap-4;
+}
+.single-blog-list {
+    @apply flex gap-8 items-center;
+}
+.blog-info-title h2 {
+    @apply w-150.5;
+}
+
+.blog-info-title p {
+    @apply w-156;
+}
+
+.single-blog-info span{
+    @apply text-base font-semibold leading-5 tracking-[3px] uppercase text-[var(--Purple)];
 }
 
 
