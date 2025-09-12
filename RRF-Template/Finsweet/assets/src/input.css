@@ -589,23 +589,22 @@ a.comment-btn{
 
 /* ---------------Comment Form----------------- */
 .form-control {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    @apply flex flex-col gap-2;
 }
 
 .form-control input[type="text"], .form-control input[type="email"], .form-control textarea {
-    border: 1px solid #ccc;
-    padding: 10px;
+    @apply border-1 border-[#ccc] p-2.5 focus:outline-none focus:border-1 focus:border-[var(--Yellow)] active:border-1 active:border-[var(--Yellow)];
+}
+
+.form-control label{
+     @apply text-[var(--Medium-grey)];
 }
 
 form.comment-form {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+    @apply flex flex-col gap-8;
 }
 .comments-form p {
-    padding: 24px 0;
+    @apply py-6 text-sm ;
 }
 
 
