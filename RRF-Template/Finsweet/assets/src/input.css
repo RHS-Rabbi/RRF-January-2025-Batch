@@ -415,6 +415,9 @@ p{
 
 
 /*-------------- Blog All Post Area ------------------*/
+.blog-catagory h2 {
+    @apply text-left;
+}
 .blog-all-post-area{
     @apply pt-16 py-25;
 }
@@ -439,10 +442,10 @@ p{
     @apply flex flex-col gap-4;
 }
 .single-blog-list {
-    @apply flex gap-8 items-center;
+    @apply flex md:flex-row flex-col gap-8 items-center;
 }
 .blog-info-title h2 {
-    @apply lg:w-150.5 text-2xl;
+    @apply lg:w-150.5 text-2xl leading-8 lg:[font-size:var(--36px)] lg:leading-12;
 }
 
 .blog-info-title p {
@@ -453,7 +456,157 @@ p{
     @apply text-base font-semibold leading-5 tracking-[3px] uppercase text-[var(--Purple)];
 }
 
+/*------------ Pagination---------------- */
+.pagination {
+    @apply flex justify-center gap-4.25;
+}
+.pagination a, .pagination a.active {
+    @apply md:text-2xl text-xl font-bold leading-8 text-[var(--Medium-grey)] font-sen! duration-300 transition-all hover:text-[var(--Black)];
+}
 
+.pagination a.active{
+    @apply text-[var(--Black)];
+}
+
+
+/*-------------Single Blog Area-------------- */
+.blog-inner-header{
+    @apply lg:pt-32 pb-16 pt-32;
+}
+.blog-inner-user {
+    @apply flex gap-4;
+}
+
+.blog-user-bg img {
+    @apply size-12 object-cover;
+}
+
+.blog-inner-list {
+    @apply flex flex-col gap-6;
+}
+
+.blog-inner-title {
+    @apply flex flex-col gap-8;
+}
+
+.catagory-blog-inner {
+    @apply flex gap-2 items-center;
+}
+
+.single-blog-bg img {
+    @apply w-320 h-auto object-cover;
+}
+.blog-inner-heading h4 {
+    @apply flex items-center  gap-3  md:text-2xl text-[15px] font-bold leading-8;
+}
+.single-blog-content {
+    @apply flex flex-col gap-4;
+}
+
+.recent-area-bg img {
+    @apply size-full object-cover;
+}
+
+.recent-post-details {
+    @apply pt-8 flex flex-col gap-4;
+}
+
+.recent-post-title {
+    @apply flex flex-col gap-6 h-full;
+}
+.recent-post-title p{
+    @apply mb-auto;
+}
+
+.single-recent-post-item {
+    @apply cursor-pointer;
+}
+
+.recent-post-title h3 {
+    @apply lg:[font-size:var(--28px)] font-bold lg:leading-9 font-sen text-xl leading-6.5;
+}
+
+.recent-post-area-title h2 {
+
+    @apply md:text-left text-center ;
+}
+
+.single-recent-post-item{
+    @apply flex flex-col h-full flex-grow;
+}
+
+/* ---------Comment Area---------------- */
+.single-comment-content-list {
+    @apply flex gap-4;
+}
+
+.comment-user img {
+    @apply size-20 object-cover rounded-[6px]
+}
+
+.comment-user-info {
+    @apply flex flex-col gap-2;
+}
+.comment-reply {
+    @apply md:pl-17.5 pl-4;
+}
+
+a.comment-btn{
+    @apply text-[var(--Black)] font-bold duration-300 ease-in-out hover:text-[var(--Yellow)] focus:text-[var(--Yellow)] active:text-[var(--Yellow)];
+}
+
+.comment-content{
+    @apply flex flex-col gap-8 py-12;
+}
+
+.comment-user {
+    @apply flex shrink-0;
+}
+
+.comment-title-divider{
+    @apply h-0.25 bg-[var(--Medium-grey)] opacity-[0.3];
+}
+
+.comment-title {
+    @apply flex flex-col gap-4;
+}
+
+.comment-style,.serch-form{
+    @apply bg-[var(--Light-grey)] p-8 rounded-lg ;
+}
+
+.comment-search-form {
+    @apply w-full py-3 px-5 border-1 border-[#CBCBCD] flex justify-between;
+}
+.serch-title {
+    @apply pb-4;
+}
+
+.comment-search-form input[type="text"] {
+    @apply w-full focus:outline-none;
+}
+
+
+/* ---------------Comment Form----------------- */
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-control input[type="text"], .form-control input[type="email"], .form-control textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+form.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.comments-form p {
+    padding: 24px 0;
+}
 
 
 
