@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRF Student Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tabs-container {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background: #f8f9fa;
+            color: #6c757d;
+            cursor: pointer;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .tab:hover::before {
+            left: 100%;
+        }
+
+        .tab.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd89b, #19547b);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-description {
+            color: #6c757d;
+            margin-bottom: 25px;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        th {
+            padding: 20px 15px;
+            font-weight: 600;
+            text-align: left;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f1f3f4;
+        }
+
+        tbody tr:hover {
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+            padding: 18px 15px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            max-width: 100%;
+            word-break: break-all;
+        }
+
+        .link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .link:hover {
+            color: #764ba2;
+            transform: translateY(-1px);
+        }
+
+        .link:hover::before {
+            width: 100%;
+        }
+
+        .student-count {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 15px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 1.8rem;
+            }
+            
+            .tab {
+                padding: 15px 10px;
+                font-size: 0.9rem;
+            }
+            
+            .tab-content {
+                padding: 20px 15px;
+            }
+            
+            th, td {
+                padding: 12px 8px;
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">RRF Student Report</h1>
+            <p class="subtitle">Comprehensive Student Activity Dashboard</p>
+        </div>
+
+        <div class="tabs-container">
+            <button class="tab active" onclick="switchTab('fast-to-last')">
+                Fast To Last Active 
+                <span class="student-count">7</span>
+            </button>
+            <button class="tab" onclick="switchTab('active-students')">
+                Active Students 
+                <span class="student-count">20</span>
+            </button>
+        </div>
+
+        <div id="fast-to-last" class="tab-content active">
+            <h2 class="section-title">Fast To Last Active Students</h2>
+            <p class="section-description">Students with highest recent activity levels</p>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Name</th>
+                            <th>Group Profile Link</th>
+                            <th>Facebook Profile Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="active">
+                            <td>Minha Sheikh</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100006715152541" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/profile.php?id=61577355073457">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Nasrin Nahar</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100028521932938/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/shada.golap.7330/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Fahima Mim</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100011298796749/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/fahima.mim.21/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Rabbi Hossain</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100009317765527" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/rabbihossain.0/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Maruf Mizi</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100010069304208/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/maruf.meje/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Md. Shahriar</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100042348453651" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/md.shahriar.sizer.98/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>MD Hridoy Mia</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100017083844343" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/mdhridoy.ahamed.7528/">Facebook Profile</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="active-students" class="tab-content">
+            <h2 class="section-title">Active Students</h2>
+            <p class="section-description">Due Some Class - Students with ongoing class obligations</p>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Name</th>
+                            <th>Group Profile Link</th>
+                            <th>Facebook Profile Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="active">
+                            <td>Nasrin Nahar</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100028521932938/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/shada.golap.7330/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Fahima Mim</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100011298796749/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/fahima.mim.21/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Mokaddes Ali</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100045750607344/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/mokaddes.ali.56232938/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Imran HHossain</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100007422758092/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/iimran.hhossain/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Al Masoud</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/1718762203/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/al.masoud.35/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Sultana Rabeya</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/61575581216044/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/sultana.rabeya.503908/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Mir Sumon</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100086421625228/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/mirsumon69/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Borhan U Apon</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100004726665069/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/borhan.u.apon/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>S M Saidur Hasan</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100001978825393/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/saidur.hasan.sujan/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Nehayel Hossain Walid</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100012942761976/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/Nehayel/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Shuaib Ahmed</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/1752102122/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/Shoebahmedprithu/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Naimul Islam Nabin</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100025045839504/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/naimul95/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Nasir Hossaien</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100009795244955/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/nasir.hossaien/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Md Salauddin Sakib <small>(last post: August 18)</small></td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100009795244955/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/nasir.hossaien/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Mazharul Islam <small>(last post: August 16)</small></td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100050487402328" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/mazhartuhin78/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Ashraful Islam</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100016727806402" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/ashrafu.islam4/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Anisur Rahman</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/61554933882318/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/AnisurRahmanG/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Rabbi Hossain</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100009317765527" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/rabbihossain.0/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Maruf Mizi</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100010069304208/" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/maruf.meje/">Facebook Profile</a></td>
+                        </tr>
+                        <tr class="active">
+                            <td>Md. Shahriar</td>
+                            <td><a class="link" href="https://www.facebook.com/groups/1103590641314959/user/100042348453651" target="_blank">Group Profile</a></td>
+                            <td><a class="link" target="_blank" href="https://www.facebook.com/md.shahriar.sizer.98/">Facebook Profile</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            // Remove active class from all tabs and tab contents
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+            
+            // Show corresponding content
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Add smooth scrolling and enhanced interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add loading animation for tables
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                table.style.opacity = '0';
+                table.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    table.style.transition = 'all 0.6s ease';
+                    table.style.opacity = '1';
+                    table.style.transform = 'translateY(0)';
+                }, 300);
+            });
+            
+            // Enhanced link interactions
+            const links = document.querySelectorAll('.link');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                
+                link.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
