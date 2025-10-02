@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aspect Ratio Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      background: #1f2937;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(18px, 2.5vw, 24px);
+      color: #fbbf24;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    button {
+      background: #f59e0b;
+      color: #1f2937;
+      border: none;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #facc15;
+      transform: translateY(-2px);
+    }
+
+    #result {
+      margin-top: 18px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #a5f3fc;
+      background: #111827;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      user-select: none;
+      display: none;
+      white-space: pre-line;
+      word-wrap: break-word;
+    }
+
+    #result.copied {
+      color: #4ade80;
+    }
+
+    /* 🔹 Extra responsiveness for very small screens */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+      input, button {
+        font-size: 14px;
+        padding: 10px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📐 Aspect Ratio Calculator</h2>
+    <input type="number" id="width" placeholder="Enter Width (px)">
+    <input type="number" id="height" placeholder="Enter Height (px)">
+    <button onclick="calculateRatio()">Calculate</button>
+    <p id="result" onclick="copyCSS(this)"></p>
+  </div>
+
+  <script>
+    function gcd(a, b) {
+      return b == 0 ? a : gcd(b, a % b);
+    }
+
+    function calculateRatio() {
+      let w = parseFloat(document.getElementById("width").value);
+      let h = parseFloat(document.getElementById("height").value);
+      let resultEl = document.getElementById("result");
+
+      if (!w || !h) {
+        resultEl.style.display = "block";
+        resultEl.innerText = "⚠️ Please enter both values!";
+        resultEl.classList.remove("copied");
+        return;
+      }
+
+      let divisor = gcd(w, h);
+      let ratioW = w / divisor;
+      let ratioH = h / divisor;
+
+      let cssCode = `aspect-ratio: ${ratioW}/${ratioH};`;
+
+      resultEl.style.display = "block";
+      resultEl.innerText =
+        `✅ Aspect Ratio = ${ratioW}:${ratioH}\n👉 ${cssCode}`;
+      resultEl.dataset.css = cssCode;
+      resultEl.classList.remove("copied");
+    }
+
+    function copyCSS(el) {
+      if (!el.dataset.css) return;
+
+      navigator.clipboard.writeText(el.dataset.css).then(() => {
+        el.innerText = `✅ Copied to Clipboard!\n👉 ${el.dataset.css}`;
+        el.classList.add("copied");
+      });
+    }
+  </script>
+</body>
+</html>
