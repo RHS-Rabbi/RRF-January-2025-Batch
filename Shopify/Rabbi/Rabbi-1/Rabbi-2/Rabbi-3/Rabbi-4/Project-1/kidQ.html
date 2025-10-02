@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDS-Q Html</title>
+    <link href="./assets/src/output.css" rel="stylesheet">
+    <!-- Slick Min CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+     
+</head>
+<body>
+     <main>
+        <!-- Header Area -->
+        <header class="header-area py-4 xl:py-0">
+            <div class="container">
+                <div class="header-row">
+                <!-- logo -->
+                <div class="site-logo">
+                    <a href="index.html"><img src="./assets/img/site-logo.png" alt="Site logo"></a>
+                </div>
+
+                <!-- mobile menu button -->
+                <button id="menu-toggle" class="mobile-menu lg:hidden">
+                    <!-- hamburger -->
+                    <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- close -->
+                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- nav -->
+                <nav id="menu" class="mainmenu">
+                    <ul class="flex flex-col lg:flex-row gap-4  items-center">
+                    <li><a href="./rules.html">Rules</a></li>
+                    <li><a href="./Scholarship.html">Sponsors</a></li>
+                    <li><a href="./kidQ.html">Kids-Q</a></li>
+                     <li><a href="./Scholarship.html">Bingham Mayors Scholarship</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <!-- button -->
+                <div class="header-btn hidden lg:block">
+                    <a class="btntwo" href="#">Enter Competition</a>
+                </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Breadcumb -->
+        <div class="breadcumb">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <div class="breadcumb-list">
+                        <a href="#">Home</a>
+                        <svg width="2" height="18" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.694824" width="1" height="17.0764" fill="white"/>
+                        </svg>
+                        <a href="#">rules</a>
+                    </div>
+                    <h3>the Gaming rules</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Kid division Area -->
+        <section class="kid-disivison-area">
+            <div class="container">
+                <div class="kid-division-overlay">
+                    <div class="kid-division-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="758" height="179" viewBox="0 0 758 179" fill="none">
+                            <path d="M0 176.514V2.48611H41.2155C69.5201 2.48611 81.6861 15.6625 81.6861 42.5125V49.4736C81.6861 67.3736 76.2238 78.5611 64.0578 83.5333V84.0306C78.7067 89.0028 84.4173 101.931 84.4173 120.328V135.244C84.4173 162.094 70.265 176.514 42.9535 176.514H0ZM27.3115 73.3403H37.9878C48.1675 73.3403 54.3747 68.8653 54.3747 54.9431V45.2472C54.3747 32.8167 50.1538 27.3472 40.4706 27.3472H27.3115V73.3403ZM27.3115 151.653H42.9535C52.1401 151.653 57.1058 147.426 57.1058 134.499V119.333C57.1058 103.174 51.8918 98.2014 39.4775 98.2014H27.3115V151.653Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M158.983 176.514L154.265 142.454H122.733L118.015 176.514H92.6902L120.995 2.48611H157.99L186.294 176.514H158.983ZM126.209 118.836H150.789L138.375 31.0764L126.209 118.836Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M199.308 176.514V2.48611H239.778C268.083 2.48611 280.249 15.6625 280.249 42.5125V53.2028C280.249 71.1028 274.538 82.5389 262.372 87.5111V88.0083C276.028 92.2347 280.497 105.162 280.497 124.803V155.382C280.497 163.835 280.746 170.05 283.477 176.514H255.669C254.179 172.039 253.186 169.304 253.186 155.133V123.311C253.186 107.151 248.468 101.931 236.054 101.931H226.619V176.514H199.308ZM226.619 77.0695H236.551C246.73 77.0695 252.938 72.5945 252.938 58.6722V45.2472C252.938 32.8167 248.717 27.3472 239.034 27.3472H226.619V77.0695Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M299.447 176.514V2.48611H340.662C368.967 2.48611 381.133 15.6625 381.133 42.5125V49.4736C381.133 67.3736 375.67 78.5611 363.504 83.5333V84.0306C378.153 89.0028 383.864 101.931 383.864 120.328V135.244C383.864 162.094 369.712 176.514 342.4 176.514H299.447ZM326.758 73.3403H337.434C347.614 73.3403 353.821 68.8653 353.821 54.9431V45.2472C353.821 32.8167 349.6 27.3472 339.917 27.3472H326.758V73.3403ZM326.758 151.653H342.4C351.587 151.653 356.552 147.426 356.552 134.499V119.333C356.552 103.174 351.338 98.2014 338.924 98.2014H326.758V151.653Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M399.828 176.514V2.48611H474.314V27.3472H427.139V73.3403H464.631V98.2014H427.139V151.653H474.314V176.514H399.828Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M527.292 179C500.973 179 487.069 163.089 487.069 136.239V42.7611C487.069 15.9111 500.973 0 527.292 0C553.61 0 567.514 15.9111 567.514 42.7611V61.1583H541.692V41.0208C541.692 29.5847 536.23 24.8611 528.037 24.8611C519.843 24.8611 514.381 29.5847 514.381 41.0208V138.228C514.381 149.664 519.843 154.139 528.037 154.139C536.23 154.139 541.692 149.664 541.692 138.228V112.869H567.514V136.239C567.514 163.089 553.61 179 527.292 179Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M623.344 179C596.529 179 582.625 163.089 582.625 135.244V2.48611H609.936V137.233C609.936 149.664 615.15 154.139 623.84 154.139C632.53 154.139 637.744 149.664 637.744 137.233V2.48611H664.062V135.244C664.062 163.089 650.159 179 623.344 179Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M683.514 176.514V2.48611H758V27.3472H710.826V73.3403H748.317V98.2014H710.826V151.653H758V176.514H683.514Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="kid-division-title">
+                    <h1>KIDS-<span>Q</span></h1>
+                    <p>The Kid’s Q will be divided into two divisions</p>
+                </div>
+                <div class="kid-division">
+                    <div class="flex flex-col lg:flex-row gap-8.75 flex-wrap">
+                        <!-- Single kid division 01 -->
+                        <div class="xl:w-136.25 lg:w-[466px] w-full">
+                            <div class="single-kid-division">
+                                <div class="kid-division-bg">
+                                    <img src="./assets/img/k-d-1.png" alt="K-d-1">
+                                </div>
+                                <div class="kid-division-content">
+                                    <div class="flex flex-col gap-4.25 h-full">
+                                        <div class="flex justify-between items-center">
+                                            <h5>Junior Division (Age 5-10 )</h5>
+                                            <h6>$25</h6>
+                                        </div>
+                                        <div class="flex flex-col gap-7.5 h-full">
+                                            <p>Enter in the older kids division below. Each Child Needs A Separate Entry </p>
+                                            <div class="kid-btn">
+                                                <a class="btntwo" href="#">Buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single kid division 02 -->
+                        <div class="xl:w-136.25 lg:w-[466px] w-full">
+                            <div class="single-kid-division">
+                                <div class="kid-division-bg">
+                                    <img src="./assets/img/k-d-2.png" alt="K-d-2">
+                                </div>
+                                <div class="kid-division-content">
+                                    <div class="flex flex-col gap-4.25 h-full">
+                                        <div class="flex justify-between items-center">
+                                            <h5>JOlder Division (Age 11-16)</h5>
+                                            <h6>$25</h6>
+                                        </div>
+                                        <div class="flex flex-col gap-7.5 h-full">
+                                            <p>Enter in the older kids division below. Each Child Needs A Separate Entry </p>
+                                            <div class="kid-btn">
+                                                <a class="btntwo" href="#">Buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single kid division 03 -->
+                        <div class="xl:w-136.25 lg:w-[466px] w-full">
+                            <div class="single-kid-division">
+                                <div class="kid-division-bg extra-de">
+                                    <img src="./assets/img/k-d-3.png" alt="K-d-3">
+                                </div>
+                                <div class="kid-division-content">
+                                    <div class="flex flex-col gap-4.25 h-full">
+                                        <div class="flex justify-between items-center">
+                                            <h5>Junior Division (Age 5-10 )</h5>
+                                            <h6>$25</h6>
+                                        </div>
+                                        <div class="flex flex-col gap-7.5 h-full">
+                                            <p>Enter in the older kids division below. Each Child Needs A Separate Entry </p>
+                                            <div class="kid-btn">
+                                                <a class="btntwo" href="#">Buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single kid division 04 -->
+                        <div class="xl:w-136.25 lg:w-[466px] w-full">
+                            <div class="single-kid-division">
+                                <div class="kid-division-bg extra-de">
+                                    <img src="./assets/img/k-d-4.png" alt="K-d-4">
+                                </div>
+                                <div class="kid-division-content">
+                                    <div class="flex flex-col gap-4.25 h-full">
+                                        <div class="flex justify-between items-center">
+                                            <h5>Older Division (Age 11-16)</h5>
+                                            <h6>$25</h6>
+                                        </div>
+                                        <div class="flex flex-col gap-7.5 h-full">
+                                            <p>Enter in the older kids division below. Each Child Needs A Separate Entry </p>
+                                            <div class="kid-btn">
+                                                <a class="btntwo" href="#">Buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Youger Division -->
+        <section class="younger-division-area">
+            <div class="container">
+                <div class="flex flex-col lg:flex-row gap-12 xl:items-center">
+                    <div class="xl:w-156 lg:w-6/12">
+                        <div class="younger-left-area">
+                            <div class="younger-left-title">
+                                <h4>The <span>Younger</span> Division</h4>
+                                <p>The younger kids will prepare, cook, and box their entries with the help of a parent.Parents should let the kids do as much as they are capable of, given age and abilities.The emphasis in this age group is bonding with their family/friends, learning how to cook and growing their skills with familiar mentors. The focus should be to encourage kids to have fun while learning.</p>
+                            </div>
+                            <div class="younger-btn">
+                                <a href="#">ENTER THE COMPETITION</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-148.5 lg:w-6/12">
+                        <div class="younger-right-area">
+                            <div class="younger-bg overlay-d-1">
+                                <img src="./assets/img/younger-1.png" alt="Younger Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <!-- Older Division Area -->
+        <section class="older-division-area py-26.75">
+            <div class="container">
+                <div class="flex flex-col-reverse lg:flex-row gap-7.5">
+                    <div class="xl:w-148.25 lg:w-6/12">
+                        <div class="older-left-area">
+                            <div class="older-left-bg overlay-d-1">
+                                <img src="./assets/img/older-1.png" alt="Older Bg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-156 lg:w-6/12">
+                        <div class="older-right-area">
+                            <div class="older-right-title">
+                                <h4>The <span>Older</span> Division</h4>
+                                <p>The older kids will get to compete in a kid-only environment, and allowed to challenge their peers much like they do in any other sport or activity that hosts competitions and tournaments.Parents can encourage their children from outside the cooking area, but cannot help/do any of the cooking. Each entry shall be cooked by one child only.The child must do the preparation, cooking, and presentation. This means that the child should be able to put his/her own protein on the grill, turn his/her own protein on the grill,remove the protein from the grill, and do all garnishing (if garnish is being used).Must be able to temp and flip their own food.Are allowed to bring written or pictorial notes with them for guidance but must be able to read/follow it themselves. It helps if the children make these note sheets themselves.</p>
+                            </div>
+                            <div class="older-btn">
+                                <a class="older-btn btn" href="#">ENTER THE COMPETITION</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Older Mentoring Area -->
+        <section class="older-mentoring-area pb-26.75">
+            <div class="container">
+                <div class="flex flex-col lg:flex-row gap-7.5">
+                    <div class="xl:w-156 lg:w-6/12">
+                        <div class="older-mentoring-left-area">
+                            <div class="older-mentoring-title">
+                                <h4>The older competitor <span>mentoring</span> session</h4>
+                                <p>Competitors should trim any of their meats, as needed, and volunteers will be available to help as necessary.Older division cooks will have the opportunity to have a mentoring session with a competition BBQ team at the event prior to their contest.Charcoal grills will be provided for each contestant and a volunteer will be on hand to light the charcoal and provide other assistance as needed.Prior to the contest an information packet will be sent to all the contestants outlining the rules and describing the protein being used. This information will be sent to all contestants at the same time allowing an equal amount of time for contestants to plan and prepare for their cook.Entry fee is $25 for each child.</p>
+                            </div>
+                            <div class="older-mentoring-btn">
+                                <a class="btn" href="contact-us-two.html">ENTER THE COMPETITION</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-148.25 lg:w-6/12">
+                        <div class="older-mentoring-right-area">
+                            <div class="older-mentoring-bg overlay-d-1">
+                                <img src="./assets/img/older-mentoring.png" alt="Older Mentoring">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Kid-Q Contact Area -->
+        <section class="kidQ-contact-areas kidQ-contact-bg">
+            <div class="container">
+                <div class="flex flex-col-reverse lg:flex-row gap-13.5 items-center">
+                    <div class="lg:w-147.75 w-full">
+                        <div class="kidQ-contact-area">
+                            <div class="kidQ-contact-title">
+                                <h5>Welcome to Form Builder</h5>
+                                <p>Each child needs a separate entry.</p>
+                            </div>
+                            <form class="kidQ-conatact-form" action="">
+                                <div class="flex flex-col md:flex-row gap-7.5">
+                                    <!-- KidQ Form Child’s name -->
+                                    <div class="form-control">
+                                        <label for="Child’s name">Child’s name</label>
+                                        <div class="form-style">
+                                            <input type="text" name="Child’s name" placeholder="Child’s name">
+                                        </div>
+                                    </div>
+                                     <!-- KidQ Form Email -->
+                                    <div class="form-control">
+                                        <label for="Child’s name">Email</label>
+                                        <div class="form-style">
+                                            <input type="email" name="Email" placeholder="you@company.com">
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- KidQ Form Phone number -->
+                                <div class="flex flex-col md:flex-row gap-7.5">
+                                    <div class="form-control">
+                                        <label for="Child’s name">Phone number</label>
+                                        <div class="form-style">
+                                            <span>us</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                                <path d="M5.31543 7.54517L10.3154 12.5452L15.3154 7.54517" stroke="#7C7C7C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <input type="tel" name="Phone number" placeholder="941-888-5148">
+                                        </div>
+                                    </div>
+                                     <!-- KidQ Form Parents phone -->
+                                    <div class="form-control">
+                                        <label for="Child’s name">Parents phone</label>
+                                        <div class="form-style">
+                                            <span>us</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                                                <path d="M5.31543 7.54517L10.3154 12.5452L15.3154 7.54517" stroke="#7C7C7C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <input type="tel" name="Phone number" placeholder="941-888-5148">
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- KidQ Form Parents name -->
+                                <div class="flex flex-col md:flex-row gap-7.5">
+                                    <div class="form-control">
+                                        <label for="Parents name">Parents name</label>
+                                        <div class="form-style">
+                                            <input type="text" name="Parents name" placeholder="Parents name">
+                                        </div>
+                                    </div>
+                                    <!-- KidQ Form Select Division -->
+                                    <div class="form-control">
+                                        <label for="division">Select Division</label>
+                                        <div class="form-styles">
+                                            <select id="division" name="division">
+                                            <option value="">Select</option>
+                                            <option value="dhaka">Dhaka</option>
+                                            <option value="chattogram">Chattogram</option>
+                                            <option value="rajshahi">Rajshahi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- KidQ Form Date -->
+                                <div class="flex flex-col md:flex-row gap-7.5">
+                                    <div class="form-control !w-full">
+                                        <label for="Parents name">Date</label>
+                                        <div class="form-style">
+                                            <input type="text" id="dateInput" value="22/2/2025" placeholder="DD/MM/YYYY">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- KidQ Form Massage -->
+                                <div class="flex flex-col md:flex-row gap-7.5">
+                                    <div class="form-control !w-full">
+                                        <label for="Parents name">Message</label>
+                                        <div class="form-style">
+                                            <textarea name="Message" placeholder="Include a message..."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="kidQ-form-btn btntwo" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="lg:w-152.25">
+                        <div class="kidQ-contact-right-area">
+                            <h4>This will be a fun and rewarding event. Space is limited so sign up now. To enter, fill out the form.</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur. Pellentesque lectus pulvinar cras cursus parturient in. Vitae risus nisi scelerisque iaculis feugiat vel ornare nec. Hendrerit nullam eu nisl arcu. Phasellus a tincidunt diam interdum.</p>
+                            <div class="older-mentoring-btn">
+                                <a class="btn" href="#">ENTER THE COMPETITION</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Area -->
+        <footer  class="footer-area">
+            <div class="container footer">
+                <div class="footer-row">
+                    <div class="lg:w-173.75 md:w-6/12">
+                        <div class="footer-left-title">
+                            <h2>Smoke-N-Wings <span>BBQ</span> Competition</h2>
+                        </div>
+                    </div>
+                    <div class="lg:w-91.75 md:w-6/12 w-full">
+                        <div class="footer-right-content flex flex-col gap-9.5">
+                            <a class="footer-btn" href="#">Enter Competition</a>
+                            <div class="flex flex-col md:flex-row md:justify-between">
+                                <ul class="footer-nav">
+                                    <li><a href="#">Rules</a></li>
+                                    <li><a href="#">Sponsors</a></li>
+                                    <li><a href="#">Kids-Q</a></li>
+                                </ul>
+                                <ul class="footer-nav">
+                                    <li><a href="#">Bingham Mayors Scholarship</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="container footer">
+                <div class="cta">
+                    <p>© copyright 2025 smoke-n-wings.com. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        
+    </main>
+
+    <!-- jQuery (required by Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>

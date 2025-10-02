@@ -1,0 +1,1636 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Bebas Neue Pro';
+    src: url('/assets/font/BebasNeuePro-Regular.woff2') format('woff2'),
+        url('/assets/font/BebasNeuePro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Bebas Neue Pro';
+    src: url('/assets/font/BebasNeuePro-Bold.woff2') format('woff2'),
+        url('/assets/font/BebasNeuePro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    @apply font-jost;
+}
+
+h1, h2, h3 {
+    @apply font-bebas-pro
+}
+
+h4,h5,h6 {
+    @apply font-bebas;
+}
+
+
+@theme{
+    --font-jost: 'Jost', sans-serif;
+    --font-bebas-pro: 'Bebas Neue Pro', sans-serif;
+    --font-bebas: "Bebas Neue", sans-serif;
+    --font-dm:"DM Sans", sans-serif;
+    --primary: #16396F;
+    --black:#000;
+    --secondary: #591419;
+    --orange:#F65600;
+    --color4:#F8B895;
+    --color5:#FFE4D5;
+    --color6:#FFF4EE;
+    --78px:4.875rem;
+    --19px:1.1875rem;
+    --55px:3.4375rem;
+    --26px:1.625rem;
+    --48px:3rem;
+    --60px:3.75rem;
+    --34px:2.125rem;
+    --p1:#7C7C7C;
+}
+
+.container{
+    @apply mx-auto xl:w-[1239px] lg:w-[1000px] xl:px-0 px-4;
+}
+
+.btn{
+    @apply transition-all ease-in-out duration-300 hover:bg-[var(--primary)];
+}
+.footer-btn{
+    @apply transition-all ease-in-out duration-300 hover:bg-[var(--secondary)];
+}
+.btntwo{
+    @apply transition-all ease-in-out duration-300 hover:bg-[var(--secondary)];
+}
+
+.header-1{
+    @apply text-[46px] lg:text-[76px] leading-15 xl:[font-size:var(--78px)]  font-bold lg:leading-20.25;
+}
+
+/*------------------- Header Area------------------- */
+.header-area {
+    @apply  bg-white;
+}
+.mainmenu {
+    @apply hidden lg:block w-full lg:w-auto mt-4 lg:mt-0;
+    
+}
+
+.mobile-menu {
+    @apply bg-[var(--orange)] text-white p-1.5 rounded-[6px];
+}
+.mainmenu ul {
+    @apply flex xl:gap-7.75  flex-col lg:flex-row gap-3 items-center;
+}
+.mainmenu ul li a {
+    @apply font-bebas-pro text-xl font-bold tracking-[0.4px] uppercase;
+}
+.header-btn a {
+   @apply text-white text-xl not-italic font-bold font-bebas-pro uppercase bg-[var(--orange)] tracking-[0.4px] py-2.75 px-8.5;
+}
+.site-logo a {
+    @apply flex;
+}
+.site-logo a img {
+    @apply w-52.5 h-26.25 object-cover flex shrink-0;
+}
+
+.header-btn {
+    @apply flex;
+}
+
+.header-row{
+    /* @apply flex flex-col items-center lg:flex-row lg:gap-5 gap-4 lg:items-center 2xl:gap-[135px] lg:justify-between; */
+    @apply flex flex-col items-center lg:flex-row lg:gap-5 gap-4 lg:items-center lg:justify-between;
+}
+
+
+/* ----------------Hero Area--------------------- */
+.hero-area{
+    @apply bg-[var(--color4)] relative overflow-hidden;
+}
+.hero-overlay .h-text {
+    @apply text-[247px]  font-bold text-[#F8B89573];
+}
+
+.hero-overlay  {
+    @apply mix-blend-multiply uppercase;
+}
+
+.hero-overlay .h-text:first-child {
+    @apply leading-39.75;
+}
+
+.hero-overlay .h-text:nth-child(2) {
+    @apply text-[242px] leading-[192px];
+}
+.hero-overlay .h-text:last-child {
+    @apply text-[311px] leading-62.5;
+
+}
+
+
+.hero-overlay-bg{
+    background-image: url('/assets/img/hero-2.png');
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.hero-bg img {
+    @apply mx-auto w-141.25;
+}
+
+.hero-btns {
+    @apply flex flex-col lg:flex-row w-full lg:justify-between justify-center relative gap-4 lg:gap-0;
+}
+.hero-btn {
+    @apply lg:absolute w-full bottom-45 pb-15 lg:pb-0;
+}
+
+.hero1 a, .hero2 a {
+    @apply text-white text-3xl lg:[font-size:var(--48px)] not-italic font-bebas-pro! font-bold leading-normal tracking-[0.96px] uppercase;
+}
+
+.hero1, .hero2 {
+    @apply lg:w-100 h-full relative z-1 py-3.75  flex flex-col lg:block items-center;
+}
+.hero1::after{
+    transform: skew(-18deg, 0);
+    @apply lg:absolute content-[''] w-[100vw] h-full bg-[var(--orange)] right-0 top-0 -z-1;
+
+}
+.hero2::after{
+    transform: skew(-18deg, 0);
+    @apply lg:absolute content-[''] w-[100vw] h-full bg-[var(--secondary)] left-0 top-0 -z-1 ;
+}
+
+.hero2 {
+    @apply lg:text-end lg:w-107.5;
+}
+
+.hero1{
+    @apply bg-[var(--orange)] lg:bg-transparent;
+}
+.hero2{
+    @apply bg-[var(--secondary)] lg:bg-transparent;
+}
+
+
+/* ----------Join Area------------------- */
+.join-area{
+    @apply pt-24.25 relative pb-7.5 bg-white;
+}
+.join-title h1{
+    @apply text-[var(--primary)] text-[46px] lg:text-[76px] leading-15 xl:[font-size:var(--78px)]  font-bold lg:leading-20.25 tracking-[1.56px] uppercase;
+}
+.join-title{
+    @apply flex flex-col gap-6.5;
+}
+.join-title h1 span{
+    @apply text-[var(--orange)];
+}
+
+.join-title .join-content p{
+    @apply text-[var(--black)] [font-size:var(--19px)]   font-normal leading-6.75 tracking-[0.38px] lg:w-133.5;
+}
+
+.join-row{
+    @apply flex flex-col md:flex-row gap-12 relative z-10 justify-between;
+}
+
+.join {
+    @apply px-6.25 pt-16;
+}
+
+
+.join-area-bg{
+    background-image: url(../img/overlay-1.png);
+    background-repeat: no-repeat;
+    background-position: 45px 42px;
+}
+
+
+.join-right-area {
+    @apply relative;
+}
+
+
+.join-right-text a{
+    @apply block bg-[var(--primary)] text-white !font-bebas-pro xl:[font-size:var(--55px)] not-italic font-bold tracking-[1.1px] uppercase text-center xl:w-148.5 pt-3 pb-2.75 pl-[92px] pr-[72.5px] cursor-pointer ;
+    clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media screen and (min-width: 375px) and (max-width: 1024px){
+    .join-right-text a{
+        clip-path: polygon(3.5% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 768px){
+    .join-right-text a {
+        clip-path: polygon(2.5% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1024px){
+    .join-right-text a {
+        clip-path: polygon(2.5% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+
+.join-right-text {
+    @apply absolute w-full bottom-0 z-1;
+}
+
+.join-right-area {
+    @apply relative;
+}
+
+
+.join-bg{
+    background-image: url(../img/overlay-2.png);
+}
+
+.join-bg img {
+    /* @apply lg:w-[594px] md:h-[455px] lg:h-[495px] object-cover relative; */
+    @apply  object-cover relative;
+    aspect-ratio: 593.50/495.00;
+}
+
+/*---------------- Intro Area--------------- */
+.info-area {position: relative; padding: 35px 0; }
+
+
+
+.single-info h3 {
+    @apply text-[var(--color5)] [font-size:var(--48px)] not-italic font-bold leading-normal tracking-[0.96px] uppercase text-center;
+}
+
+.single-info p{
+    @apply text-[var(--color5)]  text-center !font-bebas-pro not-italic font-bold tracking-[0.52px] uppercase;
+}
+
+
+.info-left-content {
+    /* @apply flex flex-col lg:flex-row gap-5 lg:gap-14.5 relative h-full py-6 lg:w-138.5 w-[343px] z-1; */
+    @apply flex flex-col lg:flex-row gap-5 lg:gap-14.5 lg:justify-around xl:justify-start relative h-full py-6 w-full z-1;
+}
+
+
+.info-left-content::after {
+    transform: skew(-18deg, 0);
+    @apply absolute right-0 top-0 bg-[var(--secondary)] content-[""] xl:w-[100vw] w-full h-full -z-1;
+}
+
+.info-right-area p{
+    @apply text-[var(--black)] lg:text-right text-center [font-size:var(--19px)] not-italic font-normal tracking-[0.38px];
+}
+
+.single-info {
+    @apply flex flex-col h-full;
+}
+
+.info-row{
+    @apply flex flex-col xl:flex-row gap-[86px] xl:px-6.25 items-center;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1024px){
+    .info-left-content::after {
+        transform: none !important;
+    
+    }
+}
+
+/* -----------Carousel Area--------------- */
+.carousel-area {
+    @apply relative;
+}
+
+.carousel-overlay {
+    @apply absolute right-0 pr-10.5;
+}
+.carousel-title{
+    @apply relative z-10 pt-10.5;
+}
+.carousel-title h2{
+    @apply text-[var(--primary)] lg:[font-size:var(--78px)] text-[50px] text-center lg:text-left not-italic font-bold lg:leading-20.25 leading-14.5 uppercase tracking-[1.56px] lg:w-156.5;
+}
+.carousel-title h2 span{
+    @apply text-[var(--orange)];
+}
+
+.single-carousel-list img {
+    @apply w-full h-57.25 object-cover;
+}
+
+.carousel-slider .slick-list {
+    @apply -mx-3.25;
+}
+
+.single-carousel-list {
+    @apply px-3.25;
+}
+
+.carousel-slider {
+    margin-top: 32px;
+}
+
+
+
+.carousel-slider .slick-arrow {
+    @apply bg-[var(--color5)] absolute top-0 lg:-top-23.75 lg:size-13.25 size-10 flex justify-center items-center right-0 z-10 cursor-pointer transform duration-300 ease-in-out hover:bg-[var(--secondary)] focus:bg-[var(--secondary)] active:bg-[var(--secondary)] ;
+}
+.carousel-slider .slick-prev {
+    @apply right-15;
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px){
+   .carousel-slider .slick-prev{
+        left: 0;
+   }
+}
+
+
+/* ----------------Info Two Area------------------ */
+/* section.info2-area {
+    @apply py-13.5;
+}
+.info2-overlay {
+    @apply absolute right-6.25 bg-[var(--color5)] h-full;
+    clip-path: polygon(7.4% 0%, 100% 0%, 100% 100%, 0.4% 100%);
+
+}
+
+
+
+.info2-overlay-text{
+    @apply flex flex-col gap-2.5;
+}
+.info-two{
+    @apply relative px-6.25;
+}
+
+
+
+.info-two-left {
+    @apply flex flex-col gap-3 w-95;
+}
+
+.info-two-left-1  {
+    color: #000;
+    font-family: "Bebas Neue Pro";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    @apply [font-size:var(--48px)] not-italic font-bold tracking-[0.96px] leading-normal  uppercase;
+    
+}
+
+
+
+.info2-title h3{
+    color: #591419;
+    font-family: "Bebas Neue Pro";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+    @apply text-[var(--secondary)] text-[48px] font-bold leading-normal tracking-[0.96px] uppercase;
+}
+
+.info2-right-content h3{
+    color: #000;
+    font-family: "Bebas Neue Pro";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.52px;
+    text-transform: uppercase;
+}
+
+.info2-right-content p{
+    color: #000;
+    font-family: Jost;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.38px;
+}
+
+.info2-right-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 761px;
+}
+
+.info2-right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+
+.flex.flex-col.md\:flex-row.relative.z-10.pt-\[70px\].pb-\[66px\].items-center.gap-5 {
+    position: relative;
+    overflow: clip;
+}
+
+
+
+
+
+
+
+
+
+.info-two-left {
+    position: absolute;
+    transform: rotate(-78deg);
+    top: 88px;
+    left: -26px;
+}
+
+
+
+.info-two-left-1 h3 {
+    transform: rotate(-78deg);
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    right: 114px;
+    height: 100%;
+    color: #fff;
+}
+
+.info-two-left-1::after {
+    position: absolute;
+    left: 33px;
+    top: -188px;
+    width: 88px;
+    height: 386px;
+    background: #16396F;
+    content: "";
+    transform: rotate(11deg);
+    z-index: -1;
+    clip-path: polygon(0% 4.5%, 100% 0%, 100% 92%, 0% 96%);
+}
+
+.info-two-left-1{
+    position: relative;
+}
+
+
+.info-two-left-2{
+    position: relative;
+}
+
+.info-two-left-2 h3 {
+    transform: rotate(-78deg);
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    left: -10px;
+    height: 100%;
+    color: #fff;
+    color: #FFF;
+    font-family: "Bebas Neue Pro";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}
+
+.info-two-left-2::after {
+    position: absolute;
+    right: 105px;
+    top: -188px;
+    width: 88px;
+    height: 385px;
+    background: #F65600;
+    content: "";
+    transform: rotate(11deg);
+    z-index: -1;
+    clip-path: polygon(0% 4.5%, 100% 0%, 100% 92%, 0% 96%);
+}
+
+
+.info-two-left-2::after {
+    position: absolute;
+    right: 105px;
+    top: -250px;
+    width: 88px;
+    height: 560px;
+    background: #F65600;
+    content: "";
+    transform: rotate(11deg);
+    z-index: -1;
+    clip-path: polygon(0% 4.5%, 100% 0%, 100% 92%, 0% 96%);
+} */
+
+
+.group-overlay{
+    background-image: url(../img/mask.png);
+
+    background-color: #FFE4D5;
+}
+
+
+.single-group-list {
+    @apply flex flex-col gap-4;
+}
+
+.single-group-title h2 {
+    @apply text-[var(--secondary)] md:text-[48px] text-[40px] font-bold leading-normal tracking-[0.96px] uppercase xl:text-left  text-center;
+}
+
+.single-group-title {
+    @apply flex flex-col gap-0.75;
+}
+
+.single-group-content h3 {
+    @apply text-[var(--black)] md:text-[26px] text-lg leading-normal font-bold tracking-[0.52px] uppercase xl:text-left  text-center;
+}
+
+.single-group-content p {
+    @apply text-[var(--black)] leading-normal font-normal tracking-[0.38px] xl:w-[768px] xl:text-left px-5 xl:px-0 text-center;
+}
+
+
+.single-group-ticket,.single-group-tickets {
+    line-height: normal;
+    @apply text-white md:text-[48px] text-[40px]  tracking-[0.96px] uppercase font-bold xl:text-left  text-center;
+}
+
+.single-group-ticket h3 {
+    transform: rotate(-78.84deg);
+    @apply xl:absolute bottom-[147px] xl:w-[145%] bg-[var(--primary)] py-4.5 px-8.5 left-[-132px] ;
+}
+
+
+
+
+.single-group-tickets h3 {
+    transform: rotate(-78.84deg);
+    @apply bg-[var(--orange)] xl:absolute xl:w-[145%] py-4.5 px-8.5 bottom-[146px] left-[-22px];
+}
+
+
+.rabbi {
+    clip-path: polygon(0% 0%, 96% 0%, 74% 100%, 0% 101%);
+    @apply bg-white relative;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1024px){
+    .rabbi {
+        clip-path: none;
+    }
+    .single-group-ticket h3, .single-group-tickets h3{
+        transform: none;
+    }
+}
+
+.single-group-content{
+    @apply flex flex-col gap-3.25;
+}
+
+.group-row{
+    @apply flex flex-col-reverse xl:flex-row gap-7.5 justify-between overflow-clip;
+}
+
+/* -----------------------------Faq Area-------------------------- */
+.faq-area{
+    @apply pb-23;
+}
+.faq-title h2 {
+    @apply text-[var(--primary)] xl:text-right text-left xl:[font-size:var(--78px)] text-[46px] leading-15 font-bold xl:leading-20.25 tracking-[1.56px] uppercase;
+}
+.faq-title h2 span {
+    @apply text-[var(--orange)];
+}
+
+.faq-title {
+    @apply xl:py-5.5;
+}
+
+
+.faq-content {
+    @apply xl:w-145.75 xl:float-right;
+}
+
+
+.faq-content .accordion {
+    @apply !font-jost border-t-1 border-t-[#F8B895] my-5;
+}
+
+.faq-content .accordion-item {
+    @apply border-b-1 border-b-[#F8B895]
+}
+
+
+.faq-content .accordion-header {
+    @apply cursor-pointer relative text-lg;
+}
+
+.faq-content .accordion-header .icon {
+    transform: translateY(-50%);
+    @apply absolute right-6 top-[50%] font-bold text-[var(--secondary)];
+}
+
+.faq-content .accordion-content {
+    @apply hidden pl-7.5 pt-2.5 pb-4.25 pr-6 text-base font-normal leading-normal tracking-[0.32px] text-[var(--black)];
+}
+
+/* Icons */
+.ui-icon-plus::before {
+    @apply content-['+'] text-[24px];
+}
+.ui-icon-minus::before {
+    @apply content-['−'] text-[24px];
+}
+
+
+.faq-content .accordion-header {
+    @apply pl-7.5 pt-2.5 pb-2.5;
+}
+/* .faq{
+    @apply 2xl:!px-9.75;
+} */
+.faq-row{
+    @apply flex flex-col md:flex-row gap-5 justify-between;
+}
+
+.overlay-d-2 {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-bg img {
+    aspect-ratio: 543.50/495.00;
+}
+
+.faq-bg{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='544' height='495' viewBox='0 0 544 495' fill='none'%3E%3Cpath d='M448.5 495H0V0H543.5L448.5 495Z' fill='%23591419'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay-d-2::after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    content: "";
+    clip-path: polygon(0 0,80% 0%,100% 100%,0% 100%);
+    left: 12px;
+    z-index: -1;
+}
+
+.overlay-d-2 img {
+    clip-path: polygon(0 0,80% 0%,100% 100%,0% 100%);
+}
+
+
+/* --------------Footer Area -------------------*/
+.footer-area{
+    @apply pt-11.25 bg-[var(--primary)];
+}
+
+.footer-row{
+    @apply flex flex-col md:flex-row  gap-5 lg:gap-5 md:gap-10 items-center justify-between pb-9.5;
+}
+
+.footer{
+    @apply 2xl:px-6.25;
+}
+
+.footer-left-title h2{
+    @apply text-[var(--color5)] text-5xl md:text-left text-center leading-16 md:text-[70px] md:leading-22  lg:text-[90px] xl:text-[115px] not-italic font-bold lg:leading-25.5 tracking-[2.3px] uppercase;
+}
+
+.footer-left-title h2 span{
+    @apply text-[var(--orange)];
+}
+
+
+.footer-btn{
+    @apply py-2.5 px-8.5 text-center bg-[var(--orange)] text-xl uppercase font-bold tracking-[0.4px] text-white !font-bebas-pro;
+}
+.footer-nav{
+    @apply flex flex-col gap-4.5;
+}
+.footer-nav li a{
+    @apply text-[var(--color5)] !font-bebas-pro text-xl font-bold uppercase tracking-[0.4px];
+}
+
+.footer-divider{
+    @apply 2xl:w-[1334px] w-full mx-auto h-0.5 bg-white;
+}
+
+.cta{
+    @apply pt-5 pb-3;
+}
+.cta p{
+    @apply  text-[var(--color5)] text-[15px] font-normal tracking-[0.3px] uppercase text-center;;
+}
+
+/* ======================== Rule Template========================== */
+
+/*-------------- Breadcumb Area------------------- */
+.breadcumb{
+    @apply py-15.25;
+    background-color: transparent;
+    background-image: linear-gradient(216deg, var(--orange) 15%, var(--secondary) 0%);
+}
+
+.breadcumb-content{
+    @apply !font-bebas text-white text-center flex flex-col gap-4.5;
+}
+.breadcumb-list{
+    @apply flex gap-2.75 text-center justify-center items-center text-2xl font-normal leading-8.5;
+}
+.breadcumb-content h3{
+    @apply [font-size:var(--48px)] font-bold uppercase tracking-[0.96px];
+}
+
+
+/* -----------------------Rules Area---------------------------- */
+.rlues-area {
+    @apply relative;
+}
+
+/* .rules-overlay {
+    @apply absolute top-10.75;
+
+} */
+
+.rules-overlay{
+    background-image: url(../img/overlay-1.png);
+    background-repeat: no-repeat;
+    background-position: 0 47px;
+}
+
+.rules{
+    @apply 2xl:px-3.75;
+}
+
+.rules-title {
+    @apply relative z-10 pt-21.75 lg:w-182.5 text-center mx-auto flex flex-col gap-4.25 pb-16;
+}
+
+.rules-title h1{
+    @apply text-[var(--primary)] !font-bebas [font-size:var(--60px)] not-italic font-normal leading-20.25 tracking-[1.2px] uppercase;
+}
+
+.rules-title p{
+    @apply text-[var(--black)] text-center text-lg not-italic font-normal leading-normal tracking-[0.36px];
+}
+.rules-area-content{
+    @apply relative z-10 md:w-156;
+}
+.rukes-intro{
+    @apply flex flex-col gap-0.75;
+
+}
+
+.rukes-intro p{
+    @apply text-[var(--black)] text-2xl font-normal leading-normal tracking-[0.48px];
+}
+
+.rules-all-item {
+    @apply pt-14.5 pb-26.75;
+}
+
+.rule-all-content {
+    @apply pt-10.75 pr-7.75 pb-9.5 pl-7.5 flex flex-col gap-9.25 h-full;
+}
+
+.rule-all-content p{
+    @apply text-[var(--p1)] text-xl font-normal leading-[140%] mb-auto;
+}
+
+.rule-all-content h4 {
+    @apply text-[var(--black)] xl:text-[44px] lg:text-4xl md:text-[44px] text-[25px] font-normal leading-[120%];
+}
+.rule-all-content h5{
+    @apply text-[var(--black)] text-[21px] font-normal leading-[120%]
+}
+
+.rules-bg img {
+    @apply 2xl:w-147.25 w-full h-80.5 object-cover;
+}
+.single-rules-all-list {
+    @apply bg-[#FFE4D566] flex flex-col h-full cursor-pointer;
+}
+
+.rules-btn {
+    @apply py-4 px-7.75 text-2xl !font-bebas font-normal leading-7.75 bg-[var(--primary)] text-white uppercase;
+}
+
+/*------------------- Compettion One Area-------------------- */
+.compettionO-area {
+    padding: 8px 0;
+}
+
+.compettion-right-bg {
+    @apply relative;
+    background-image: url(../img/overlay-2.png);
+    z-index: 1;
+}
+.overlay-d-1{
+    @apply relative z-1;
+}
+
+.compettion-right-bg img {
+    /* @apply object-cover lg:w-148.5 lg:h-123.75 w-full md:h-[460px] ; */
+    @apply object-cover w-full;
+    aspect-ratio: 593.50/495.00;
+}
+
+.overlay-d-1::after {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    content: "";
+    clip-path: polygon(20% 0,100% 0,100% 100%,0% 100%);
+    z-index: -1;
+}
+
+.overlay-d-1 img {
+    clip-path: polygon(20% 0,100% 0,100% 100%,0% 100%);
+}
+
+.compettion-left-title{
+    @apply pt-9.5 flex flex-col xl:gap-14 gap-8 lg:gap-8;
+}
+
+.compettion-left-title h4{
+    @apply text-[var(--primary)] xl:text-[60px] text-[46px] leading-15 lg:text-[53px] md:text-[60px] font-normal xl:leading-20.25 lg:leading-15 tracking-[1.2px] uppercase;
+}
+.compettion-left-title h4 span{
+    @apply text-[var(--orange)];
+}
+.compettion-left-title p{
+    @apply text-[var(--black)] text-lg font-normal leading-normal tracking-[0.36px];
+}
+
+/*------------------- Compettion Two Area-------------------- */
+.compettionT-area {
+    @apply py-23.25 bg-white;
+}
+.compettion-left-bg{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='563' height='454' viewBox='0 0 563 454' fill='none'%3E%3Cpath d='M464.008 453.164H0V0.921112H562.293L464.008 453.164Z' fill='%23591419'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: right;
+}
+
+.comepettionT-left-area .compettion-left-title{
+    @apply lg:!pt-0 xl:!pt-12.75 gap-6;
+}
+
+
+
+.compettion-left-bg img {
+    /* @apply  object-cover lg:w-148.5 lg:h-123.75 w-full h-full; */
+    @apply  object-cover w-full;
+    aspect-ratio: 562.29/534.47;
+
+}
+
+/*------------- Information Area---------------- */
+.information-area {
+    @apply pt-15 pb-8;
+}
+
+
+.information-title {
+    @apply xl:pt-10;
+}
+
+.information-left-area{
+    @apply flex flex-col gap-8.5;
+}
+
+.information-title{
+    @apply lg:w-124.75;
+}
+
+.information-title h4 {
+    @apply text-[var(--primary)] text-[60px] leading-15 tracking-[1.2px] uppercase;
+    
+}
+.information-title span {
+    @apply text-[var(--orange)];
+}
+
+.single-informations-list {
+    @apply flex gap-5.5;
+}
+
+.information-left-content {
+    @apply flex flex-col gap-5.25;
+}
+
+.single-informations-list p {
+    @apply text-[var(--black)] text-base font-normal leading-normal tracking-[0.32px];
+}
+
+
+
+.information-right-bg img {
+    /* @apply object-cover lg:w-148.5 lg:h-123.75 w-full h-full; */
+    @apply object-cover  w-full;
+    aspect-ratio: 593.50/495.00;
+}
+
+.information-right-bg{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='594' height='495' viewBox='0 0 594 495' fill='none'%3E%3Cpath d='M95.3938 495H593.894V0H0.393799L95.3938 495Z' fill='%23591419'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+/* --------------Content Area -----------------*/
+.content-area {
+    @apply pt-7.5 pb-25.5;
+}
+.content-right-area h4{
+    @apply text-[var(--primary)] xl:text-[60px] lg:text-[45px] text-[60px] font-normal leading-20.5 tracking-[1.2px] uppercase;
+}
+.content-right-area h4 span{
+    @apply text-[var(--orange)];
+}
+
+.content-right-area p{
+    @apply text-[var(--black)] text-lg font-normal leading-normal tracking-[0.36px];
+}
+
+
+
+.content-left-bg img {
+    /* @apply  object-cover lg:w-140.75 lg:h-116.25 w-full h-full; */
+    /* @apply  object-cover lg:w-140.75 lg:h-116.25 w-full h-full; */
+    @apply  object-cover  w-full ;
+    aspect-ratio: 562.29/464.19;
+
+}
+
+
+.content-left-bg{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='563' height='464' viewBox='0 0 563 464' fill='none'%3E%3Cpath d='M464.008 463.427H0V-6.10352e-05H562.293L464.008 463.427Z' fill='%23591419'/%3E%3C/svg%3E");
+    @apply bg-right bg-cover;
+}
+
+
+.content-right-area {
+    @apply flex flex-col gap-15;
+}
+
+
+.content-right-area {
+    @apply xl:py-7.5 ;
+}
+
+/* ======================== Sponsors Template========================== */
+.sponsor-area{
+    @apply pt-31.25 pb-32;
+}
+
+.sponsor-title{
+    @apply text-center;
+}
+.sponsor-title h1{
+    @apply text-[var(--primary)] !font-bebas text-[60px] font-normal leading-20.25 tracking-[1.2px] uppercase;
+}
+
+.sponsor-title h1 span{
+    @apply text-[var(--orange)];
+}
+
+.single-sponsor {
+    @apply flex p-16.5  flex-col text-center border-5 border-[var(--color5)] bg-white h-full;
+}
+
+.single-sponsor img {
+    @apply w-43 h-28.75 object-contain;
+}
+
+
+/* ========================  Kids  Template========================== */
+
+
+/*---------------- Kid Division Area-------------------- */
+.kid-disivison-area{
+    @apply relative pt-24.75;
+}
+
+.kid-division-overlay {
+    @apply absolute right-0;
+}
+.kid-division-title{
+    @apply md:w-182.5 mx-auto text-center flex flex-col gap-3.5;
+}
+
+.kid-division-title h1{
+    @apply text-[var(--primary)] text-center !font-bebas [font-size:var(--60px)] font-normal leading-20.25 tracking-[1.2px] uppercase;
+}
+.kid-division-title h1 span{
+    @apply text-[var(--orange)];
+}
+
+.kid-division-title p{
+    @apply text-[var(--black)] text-lg not-italic font-normal leading-normal tracking-[0.36px];
+}
+.kid-division {
+    @apply py-13.75;
+}
+
+
+.kid-division-content {
+    @apply md:pt-7.5 md:pr-10.25 md:pb-5.5 md:pl-8 p-5 border-1 border-[#E7E7E7] bg-white flex flex-col h-full;
+}
+
+.kid-division-bg img {
+    @apply xl:w-136.25 xl:h-147.5 w-full h-full object-cover bg-[rgba(0,_0,_0,_0.04)];
+}
+
+.extra-de img {
+    @apply xl:h-79.25;
+}
+
+.kid-division-content h5 {
+    @apply text-[var(--black)] md:text-[34px] text-[26px] font-normal leading-[120%];
+}
+
+.single-kid-division {
+    @apply flex flex-col h-full;
+}
+
+.kid-division-content p {
+    @apply text-[#7C7C7C] text-lg font-normal leading-[120%] mb-auto;
+}
+
+.kid-btn a {
+    @apply py-3.75 px-20 bg-[var(--primary)] text-2xl !font-bebas font-normal leading-7.5 text-white;
+}
+
+.kid-btn {
+    @apply flex justify-center;
+}
+
+.flex.justify-between h6 {
+    @apply text-[var(--primary)] md:text-[44px] text-2xl font-normal leading-[120%];
+}
+
+
+.kid-division{
+    @apply xl:w-281.5 mx-auto;
+}
+
+/* ---------------Younger Area---------------- */
+
+.younger-left-title{
+    @apply flex flex-col xl:gap-14 lg:gap-3;
+}
+.younger-left-title h4{
+    @apply text-[var(--primary)] text-[60px] font-normal leading-20.25 tracking-[1.2px] uppercase;
+}
+.younger-left-title h4 span{
+    @apply text-[var(--orange)];
+}
+.younger-left-title p{
+    @apply text-[var(--black)] text-lg font-normal  leading-normal tracking-[0.36px];
+}
+
+.younger-btn{
+    @apply flex;
+}
+.younger-btn a{
+    @apply py-3.5 px-7.5 bg-[var(--orange)] text-white !font-bebas text-2xl font-normal leading-7.5;
+}
+
+.younger-left-area{
+    @apply flex flex-col gap-11.25;
+}
+
+.younger-bg{
+    background-image: url(../img/overlay-2.png);
+    background-size: cover;
+}
+
+
+
+.younger-bg img {
+    /* @apply  object-cover xl:w-148.5 xl:h-123.75 h-full w-full; */
+    @apply  object-cover  h-full w-full;
+    aspect-ratio: 593.50/495.00;
+}
+
+/* -------------Older Division Area--------------- */
+
+
+.older-left-bg img {
+    /* @apply object-cover xl:w-148.5 xl:h-126.75 w-full h-full; */
+    @apply object-cover  w-full h-full;
+    aspect-ratio: 593.50/507.00;
+}
+
+.older-left-bg{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='594' height='507' viewBox='0 0 594 507' fill='none'%3E%3Cpath d='M95 507H593.5V0H0L95 507Z' fill='%23591419'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+
+}
+
+
+
+.older-right-area{
+    @apply flex flex-col gap-10;
+}
+.older-right-title{
+    @apply flex flex-col gap-[40px];
+}
+
+.older-right-title h4{
+    @apply text-[var(--primary)] text-[60px] font-normal leading-15 tracking-[0.6px] uppercase;
+}
+.older-right-title h4 span{
+    @apply text-[var(--orange)];
+}
+
+.older-right-title p{
+    @apply text-[var(--black)] text-lg font-normal leading-6.25 tracking-[0.36px];
+}
+
+
+.older-btn{
+    @apply flex;
+}
+.older-btn a{
+    @apply py-3.5 px-7.5 bg-[var(--orange)] text-white !font-bebas text-2xl font-normal leading-7.5;
+}
+
+/* ------------------Older Mentoring Area -----------------*/
+
+
+.older-mentoring-left-area{
+    @apply flex flex-col gap-11.25;
+}
+.older-mentoring-title{
+    @apply flex flex-col lg:gap-14 gap-5 pt-2.5;
+}
+.older-mentoring-title h4{
+    @apply text-[var(--primary)] md:text-[60px] text-[44px] not-italic md:leading-20.25 tracking-[1.2px] uppercase;
+}
+.older-mentoring-title h4 span{
+    @apply text-[var(--orange)];
+}
+
+.older-mentoring-title p{
+    @apply text-[var(--black)] text-lg font-normal leading-normal tracking-[0.36px];
+}
+
+
+.older-mentoring-btn{
+    @apply flex;
+}
+.older-mentoring-btn a{
+    @apply py-3.5 px-7.5 bg-[var(--orange)] text-white !font-bebas text-2xl font-normal leading-7.5;
+}
+
+
+.older-mentoring-bg img {
+    @apply  object-cover w-full;
+    aspect-ratio: 593.50/614.00;
+}
+
+.older-mentoring-bg{
+    background-image: url(../img/overlay-2.png);
+    background-size: cover;
+}
+
+
+
+/* --------------Kid-Q Contact Area----------------- */
+.kidQ-contact-bg{
+    @apply overflow-hidden bg-[url(../img/kid-q-contact-bg.png)] bg-center bg-cover bg-no-repeat py-22.25 z-1 relative after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-[#00000080] after:content-[''] after:-z-1;
+
+}
+
+.kidQ-contact-area{
+    @apply bg-white py-9.25 px-9.75 flex flex-col gap-9.25;
+}
+
+
+
+.kidQ-contact-title{
+    @apply flex flex-col gap-1.25;
+}
+.kidQ-contact-title h5{
+    @apply text-[#01112D] text-[38px] font-normal leading-[120%] md:w-117.25;
+}
+
+.kidQ-contact-title p{
+    @apply w-106.25 font-dm text-base font-normal leading-[140%] text-[var(--primary)];
+}
+
+
+
+.kidQ-conatact-form{
+    @apply flex flex-col gap-5.5;
+}
+
+.form-control {
+    @apply flex flex-col lg:w-60.5 w-full;
+}
+
+.form-control .form-style {
+    @apply border-1 border-[#CCC] pt-3 pr-8 pb-3 pl-4 peer-focus-within:border-red-500 ;
+}
+
+.form-style ,.form-styles {
+    @apply flex items-center text-[#7C7C7C] gap-4.75;
+}
+
+.form-style span {
+    @apply uppercase;
+}
+
+.form-style svg {
+    @apply flex shrink-0;
+}
+
+.form-style input , .form-styles select, .form-style textarea{
+    @apply w-full outline-none;
+}
+
+.form-styles {
+    @apply border-1 border-[#CCC] pt-3 pr-3 pb-3 pl-4;
+}
+
+
+.form-style textarea{
+    @apply resize-none;
+}
+
+.kidQ-form-btn{
+    @apply text-white text-center text-base font-semibold leading-6 py-3  md:px-57.5 bg-[var(--primary)] cursor-pointer mt-4.5;
+}
+
+.form-control label{
+    @apply text-[var(--black)] text-base font-normal leading-6;
+}
+
+
+.kidQ-contact-right-area h4 {
+    @apply text-white text-[40px] font-normal leading-normal tracking-[0.8px];
+}
+
+.kidQ-contact-right-area p {
+    @apply text-[19px] text-white font-normal tracking-[0.38px];
+}
+
+.kidQ-contact-right-area {
+    @apply flex flex-col gap-7;
+}
+
+
+.form-control .form-style:focus-within {
+   @apply border-1 border-[var(--primary)];
+}
+
+/* ========================  SCHOLORSHIP  Template========================== */
+
+/*----------------- Scholarship Area -----------------------*/
+
+.scholarship-overlay-text {
+    @apply absolute top-14 -z-1 right-0;
+}
+
+.scholarship-left-area{
+    @apply flex flex-col gap-11.25;
+}
+
+.scholarship-left-title{
+    @apply flex flex-col gap-9;
+}
+
+.scholarship-left-title h4{
+    @apply text-[var(--primary)] text-[60px] font-normal leading-20.25 tracking-[1.2px] uppercase;
+}
+
+.scholarship-left-title h4 span{
+    @apply text-[var(--orange)];
+}
+.scholarship-left-title p{
+    @apply text-[var(--black)] text-lg font-normal leading-normal tracking-[0.36px];
+}
+
+
+.scholar-right-bg img {
+    /* @apply  object-none w-148.5 h-122.5; */
+    @apply  object-cover w-full;
+    aspect-ratio: 593.50/495.00;
+}
+
+.scholar-right-bg{
+    background-image: url(../img/overlay-2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.scholar-intro {
+    @apply relative z-1 xl:w-142 lg:w-full p-1.5 bg-[#FFF4EE];
+}
+
+.scholar-intro-text::after {
+    clip-path: polygon(0% 0, 100% 0, 0% 100%, 0 100%);
+    @apply absolute left-0 top-0 w-8.5 h-full bg-[var(--secondary)] content-[""];
+}
+
+.scholar-intro-text {
+    @apply pt-5 pr-5.75 pb-4.5 pl-12 !font-bebas text-2xl font-normal leading-7.5 relative;
+}
+
+.scholar-intro-text span{
+    @apply text-[var(--orange)];
+}
+
+
+/* ========================  Conatact  Template========================== */
+
+/* ----------------Contact Area-------------------- */
+.contact-row{
+    @apply flex flex-col lg:flex-row 2xl:px-7.5 gap-7.5;
+}
+
+.contact-area {
+    @apply pt-29 pb-32;
+}
+.contact-overlay {
+    @apply absolute top-14 -z-1 right-0;
+}
+
+
+.contact-left-title{
+    @apply flex flex-col gap-9;
+}
+
+.contact-left-title h4{
+    @apply text-[var(--primary)]  text-[60px] font-normal leading-20.25 tracking-[1.2px] uppercase;
+}
+
+.contact-left-title p{
+    @apply text-[var(--black)] text-lg font-normal leading-normal tracking-[0.36px]
+}
+.contact-left-area {
+    @apply flex flex-col gap-10;
+}
+
+.single-contact-list{
+    @apply 2xl:w-122.25 bg-[var(--color6)] pt-3.25 pb-3 pl-3.25 pr-1.75;
+}
+
+.single-contact-list-item{
+    @apply flex relative gap-4 items-center z-1 cursor-pointer;
+}
+
+.single-contact-list .contact-left-icon{
+    @apply absolute right-0;
+}
+.contact-left-content {
+    @apply flex flex-col gap-6;
+}
+.contact-icon {
+    @apply size-18.5 flex justify-center items-center shrink-0 bg-[var(--primary)];
+}
+
+.single-contact-list p,.single-contact-list a{
+    @apply text-[var(--primary)] md:text-[23px] text-lg not-italic font-normal leading-20.25 tracking-[0.46px] uppercase !font-bebas;
+} 
+
+
+
+.contact-right-area {
+  @apply md:px-10 md:pt-10.5 md:pb-12.25 p-5 bg-white shadow-[-12px_49px_94px_rgba(85,89,90,0.05)];
+}
+
+
+.contact-title-right h5{
+    @apply text-[var(--primary)] text-[38px] font-normal leading-10.25 tracking-[0.76px] uppercase;
+}
+.contact-title-right h5 span{
+    @apply text-[var(--orange)];
+}
+
+.contact-form-control {
+    @apply flex flex-col w-full gap-1.5;
+}
+
+.contact-form-control input , .contact-form-control textarea {
+    @apply w-full border-1 border-[rgba(204,_204,_204,_0.50)] py-3 pr-8 pl-4 outline-none focus:border-1 focus:border-[var(--primary)] resize-none relative;
+}
+
+.contact-right-area {
+    @apply flex flex-col gap-10;
+}
+
+.contact-form {
+    @apply flex flex-col;
+}
+
+
+.contact-form-control label{
+    @apply text-[var(--primary)] !font-bebas text-lg font-normal leading-5;
+}
+
+
+
+
+.contact-btn{
+    @apply w-full py-3 px-15 bg-[var(--orange)] !font-bebas text-xl font-normal leading-normal tracking-[0.4px] uppercase text-white cursor-pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* ========================  Conatact 2 Template========================== */
+
+/* ----------------ContactT  Area -------------------- */
+
+.contactT-right-area{
+    @apply  xl:px-10 xl:pt-10.5 xl:pb-12.25 p-6;
+}
+.contactT-row{
+    @apply flex flex-col lg:flex-row 2xl:px-6.25 justify-between gap-7.5
+}
+
+
+.contact-field-icon {
+    @apply absolute top-3.5 right-3.5;
+}
+
+
+.contact-check-one p {
+    @apply text-[var(--primary)] text-base font-semibold leading-normal tracking-[0.32px];
+}
+
+.contact-check-one {
+    @apply py-5.5 px-4.5 bg-[var(--color6)] flex flex-col gap-3.75;
+}
+
+.contact-one-field label {
+    box-shadow: -12px 49px 94px 0 rgba(85, 89, 90, 0.05);
+    @apply lg:w-57.25 w-full h-10 py-2 px-3 border-1 border-[rgba(246,_86,_0,_0.10)] bg-white flex items-center gap-1.75;
+}
+
+.contact-one-field {
+    @apply flex md:flex-row flex-col gap-4 justify-between;
+}
+
+.contact-one-field label span ,.contact-2-agreement label span {
+    @apply text-[var(--black)] xl:text-xs text-[11px] font-semibold leading-normal tracking-[0.24px];
+}
+
+.contact-2-agreement label{
+    @apply flex gap-1.75;
+}
+
+.contact-2-agreement input[type="checkbox"]{
+    @apply flex shrink-0;
+
+}
+
+/* .contact-2-agreement label span {
+    line-height: 13px;
+} */
+
+
+
+.contact-form-two input[type="checkbox"],.contact-form-two input[type="radio"]  {
+    appearance: none;
+    -webkit-appearance: none;
+  @apply  size-4 border-1 border-[#D3D3D3] rounded-none cursor-pointer flex shrink-0;
+}
+
+.contact-form-two input[type="checkbox"]:checked ,.contact-form-two input[type="radio"]:checked  {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8' fill='none'%3E%3Cpath d='M1.5 5L3.25 6.75L8.5 1.25' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+    @apply bg-[var(--primary)] border-[var(--primary)];
+}
+
+
+.contact-one-field {
+  @apply flex gap-3.75;
+}
+
+.contact-long-field {
+  @apply flex-col gap-2.5;
+}
+
+.contact-long-field label {
+  @apply w-full;
+}
+
+.contact-form-two {
+    @apply gap-7.5;
+}
+
+/* ---------------------Service Area------------------------ */
+
+/* .snigle-service-list {
+  @apply flex flex-col xl:flex-row items-stretch border border-[#E7E7E7];
+}
+
+.service-bg {
+  @apply flex w-full xl:w-[545px] h-auto xl:h-auto; 
+}
+
+.service-bg img {
+  @apply w-full h-full object-cover; 
+}
+
+.service-content {
+  @apply flex flex-col justify-between gap-6.5 bg-white 
+         pt-11.25 pl-11.75 pb-12.25 pr-14 h-full; 
+} */
+
+.snigle-service-list {
+    @apply flex flex-col xl:flex-row h-full;
+}
+
+.service-bg {
+    @apply flex shrink-0;
+}
+
+.service-bg img {
+    @apply xl:w-136.25 xl:h-79.25 w-full h-full object-cover;
+}
+
+.service-content{
+    @apply flex flex-col gap-6.5 bg-white border-1 border-[#E7E7E7] md:pt-11.25 md:pl-11.75 md:pb-12.25 md:pr-14 p-6 justify-between h-full; 
+}
+
+
+.service-content h4 {
+    @apply text-[var(--black)] text-[34px] font-normal leading-[120%];
+}
+
+.service-content h6 {
+    @apply text-[var(--primary)] text-[44px] font-normal leading-[120%];
+}
+.service-content p{
+    @apply font-normal leading-[120%] text-lg mb-auto text-[var(--p1)]; 
+}
+
+.service-btn a {
+    @apply py-4 px-7.75 text-2xl !font-bebas font-normal leading-7.75 bg-[var(--primary)] text-white uppercase;
+}
+
+
+/* .service-bg img {
+    @apply w-136.25 h-79.25 object-cover;
+} */
+
+.service-btn{
+    @apply flex;
+}
+.service-btn a{
+   @apply py-3.75 px-20 bg-[var(--primary)] text-2xl !font-bebas font-normal leading-7.5 text-white;
+}
+
+
+
+
+
+
+
+
+
+

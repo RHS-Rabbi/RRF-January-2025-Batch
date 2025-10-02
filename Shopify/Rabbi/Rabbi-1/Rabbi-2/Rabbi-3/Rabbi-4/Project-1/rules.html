@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Html</title>
+    <link href="./assets/src/output.css" rel="stylesheet">
+    <!-- Slick Min CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+</head>
+<body>
+   <main>
+        <!-- Header Area -->
+        <header class="header-area py-4 xl:py-0">
+            <div class="container">
+                <div class="header-row">
+                <!-- logo -->
+                <div class="site-logo">
+                    <a href="index.html"><img src="./assets/img/site-logo.png" alt="Site logo"></a>
+                </div>
+
+                <!-- mobile menu button -->
+                <button id="menu-toggle" class="mobile-menu lg:hidden">
+                    <!-- hamburger -->
+                    <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- close -->
+                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- nav -->
+                <nav id="menu" class="mainmenu">
+                    <ul class="flex flex-col lg:flex-row gap-4  items-center">
+                    <li><a href="./rules.html">Rules</a></li>
+                    <li><a href="./sponsor.html">Sponsors</a></li>
+                    <li><a href="./kidQ.html">Kids-Q</a></li>
+                    <li><a href="./Scholarship.html">Bingham Mayors Scholarship</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <!-- button -->
+                <div class="header-btn hidden lg:block">
+                    <a class="btntwo" href="#">Enter Competition</a>
+                </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Breadcumb -->
+        <div class="breadcumb">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <div class="breadcumb-list">
+                        <a href="#">Home</a>
+                        <svg width="2" height="18" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.694824" width="1" height="17.0764" fill="white"/>
+                        </svg>
+                        <a href="#">rules</a>
+                    </div>
+                    <h3>the Gaming rules</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rules Area -->
+        <section class="rlues-area">
+            <div class="container rules">
+                <div class="rules-overlay">
+                    <div class="rules-title">
+                        <h1>SMOKE-N-WINGS <span>2024</span> RULES</h1>
+                        <p>As a KCBS sanctioned Master Series Contest, all KCBS rules will be followed. The event and the judging will be overseen by the KCBS Contest Representatives assigned to the event. Their decisions and interpretations are final.</p>
+                    </div>
+                    <div class="rules-area-content">
+                        <div class="rukes-intro">
+                            <p>As a Master Series Contest, teams will cook four meats:</p>
+                            <p>The Four KCBS Meat Categories are:</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="rules-all-item">
+                    <div class="flex flex-col lg:flex-row gap-[36px] justify-between flex-wrap">
+                        <div class="2xl:w-[585px] xl:w-[601px] lg:w-[466px]">
+                            <!-- Single Rule All List 1 -->
+                            <div class="single-rules-all-list">
+                                <div class="rules-bg">
+                                    <img src="./assets/img/Rules bg/r-1.png" alt="R-1">
+                                </div>
+                                <div class="rule-all-content">
+                                    <div class="flex justify-between items-center">
+                                        <h4>PORK</h4>
+                                        <div class="flex gap-3.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                                <g clip-path="url(#clip0_2013_48)">
+                                                    <path d="M12.1619 22.5885C18.5022 22.5885 23.6619 17.6532 23.6619 11.5885C23.6619 5.52385 18.5023 0.588501 12.1619 0.588501C5.82148 0.588501 0.661865 5.52385 0.661865 11.5885C0.661865 17.6532 5.82154 22.5885 12.1619 22.5885ZM12.1619 2.05514C17.6588 2.05514 22.1286 6.33046 22.1286 11.5885C22.1286 16.8465 17.6589 21.1219 12.1619 21.1219C6.66482 21.1219 2.19517 16.8465 2.19517 11.5885C2.19517 6.33046 6.66489 2.05514 12.1619 2.05514Z" fill="#F65600"/>
+                                                    <path d="M15.5161 15.0939C15.658 15.2038 15.8266 15.2552 15.9953 15.2552C16.2214 15.2552 16.4437 15.1599 16.5932 14.9802C16.8577 14.6649 16.804 14.2029 16.4744 13.9498L12.9286 11.2365V5.72185C12.9286 5.31851 12.5836 4.98853 12.1619 4.98853C11.7402 4.98853 11.3953 5.31851 11.3953 5.72185V11.5885C11.3953 11.8122 11.5026 12.0212 11.6828 12.1605L15.5161 15.0939Z" fill="#F65600"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_2013_48">
+                                                    <rect width="23" height="22" fill="white" transform="translate(0.661865 0.588501)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <h5>Judging will start at 1:00pm</h5>
+                                        </div>
+                                    </div>
+                                    <p>Pork is defined as Boston Butt, Boston Roast, Picnic, Collar (aka Cellar) and/or</p>
+                                    <div class="flex">
+                                        <a class="rules-btn btntwo" href="#">ENTER THE COMPETITION</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="2xl:w-[585px] xl:w-[601px] lg:w-[466px]">
+                            <!-- Single Rule All List 2 -->
+                            <div class="single-rules-all-list">
+                                <div class="rules-bg">
+                                    <img src="./assets/img/Rules bg/r-2.png" alt="R-2">
+                                </div>
+                                <div class="rule-all-content">
+                                    <div class="flex justify-between items-center">
+                                        <h4>PORK RIBS</h4>
+                                        <div class="flex gap-3.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                                <g clip-path="url(#clip0_2013_48)">
+                                                    <path d="M12.1619 22.5885C18.5022 22.5885 23.6619 17.6532 23.6619 11.5885C23.6619 5.52385 18.5023 0.588501 12.1619 0.588501C5.82148 0.588501 0.661865 5.52385 0.661865 11.5885C0.661865 17.6532 5.82154 22.5885 12.1619 22.5885ZM12.1619 2.05514C17.6588 2.05514 22.1286 6.33046 22.1286 11.5885C22.1286 16.8465 17.6589 21.1219 12.1619 21.1219C6.66482 21.1219 2.19517 16.8465 2.19517 11.5885C2.19517 6.33046 6.66489 2.05514 12.1619 2.05514Z" fill="#F65600"/>
+                                                    <path d="M15.5161 15.0939C15.658 15.2038 15.8266 15.2552 15.9953 15.2552C16.2214 15.2552 16.4437 15.1599 16.5932 14.9802C16.8577 14.6649 16.804 14.2029 16.4744 13.9498L12.9286 11.2365V5.72185C12.9286 5.31851 12.5836 4.98853 12.1619 4.98853C11.7402 4.98853 11.3953 5.31851 11.3953 5.72185V11.5885C11.3953 11.8122 11.5026 12.0212 11.6828 12.1605L15.5161 15.0939Z" fill="#F65600"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_2013_48">
+                                                    <rect width="23" height="22" fill="white" transform="translate(0.661865 0.588501)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <h5>Judging will start at 12:30pm</h5>
+                                        </div>
+                                    </div>
+                                    <p>Ribs shall include the bone. Country style ribs are prohibited.</p>
+                                    <div class="flex">
+                                        <a class="rules-btn btntwo" href="#">ENTER THE COMPETITION</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="2xl:w-[585px] xl:w-[601px] lg:w-[466px]">
+                            <!-- Single Rule All List 3 -->
+                            <div class="single-rules-all-list">
+                                <div class="rules-bg">
+                                    <img src="./assets/img/Rules bg/r-3.png" alt="R-3">
+                                </div>
+                                <div class="rule-all-content">
+                                    <div class="flex justify-between items-center">
+                                        <h4>PORK</h4>
+                                        <div class="flex gap-3.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                                <g clip-path="url(#clip0_2013_48)">
+                                                    <path d="M12.1619 22.5885C18.5022 22.5885 23.6619 17.6532 23.6619 11.5885C23.6619 5.52385 18.5023 0.588501 12.1619 0.588501C5.82148 0.588501 0.661865 5.52385 0.661865 11.5885C0.661865 17.6532 5.82154 22.5885 12.1619 22.5885ZM12.1619 2.05514C17.6588 2.05514 22.1286 6.33046 22.1286 11.5885C22.1286 16.8465 17.6589 21.1219 12.1619 21.1219C6.66482 21.1219 2.19517 16.8465 2.19517 11.5885C2.19517 6.33046 6.66489 2.05514 12.1619 2.05514Z" fill="#F65600"/>
+                                                    <path d="M15.5161 15.0939C15.658 15.2038 15.8266 15.2552 15.9953 15.2552C16.2214 15.2552 16.4437 15.1599 16.5932 14.9802C16.8577 14.6649 16.804 14.2029 16.4744 13.9498L12.9286 11.2365V5.72185C12.9286 5.31851 12.5836 4.98853 12.1619 4.98853C11.7402 4.98853 11.3953 5.31851 11.3953 5.72185V11.5885C11.3953 11.8122 11.5026 12.0212 11.6828 12.1605L15.5161 15.0939Z" fill="#F65600"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_2013_48">
+                                                    <rect width="23" height="22" fill="white" transform="translate(0.661865 0.588501)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <h5>Judging will start at 1:00pm</h5>
+                                        </div>
+                                    </div>
+                                    <p>Pork is defined as Boston Butt, Boston Roast, Picnic, Collar (aka Cellar) and/or</p>
+                                    <div class="flex">
+                                        <a class="rules-btn btntwo" href="#">ENTER THE COMPETITION</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="2xl:w-[585px] xl:w-[601px] lg:w-[466px]">
+                            <!-- Single Rule All List 4 -->
+                            <div class="single-rules-all-list">
+                                <div class="rules-bg">
+                                    <img src="./assets/img/Rules bg/r-4.png" alt="R-3">
+                                </div>
+                                <div class="rule-all-content">
+                                    <div class="flex justify-between items-center">
+                                        <h4>BEEF BRISKET</h4>
+                                        <div class="flex gap-3.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                                <g clip-path="url(#clip0_2013_48)">
+                                                    <path d="M12.1619 22.5885C18.5022 22.5885 23.6619 17.6532 23.6619 11.5885C23.6619 5.52385 18.5023 0.588501 12.1619 0.588501C5.82148 0.588501 0.661865 5.52385 0.661865 11.5885C0.661865 17.6532 5.82154 22.5885 12.1619 22.5885ZM12.1619 2.05514C17.6588 2.05514 22.1286 6.33046 22.1286 11.5885C22.1286 16.8465 17.6589 21.1219 12.1619 21.1219C6.66482 21.1219 2.19517 16.8465 2.19517 11.5885C2.19517 6.33046 6.66489 2.05514 12.1619 2.05514Z" fill="#F65600"/>
+                                                    <path d="M15.5161 15.0939C15.658 15.2038 15.8266 15.2552 15.9953 15.2552C16.2214 15.2552 16.4437 15.1599 16.5932 14.9802C16.8577 14.6649 16.804 14.2029 16.4744 13.9498L12.9286 11.2365V5.72185C12.9286 5.31851 12.5836 4.98853 12.1619 4.98853C11.7402 4.98853 11.3953 5.31851 11.3953 5.72185V11.5885C11.3953 11.8122 11.5026 12.0212 11.6828 12.1605L15.5161 15.0939Z" fill="#F65600"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_2013_48">
+                                                    <rect width="23" height="22" fill="white" transform="translate(0.661865 0.588501)"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <h5>Judging will start at 1:30pm</h5>
+                                        </div>
+                                    </div>
+                                    <p>May be whole brisket, flat, or point. Corned beef is not allowed. All competition meats shall be inspected by the Official Meat Inspector/Health Department during the times established by the contest organizer.</p>
+                                    <div class="flex">
+                                        <a class="rules-btn btntwo" href="#">ENTER THE COMPETITION</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competition One Area -->
+        <section class="compettionO-area">
+            <div class="container px-2.5">
+                <div class="flex flex-col lg:flex-row gap-7.5 justify-between">
+                    <div class="xl:w-142 lg:w-6/12">
+                        <div class="compettionO-left-area">
+                            <div class="compettion-left-title">
+                                <h4>The <span>competition</span> held on</h4>
+                                <div class="flex flex-col gap-5">
+                                    <p>The competition will be held on the tarmac at the Blackfoot Municipal Airport (McCarley Field).During the competition the area will continue to be an active airport.No guns, fireworks and all fire/flame must be contained within the cooking apparatus.Pets MUST be on a leash or contained at the teams cook site. There is a dog park just outside the airport gate.Vehicles must follow established traffic flow through the airport property.</p>
+                                    <p>Each team site must have a fire extinguisher and if a stick burner is used some sort of ground protection must be used under the fire box. This may include sheet metal or cement board forexample.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-148.5 lg:w-6/12">
+                        <div class="compettionO-right-area">
+                            <div class="compettion-right-bg overlay-d-1">
+                                <img src="./assets/img/com-1.png" alt="C-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Competition Two Area -->
+        <section class="compettionT-area">
+            <div class="container px-2.5">
+                <div class="flex flex-col lg:flex-row gap-17 justify-between">
+                    <div class="xl:w-140.75 lg:w-6/12">
+                        <div class="compettionT-left-area">
+                            <div class="compettion-left-bg overlay-d-2">
+                                <img src="./assets/img/com-2.png" alt="C-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-[578px] lg:w-6/12">
+                        <div class="compettionO-left-area comepettionT-left-area">
+                            <div class="compettion-left-title">
+                                <h4>The <span>competition</span> awareness</h4>
+                                <div class="flex flex-col gap-5">
+                                    <p>Fire lanes and emergency access shall be maintained at all times.Ashes and grease must be disposed of in provided containers located close to the cook sites. Team site will be left with no garbage, ashes, debris or liquid/grease spills. If site is not left in a Clean manner the city will clean the site and bill the team for the labor involved.</p>
+                                    <p>All teams equipment, vehicles, trailers, cookers, awnings etc. must stay within teams assigned cook area. A parking area will be available nearby for vehicles that don’t fit within cook site.Water will be available as well as gray water disposal area. Electricity will not be provided. Please plan accordingly Each cook site will have a brief health department inspection along with their meat inspection.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Area -->
+        <section class="info-area">
+            <div class="container">
+                <div class="info-row">
+                    <div class="xl:w-6/12 w-full">
+                        <div class="info-left-content">
+                            <div class="single-info xl:w-[146px]">
+                                <h3 class="text-center">When:</h3>
+                                <p class="[font-size:var(--26px)]">June 28-29, 2025</p>
+                            </div>
+                            <div class="single-info xl:w-[240px] text-center">
+                                <h3>Where:</h3>
+                                <div class="flex flex-col">
+                                    <p class="lg:text-center [font-size:var(--26px)]">Blackfoot, Idaho</p>
+                                    <p class="[font-size:var(--19px)]">Blackfoot Airport (McCarly Field)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-[534px] w-full">
+                        <div class="info-right-area">
+                            <p>Lorem ipsum dolor sit amet consectetur. Pellentesque lectus pulvinar cras cursus parturient in. Vitae risus nisi scelerisque iaculis feugiat vel ornare nec. Hendrerit nullam eu nisl arcu. Phasellus a tincidunt diam interdum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Information Area -->
+        <section class="information-area">
+            <div class="container px-2.5">
+                <div class="flex flex-col lg:flex-row gap-7.5 justify-between">
+                    <div class="xl:w-142.25 lg:w-6/12">
+                        <div class="information-left-area">
+                            <div class="information-title">
+                                <h4><span>The items</span> they are looking for are</h4>
+                            </div>
+                            <div class="information-left-content">
+                                <div class="single-informations-list">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                            <g clip-path="url(#clip0_2019_65)">
+                                                <circle cx="11" cy="11.1641" r="11" fill="#E9680C"/>
+                                                <path d="M5.44141 10.4799L9.37562 14.4141L16.5598 7.91406" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2019_65">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.164062)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                    <p>
+                                        Three separate bins or basins for dishwashing (wash, rinse and sterilise) They can be as simple as rubbermaid bins.
+                                    </p>
+                                </div>
+                                <div class="single-informations-list">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                            <g clip-path="url(#clip0_2019_65)">
+                                                <circle cx="11" cy="11.1641" r="11" fill="#E9680C"/>
+                                                <path d="M5.44141 10.4799L9.37562 14.4141L16.5598 7.91406" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2019_65">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.164062)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                    <p>
+                                       A basin for Clorox water for wiping down surfaces
+                                    </p>
+                                </div>
+                                <div class="single-informations-list">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                            <g clip-path="url(#clip0_2019_65)">
+                                                <circle cx="11" cy="11.1641" r="11" fill="#E9680C"/>
+                                                <path d="M5.44141 10.4799L9.37562 14.4141L16.5598 7.91406" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2019_65">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.164062)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                    <p>
+                                      Clorox
+                                    </p>
+                                </div>
+                                <div class="single-informations-list">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                            <g clip-path="url(#clip0_2019_65)">
+                                                <circle cx="11" cy="11.1641" r="11" fill="#E9680C"/>
+                                                <path d="M5.44141 10.4799L9.37562 14.4141L16.5598 7.91406" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2019_65">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.164062)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                    <p>
+                                      An area with fresh water and soap for handwashing with hand soap and paper towels
+                                    </p>
+                                </div>
+                                <div class="single-informations-list">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                            <g clip-path="url(#clip0_2019_65)">
+                                                <circle cx="11" cy="11.1641" r="11" fill="#E9680C"/>
+                                                <path d="M5.44141 10.4799L9.37562 14.4141L16.5598 7.91406" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2019_65">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.164062)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                    <p>
+                                      Meat thermometer
+                                    </p>
+                                </div>
+                                <div class="single-informations-list">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                            <g clip-path="url(#clip0_2019_65)">
+                                                <circle cx="11" cy="11.1641" r="11" fill="#E9680C"/>
+                                                <path d="M5.44141 10.4799L9.37562 14.4141L16.5598 7.91406" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2019_65">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.164062)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                    <p>
+                                      Your meat will need to be on ice with a fridge thermometer. It must read  at time of inspection
+                                    </p>
+                                </div>
+                                <div class="single-informations-list">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none">
+                                            <g clip-path="url(#clip0_2019_65)">
+                                                <circle cx="11" cy="11.1641" r="11" fill="#E9680C"/>
+                                                <path d="M5.44141 10.4799L9.37562 14.4141L16.5598 7.91406" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2019_65">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.164062)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </p>
+                                    <p>
+                                      Disposable gloves
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-148.5 lg:w-6/12">
+                        <div class="information-right-area">
+                            <div class="information-right-bg overlay-d-1">
+                                <img src="./assets/img/in.png" alt="IN">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info2 Area -->
+        <section class="group-1 pt-21 pb-21.75">
+            <div class="container">
+                <div class="group-overlay relative">
+                    <div class="group-row">
+                        <div class="xl:w-[300px] rabbi">
+                            <div class="group-ticket">
+                                <div class="single-group-ticket">
+                                    <h3>Kids-Q</h3>
+                                </div>
+                                <div class="single-group-tickets">
+                                    <h3>Saturday June 29th</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="xl:w-[889px] pt-[69px] pb-[67px]">
+                            <div class="single-group-list">
+                                <div class="single-group-title">
+                                    <h2>Friday June 28, 2024</h3>
+                                    <svg class="mx-auto xl:mx-0" width="155" height="9" viewBox="0 0 155 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line y1="4.5" x2="155" y2="4.5" stroke="#591419" stroke-width="9"/>
+                                    </svg>
+                                </div>
+                                <div class="single-group-content">
+                                    <h3>Bingham County Mayors Scholarship Fundraiser</h3>
+                                    <p>Friday June 28, 2024 from 5-7pm – Community invited to enjoy BBQ, Kids-Q, activities and an auction to benefit the high school seniors of Bingham County through the Bingham County Mayors Scholarship. Come and help support a wonderful cause.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Area -->
+        <section class="content-area">
+            <div class="container px-2.5">
+                <div class="flex flex-col lg:flex-row gap-13.5 justify-between">
+                    <div class="xl:w-140.75 lg:w-6/12">
+                        <div class="content-left-area">
+                            <div class="content-left-bg overlay-d-2">
+                               <img src="./assets/img/content-1.png" alt="Content">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-153.25 lg:w-6/12">
+                        <div class="content-right-area">
+                            <h4>contestant's <span>responsibility</span></h4>
+                            <p>Neither the City of Blackfoot, McCarley Field nor the event organizers will be responsible for any injury, loss or damage that may occur to the contestants or the contestant’s property from any cause whatsoever. It is the contestant’s responsibility to protect equipment and space sothat no injury will result to the public, visitors, guests or persons or property.Cancellation and Refunds – A team may cancel up to 1 month (May 28 th ) prior to the event with full refund of site fee. Cancellations after May 28 th fill forfeit fees paid.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Footer Area -->
+        <footer  class="footer-area">
+            <div class="container footer">
+                <div class="footer-row">
+                    <div class="lg:w-173.75 md:w-6/12">
+                        <div class="footer-left-title">
+                            <h2>Smoke-N-Wings <span>BBQ</span> Competition</h2>
+                        </div>
+                    </div>
+                    <div class="lg:w-91.75 md:w-6/12 w-full">
+                        <div class="footer-right-content flex flex-col gap-9.5">
+                            <a class="footer-btn" href="#">Enter Competition</a>
+                            <div class="flex flex-col md:flex-row md:justify-between">
+                                <ul class="footer-nav">
+                                    <li><a href="#">Rules</a></li>
+                                    <li><a href="#">Sponsors</a></li>
+                                    <li><a href="#">Kids-Q</a></li>
+                                </ul>
+                                <ul class="footer-nav">
+                                    <li><a href="#">Bingham Mayors Scholarship</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="container footer">
+                <div class="cta">
+                    <p>© copyright 2025 smoke-n-wings.com. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        
+    </main>
+
+    <!-- jQuery (required by Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>

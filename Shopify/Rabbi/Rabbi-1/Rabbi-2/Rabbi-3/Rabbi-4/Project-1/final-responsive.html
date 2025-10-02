@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Html</title>
+    <link href="./assets/src/output.css" rel="stylesheet">
+    <!-- Slick Min CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+     
+</head>
+<body>
+    <main>
+        <!-- Header Area -->
+        <header class="header-area py-4 xl:py-0">
+            <div class="container">
+                <div class="header-row">
+                <!-- logo -->
+                <div class="site-logo">
+                    <a href="index.html"><img src="./assets/img/site-logo.png" alt="Site logo"></a>
+                </div>
+
+                <!-- mobile menu button -->
+                <button id="menu-toggle" class="mobile-menu lg:hidden">
+                    <!-- hamburger -->
+                    <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- close -->
+                    <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- nav -->
+                <nav id="menu" class="mainmenu">
+                    <ul class="flex flex-col lg:flex-row gap-4  items-center">
+                    <li><a href="./rules.html">Rules</a></li>
+                    <li><a href="./sponsor.html">Sponsors</a></li>
+                    <li><a href="./kidQ.html">Kids-Q</a></li>
+                    <li><a href="./Scholarship.html">Bingham Mayors Scholarship</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <!-- button -->
+                <div class="header-btn hidden lg:block">
+                    <a class="btntwo" href="#">Enter Competition</a>
+                </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Breadcumb -->
+        <div class="breadcumb">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <div class="breadcumb-list">
+                        <a href="#">Home</a>
+                        <svg width="2" height="18" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.694824" width="1" height="17.0764" fill="white"/>
+                        </svg>
+                        <a href="#">rules</a>
+                    </div>
+                    <h3>the Gaming rules</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contact Area -->
+        <section class="contact-area relative">
+            <div class="container">
+                <div class="contact-overlay">
+                    <div class="contact-overlay-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="758" height="179" viewBox="0 0 758 179" fill="none">
+                            <path d="M0 176.514V2.48611H41.2155C69.5201 2.48611 81.6861 15.6625 81.6861 42.5125V49.4736C81.6861 67.3736 76.2238 78.5611 64.0578 83.5333V84.0306C78.7067 89.0028 84.4173 101.931 84.4173 120.328V135.244C84.4173 162.094 70.265 176.514 42.9535 176.514H0ZM27.3115 73.3403H37.9878C48.1675 73.3403 54.3747 68.8653 54.3747 54.9431V45.2472C54.3747 32.8167 50.1538 27.3472 40.4706 27.3472H27.3115V73.3403ZM27.3115 151.653H42.9535C52.1401 151.653 57.1058 147.426 57.1058 134.499V119.333C57.1058 103.174 51.8918 98.2014 39.4775 98.2014H27.3115V151.653Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M158.983 176.514L154.265 142.454H122.733L118.015 176.514H92.6902L120.995 2.48611H157.99L186.294 176.514H158.983ZM126.209 118.836H150.789L138.375 31.0764L126.209 118.836Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M199.308 176.514V2.48611H239.778C268.083 2.48611 280.249 15.6625 280.249 42.5125V53.2028C280.249 71.1028 274.538 82.5389 262.372 87.5111V88.0083C276.028 92.2347 280.497 105.162 280.497 124.803V155.382C280.497 163.835 280.746 170.05 283.477 176.514H255.669C254.179 172.039 253.186 169.304 253.186 155.133V123.311C253.186 107.151 248.468 101.931 236.054 101.931H226.619V176.514H199.308ZM226.619 77.0695H236.551C246.73 77.0695 252.938 72.5945 252.938 58.6722V45.2472C252.938 32.8167 248.717 27.3472 239.034 27.3472H226.619V77.0695Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M299.447 176.514V2.48611H340.662C368.967 2.48611 381.133 15.6625 381.133 42.5125V49.4736C381.133 67.3736 375.67 78.5611 363.504 83.5333V84.0306C378.153 89.0028 383.864 101.931 383.864 120.328V135.244C383.864 162.094 369.712 176.514 342.4 176.514H299.447ZM326.758 73.3403H337.434C347.614 73.3403 353.821 68.8653 353.821 54.9431V45.2472C353.821 32.8167 349.6 27.3472 339.917 27.3472H326.758V73.3403ZM326.758 151.653H342.4C351.587 151.653 356.552 147.426 356.552 134.499V119.333C356.552 103.174 351.338 98.2014 338.924 98.2014H326.758V151.653Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M399.828 176.514V2.48611H474.314V27.3472H427.139V73.3403H464.631V98.2014H427.139V151.653H474.314V176.514H399.828Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M527.292 179C500.973 179 487.069 163.089 487.069 136.239V42.7611C487.069 15.9111 500.973 0 527.292 0C553.61 0 567.514 15.9111 567.514 42.7611V61.1583H541.692V41.0208C541.692 29.5847 536.23 24.8611 528.037 24.8611C519.843 24.8611 514.381 29.5847 514.381 41.0208V138.228C514.381 149.664 519.843 154.139 528.037 154.139C536.23 154.139 541.692 149.664 541.692 138.228V112.869H567.514V136.239C567.514 163.089 553.61 179 527.292 179Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M623.344 179C596.529 179 582.625 163.089 582.625 135.244V2.48611H609.936V137.233C609.936 149.664 615.15 154.139 623.84 154.139C632.53 154.139 637.744 149.664 637.744 137.233V2.48611H664.062V135.244C664.062 163.089 650.159 179 623.344 179Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                            <path d="M683.514 176.514V2.48611H758V27.3472H710.826V73.3403H748.317V98.2014H710.826V151.653H758V176.514H683.514Z" fill="#F8B895" fill-opacity="0.11" style="mix-blend-mode:multiply"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="contactT-row">
+                    <div class="xl:w-130.5 lg:w-117.25">
+                        <div class="contact-left-area !gap-9">
+                            <div class="contact-left-title">
+                                <h4>Enter Competition</h4>
+                                <div class="flex flex-col gap-6">
+                                    <p>We are excited to welcome your team to the 2024 SMOKE-N-WINGS BBQ CONTEST. Put your skills to the test for your chance to win cash prizes and be crowned the SMOKE-N-WINGS Grand Champion and the Idaho State Champion.</p>
+                                    <p>This KCBS sanctioned competition will be held June 28-29, 2024. Winning will make your team eligible for the American Royal and the Jack Daniels World Championship. </p>
+                                </div>
+                            </div>
+                            <div class="contact-left-content xl:w-122.25 !gap-9">
+                                <div class="single-contact-list">
+                                    <div class="single-contact-list-item">
+                                        <div class="contact-left-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="85" viewBox="0 0 28 85" fill="none">
+                                                <path d="M28 0H0L28 85V0Z" fill="#591419"/>
+                                            </svg>
+                                        </div>
+                                        <div class="contact-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                                                <path d="M38.5 33.25V8.75H3.5V33.25H38.5Z" stroke="white" stroke-width="2.625" stroke-miterlimit="10"/>
+                                                <path d="M5.25 9.625L21 24.5L36.75 9.625" stroke="white" stroke-width="2.625"/>
+                                                <path d="M17.5 21L3.5 33.25" stroke="white" stroke-width="2.625"/>
+                                                <path d="M24.5 21L38.5 33.25" stroke="white" stroke-width="2.625"/>
+                                                <path d="M16.625 21L5.25 9.625L6.125 8.75H32.375L35.875 9.625L25.375 19.25L21.875 23.625L16.625 21Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <a href="mailto:smokenwingsbbq@gmail.com" aria-label="Email Smoke-N-Wings BBQ">smokenwingsbbq@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="single-contact-list">
+                                    <div class="single-contact-list-item">
+                                        <div class="contact-left-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="85" viewBox="0 0 28 85" fill="none">
+                                                <path d="M28 0H0L28 85V0Z" fill="#591419"/>
+                                            </svg>
+                                        </div>
+                                        <div class="contact-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                                                <path d="M38.5 7H3.5V38.5H38.5V7Z" stroke="white" stroke-width="2.625"/>
+                                                <path d="M12.25 3.5V10.5" stroke="white" stroke-width="2.625"/>
+                                                <path d="M3.5 15.75H38.5V38.5H3.5V15.75Z" fill="white"/>
+                                                <path d="M23.2685 22.75H18.7315M33.25 22.75H28.713M13.287 22.75H8.75" stroke="#16396F" stroke-width="2.625"/>
+                                                <path d="M23.2685 31.5H18.7315M33.25 31.5H28.713M13.287 31.5H8.75" stroke="#16396F" stroke-width="2.625"/>
+                                                <path d="M21 3.5V10.5" stroke="white" stroke-width="2.625"/>
+                                                <path d="M29.75 3.5V10.5" stroke="white" stroke-width="2.625"/>
+                                                <path d="M3.5 15.75H38.5" stroke="white" stroke-width="2.625"/>
+                                            </svg>
+                                        </div>
+                                        <p>Mon - Fri 09:00 - 18:00</p>
+                                    </div>
+                                </div>
+                                <div class="single-contact-list">
+                                    <div class="single-contact-list-item">
+                                        <div class="contact-left-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="85" viewBox="0 0 28 85" fill="none">
+                                                <path d="M28 0H0L28 85V0Z" fill="#591419"/>
+                                            </svg>
+                                        </div>
+                                        <div class="contact-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                                                <path d="M8.89327 20.555C10.4071 23.0489 12.2926 25.428 14.4323 27.5662C16.5702 29.7055 18.9491 31.5915 21.4425 33.1054L27.7038 26.3879L39.8105 33.2831C38.0535 36.5454 33.8393 40.7176 28.4854 39.6389C25.9552 39.1284 23.4583 38.2776 20.4391 36.5454C17.4001 34.8019 14.5307 32.575 11.9814 30.0239C9.43016 27.4745 7.19623 24.598 5.45265 21.559C3.7204 18.5397 2.86967 16.0429 2.35907 13.5127C1.28052 8.15874 5.45265 3.94464 8.71495 2.1875L15.6101 14.2943L8.89327 20.555Z" fill="white"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.75 10.15V5.25H26.25V10.15H22.75ZM28.4606 11.0662L31.9254 7.60142L34.4003 10.0763L30.9354 13.5411L28.4606 11.0662ZM31.85 15.75H36.75V19.25H31.85V15.75Z" fill="white"/>
+                                            </svg>
+                                        </div>
+                                        <a href="tel:8001234567">Call (800) 123 45 67</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xl:w-148.5 lg:w-117.5">
+                        <div class="contact-right-area contactT-right-area">
+                            <div class="contact-title-right">
+                                <h5>Complete the <span>Entry Form</span> Below</h5>
+                            </div>
+                            <form class="contact-form contact-form-two" action="">
+                                <div class="flex flex-col">
+                                    <!-- ContactT Field Form 01 -->
+                                    <div class="flex flex-col md:flex-row gap-7.5 pb-5.75">
+                                        <div class="contact-form-control">
+                                            <label for="Team name">Team name</label>
+                                            <div class="relative">
+                                                <input type="text" name="Team name" placeholder="Enter team name">
+                                                <div class="contact-field-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path d="M10.0002 10.1191C11.8266 10.1191 13.3071 8.78657 13.3071 7.14287C13.3071 5.49917 11.8266 4.16669 10.0002 4.16669C8.17389 4.16669 6.69336 5.49917 6.69336 7.14287C6.69336 8.78657 8.17389 10.1191 10.0002 10.1191Z" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M5.37012 14.7484C5.37012 12.1916 7.44286 10.1188 9.99975 10.1188C12.5566 10.1188 14.6293 12.1916 14.6293 14.7484C14.6293 15.479 14.0372 16.0712 13.3066 16.0712H6.69286C5.96233 16.0712 5.37012 15.479 5.37012 14.7484Z" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M14.167 4.2326C15.8107 4.2326 17.1432 5.43184 17.1432 6.91117C17.1432 8.39052 15.8107 9.58977 14.167 9.58977C16.4682 9.58977 18.3337 11.4552 18.3337 13.7564C18.3337 14.4138 17.8007 14.9468 17.1432 14.9468H16.667" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M5.83363 4.2326C4.18993 4.2326 2.85745 5.43184 2.85745 6.91117C2.85745 8.39052 4.18993 9.58977 5.83363 9.58977C3.53246 9.58977 1.66699 11.4552 1.66699 13.7564C1.66699 14.4138 2.19998 14.9468 2.85747 14.9468H3.33366" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contact-form-control">
+                                            <label for="First name">Email</label>
+                                            <div class="relative">
+                                                <input type="email" name="Email" placeholder="your@team.com">
+                                                <div class="contact-field-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path d="M18.3337 13.3334V6.66669C18.3337 5.28598 17.2144 4.16669 15.8337 4.16669H4.16699C2.78628 4.16669 1.66699 5.28598 1.66699 6.66669V13.3334C1.66699 14.7141 2.78628 15.8334 4.16699 15.8334H15.8337C17.2144 15.8334 18.3337 14.7141 18.3337 13.3334Z" stroke="#F65600" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M2.5 4.58331L8.28344 10.0455C9.24692 10.9554 10.7531 10.9554 11.7166 10.0455L17.5 4.58331" stroke="#F65600" stroke-width="1.25" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ContactT Field Form 02 -->
+                                    <div class="contact-form-control pb-5.75">
+                                        <label for="Head Cook">Head Cook</label>
+                                        <div class="relative">
+                                            <input type="text" name="Head Cook" placeholder="Enter head cook name">
+                                            <div class="contact-field-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                    <path d="M2.5 15.2469C2.5 11.8378 5.26367 9.0741 8.67283 9.0741H10.7304C14.1396 9.0741 16.9033 11.8378 16.9033 15.2469V15.8333C16.9033 17.2141 15.784 18.3333 14.4033 18.3333H5C3.61929 18.3333 2.5 17.2141 2.5 15.8333V15.2469Z" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M13.6105 5.37039C13.6105 7.41589 11.9523 9.0741 9.90684 9.0741C7.86133 9.0741 6.20312 7.41589 6.20312 5.37039C6.20312 3.3249 7.86133 1.66669 9.90684 1.66669C11.9523 1.66669 13.6105 3.3249 13.6105 5.37039Z" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ContactT Field Form 03 -->
+                                    <div class="flex flex-col md:flex-row gap-7.5 pb-5.75">
+                                        <div class="contact-form-control">
+                                            <label for="Address">Address</label>
+                                            <div class="relative">
+                                                <input type="text" name="Address" placeholder="Enter your address">
+                                                <div class="contact-field-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path d="M10.417 1.66669C6.96699 1.66669 4.16699 4.46669 4.16699 7.91669C4.16699 10.8378 6.47825 14.0286 8.29038 16.0819L8.58824 16.3973C9.57899 17.4462 11.2495 17.441 12.2337 16.3859L12.8462 15.7295C14.6006 13.675 16.667 10.6756 16.667 7.91669C16.667 4.46669 13.867 1.66669 10.417 1.66669Z" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M10.4163 10.1579C11.9121 10.1579 13.1247 8.94534 13.1247 7.44954C13.1247 5.95378 11.9121 4.74121 10.4163 4.74121C8.92059 4.74121 7.70801 5.95378 7.70801 7.44954C7.70801 8.94534 8.92059 10.1579 10.4163 10.1579Z" stroke="#F65600" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contact-form-control">
+                                            <label for="First name">Phone Number</label>
+                                            <div class="relative">
+                                                <input type="tel" name="Email" placeholder="Enter your phone number">
+                                                <div class="contact-field-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                        <path d="M7.63188 4.76019L7.29633 4.00521C7.07693 3.51157 6.96723 3.26473 6.80317 3.07584C6.59756 2.83912 6.32956 2.66495 6.02973 2.57321C5.79049 2.5 5.52038 2.5 4.98017 2.5C4.18992 2.5 3.7948 2.5 3.46311 2.65191C3.07239 2.83085 2.71953 3.2194 2.57894 3.6255C2.45959 3.97024 2.49378 4.32453 2.56215 5.03308C3.28992 12.5752 7.42485 16.7101 14.9669 17.4378C15.6755 17.5062 16.0298 17.5404 16.3745 17.4211C16.7806 17.2805 17.1691 16.9276 17.3481 16.5369C17.5 16.2052 17.5 15.8101 17.5 15.0198C17.5 14.4796 17.5 14.2095 17.4268 13.9702C17.335 13.6704 17.1609 13.4024 16.9241 13.1968C16.7353 13.0327 16.4885 12.9231 15.9948 12.7037L15.2398 12.3681C14.7052 12.1305 14.4379 12.0117 14.1663 11.9859C13.9063 11.9612 13.6442 11.9977 13.4009 12.0924C13.1466 12.1914 12.922 12.3787 12.4725 12.7532C12.0251 13.126 11.8015 13.3124 11.5281 13.4122C11.2858 13.5007 10.9655 13.5336 10.7103 13.4959C10.4224 13.4535 10.202 13.3358 9.76105 13.1001C8.38938 12.3671 7.63294 11.6107 6.89989 10.2389C6.66428 9.79808 6.54648 9.57758 6.50406 9.28975C6.46645 9.0345 6.49923 8.71417 6.58775 8.47192C6.6876 8.19857 6.87401 7.97488 7.24682 7.5275C7.62135 7.07807 7.80861 6.85335 7.90762 6.59909C8.00237 6.35578 8.03885 6.09367 8.01412 5.83373C7.98828 5.5621 7.86948 5.2948 7.63188 4.76019Z" stroke="#F65600" stroke-width="1.25" stroke-linecap="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ContactT Field Form 04 -->
+                                    <div class="flex flex-col md:flex-row gap-7.5 pb-5.75">
+                                        <div class="contact-form-control">
+                                            <label for="Are you a KCBS Member?">Are you a KCBS Member?</label>
+                                            <div class="relative">
+                                                <input type="text" name="Are you a KCBS Member?" placeholder="Yes">
+                                                <div class="contact-field-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#F65600" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contact-form-control">
+                                            <label for="Head Cook KCBS Number">Head Cook KCBS Number</label>
+                                            <div class="relative">
+                                                <input type="tel" name="Head Cook KCBS Number" placeholder="Head cook KCBS number">
+                                                <div class="contact-field-icon">
+                                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <rect width="22" height="19" fill="url(#pattern0_2032_471)"/>
+                                                    <defs>
+                                                    <pattern id="pattern0_2032_471" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                    <use xlink:href="#image0_2032_471" transform="scale(0.00333333 0.00392157)"/>
+                                                    </pattern>
+                                                    <image id="image0_2032_471" width="300" height="300" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+                                                    </defs>
+                                                    </svg>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-check-area pt-[57px]">
+                                        <div class="flex flex-col gap-6.25">
+                                            <!-- Question 1 -->
+                                            <div class="contact-check-one">
+                                                <p>I have read and agree to the smoke-n-wings Competition Rules</p>
+                                                <div class="contact-one-field">
+                                                    <label>
+                                                        <input type="radio" name="rules_agreement" value="yes">
+                                                        <span>Yes</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="rules_agreement" value="no">
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 2 -->
+                                            <div class="contact-check-one">
+                                                <p>TO HELP US PROMOTE THIS EVENT AND OUR FUNDRAISER TO THE PUBLIC, MY TEAM WOULD LIKE TO SERVE FOOD ON FRIDAY NIGHT FROM 5-7PM. 100% OF SALES FROM FOOD REMAINS WITH THE TEAM.</p>
+                                                <div class="contact-one-field contact-long-field">
+                                                    <label>
+                                                        <input type="radio" name="team_food" value="yes">
+                                                        <span>Yes - My team would like to serve food</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="team_food" value="no">
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 3 -->
+                                            <div class="contact-check-one">
+                                                <p>MY TEAM WOULD BE WILLING TO MENTOR AN OLDER DIVISION KIDS-Q CONTESTANT FOR 30 MINUTES IMMEDIATELY FOLLOWING THE COOKS MEETING.</p>
+                                                <div class="contact-one-field contact-long-field">
+                                                    <label>
+                                                        <input type="radio" name="my_team" value="yes">
+                                                        <span>YES – MY TEAM WOULD LOVE TO HELP A KID PREPARE FOR THE KIDS-Q</span>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="my_team" value="no">
+                                                        <span>No</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-2-agreement">
+                                    <label>
+                                        <input type="checkbox" name="rules_agreement" value="yes">
+                                        <span>I UNDERSTAND THAT POWER WILL NOT BE PROVIDED AND I NEED TO PROVIDE MY OWN POWER SOURCE.</span>
+                                    </label>
+                                </div>
+                                <button class="contact-btn btn" type="submit">Send message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Area -->
+        <Section class="service-area py-[115px]">
+            <div class="container">
+                <div class="flex flex-col 2xl:px-6.25 gap-12.5">
+                    <!-- Single Service 01 -->
+                    <div class="w-full">
+                        <div class="snigle-service-list">
+                            <div class="service-bg">
+                                <img src="./assets/img/service-bg/s-1.png" alt="Service 1">
+                            </div>
+                            <div class="service-content">
+                                <div class="flex justify-between items-center">
+                                    <h4><a href="#">20x30 Cook Site</a></h4>
+                                    <h6>$300</h6>
+                                </div>
+                                <div class="flex flex-col gap-9.75 h-full">
+                                    <p>Buy your spot before they are gone. If you need a size larger than listed please contact event organizer and we will accommodate you.</p>
+                                    <div class="service-btn">
+                                        <a class="btntwo" href="#">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Service 02 -->
+                    <div class="w-full">
+                        <div class="snigle-service-list">
+                            <div class="service-bg">
+                                <img src="./assets/img/service-bg/s-2.png" alt="Service 1">
+                            </div>
+                            <div class="service-content">
+                                <div class="flex justify-between items-center">
+                                    <h4><a href="#">30x30 Cook Site</a></h4>
+                                    <h6>$300</h6>
+                                </div>
+                                <div class="flex flex-col gap-9.75 h-full">
+                                    <p>Buy your spot before they are gone. If you need a size larger than listed please contact event organizer and we will accommodate you.</p>
+                                    <div class="service-btn">
+                                        <a class="btntwo" href="#">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Service 03 -->
+                    <div class="w-full">
+                        <div class="snigle-service-list">
+                            <div class="service-bg">
+                                <img src="./assets/img/service-bg/s-3.png" alt="Service 1">
+                            </div>
+                            <div class="service-content">
+                                <div class="flex justify-between items-center">
+                                    <h4><a href="#">20x50 Cook Site</a></h4>
+                                    <h6>$300</h6>
+                                </div>
+                                <div class="flex flex-col gap-9.75 h-full">
+                                    <p>Buy your spot before they are gone. If you need a size larger than listed please contact event organizer and we will accommodate you.</p>
+                                    <div class="service-btn">
+                                        <a class="btntwo" href="#">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Section>
+
+        <!-- Footer Area -->
+        <footer  class="footer-area">
+            <div class="container footer">
+                <div class="footer-row">
+                    <div class="lg:w-173.75 md:w-6/12">
+                        <div class="footer-left-title">
+                            <h2>Smoke-N-Wings <span>BBQ</span> Competition</h2>
+                        </div>
+                    </div>
+                    <div class="lg:w-91.75 md:w-6/12 w-full">
+                        <div class="footer-right-content flex flex-col gap-9.5">
+                            <a class="footer-btn" href="#">Enter Competition</a>
+                            <div class="flex flex-col md:flex-row md:justify-between">
+                                <ul class="footer-nav">
+                                    <li><a href="#">Rules</a></li>
+                                    <li><a href="#">Sponsors</a></li>
+                                    <li><a href="#">Kids-Q</a></li>
+                                </ul>
+                                <ul class="footer-nav">
+                                    <li><a href="#">Bingham Mayors Scholarship</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="container footer">
+                <div class="cta">
+                    <p>© copyright 2025 smoke-n-wings.com. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        
+    </main>
+
+    <!-- jQuery (required by Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>
