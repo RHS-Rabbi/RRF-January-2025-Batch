@@ -1026,7 +1026,7 @@ h4,h5,h6 {
 }
 
 .single-sponsor {
-    @apply flex p-16.5  flex-col text-center border-5 border-[var(--color5)] bg-white h-full;
+    @apply flex p-16.5 items-center flex-col text-center border-5 border-[var(--color5)] bg-white h-full;
 }
 
 .single-sponsor img {
