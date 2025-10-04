@@ -798,6 +798,9 @@ h4,h5,h6 {
 .rules-title h1{
     @apply text-[var(--primary)] !font-bebas [font-size:var(--60px)] not-italic font-normal leading-20.25 tracking-[1.2px] uppercase;
 }
+.rules-title h1 span{
+    @apply text-[var(--orange)];
+}
 
 .rules-title p{
     @apply text-[var(--black)] text-center text-lg not-italic font-normal leading-normal tracking-[0.36px];
@@ -1026,7 +1029,7 @@ h4,h5,h6 {
 }
 
 .single-sponsor {
-    @apply flex p-16.5 items-center flex-col text-center border-5 border-[var(--color5)] bg-white h-full;
+    @apply flex p-16.5  flex-col text-center border-5 border-[var(--color5)] bg-white h-full;
 }
 
 .single-sponsor img {
