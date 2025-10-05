@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'Bebas Neue Pro';
-    src: url('/assets/font/BebasNeuePro-Regular.woff2') format('woff2'),
-        url('/assets/font/BebasNeuePro-Regular.woff') format('woff');
+    src: url('../font/BebasNeuePro-Regular.woff2') format('woff2'),
+        url('../font/BebasNeuePro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -14,8 +14,8 @@
 
 @font-face {
     font-family: 'Bebas Neue Pro';
-    src: url('/assets/font/BebasNeuePro-Bold.woff2') format('woff2'),
-        url('/assets/font/BebasNeuePro-Bold.woff') format('woff');
+    src: url('../font/BebasNeuePro-Bold.woff2') format('woff2'),
+        url('../font/BebasNeuePro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -1563,6 +1563,12 @@ h4,h5,h6 {
 
 .contact-form-two {
     @apply gap-7.5;
+}
+
+.contact-form-control input::placeholder,
+.contact-form-control textarea::placeholder,
+.enter-kcbs::placeholder {
+  @apply text-[#333333];
 }
 
 /* ---------------------Service Area------------------------ */
