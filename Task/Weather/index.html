@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live GPS Weather & Hurricane Tracker</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<style>
+  body { background: linear-gradient(to bottom, #1e3c72, #2a5298); color: #fff; font-family: "Poppins", sans-serif; }
+  #map { height: 90vh; border-radius: 15px; margin-top: 1rem; box-shadow: 0 0 15px rgba(0,0,0,0.3); }
+  .navbar { background-color: rgba(0,0,0,0.6) !important; backdrop-filter: blur(6px); }
+  .leaflet-popup-content { color: #000; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark px-4">
+  <a class="navbar-brand fw-bold text-light" href="#">🌦️ Live GPS & Hurricane Tracker</a>
+  <div class="ms-auto d-flex">
+    <input id="searchCity" class="form-control me-2" type="text" placeholder="Enter city name...">
+    <button id="searchBtn" class="btn btn-warning">Search</button>
+    <button id="locBtn" class="btn btn-light ms-2">📍 My Location</button>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const OPENWEATHER_API_KEY = "b9a444274d7853e1249bf2e926b0c1bc";
+
+const map = L.map('map').setView([23.8103, 90.4125], 7);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+
+// RainViewer overlay
+async function addRainLayer() {
+  const res = await fetch('https://api.rainviewer.com/public/weather-maps.json');
+  const data = await res.json();
+  const latest = data.radar.past.pop().path;
+  L.tileLayer(`https://tilecache.rainviewer.com${latest}/256/{z}/{x}/{y}/2/1_1.png`, { opacity: 0.5, attribution: 'RainViewer' }).addTo(map);
+}
+addRainLayer();
+
+// Custom GPS marker icon
+const gpsIcon = L.icon({
+  iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png',
+  iconSize: [40, 40],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -40]
+});
+
+let gpsMarker = null;
+
+// Hurricane layer
+let hurricaneLayer = L.layerGroup().addTo(map);
+async function loadHurricanes() {
+  // Example GeoJSON source (replace with real-time NOAA/Cyclone feed if available)
+  const url = 'https://opendata.arcgis.com/datasets/0caa9a5b2a4140a68f7b52e6e2b39bcd_0.geojson'; 
+  try {
+    const geojson = await fetch(url).then(r=>r.json());
+    hurricaneLayer.clearLayers(); // clear old markers
+    L.geoJSON(geojson, {
+      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius:8, color:'#ff8800', fillColor:'#ffaa33', fillOpacity:0.7 }),
+      onEachFeature: (feature, layer) => {
+        if(feature.properties && feature.properties.NAME) {
+          layer.bindPopup(`<strong>Hurricane:</strong> ${feature.properties.NAME}`);
+        }
+      }
+    }).addTo(hurricaneLayer);
+  } catch(e){ console.log('Hurricane load error', e); }
+}
+loadHurricanes();
+setInterval(loadHurricanes, 60000); // refresh every 1 minute
+
+// Fetch weather by coordinates
+async function getWeather(lat, lon) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${OPENWEATHER_API_KEY}&units=metric`;
+  const res = await fetch(url);
+  const data = await res.json();
+  return data;
+}
+
+// Show popup with Bootstrap card
+async function updateGPSMarker(lat, lon) {
+  const data = await getWeather(lat, lon);
+  const icon = data.weather[0].icon;
+  const popupHTML = `
+    <div class="card text-center p-2" style="width: 13rem;">
+      <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="card-img-top" alt="">
+      <div class="card-body">
+        <h6 class="card-title fw-bold">${data.name}, ${data.sys.country}</h6>
+        <p class="mb-0">🌡️ ${data.main.temp}°C</p>
+        <p class="mb-0">💧 ${data.main.humidity}%</p>
+        <p class="mb-0">🌬️ ${data.wind.speed} m/s</p>
+        <small>${data.weather[0].main}</small>
+      </div>
+    </div>`;
+  
+  if (!gpsMarker) {
+    gpsMarker = L.marker([lat, lon], {icon: gpsIcon}).addTo(map).bindPopup(popupHTML).openPopup();
+  } else {
+    gpsMarker.setLatLng([lat, lon]).setPopupContent(popupHTML).openPopup();
+  }
+}
+
+// Function to track GPS every 1 minute
+function startGPSTracking() {
+  if (!navigator.geolocation) { alert('Geolocation not supported'); return; }
+  navigator.geolocation.getCurrentPosition(async pos => {
+    const { latitude, longitude } = pos.coords;
+    map.setView([latitude, longitude], 12);
+    updateGPSMarker(latitude, longitude);
+  });
+
+  setInterval(() => {
+    navigator.geolocation.getCurrentPosition(async pos => {
+      const { latitude, longitude } = pos.coords;
+      updateGPSMarker(latitude, longitude);
+    });
+  }, 60000);
+}
+
+// Start GPS tracking
+startGPSTracking();
+
+// Click map → show weather marker
+map.on('click', e => updateGPSMarker(e.latlng.lat, e.latlng.lng));
+
+// My Location button
+document.getElementById('locBtn').addEventListener('click', startGPSTracking);
+
+// Search by city
+document.getElementById('searchBtn').addEventListener('click', async () => {
+  const city = document.getElementById('searchCity').value.trim();
+  if (!city) return alert('Please enter a city name');
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPENWEATHER_API_KEY}&units=metric`;
+  const res = await fetch(url);
+  if (!res.ok) return alert('City not found!');
+  const data = await res.json();
+  map.setView([data.coord.lat, data.coord.lon], 12);
+  updateGPSMarker(data.coord.lat, data.coord.lon);
+});
+</script>
+
+</body>
+</html>
